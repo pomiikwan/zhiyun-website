@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公司介绍 - 智云数据股份</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="about-company.html" class="active"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>公司介绍</span></div>
+        <ul class="sidebar-items" style="max-height:200px">
+          <a href="about-company.html" class="sidebar-item active"><i data-lucide="building-2" style="width:16px;height:16px"></i><span>智云数据股份介绍</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>快速导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="book-open" style="width:16px;height:16px"></i><span>专业领域知识库</span></a>
+          <a href="../tasks/index.html" class="sidebar-item"><i data-lucide="target" style="width:16px;height:16px"></i><span>核心任务 P1-P4</span></a>
+          <a href="../dashboard.html" class="sidebar-item"><i data-lucide="bar-chart-3" style="width:16px;height:16px"></i><span>数据看板</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+
+        <!-- ==================== PART 01 公司概况 ==================== -->
+        <section class="mb-8">
+          <div class="detail-breadcrumb">
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>公司介绍</span>
+          </div>
+          <h1 class="hero-title">智云数据股份<br><span style="color:var(--accent-blue)">人工智能全栈解决方案提供商</span></h1>
+          <p class="hero-subtitle">提供从硬件到软件、从基础设施到应用开发的全栈AI服务，满足不同客户的多样化需求。</p>
+        </section>
+
+        <!-- 核心数据指标 -->
+        <section class="mb-8">
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-label">专利</div>
+              <div class="metric-value blue">51项</div>
+              <div class="metric-sub">核心技术知识产权</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">软件著作权</div>
+              <div class="metric-value purple">170项</div>
+              <div class="metric-sub">软件产品著作权</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">智算中心投建</div>
+              <div class="metric-value green">26.2亿</div>
+              <div class="metric-sub">河南空港智算中心</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">知识产权总计</div>
+              <div class="metric-value yellow">221项</div>
+              <div class="metric-sub">专利+软著合计</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 主要荣誉 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="award" style="width:20px;height:20px;color:var(--accent-blue)"></i>主要荣誉
+          </h2>
+          <div class="grid-3">
+            <div class="card" style="cursor:default">
+              <div class="card-icon blue"><i data-lucide="award" style="width:22px;height:22px"></i></div>
+              <div class="card-title">国家级高新技术企业</div>
+              <div class="card-desc">国家科技部认证的高新技术企业，享受相关优惠政策。</div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon purple"><i data-lucide="gem" style="width:22px;height:22px"></i></div>
+              <div class="card-title">省级"专精特新"企业</div>
+              <div class="card-desc">河南省"专精特新"中小企业认定，专业化精细化特色化发展。</div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon green"><i data-lucide="cpu" style="width:22px;height:22px"></i></div>
+              <div class="card-title">郑州市人工智能标杆企业</div>
+              <div class="card-desc">郑州市人工智能标杆企业，引领区域AI产业发展。</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 公司简介 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title">
+            <i data-lucide="building-2"></i>公司简介
+          </h2>
+          <p class="detail-text">
+            智云数据股份是一家多年聚焦人工智能及AI智能制造领域的<strong>国家级高新技术企业</strong>、省级<strong>"专精特新"企业</strong>，是<strong>郑州市人工智能标杆企业</strong>。公司在2016年和2022年分别获得金水控股和中原证券中鼎开源基金的投资。
+          </p>
+          <p class="detail-text mt-4">
+            公司创始研发团队均来自于号称军中"清华"的<strong>解放军信息工程大学</strong>，三位核心研发人员均获得过<strong>军队科技进步一等奖</strong>、<strong>公安部科技进步一等奖</strong>、<strong>国家科技进步一等奖</strong>。公司多年承担国家部委、省、市级项目三十余项，并建有一个省级研发平台和两个市级企业研究中心。
+          </p>
+        </section>
+
+        <!-- 发展历程 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title">
+            <i data-lucide="history"></i>发展历程
+          </h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:120px">时间</th>
+                <th>事件</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2010年7月</td><td>公司前身"郑州信大信安科技有限公司"成立</td></tr>
+              <tr><td>2012年7月</td><td>首次被认定为"武器装备科研生产二级保密资格单位"</td></tr>
+              <tr><td>2016年7月</td><td>更名为"河南智云数据信息技术股份有限公司"</td></tr>
+              <tr><td>2016年12月</td><td>首次被认定为"高新技术企业"</td></tr>
+              <tr><td>2017年8月</td><td>在新三板挂牌上市</td></tr>
+              <tr><td>2020年6月</td><td>获批国家重点研发计划"科技助力经济2020"重点专项</td></tr>
+              <tr><td>2021年5月</td><td>荣获河南省"专精特新"中小企业</td></tr>
+              <tr><td>2023年12月</td><td>首次荣获郑州市人工智能标杆企业</td></tr>
+              <tr><td>2024年1月</td><td>荣获"郑州市人工智能标杆企业"</td></tr>
+              <tr><td>2024年7月</td><td>开发的住建部"住建领域法规标准知识服务平台大模型"在北京开通试运行</td></tr>
+              <tr><td>2024年10月</td><td>参与中部最大智算中心投建，累计金额达26.2亿</td></tr>
+              <tr><td>2025年4月</td><td>签约黄河勘测规划设计研究院，提供水利大模型知识服务</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== PART 02 核心业务介绍 ==================== -->
+        <section class="detail-section">
+          <h2 class="detail-section-title">
+            <i data-lucide="briefcase"></i>核心业务
+          </h2>
+          <div class="grid-4 mb-6">
+            <div class="card" style="cursor:default">
+              <div class="card-icon blue"><i data-lucide="brain" style="width:22px;height:22px"></i></div>
+              <div class="card-title">01 垂类AI大模型开发调试</div>
+              <div class="card-meta"><span>模型定制与优化</span></div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon green"><i data-lucide="server" style="width:22px;height:22px"></i></div>
+              <div class="card-title">02 智算中心投建</div>
+              <div class="card-meta"><span>投-建-运一体化</span></div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon purple"><i data-lucide="cloud" style="width:22px;height:22px"></i></div>
+              <div class="card-title">03 算力租赁</div>
+              <div class="card-meta"><span>弹性GPU算力</span></div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon teal"><i data-lucide="hard-drive" style="width:22px;height:22px"></i></div>
+              <div class="card-title">04 GPU生态</div>
+              <div class="card-meta"><span>芯片模组服务器</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 一、垂类AI大模型开发调试 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="brain-circuit"></i>一、垂类AI大模型开发调试
+          </h3>
+          <p class="detail-text">
+            专注于为特定行业或领域（如金融、医疗、制造、法律等）量身定制和优化大型人工智能模型。提供从模型选型、行业知识注入、场景化训练调优到部署后性能监控与迭代的全流程服务，旨在打造深度契合客户专业需求、解决实际业务痛点的高性能专属AI大模型。
+          </p>
+
+          <div class="grid-2 mt-6">
+            <!-- 案例1 -->
+            <div class="card" style="cursor:default">
+              <div class="card-icon blue"><i data-lucide="building" style="width:22px;height:22px"></i></div>
+              <div class="card-title">案例1：住建领域法规标准知识大模型</div>
+              <div class="card-desc">
+                聚焦建筑行业，以商汤"日日新SenseNova 5.5"大模型体系为基础，结合住建行业标准、法律条款、设计及工艺规范等知识库数据，为建筑设计、规划、施工等带来智能、高效、专业的知识扩展和应用支持。
+                <br><br>
+                <strong>深度学习了8000余种法律法规、6000余种标准规范</strong>，为建筑行业用户提供住建领域智能问答、智能集成、智能翻译、智能查重、智能比对等服务。
+              </div>
+              <div class="card-meta mt-4">
+                <span><i data-lucide="check-circle" style="width:14px;height:14px"></i>智能问答</span>
+                <span><i data-lucide="check-circle" style="width:14px;height:14px"></i>智能写作</span>
+                <span><i data-lucide="check-circle" style="width:14px;height:14px"></i>智能比对</span>
+                <span><i data-lucide="check-circle" style="width:14px;height:14px"></i>智能查重</span>
+              </div>
+              <div class="mt-4 text-sm text-muted">
+                客户：中国建筑出版传媒有限公司（原中国建筑工业出版社），2024年7月在京发布
+              </div>
+            </div>
+            <!-- 案例2 -->
+            <div class="card" style="cursor:default">
+              <div class="card-icon green"><i data-lucide="waves" style="width:22px;height:22px"></i></div>
+              <div class="card-title">案例2：黄勘院水利知识大模型</div>
+              <div class="card-desc">
+                深度学习水利行业的技术报告、设计文件、政策文件、研究论文等各项专业文档，构建水利行业垂直领域知识大模型，打造基于知识库的智能问答、智能写作、智能决策、风险评估等应用场景。
+              </div>
+              <div class="card-meta mt-4">
+                <span><i data-lucide="search" style="width:14px;height:14px"></i>智能查找</span>
+                <span><i data-lucide="file-text" style="width:14px;height:14px"></i>智能写作</span>
+                <span><i data-lucide="bar-chart-2" style="width:14px;height:14px"></i>决策支持</span>
+                <span><i data-lucide="shield" style="width:14px;height:14px"></i>风险评估</span>
+              </div>
+              <div class="mt-4 text-sm text-muted">
+                客户：黄河勘测规划设计研究院，2025年4月签约
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 二、智算中心投建 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="server"></i>二、智算中心投建
+          </h3>
+          <p class="detail-text">
+            专注于为政府与企业提供从规划、基础设施搭建到算力系统部署的全周期智能算力中心建设服务。通过整合高性能AI服务器集群、绿色节能技术及多元算力调度平台等资源，构建<strong>1000P级以上算力规模</strong>的智算基础设施，支撑人工智能大模型训练、工业数字孪生、智慧交通等场景落地。业务以<strong>"投-建-运"一体化模式</strong>，破解传统建设运营割裂难题。
+          </p>
+
+          <div class="grid-4 mt-4 mb-6">
+            <div class="metric-card">
+              <div class="metric-label">核心能力</div>
+              <div class="metric-value" style="font-size:1rem">集群建设能力</div>
+              <div class="metric-sub">技术积淀、稳定供应链</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">&nbsp;</div>
+              <div class="metric-value" style="font-size:1rem">市场洞察</div>
+              <div class="metric-sub">市场营销、规划能力</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">&nbsp;</div>
+              <div class="metric-value" style="font-size:1rem">资金闭环</div>
+              <div class="metric-sub">立项申报、算力兜底</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">&nbsp;</div>
+              <div class="metric-value" style="font-size:1rem">业务闭环</div>
+              <div class="metric-sub">投-建-运一站式服务</div>
+            </div>
+          </div>
+
+          <!-- 河南空港智算中心案例 -->
+          <div class="card mb-6" style="cursor:default">
+            <div class="card-icon blue"><i data-lucide="landmark" style="width:22px;height:22px"></i></div>
+            <div class="card-title">案例：河南空港智算中心项目</div>
+            <div class="card-desc">
+              河南空港智算中心是由河南空港数字城市开发建设有限公司牵头建设的<strong>A级数据中心</strong>。作为一项<strong>总投资约300亿元</strong>的重大项目，与国内IT厂商、人工智能企业携手共建。按照<strong>总算力超10万P规模</strong>规划，致力于打造<strong>中部最大、国内领先的万卡算力集群</strong>，填补了河南省在超大规模智算中心方面的空白。
+            </div>
+            <div class="mt-4">
+              <table class="data-table">
+                <thead>
+                  <tr><th>项目</th><th>详情</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>位置</td><td>郑州航空港豫发锦荣信息科技园，占地约4.6万㎡，两栋机房楼（9、12号楼）16个模块化机房</td></tr>
+                  <tr><td>一中心</td><td>已投产<strong>2000P</strong>，在建<strong>8000P</strong></td></tr>
+                  <tr><td>二中心</td><td>集装箱式的液冷集群，基础设施已建设完成</td></tr>
+                  <tr><td>三中心</td><td>目前正在规划中</td></tr>
+                  <tr><td>合作方</td><td>直真科技(003007)、大唐电信(600198)、嘉唐科技</td></tr>
+                  <tr><td>累计金额</td><td><strong class="text-blue">26.2亿元</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 中标信息 -->
+          <div class="grid-2">
+            <div class="card" style="cursor:default">
+              <div class="card-icon purple"><i data-lucide="trophy" style="width:22px;height:22px"></i></div>
+              <div class="card-title">三标段（联合体牵头人）</div>
+              <div class="card-desc">
+                郑州航空港区智算中心项目三标段以联合体牵头人身份中标。
+              </div>
+              <table class="data-table mt-4">
+                <thead><tr><th>项目</th><th>详情</th></tr></thead>
+                <tbody>
+                  <tr><td>联合体牵头人</td><td>河南智云数据信息技术股份有限公司</td></tr>
+                  <tr><td>联合体成员</td><td>上海嘉唐信息科技有限公司</td></tr>
+                  <tr><td>建设费投标报价</td><td><strong class="text-purple">412,879,337.00元</strong></td></tr>
+                  <tr><td>运营费投标总报价</td><td>120%</td></tr>
+                  <tr><td>工期</td><td>90日历天</td></tr>
+                  <tr><td>质保期</td><td>60个月免费质保</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon green"><i data-lucide="award" style="width:22px;height:22px"></i></div>
+              <div class="card-title">一标段（联合体成员）</div>
+              <div class="card-desc">
+                郑州航空港区智算中心项目一标段以联合体成员身份中标。
+              </div>
+              <table class="data-table mt-4">
+                <thead><tr><th>项目</th><th>详情</th></tr></thead>
+                <tbody>
+                  <tr><td>联合体牵头人</td><td>北京直真科技股份有限公司</td></tr>
+                  <tr><td>联合体成员</td><td>河南智云数据信息技术股份有限公司</td></tr>
+                  <tr><td>建设费投标报价</td><td><strong class="text-green">901,860,961.00元</strong></td></tr>
+                  <tr><td>运营费投标总报价</td><td>120%</td></tr>
+                  <tr><td>工期</td><td>90日历天</td></tr>
+                  <tr><td>质保期</td><td>60个月免费质保</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 三、算力租赁 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="cloud"></i>三、算力租赁
+          </h3>
+          <p class="detail-text">
+            通过提供弹性可扩展的GPU算力资源，帮助企业以<strong>"按需租用、灵活付费"</strong>模式替代传统硬件自购，显著降低算力使用门槛与综合成本。业务覆盖AI大模型训练、企业级推理、高性能计算等场景，支持秒级资源开通、动态扩缩容及全托管运维。
+          </p>
+
+          <div class="grid-3 mt-4">
+            <div class="card" style="cursor:default">
+              <div class="card-icon blue"><i data-lucide="box" style="width:22px;height:22px"></i></div>
+              <div class="card-title">裸金属租赁</div>
+              <div class="card-desc">用户独享物理服务器资源，无虚拟化层开销，提供100%原始算力，具备强隔离性和安全性。</div>
+              <div class="card-meta mt-2"><span>适用于金融、政府等高合规领域及高性能计算任务</span></div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon purple"><i data-lucide="database" style="width:22px;height:22px"></i></div>
+              <div class="card-title">集群租赁</div>
+              <div class="card-desc">以整台服务器或固定集群为单位出租，用户独占资源，适合中大型企业稳定需求。</div>
+              <div class="card-meta mt-2"><span>大模型训练与行业专属推理及买断式合作</span></div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon green"><i data-lucide="cloud" style="width:22px;height:22px"></i></div>
+              <div class="card-title">云服务平台（规划）</div>
+              <div class="card-desc">虚拟化算力池按需分配，秒级扩缩容，按实际使用量（秒/分钟）计费。</div>
+              <div class="card-meta mt-2"><span>中小型企业轻量化需求及流量波动业务</span></div>
+            </div>
+          </div>
+
+          <!-- 合作模式 -->
+          <div class="card mt-6" style="cursor:default">
+            <div class="card-title">合作模式</div>
+            <div class="grid-4 mt-4">
+              <div>
+                <span class="tag blue">按期租赁</span>
+                <p class="text-xs text-muted mt-2">支持灵活的资源付费模式，可按月租、年租等合作方式</p>
+              </div>
+              <div>
+                <span class="tag purple">集群整租</span>
+                <p class="text-xs text-muted mt-2">适用于需要大规模AI算力资源的客户，提供千卡集群租赁服务</p>
+              </div>
+              <div>
+                <span class="tag green">集群定制</span>
+                <p class="text-xs text-muted mt-2">提供国产和NVIDIA系列GPU产品的整机模组定制、数据中心上架等一站式解决方案</p>
+              </div>
+              <div>
+                <span class="tag teal">合作共建</span>
+                <p class="text-xs text-muted mt-2">共同建设和管理AI算力基础设施，共享资源共担风险</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 四、GPU生态 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="hard-drive"></i>四、GPU生态
+          </h3>
+          <p class="detail-text">
+            智云数据股份合资公司——<strong>瀚海智芯半导体</strong>，依托研发、产线和稳定的供应链能力等优势，帮助客户打造国产化智算服务器生产基地，赋能品牌建设。
+          </p>
+
+          <div class="grid-3 mt-4 mb-6">
+            <div class="metric-card">
+              <div class="metric-label">芯片</div>
+              <div class="metric-value" style="font-size:1.25rem">稳定供应链</div>
+              <div class="metric-sub">高性能GPU芯片及模组</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">模组</div>
+              <div class="metric-value" style="font-size:1.25rem">全线产品</div>
+              <div class="metric-sub">高性能GPU产品维保能力</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">服务器</div>
+              <div class="metric-value" style="font-size:1.25rem">国产芯片</div>
+              <div class="metric-sub">服务器制造和运维能力</div>
+            </div>
+          </div>
+
+          <div class="card mb-6" style="cursor:default">
+            <div class="card-icon green"><i data-lucide="trending-up" style="width:22px;height:22px"></i></div>
+            <div class="card-title">项目业绩</div>
+            <div class="card-desc">
+              智云数据已联合合作伙伴完成<strong class="text-green">70亿规模</strong>的合约签订和近<strong class="text-yellow">40亿</strong>的订单交付，服务国内多个大厂和大型服务器制造企业。
+            </div>
+          </div>
+
+          <div class="card" style="cursor:default">
+            <div class="card-icon purple"><i data-lucide="map-pin" style="width:22px;height:22px"></i></div>
+            <div class="card-title">案例：瀚海智芯GPU服务器项目落户杭州萧山经开区</div>
+            <div class="card-desc">
+              2025年4月2日，杭州萧山经开区国控集团党委书记、董事长江峰与瀚海智芯总经理朱俊代表双方签订"GPU服务器项目"合作仪式。致力于芯片设计、封装、测试以及GPU服务器的组装、生产领域。
+              <br><br>
+              瀚海智芯通过全球化资源整合与产业链重构，创新<strong>"技术协同+整机引进"</strong>模式，成功打造出完全自主可控的GPU服务器供应体系。同时以<strong>"超融合算力架构"</strong>为核心竞争力，推出AI超级服务器和异构融合算力平台两大革命性产品。
+            </div>
+            <div class="grid-3 mt-4">
+              <div class="metric-card">
+                <div class="metric-label">首年营收</div>
+                <div class="metric-value green">50亿+</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">三年复合增长率</div>
+                <div class="metric-value yellow">45%+</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">五年目标</div>
+                <div class="metric-value blue">TOP10</div>
+                <div class="metric-sub">全球算力服务商TOP10</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 深圳交付中心 -->
+        <section class="detail-section">
+          <div class="card" style="cursor:default; border-color:var(--accent-blue)">
+            <div class="card-icon blue"><i data-lucide="package" style="width:22px;height:22px"></i></div>
+            <div class="card-title">深圳交付中心</div>
+            <div class="card-desc">
+              <strong>"深圳交付中心"</strong>：全国TOP3头部服务器交付中心之一，拥有<strong>100台B200同步交付能力</strong>，<strong>1万平方米</strong>的交付场地，总计<strong>3000千瓦</strong>的用电负荷，持续输出的稳定电力，支持超百台超算服务器的高强度并发压力测试。
+            </div>
+            <div class="mt-4">
+              <ul class="styled-list">
+                <li>具备原厂级技术难题解决能力</li>
+                <li>自动化交付系统有效提升交付效率</li>
+                <li>深度融合工业互联网、工业大模型等新型技术</li>
+                <li>打造<strong>"算力+算法+场景"</strong>的一体化解决方案</li>
+              </ul>
+            </div>
+            <div class="mt-4 text-sm text-muted">
+              智云数据股份与深圳新爱算公司深度合作，共同打造深圳交付中心。
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== PART 03 生态合作战略 ==================== -->
+        <section class="detail-section">
+          <h2 class="detail-section-title">
+            <i data-lucide="globe"></i>生态合作战略
+          </h2>
+
+          <div class="grid-4 mb-6">
+            <div class="card" style="cursor:default">
+              <div class="card-icon blue"><i data-lucide="users" style="width:22px;height:22px"></i></div>
+              <div class="card-title">01 建立产业联盟</div>
+              <div class="card-desc">通过建设AI产业联盟，联合上下游企业、科研机构等，构建产业生态共同体。开展技术交流、标准制定、项目合作等活动。</div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon purple"><i data-lucide="handshake" style="width:22px;height:22px"></i></div>
+              <div class="card-title">02 创新合作模式</div>
+              <div class="card-desc">探索联合研发、战略投资、技术授权等多元合作模式，深化合作层次，实现互利共赢。</div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon green"><i data-lucide="map" style="width:22px;height:22px"></i></div>
+              <div class="card-title">03 深耕国内市场</div>
+              <div class="card-desc">加强与国内各行业头部客户合作，拓展市场份额，提升品牌知名度。实现精准营销与差异化竞争。</div>
+            </div>
+            <div class="card" style="cursor:default">
+              <div class="card-icon teal"><i data-lucide="rocket" style="width:22px;height:22px"></i></div>
+              <div class="card-title">04 探索新兴行业</div>
+              <div class="card-desc">关注自动驾驶、元宇宙等新兴行业，提前布局，研发适配产品与解决方案，抢占市场先机。</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 政府支持 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="landmark"></i>政府支持
+          </h3>
+          <div class="card" style="cursor:default">
+            <ul class="styled-list">
+              <li>河南省人大常委会副主任刘南昌 — 座谈指导</li>
+              <li>河南省委、市委政研室调研组领导 — 座谈指导</li>
+              <li>河南省数据局局长郑华卿一行 — 莅临指导座谈</li>
+              <li>郑州市金水区委书记张艳华</li>
+              <li>郑州市金水区副区长、金水科教园区管委会主任李明刚等领导莅临指导交流</li>
+              <li>郑州市发改委领导 — 座谈指导</li>
+              <li>金水区工信局领导 — 座谈指导</li>
+              <li>金水区人大科教文卫领导、区人大代表 — 座谈交流</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 上市公司合作交流 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="building"></i>上市公司合作交流
+          </h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>合作伙伴</th>
+                <th>股票代码</th>
+                <th>合作伙伴</th>
+                <th>股票代码</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>直真科技</td><td><code>003007</code></td><td>奥飞数据</td><td><code>300738</code></td></tr>
+              <tr><td>大唐电信</td><td><code>600198</code></td><td>安博通</td><td><code>688168</code></td></tr>
+              <tr><td>九联科技</td><td><code>688609</code></td><td>新智认知</td><td><code>603869</code></td></tr>
+              <tr><td>协创数据</td><td><code>300857</code></td><td>碧兴物联</td><td><code>688671</code></td></tr>
+              <tr><td>四川长虹</td><td><code>600839</code></td><td>桑达股份</td><td><code>000032</code></td></tr>
+              <tr><td>海尔集团</td><td><code>600690</code></td><td>恒信东方</td><td><code>300081</code></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 商务合作商谈、技术交流 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="message-square"></i>商务合作商谈、技术交流
+          </h3>
+          <div class="card" style="cursor:default">
+            <ul class="styled-list">
+              <li>新疆生产建设兵团第十三师自然资源局领导参观调研智云数据 & 河南空港智算中心</li>
+              <li>甘肃省庆阳市领导参观调研智云数据 & 河南空港智算中心</li>
+              <li>建设银行、国新证券相关领导 — 业务商谈</li>
+              <li>鄂尔多斯市云泰互联科技有限公司 — 业务商谈</li>
+              <li>浙江省宁波工业互联网研究院 — 技术交流</li>
+              <li>上海弘琪云创科技集团有限公司 — 业务商谈</li>
+              <li>北京基流科技有限公司 — 河南汇融基金业务商谈</li>
+              <li>洛阳市智能算力产业中心 — 业务商谈</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 受邀出席各项活动 -->
+        <section class="detail-section">
+          <h3 class="detail-section-title" style="font-size:1rem">
+            <i data-lucide="calendar"></i>受邀出席各项活动
+          </h3>
+          <div class="card" style="cursor:default">
+            <ul class="styled-list">
+              <li>2024豫台经贸洽谈会暨两岸智能装备制造对接活动</li>
+              <li>"河南空港智算中心揭牌暨签约仪式"</li>
+              <li>河南省人工智能产业生态座谈会</li>
+              <li>2024中国算力大会</li>
+              <li>商汤AI芯片公司举办新品牌「曦望Sunrise」发布庆典</li>
+            </ul>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>Intelligent Cloud &copy; 2026 | 河南智云数据信息技术股份有限公司</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
