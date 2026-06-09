@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>芯片自消纳与生态 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
+          <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
+          <a href="0102-process-nodes.html" class="sidebar-item"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
+          <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
+          <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>高速网卡芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0201-nic-overview.html" class="sidebar-item"><i data-lucide="network" style="width:16px;height:16px"></i><span>网卡芯片概览</span></a>
+          <a href="0202-smartnic-dpu.html" class="sidebar-item"><i data-lucide="layers" style="width:16px;height:16px"></i><span>SmartNIC与DPU</span></a>
+          <a href="0203-rdma.html" class="sidebar-item"><i data-lucide="zap" style="width:16px;height:16px"></i><span>RDMA与高速互联</span></a>
+          <a href="0204-ub-huawei.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>UB底座与华为灵衢</span></a>
+          <a href="0205-nic-competition.html" class="sidebar-item"><i data-lucide="bar-chart-2" style="width:16px;height:16px"></i><span>高速网卡竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI推理芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0301-ai-chip-overview.html" class="sidebar-item"><i data-lucide="brain" style="width:16px;height:16px"></i><span>AI芯片概览</span></a>
+          <a href="0302-inference-training.html" class="sidebar-item"><i data-lucide="git-compare" style="width:16px;height:16px"></i><span>推理与训练</span></a>
+          <a href="0303-gpu-architecture.html" class="sidebar-item"><i data-lucide="monitor" style="width:16px;height:16px"></i><span>GPU架构与算力</span></a>
+          <a href="0304-zhiyun-inference.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>智云推理芯片</span></a>
+          <a href="0305-ai-competition.html" class="sidebar-item"><i data-lucide="swords" style="width:16px;height:16px"></i><span>AI推理芯片竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体产业链</span></div>
+        <ul class="sidebar-items">
+          <a href="0401-design-manufacture-test.html" class="sidebar-item"><i data-lucide="factory" style="width:16px;height:16px"></i><span>设计-制造-封测</span></a>
+          <a href="0402-foundry.html" class="sidebar-item"><i data-lucide="circle" style="width:16px;height:16px"></i><span>晶圆代工</span></a>
+          <a href="0403-packaging-test-industry.html" class="sidebar-item"><i data-lucide="check-circle" style="width:16px;height:16px"></i><span>封测产业</span></a>
+          <a href="0404-domestic-substitution.html" class="sidebar-item"><i data-lucide="flag" style="width:16px;height:16px"></i><span>国产替代与政策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>智云数科业务上下文</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0501-business-landscape.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>智云芯片业务版图</span></a>
+          <a href="0502-acquisition-target.html" class="sidebar-item"><i data-lucide="arrow-right-circle" style="width:16px;height:16px"></i><span>收购标的与技术迁移</span></a>
+          <a href="0503-self-consumption.html" class="sidebar-item active"><i data-lucide="repeat" style="width:16px;height:16px"></i><span>芯片自消纳与生态</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- 面包屑导航 -->
+        <div class="detail-header">
+          <div class="detail-breadcrumb">
+            <a href="../index.html">首页</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="0501-business-landscape.html">智云数科业务上下文</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>芯片自消纳与生态</span>
+          </div>
+
+          <h1 class="detail-title">芯片自消纳与生态</h1>
+          <div class="detail-tags">
+            <span class="tag purple"><i data-lucide="repeat" style="width:12px;height:12px"></i> 智云数科业务上下文</span>
+            <span class="tag red"><i data-lucide="alert-circle" style="width:12px;height:12px"></i> 核心（项目专用）</span>
+          </div>
+        </div>
+
+        <!-- 术语定义 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
+          <p class="detail-text">自消纳（Self-Consumption）：智云数科生产的芯片不完全依赖外部市场销售，而是通过自建/合作的智算中心、大厂合作、国资平台等渠道自行消耗产能。</p>
+        </div>
+
+        <!-- 通俗解释 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
+          <p class="detail-text">自消纳就是"自己做的饭自己先吃"——不指望别人来买，先用自己的场景把芯片跑起来，有了案例和数据再卖给别人。这样即使外部市场暂时打不开，至少不会"饿死"。</p>
+        </div>
+
+        <!-- 关键参数 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>关键参数</h2>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>参数</th>
+                  <th>值</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>智算中心</code></td><td>30-40%消纳</td><td>2万P/50亿+, 7.6亿已到位</td></tr>
+                <tr><td><code>大厂合作</code></td><td>20-30%消纳</td><td>互联网/云厂商深度合作</td></tr>
+                <tr><td><code>国资平台</code></td><td>20-30%消纳</td><td>国企/政府信创采购</td></tr>
+                <tr><td><code>超充站+边缘计算</code></td><td>新消纳场景</td><td>1000个充电站/包, 1:9配资</td></tr>
+                <tr><td><code>液冷一体机</code></td><td>已验证</td><td>深大、港科大、海南大学等中标</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 自消纳四大渠道流程 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="workflow" style="width:20px;height:20px"></i>自消纳四大渠道</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:0.5rem">
+            <!-- 渠道1：智算中心 -->
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(137,180,250,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="server" style="width:18px;height:18px;color:var(--accent-blue)"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;color:var(--text)">智算中心</div>
+                  <div style="font-size:0.8rem;color:var(--accent-blue)">30-40%消纳</div>
+                </div>
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6">
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>2万P算力规模，50亿+投资</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>7.6亿已到位（移动+港区项目）</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>最确定的芯片出货保障</span>
+                </div>
+              </div>
+            </div>
+            <!-- 渠道2：大厂合作 -->
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(166,227,161,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="users" style="width:18px;height:18px;color:var(--accent-green)"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;color:var(--text)">大厂合作</div>
+                  <div style="font-size:0.8rem;color:var(--accent-green)">20-30%消纳</div>
+                </div>
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6">
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>互联网大厂深度合作</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>云厂商联合验证方案</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>大厂背书提升市场信心</span>
+                </div>
+              </div>
+            </div>
+            <!-- 渠道3：国资平台 -->
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(203,166,247,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="landmark" style="width:18px;height:18px;color:var(--accent-purple)"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;color:var(--text)">国资平台</div>
+                  <div style="font-size:0.8rem;color:var(--accent-purple)">20-30%消纳</div>
+                </div>
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6">
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>国企/政府信创采购</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>UB国标适配保障政策订单</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>信创市场2025年超2万亿</span>
+                </div>
+              </div>
+            </div>
+            <!-- 渠道4：超充站+边缘计算 -->
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
+              <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(249,226,175,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="zap" style="width:18px;height:18px;color:var(--accent-yellow)"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;color:var(--text)">超充站+边缘计算</div>
+                  <div style="font-size:0.8rem;color:var(--accent-yellow)">新消纳场景</div>
+                </div>
+              </div>
+              <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.6">
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>1000个充电站/包，1:9配资</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>充电桩内搭建边缘计算节点</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <i data-lucide="check" style="width:12px;height:12px;color:var(--accent-green)"></i>
+                  <span>推理芯片的创新应用场景</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 流程示意 -->
+          <div style="margin-top:1.5rem;padding:1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:12px;text-align:center">
+            <div style="font-size:0.9rem;color:var(--text);font-weight:600;margin-bottom:0.75rem">自消纳流程：从芯片生产到场景落地</div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap">
+              <span style="padding:0.35rem 0.75rem;background:rgba(137,180,250,0.15);border-radius:6px;font-size:0.8rem;color:var(--accent-blue)">芯片产出</span>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+              <span style="padding:0.35rem 0.75rem;background:rgba(166,227,161,0.15);border-radius:6px;font-size:0.8rem;color:var(--accent-green)">自消纳渠道</span>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+              <span style="padding:0.35rem 0.75rem;background:rgba(203,166,247,0.15);border-radius:6px;font-size:0.8rem;color:var(--accent-purple)">场景验证</span>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+              <span style="padding:0.35rem 0.75rem;background:rgba(249,226,175,0.15);border-radius:6px;font-size:0.8rem;color:var(--accent-yellow)">案例积累</span>
+              <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+              <span style="padding:0.35rem 0.75rem;background:rgba(243,139,168,0.15);border-radius:6px;font-size:0.8rem;color:var(--accent-red)">外部市场拓展</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 智云数科关联 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云数科关联</h2>
+          <p class="detail-text">自消纳是智云的"安全网"：即使商业市场开拓不顺，自消纳可保底30-50%的芯片出货。智算中心7.6亿已到位：最确定的自消纳渠道。超充站+边缘计算是推理芯片的新消纳场景。垂类大模型是自消纳的"升级版"：从"卖算力"升级到"卖行业解决方案"。</p>
+        </div>
+
+        <!-- 关联知识节点 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联知识节点</h2>
+          <div class="related-nodes">
+            <a href="0501-business-landscape.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>智云芯片业务版图</a>
+            <a href="0304-zhiyun-inference.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>智云推理芯片</a>
+            <a href="0204-ub-huawei.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>UB底座与华为灵衢</a>
+            <a href="0404-domestic-substitution.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>国产替代与政策</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

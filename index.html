@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智云数科 - 智算芯片解决方案</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="active"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>快速导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="knowledge/index.html" class="sidebar-item"><i data-lucide="book-open" style="width:16px;height:16px"></i><span>专业领域知识库</span></a>
+          <a href="tasks/index.html" class="sidebar-item"><i data-lucide="target" style="width:16px;height:16px"></i><span>核心任务 P1-P4</span></a>
+          <a href="dashboard.html" class="sidebar-item"><i data-lucide="bar-chart-3" style="width:16px;height:16px"></i><span>数据看板</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <section class="hero">
+          <h1 class="hero-title">智云数科<br><span style="color:var(--accent-blue)">智算芯片解决方案</span></h1>
+          <p class="hero-subtitle">双产品线战略：高速网卡芯片（收购获取）+ AI推理芯片（自研孵化），形成"计算+互联"双轮驱动。</p>
+        </section>
+
+        <section class="mb-8">
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-label">首期融资</div>
+              <div class="metric-value blue">2亿 RMB</div>
+              <div class="metric-sub">投后估值20亿，出让10%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">收购总对价</div>
+              <div class="metric-value purple">3亿 USD</div>
+              <div class="metric-sub">全球第五高速网卡公司</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">推理芯片算力</div>
+              <div class="metric-value yellow">1000+ TOPS</div>
+              <div class="metric-sub">7nm制程，对标RTX 4090</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">流片时间</div>
+              <div class="metric-value green">2026年8月</div>
+              <div class="metric-sub">中芯国际7nm代工</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="grid" style="width:20px;height:20px;color:var(--accent-blue)"></i>6大核心业务板块
+          </h2>
+          <div class="grid-3">
+            <div class="card" onclick="location.href='knowledge/0501-business-landscape.html'">
+              <div class="card-icon blue"><i data-lucide="server" style="width:22px;height:22px"></i></div>
+              <div class="card-title">智算中心投建</div>
+              <div class="card-desc">中部最大智算中心，储备及在签项目2万P，预计总规模超50亿元。移动+港区7.6亿已到位。</div>
+              <div class="card-meta"><span><i data-lucide="trending-up" style="width:14px;height:14px"></i>50亿+ 规模</span></div>
+            </div>
+            <div class="card" onclick="location.href='knowledge/0501-business-landscape.html'">
+              <div class="card-icon green"><i data-lucide="brain" style="width:22px;height:22px"></i></div>
+              <div class="card-title">算力+垂类大模型</div>
+              <div class="card-desc">自研垂类行业大模型：住建部法律法规大模型、黄委会水利大模型，算力+算法+行业深度融合。</div>
+              <div class="card-meta"><span><i data-lucide="zap" style="width:14px;height:14px"></i>算力+算法+行业</span></div>
+            </div>
+            <div class="card" onclick="location.href='knowledge/0501-business-landscape.html'">
+              <div class="card-icon purple"><i data-lucide="truck" style="width:22px;height:22px"></i></div>
+              <div class="card-title">高端GPU供应链</div>
+              <div class="card-desc">布局海内外高端GPU全供应链，掌握核心渠道资源，从源头把控芯片供给。</div>
+              <div class="card-meta"><span><i data-lucide="globe" style="width:14px;height:14px"></i>全球渠道</span></div>
+            </div>
+            <div class="card" onclick="location.href='knowledge/0503-self-consumption.html'">
+              <div class="card-icon teal"><i data-lucide="factory" style="width:22px;height:22px"></i></div>
+              <div class="card-title">高端GPU硬件基地</div>
+              <div class="card-desc">深圳建成全国最大高端GPU加改配、压测、交付基地。3条4090/5090产线+板卡级维保维修中心。</div>
+              <div class="card-meta"><span><i data-lucide="cpu" style="width:14px;height:14px"></i>3条产线</span></div>
+            </div>
+            <div class="card" onclick="location.href='knowledge/0201-nic-overview.html'">
+              <div class="card-icon orange"><i data-lucide="trending-up" style="width:22px;height:22px"></i></div>
+              <div class="card-title">芯片及算力应用投资</div>
+              <div class="card-desc">双产品线：高速网卡芯片（收购全球第五）+ AI推理芯片（7nm自研，对标4090），计算+互联双轮驱动。</div>
+              <div class="card-meta"><span><i data-lucide="star" style="width:14px;height:14px"></i>双轮驱动</span></div>
+            </div>
+            <div class="card" onclick="location.href='knowledge/0503-self-consumption.html'">
+              <div class="card-icon red"><i data-lucide="hard-drive" style="width:22px;height:22px"></i></div>
+              <div class="card-title">AI推理液冷专用一体机</div>
+              <div class="card-desc">集成推理芯片与液冷散热的一体化设备，开箱即用。已中标深大、港科大、海南大学等。</div>
+              <div class="card-meta"><span><i data-lucide="check-circle" style="width:14px;height:14px"></i>市场验证通过</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="compass" style="width:20px;height:20px;color:var(--accent-blue)"></i>快速导航
+          </h2>
+          <div class="grid-3">
+            <div class="card" onclick="location.href='knowledge/index.html'" style="border-color:var(--accent-blue)">
+              <div class="card-icon blue"><i data-lucide="book-open" style="width:22px;height:22px"></i></div>
+              <div class="card-title">专业领域知识库</div>
+              <div class="card-desc">22个知识节点，5大分类：半导体基础、高速网卡芯片、AI推理芯片、半导体产业链、业务上下文。</div>
+              <div class="card-meta"><span><i data-lucide="layers" style="width:14px;height:14px"></i>5大分类 / 22个节点</span></div>
+            </div>
+            <div class="card" onclick="location.href='tasks/index.html'" style="border-color:var(--accent-purple)">
+              <div class="card-icon purple"><i data-lucide="target" style="width:22px;height:22px"></i></div>
+              <div class="card-title">核心任务</div>
+              <div class="card-desc">4大优先任务：P1融资结构方案、P2收购交易结构、P3一二级市场联动、P4业务优化管理。</div>
+              <div class="card-meta"><span><i data-lucide="flag" style="width:14px;height:14px"></i>P1 - P4 优先级</span></div>
+            </div>
+            <div class="card" onclick="location.href='dashboard.html'" style="border-color:var(--accent-green)">
+              <div class="card-icon green"><i data-lucide="bar-chart-3" style="width:22px;height:22px"></i></div>
+              <div class="card-title">数据看板</div>
+              <div class="card-desc">市场增长曲线、竞争格局饼图、融资时间线、风险矩阵等关键数据可视化看板。</div>
+              <div class="card-meta"><span><i data-lucide="activity" style="width:14px;height:14px"></i>实时指标</span></div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

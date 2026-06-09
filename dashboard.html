@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据看板 - 智云数科</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="dashboard.html" class="active"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>数据看板</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="#kpi-metrics" class="sidebar-item active"><i data-lucide="gauge" style="width:16px;height:16px"></i><span>核心指标</span></a>
+          <a href="#market-growth" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>市场增长</span></a>
+          <a href="#competitive-landscape" class="sidebar-item"><i data-lucide="pie-chart" style="width:16px;height:16px"></i><span>竞争格局</span></a>
+          <a href="#financing-timeline" class="sidebar-item"><i data-lucide="clock" style="width:16px;height:16px"></i><span>融资时间线</span></a>
+          <a href="#risk-matrix" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>快速链接</span></div>
+        <ul class="sidebar-items">
+          <a href="index.html" class="sidebar-item"><i data-lucide="home" style="width:16px;height:16px"></i><span>首页</span></a>
+          <a href="knowledge/index.html" class="sidebar-item"><i data-lucide="book-open" style="width:16px;height:16px"></i><span>知识库</span></a>
+          <a href="tasks/index.html" class="sidebar-item"><i data-lucide="target" style="width:16px;height:16px"></i><span>核心任务</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+
+        <!-- Page Header -->
+        <section class="hero">
+          <h1 class="hero-title">数据<span style="color:var(--accent-blue)">看板</span></h1>
+          <p class="hero-subtitle">实时指标、市场分析、竞争格局、融资时间线和风险评估，全面展示智云数科芯片投资组合关键数据。
+        </section>
+
+        <!-- KPI Metric Cards -->
+        <section id="kpi-metrics" class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="gauge" style="width:20px;height:20px;color:var(--accent-blue)"></i>核心绩效指标
+          </h2>
+          <div class="grid-6" id="kpi-grid">
+            <!-- KPI cards injected by JS -->
+          </div>
+        </section>
+
+        <!-- 市场增长 Charts -->
+        <section id="market-growth" class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="trending-up" style="width:20px;height:20px;color:var(--accent-green)"></i>市场增长
+          </h2>
+          <div class="grid-2">
+            <div class="chart-container">
+              <div class="chart-title">SmartNIC / DPU 市场增长</div>
+              <div style="height:300px"><canvas id="smartnicChart"></canvas></div>
+            </div>
+            <div class="chart-container">
+              <div class="chart-title">AI Inference Chip 市场增长</div>
+              <div style="height:300px"><canvas id="aiInferenceChart"></canvas></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 竞争格局 -->
+        <section id="competitive-landscape" class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="pie-chart" style="width:20px;height:20px;color:var(--accent-purple)"></i>竞争格局
+          </h2>
+          <div class="grid-2">
+            <div class="chart-container">
+              <div class="chart-title">SmartNIC / DPU 竞争格局</div>
+              <div style="height:320px"><canvas id="marketShareChart"></canvas></div>
+            </div>
+            <div class="chart-container">
+              <div class="chart-title">国产AI芯片对比</div>
+              <div style="overflow-x:auto">
+                <table class="data-table" style="margin-top:8px">
+                  <thead>
+                    <tr>
+                      <th>厂商</th>
+                      <th>产品</th>
+                      <th>架构</th>
+                      <th>INT8 TOPS</th>
+                      <th>定位</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="color:var(--accent-blue);font-weight:600">NVIDIA</td>
+                      <td>L4 / L40</td>
+                      <td>GPU (Ada Lovelace)</td>
+                      <td>~1200 / ~1800</td>
+                      <td><span class="tag blue">通用推理标杆</span></td>
+                    </tr>
+                    <tr>
+                      <td style="color:var(--accent-green);font-weight:600">Huawei</td>
+                      <td>Ascend 310P</td>
+                      <td>达芬奇 (NPU)</td>
+                      <td>~640</td>
+                      <td><span class="tag green">信创 + 华为生态</span></td>
+                    </tr>
+                    <tr>
+                      <td style="color:var(--accent-purple);font-weight:600">Cambricon</td>
+                      <td>Siyuan 370</td>
+                      <td>MLU (ASIC)</td>
+                      <td>~256</td>
+                      <td><span class="tag purple">国产推理</span></td>
+                    </tr>
+                    <tr>
+                      <td style="color:var(--accent-yellow);font-weight:600">Zhiyun</td>
+                      <td>自研</td>
+                      <td>类GPU (7nm)</td>
+                      <td>1000+ (目标)</td>
+                      <td><span class="tag yellow">垂直场景推理</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 融资时间线 -->
+        <section id="financing-timeline" class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="clock" style="width:20px;height:20px;color:var(--accent-yellow)"></i>融资时间线
+          </h2>
+          <div class="chart-container">
+            <div class="chart-title">P1 融资与收购时间线</div>
+            <div style="height:240px"><canvas id="financingChart"></canvas></div>
+          </div>
+        </section>
+
+        <!-- 风险矩阵 -->
+        <section id="risk-matrix" class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="alert-triangle" style="width:20px;height:20px;color:var(--accent-red)"></i>风险矩阵
+          </h2>
+          <div class="chart-container" style="padding:0;overflow:hidden">
+            <div style="padding:16px 20px 0"><div class="chart-title" style="margin-bottom:0">关键风险评估</div></div>
+            <div style="overflow-x:auto;padding:0 4px 4px">
+              <table class="data-table" id="risk-table">
+                <thead>
+                  <tr>
+                    <th style="width:30%">风险</th>
+                    <th style="width:12%">严重度</th>
+                    <th style="width:12%">概率</th>
+                    <th style="width:30%">影响</th>
+                    <th style="width:16%">等级</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows injected by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/charts.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    /* --- KPI Cards --- */
+    const kpiGrid = document.getElementById('kpi-grid');
+    if (kpiGrid && SITE_DATA && SITE_DATA.dashboardMetrics && SITE_DATA.dashboardMetrics.kpiCards) {
+      SITE_DATA.dashboardMetrics.kpiCards.forEach(kpi => {
+        const card = document.createElement('div');
+        card.className = 'metric-card';
+        card.innerHTML = `
+          <div class="metric-label">${kpi.label}</div>
+          <div class="metric-value ${kpi.color}">${kpi.value} ${kpi.unit}</div>
+          ${kpi.sub ? `<div class="metric-sub">${kpi.sub}</div>` : ''}
+        `;
+        kpiGrid.appendChild(card);
+      });
+    }
+
+    /* --- 市场增长 Charts --- */
+    if (SITE_DATA && SITE_DATA.dashboardMetrics) {
+      createMarketGrowthChart('smartnicChart', SITE_DATA.dashboardMetrics.smartnicMarket);
+      createMarketGrowthChart('aiInferenceChart', SITE_DATA.dashboardMetrics.aiInferenceMarket);
+    }
+
+    /* --- 竞争格局 Doughnut --- */
+    if (SITE_DATA && SITE_DATA.dashboardMetrics && SITE_DATA.dashboardMetrics.marketShare) {
+      const ms = SITE_DATA.dashboardMetrics.marketShare;
+      createMarketShareChart('marketShareChart', ms.labels, ms.data, ms.colors);
+    }
+
+    /* --- 融资时间线 --- */
+    if (SITE_DATA && SITE_DATA.tasks && SITE_DATA.tasks['P1'] && SITE_DATA.tasks['P1'].chartConfig) {
+      createFinancingTimelineChart('financingChart', SITE_DATA.tasks['P1'].chartConfig.data);
+    }
+
+    /* --- 风险矩阵 Table --- */
+    const riskBody = document.querySelector('#risk-table tbody');
+    if (riskBody && SITE_DATA && SITE_DATA.dashboardMetrics && SITE_DATA.dashboardMetrics.riskMatrix) {
+      SITE_DATA.dashboardMetrics.riskMatrix.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="font-weight:500">${r.risk}</td>
+          <td><span class="tag ${r.color}">${r.severity}</span></td>
+          <td>${r.probability}</td>
+          <td style="color:var(--text-secondary)">${r.impact}</td>
+          <td><span class="priority-badge ${r.color === 'red' ? 'p1' : r.color === 'yellow' ? 'p2' : r.color === 'orange' ? 'p3' : 'p4'}">${r.severity}</span></td>
+        `;
+        riskBody.appendChild(tr);
+      });
+    }
+
+    /* --- Sidebar smooth scroll --- */
+    document.querySelectorAll('.sidebar-item[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Update active state
+        document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    /* --- Scroll spy for sidebar --- */
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.sidebar-item[href^="#"]').forEach(i => i.classList.remove('active'));
+          const activeLink = document.querySelector(`.sidebar-item[href="#${entry.target.id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => observer.observe(s));
+  });
+  </script>
+</body>
+</html>

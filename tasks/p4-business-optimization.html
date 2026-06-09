@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>业务优化管理意见 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 高速网卡团队融资结构方案</span></a>
+          <a href="p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 上市公司收购交易结构</span></a>
+          <a href="p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 一二级市场联动资本运作</span></a>
+          <a href="p4-business-optimization.html" class="sidebar-item active"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 业务优化管理意见</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">P4 业务优化管理意见</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title" id="taskTitle">P4: 业务优化管理意见</h1>
+          <div class="detail-tags">
+            <span class="priority-badge p4">P4</span>
+            <span class="status-badge pending">待启动</span>
+            <span class="tag green"><i data-lucide="settings" style="width:12px;height:12px"></i>业务优化</span>
+            <span class="tag teal"><i data-lucide="zap" style="width:12px;height:12px"></i>经营策略</span>
+          </div>
+        </div>
+
+        <!-- Background -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="file-text" style="width:20px;height:20px"></i>背景</h2>
+          <div class="detail-text" id="taskBackground"></div>
+        </section>
+
+        <!-- Core Demands -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="target" style="width:20px;height:20px"></i>核心诉求</h2>
+          <ul class="styled-list" id="coreDemands"></ul>
+        </section>
+
+        <!-- Key Questions -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="help-circle" style="width:20px;height:20px"></i>关键问题</h2>
+          <ul class="styled-list" id="keyQuestions"></ul>
+        </section>
+
+        <!-- Priority Matrix - 6大业务板块卡片网格 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="grid" style="width:20px;height:20px"></i>6大业务板块优先级矩阵</h2>
+          <div class="diagram-container">
+            <div class="grid-2" style="gap:16px">
+              <!-- 板块1: 智算中心投建 -->
+              <div class="metric-card" style="border-left:3px solid var(--accent-blue)">
+                <div class="metric-label" style="color:var(--accent-blue)">智算中心投建</div>
+                <div class="metric-value blue">最高优先</div>
+                <div class="metric-sub">2万P / 50亿+ / 7.6亿已到位</div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">当前状态：确定性收入，已到位资金</div>
+              </div>
+              <!-- 板块2: 芯片及算力投资 -->
+              <div class="metric-card" style="border-left:3px solid var(--accent-red)">
+                <div class="metric-label" style="color:var(--accent-red)">芯片及算力投资</div>
+                <div class="metric-value" style="color:var(--accent-red)">最高优先</div>
+                <div class="metric-sub">双产品线 / 核心估值驱动</div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">当前状态：核心估值驱动，融资关键</div>
+              </div>
+              <!-- 板块3: 高端GPU供应链 -->
+              <div class="metric-card" style="border-left:3px solid var(--accent-green)">
+                <div class="metric-label" style="color:var(--accent-green)">高端GPU供应链</div>
+                <div class="metric-value green">高优先</div>
+                <div class="metric-sub">核心渠道 / 3亿目标</div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">当前状态：核心渠道，2026年3亿目标</div>
+              </div>
+              <!-- 板块4: GPU硬件基地 -->
+              <div class="metric-card" style="border-left:3px solid var(--accent-teal)">
+                <div class="metric-label" style="color:var(--accent-teal)">GPU硬件基地</div>
+                <div class="metric-value teal">中优先</div>
+                <div class="metric-sub">3条产线 / 深圳基地</div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">当前状态：产线建设，支撑供应链</div>
+              </div>
+              <!-- 板块5: 算力+垂类大模型 -->
+              <div class="metric-card" style="border-left:3px solid var(--accent-purple)">
+                <div class="metric-label" style="color:var(--accent-purple)">算力+垂类大模型</div>
+                <div class="metric-value purple">中优先</div>
+                <div class="metric-sub">住建+水利 / 长期价值</div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">当前状态：长期价值，垂类场景拓展</div>
+              </div>
+              <!-- 板块6: 液冷一体机 -->
+              <div class="metric-card" style="border-left:3px solid var(--accent-yellow)">
+                <div class="metric-label" style="color:var(--accent-yellow)">液冷一体机</div>
+                <div class="metric-value yellow">低优先</div>
+                <div class="metric-sub">多校中标 / 已验证</div>
+                <div style="margin-top:8px;font-size:0.75rem;color:var(--text-muted)">当前状态：已验证，推理芯片先行</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dependencies -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>依赖关系</h2>
+          <div id="dependencies"></div>
+        </section>
+
+        <!-- Agents -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="users" style="width:20px;height:20px"></i>涉及专业Agent</h2>
+          <div class="related-nodes" id="agents"></div>
+        </section>
+
+        <!-- Deliverables -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="package" style="width:20px;height:20px"></i>交付物</h2>
+          <ul class="styled-list" id="deliverables"></ul>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof SITE_DATA === 'undefined') return;
+      const task = SITE_DATA.tasks['P4'];
+
+      // Background
+      document.getElementById('taskBackground').textContent = task.background;
+
+      // Core Demands
+      const demandsList = document.getElementById('coreDemands');
+      task.coreDemands.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        demandsList.appendChild(li);
+      });
+
+      // Key Questions
+      const questionsList = document.getElementById('keyQuestions');
+      task.keyQuestions.forEach(q => {
+        const li = document.createElement('li');
+        li.textContent = q;
+        questionsList.appendChild(li);
+      });
+
+      // Dependencies
+      const depsContainer = document.getElementById('dependencies');
+      task.dependencies.forEach(dep => {
+        const target = SITE_DATA.tasks[dep.target];
+        const depEl = document.createElement('a');
+        depEl.href = target.href;
+        depEl.className = 'related-node';
+        depEl.style.marginBottom = '8px';
+        const isBidirectional = dep.type === 'bidirectional';
+        depEl.innerHTML = `
+          <i data-lucide="${isBidirectional ? 'arrow-left-right' : 'arrow-right'}" style="width:14px;height:14px;color:var(--accent-${dep.target === 'P1' ? 'blue' : 'yellow'})"></i>
+          <span><strong>${dep.target}</strong>: ${target.title}</span>
+          <span class="tag ${isBidirectional ? 'red' : 'blue'}" style="margin-left:8px">${isBidirectional ? '双向依赖' : '单向依赖'}</span>
+        `;
+        depsContainer.appendChild(depEl);
+        const desc = document.createElement('div');
+        desc.style.cssText = 'font-size:0.8125rem;color:var(--text-muted);margin-bottom:12px;margin-left:22px';
+        desc.textContent = dep.desc;
+        depsContainer.appendChild(desc);
+      });
+
+      // Agents
+      const agentsContainer = document.getElementById('agents');
+      task.agents.forEach(agent => {
+        const el = document.createElement('span');
+        el.className = 'tag green';
+        el.style.cursor = 'default';
+        el.textContent = agent.replace(/_/g, ' ');
+        agentsContainer.appendChild(el);
+      });
+
+      // Deliverables
+      const deliverablesList = document.getElementById('deliverables');
+      task.deliverables.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        deliverablesList.appendChild(li);
+      });
+
+      // Re-init icons for dynamically added elements
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

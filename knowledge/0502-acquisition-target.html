@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>收购标的与技术迁移 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
+          <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
+          <a href="0102-process-nodes.html" class="sidebar-item"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
+          <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
+          <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>高速网卡芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0201-nic-overview.html" class="sidebar-item"><i data-lucide="network" style="width:16px;height:16px"></i><span>网卡芯片概览</span></a>
+          <a href="0202-smartnic-dpu.html" class="sidebar-item"><i data-lucide="layers" style="width:16px;height:16px"></i><span>SmartNIC与DPU</span></a>
+          <a href="0203-rdma.html" class="sidebar-item"><i data-lucide="zap" style="width:16px;height:16px"></i><span>RDMA与高速互联</span></a>
+          <a href="0204-ub-huawei.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>UB底座与华为灵衢</span></a>
+          <a href="0205-nic-competition.html" class="sidebar-item"><i data-lucide="bar-chart-2" style="width:16px;height:16px"></i><span>高速网卡竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI推理芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0301-ai-chip-overview.html" class="sidebar-item"><i data-lucide="brain" style="width:16px;height:16px"></i><span>AI芯片概览</span></a>
+          <a href="0302-inference-training.html" class="sidebar-item"><i data-lucide="git-compare" style="width:16px;height:16px"></i><span>推理与训练</span></a>
+          <a href="0303-gpu-architecture.html" class="sidebar-item"><i data-lucide="monitor" style="width:16px;height:16px"></i><span>GPU架构与算力</span></a>
+          <a href="0304-zhiyun-inference.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>智云推理芯片</span></a>
+          <a href="0305-ai-competition.html" class="sidebar-item"><i data-lucide="swords" style="width:16px;height:16px"></i><span>AI推理芯片竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体产业链</span></div>
+        <ul class="sidebar-items">
+          <a href="0401-design-manufacture-test.html" class="sidebar-item"><i data-lucide="factory" style="width:16px;height:16px"></i><span>设计-制造-封测</span></a>
+          <a href="0402-foundry.html" class="sidebar-item"><i data-lucide="circle" style="width:16px;height:16px"></i><span>晶圆代工</span></a>
+          <a href="0403-packaging-test-industry.html" class="sidebar-item"><i data-lucide="check-circle" style="width:16px;height:16px"></i><span>封测产业</span></a>
+          <a href="0404-domestic-substitution.html" class="sidebar-item"><i data-lucide="flag" style="width:16px;height:16px"></i><span>国产替代与政策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>智云数科业务上下文</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0501-business-landscape.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>智云芯片业务版图</span></a>
+          <a href="0502-acquisition-target.html" class="sidebar-item active"><i data-lucide="arrow-right-circle" style="width:16px;height:16px"></i><span>收购标的与技术迁移</span></a>
+          <a href="0503-self-consumption.html" class="sidebar-item"><i data-lucide="repeat" style="width:16px;height:16px"></i><span>芯片自消纳与生态</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- 面包屑导航 -->
+        <div class="detail-header">
+          <div class="detail-breadcrumb">
+            <a href="../index.html">首页</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="0501-business-landscape.html">智云数科业务上下文</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>收购标的与技术迁移</span>
+          </div>
+
+          <h1 class="detail-title">收购标的与技术迁移</h1>
+          <div class="detail-tags">
+            <span class="tag purple"><i data-lucide="arrow-right-circle" style="width:12px;height:12px"></i> 智云数科业务上下文</span>
+            <span class="tag red"><i data-lucide="alert-circle" style="width:12px;height:12px"></i> 核心（项目专用）</span>
+          </div>
+        </div>
+
+        <!-- 术语定义 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
+          <p class="detail-text">IP迁移（IP Migration）：将标的公司（被收购方）的知识产权、设计工具和核心人才从原属地转移到智云数科体系内的过程。</p>
+        </div>
+
+        <!-- 通俗解释 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
+          <p class="detail-text">IP迁移就像"搬公司"——不光搬设备（IP核），还要搬工具（EDA授权），最重要的是搬人（核心工程师）。智云不是买个空壳，而是要把人家的技术"灵魂"完整搬回国内。</p>
+        </div>
+
+        <!-- 关键参数 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>关键参数</h2>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>参数</th>
+                  <th>值</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>总对价</code></td><td>3亿美金（一年内）</td><td>超期降至2亿美金</td></tr>
+                <tr><td><code>首期支付</code></td><td>600万美金</td><td>启动迁移</td></tr>
+                <tr><td><code>迁移分期</code></td><td>10-12期</td><td>分批迁移</td></tr>
+                <tr><td><code>Step 1</code></td><td>授权</td><td>先租用，试试好不好用</td></tr>
+                <tr><td><code>Step 2</code></td><td>买断</td><td>好用就买下来</td></tr>
+                <tr><td><code>Step 3</code></td><td>人才转移</td><td>核心工程师转移到国内</td></tr>
+                <tr><td><code>Step 4</code></td><td>国内重新注册</td><td>在国内重新办产权证</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- IP迁移四步流程 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-merge" style="width:20px;height:20px"></i>IP迁移四步流程</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:0.5rem">
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(137,180,250,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem">
+                <span style="font-weight:700;color:var(--accent-blue)">1</span>
+              </div>
+              <div style="font-weight:600;color:var(--text);margin-bottom:0.25rem">授权</div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">先租用IP，验证技术可行性</div>
+            </div>
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(166,227,161,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem">
+                <span style="font-weight:700;color:var(--accent-green)">2</span>
+              </div>
+              <div style="font-weight:600;color:var(--text);margin-bottom:0.25rem">买断</div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">验证通过后买断IP所有权</div>
+            </div>
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(203,166,247,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem">
+                <span style="font-weight:700;color:var(--accent-purple)">3</span>
+              </div>
+              <div style="font-weight:600;color:var(--text);margin-bottom:0.25rem">人才转移</div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">核心工程师转移到国内团队</div>
+            </div>
+            <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(249,226,175,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem">
+                <span style="font-weight:700;color:var(--accent-yellow)">4</span>
+              </div>
+              <div style="font-weight:600;color:var(--text);margin-bottom:0.25rem">国内重新注册</div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">在国内重新注册知识产权</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 智云数科关联 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云数科关联</h2>
+          <p class="detail-text">IP迁移完成度是P1估值的关键变量：迁移越完整，智云芯片资产估值越高。3亿vs2亿对价机制：需要在对赌协议中精确设计。EDA迁移是最脆弱环节：美国三大EDA均受限。人才是真正的核心资产：IP可以买，但会设计IP的人才是不可替代的。</p>
+        </div>
+
+        <!-- 关联知识节点 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联知识节点</h2>
+          <div class="related-nodes">
+            <a href="0501-business-landscape.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>智云芯片业务版图</a>
+            <a href="0104-eda-ip.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>EDA与IP</a>
+            <a href="0201-nic-overview.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>网卡芯片概览</a>
+            <a href="0202-smartnic-dpu.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>SmartNIC与DPU</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

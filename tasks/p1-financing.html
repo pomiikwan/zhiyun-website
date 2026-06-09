@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P1 - 高速网卡团队融资结构方案 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="p1-financing.html" class="sidebar-item active"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">P1 融资结构</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title" id="taskTitle">P1: 高速网卡团队融资结构方案</h1>
+          <div class="detail-tags">
+            <span class="priority-badge p1">P1</span>
+            <span class="status-badge pending">待启动</span>
+            <span class="tag red"><i data-lucide="banknote" style="width:12px;height:12px"></i>融资</span>
+            <span class="tag purple"><i data-lucide="network" style="width:12px;height:12px"></i>网卡收购</span>
+          </div>
+        </div>
+
+        <!-- 背景 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="file-text" style="width:20px;height:20px"></i>背景</h2>
+          <div class="detail-text" id="task背景"></div>
+        </section>
+
+        <!-- 核心诉求 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="target" style="width:20px;height:20px"></i>核心诉求</h2>
+          <ul class="styled-list" id="coreDemands"></ul>
+        </section>
+
+        <!-- 关键问题 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="help-circle" style="width:20px;height:20px"></i>关键问题</h2>
+          <ul class="styled-list" id="keyQuestions"></ul>
+        </section>
+
+        <!-- 融资时间线 Chart -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="bar-chart-3" style="width:20px;height:20px"></i>融资 Timeline</h2>
+          <div class="chart-container">
+            <div class="chart-title">融资节奏时间线</div>
+            <div style="height:260px;position:relative">
+              <canvas id="financingChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- SPV股权结构 Description -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="share-2" style="width:20px;height:20px"></i>SPV股权结构</h2>
+          <div class="detail-text">
+            <p style="margin-bottom:16px">在P2上市公司收购交易结构中，SPV的股权设计直接受P1融资结构影响：</p>
+            <div class="grid-2" style="gap:16px">
+              <div class="metric-card">
+                <div class="metric-label">资金方</div>
+                <div class="metric-value yellow">49%</div>
+                <div class="metric-sub">5亿RMB现金出资</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">智云方</div>
+                <div class="metric-value blue">51%</div>
+                <div class="metric-sub">芯片资产作价入股</div>
+              </div>
+            </div>
+            <p style="margin-top:16px;color:var(--text-muted);font-size:0.8125rem">
+              * 51%与49%的股权对应关系取决于P1中芯片资产的估值。估值越高，智云方需作价的资产越少，反之则需更多资产注入。
+            </p>
+          </div>
+        </section>
+
+        <!-- 依赖关系 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>依赖关系</h2>
+          <div id="dependencies"></div>
+        </section>
+
+        <!-- Agents -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="users" style="width:20px;height:20px"></i>负责Agent</h2>
+          <div class="related-nodes" id="agents"></div>
+        </section>
+
+        <!-- 交付物 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="package" style="width:20px;height:20px"></i>交付物</h2>
+          <ul class="styled-list" id="deliverables"></ul>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/charts.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof SITE_DATA === 'undefined') return;
+      const task = SITE_DATA.tasks['P1'];
+
+      // 背景
+      document.getElementById('task背景').textContent = task.background;
+
+      // 核心诉求
+      const demandsList = document.getElementById('coreDemands');
+      task.coreDemands.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        demandsList.appendChild(li);
+      });
+
+      // 关键问题
+      const questionsList = document.getElementById('keyQuestions');
+      task.keyQuestions.forEach(q => {
+        const li = document.createElement('li');
+        li.textContent = q;
+        questionsList.appendChild(li);
+      });
+
+      // 依赖关系
+      const depsContainer = document.getElementById('dependencies');
+      task.dependencies.forEach(dep => {
+        const target = SITE_DATA.tasks[dep.target];
+        const depEl = document.createElement('a');
+        depEl.href = target.href;
+        depEl.className = 'related-node';
+        depEl.style.marginBottom = '8px';
+        depEl.innerHTML = `
+          <i data-lucide="${dep.type === 'bidirectional' ? 'arrow-left-right' : 'arrow-right'}" style="width:14px;height:14px;color:var(--accent-${dep.target === 'P2' ? 'yellow' : 'blue'})"></i>
+          <span><strong>${dep.target}</strong>: ${target.title}</span>
+          <span class="tag ${dep.type === 'bidirectional' ? 'red' : 'blue'}" style="margin-left:8px">${dep.type}</span>
+        `;
+        depsContainer.appendChild(depEl);
+        const desc = document.createElement('div');
+        desc.style.cssText = 'font-size:0.8125rem;color:var(--text-muted);margin-bottom:12px;margin-left:22px';
+        desc.textContent = dep.desc;
+        depsContainer.appendChild(desc);
+      });
+
+      // Agents
+      const agentsContainer = document.getElementById('agents');
+      task.agents.forEach(agent => {
+        const el = document.createElement('span');
+        el.className = 'tag blue';
+        el.style.cursor = 'default';
+        el.textContent = agent.replace(/_/g, ' ');
+        agentsContainer.appendChild(el);
+      });
+
+      // 交付物
+      const deliverablesList = document.getElementById('deliverables');
+      task.deliverables.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        deliverablesList.appendChild(li);
+      });
+
+      // Chart
+      if (task.chartConfig && task.chartConfig.data) {
+        createFinancingTimelineChart('financingChart', task.chartConfig.data);
+      }
+
+      // Re-init icons for dynamically added elements
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

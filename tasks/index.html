@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智云数科 - 核心任务</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item active"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>Overview</span></a>
+          <a href="p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <section class="hero">
+          <h1 class="hero-title">核心<span style="color:var(--accent-blue)">任务</span></h1>
+          <p class="hero-subtitle">4项核心任务涵盖融资、收购、资本运作和业务优化。各任务间存在相互依赖关系，需要协调推进。</p>
+        </section>
+
+        <!-- Task Overview Cards -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="target" style="width:20px;height:20px;color:var(--accent-blue)"></i>任务概览
+          </h2>
+          <div class="grid-2" id="taskCards">
+            <!-- P1 -->
+            <div class="card" onclick="location.href='p1-financing.html'">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                <div class="card-icon red"><i data-lucide="banknote" style="width:22px;height:22px"></i></div>
+                <div style="display:flex;gap:6px">
+                  <span class="priority-badge p1">P1</span>
+                  <span class="status-badge pending">待启动</span>
+                </div>
+              </div>
+              <div class="card-title">P1: 高速网卡团队融资结构方案</div>
+              <div class="card-desc">设计3亿美金收购融资方案，首期2亿→二轮10-15亿人民币，引入战略投资方。</div>
+              <div class="card-meta">
+                <span><i data-lucide="dollar-sign" style="width:14px;height:14px"></i>3亿USD收购</span>
+                <span><i data-lucide="coins" style="width:14px;height:14px"></i>2亿首期融资</span>
+              </div>
+            </div>
+
+            <!-- P2 -->
+            <div class="card" onclick="location.href='p2-acquisition.html'">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                <div class="card-icon yellow"><i data-lucide="building" style="width:22px;height:22px"></i></div>
+                <div style="display:flex;gap:6px">
+                  <span class="priority-badge p2">P2</span>
+                  <span class="status-badge pending">待启动</span>
+                </div>
+              </div>
+              <div class="card-title">P2: 上市公司收购交易结构</div>
+              <div class="card-desc">SPV收购汽车零配件上市公司40%股权，实现实际控制，市值约35亿标的。</div>
+              <div class="card-meta">
+                <span><i data-lucide="briefcase" style="width:14px;height:14px"></i>SPV收购40%股权</span>
+                <span><i data-lucide="landmark" style="width:14px;height:14px"></i>35亿市值标的</span>
+              </div>
+            </div>
+
+            <!-- P3 -->
+            <div class="card" onclick="location.href='p3-capital-operation.html'">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                <div class="card-icon blue"><i data-lucide="trending-up" style="width:22px;height:22px"></i></div>
+                <div style="display:flex;gap:6px">
+                  <span class="priority-badge p3">P3</span>
+                  <span class="status-badge pending">待启动</span>
+                </div>
+              </div>
+              <div class="card-title">P3: 一二级市场联动资本运作</div>
+              <div class="card-desc">二级市场为一级市场服务，建仓→资产注入→变现的联动操作框架。</div>
+              <div class="card-meta">
+                <span><i data-lucide="bar-chart-2" style="width:14px;height:14px"></i>100亿资金体量</span>
+                <span><i data-lucide="activity" style="width:14px;height:14px"></i>二级市场建仓</span>
+              </div>
+            </div>
+
+            <!-- P4 -->
+            <div class="card" onclick="location.href='p4-business-optimization.html'">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                <div class="card-icon green"><i data-lucide="settings" style="width:22px;height:22px"></i></div>
+                <div style="display:flex;gap:6px">
+                  <span class="priority-badge p4">P4</span>
+                  <span class="status-badge pending">待启动</span>
+                </div>
+              </div>
+              <div class="card-title">P4: 业务优化管理意见</div>
+              <div class="card-desc">梳理6大业务板块，评估超充站+边缘计算新方向，优化自消纳方案。</div>
+              <div class="card-meta">
+                <span><i data-lucide="grid" style="width:14px;height:14px"></i>6大业务板块优化</span>
+                <span><i data-lucide="zap" style="width:14px;height:14px"></i>超充站+边缘计算</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dependency Graph -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="git-branch" style="width:20px;height:20px;color:var(--accent-purple)"></i>任务依赖关系
+          </h2>
+          <div class="diagram-container">
+            <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:0 auto;display:block">
+              <defs>
+                <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#89b4fa"/>
+                </marker>
+                <marker id="arrowYellow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#f9e2af"/>
+                </marker>
+                <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#f38ba8"/>
+                </marker>
+                <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#a6e3a1"/>
+                </marker>
+              </defs>
+
+              <!-- P1 Node -->
+              <rect x="50" y="30" width="160" height="70" rx="10" fill="#252536" stroke="#f38ba8" stroke-width="2"/>
+              <text x="130" y="58" text-anchor="middle" fill="#f38ba8" font-family="var(--font-mono)" font-size="13" font-weight="700">P1</text>
+              <text x="130" y="80" text-anchor="middle" fill="#cdd6f4" font-family="var(--font-sans)" font-size="12">Financing</text>
+
+              <!-- P2 Node -->
+              <rect x="490" y="30" width="160" height="70" rx="10" fill="#252536" stroke="#f9e2af" stroke-width="2"/>
+              <text x="570" y="58" text-anchor="middle" fill="#f9e2af" font-family="var(--font-mono)" font-size="13" font-weight="700">P2</text>
+              <text x="570" y="80" text-anchor="middle" fill="#cdd6f4" font-family="var(--font-sans)" font-size="12">收购</text>
+
+              <!-- P3 Node -->
+              <rect x="270" y="220" width="160" height="70" rx="10" fill="#252536" stroke="#89b4fa" stroke-width="2"/>
+              <text x="350" y="248" text-anchor="middle" fill="#89b4fa" font-family="var(--font-mono)" font-size="13" font-weight="700">P3</text>
+              <text x="350" y="270" text-anchor="middle" fill="#cdd6f4" font-family="var(--font-sans)" font-size="12">一二级市场联动</text>
+
+              <!-- P4 Node -->
+              <rect x="50" y="220" width="160" height="70" rx="10" fill="#252536" stroke="#a6e3a1" stroke-width="2"/>
+              <text x="130" y="248" text-anchor="middle" fill="#a6e3a1" font-family="var(--font-mono)" font-size="13" font-weight="700">P4</text>
+              <text x="130" y="270" text-anchor="middle" fill="#cdd6f4" font-family="var(--font-sans)" font-size="12">优化</text>
+
+              <!-- P1 <-> P2 Bidirectional -->
+              <line x1="210" y1="55" x2="490" y2="55" stroke="#f38ba8" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowRed)"/>
+              <line x1="490" y1="75" x2="210" y2="75" stroke="#f9e2af" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowYellow)"/>
+              <text x="350" y="50" text-anchor="middle" fill="#6c7086" font-family="var(--font-sans)" font-size="10">双向依赖</text>
+
+              <!-- P1 -> P3 -->
+              <line x1="130" y1="100" x2="310" y2="220" stroke="#89b4fa" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+              <!-- P2 -> P3 -->
+              <line x1="570" y1="100" x2="390" y2="220" stroke="#89b4fa" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+              <!-- P1 -> P4 -->
+              <line x1="130" y1="100" x2="130" y2="220" stroke="#a6e3a1" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+              <!-- P2 -> P4 -->
+              <line x1="490" y1="85" x2="210" y2="240" stroke="#a6e3a1" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowGreen)"/>
+
+              <!-- Legend -->
+              <line x1="490" y1="250" x2="530" y2="250" stroke="#89b4fa" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+              <text x="540" y="254" fill="#6c7086" font-family="var(--font-sans)" font-size="10">单向依赖</text>
+              <line x1="490" y1="270" x2="530" y2="270" stroke="#f38ba8" stroke-width="1.5" stroke-dasharray="6,3"/>
+              <text x="540" y="274" fill="#6c7086" font-family="var(--font-sans)" font-size="10">双向依赖</text>
+            </svg>
+          </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="bar-chart-3" style="width:20px;height:20px;color:var(--accent-teal)"></i>关键指标
+          </h2>
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-label">总融资规模</div>
+              <div class="metric-value blue">21-25B</div>
+              <div class="metric-sub">各轮次累计人民币</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">收购标的</div>
+              <div class="metric-value purple">3B USD</div>
+              <div class="metric-sub">全球第五大网卡公司</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">SPV资本</div>
+              <div class="metric-value yellow">35B</div>
+              <div class="metric-sub">人民币上市公司</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">业务板块</div>
+              <div class="metric-value green">6</div>
+              <div class="metric-sub">核心业务线</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - 页面未找到 | 智云数科</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - var(--navbar-height));
+      text-align: center;
+      padding: 64px 24px;
+    }
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: 8rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+      user-select: none;
+    }
+    .error-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .error-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .error-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: var(--accent-blue);
+      color: var(--bg-primary);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      margin-bottom: 48px;
+    }
+    .error-home-link:hover {
+      background: var(--accent-blue);
+      filter: brightness(1.15);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(137,180,250,0.3);
+      text-decoration: none;
+      color: var(--bg-primary);
+    }
+    .error-home-link svg { width: 18px; height: 18px; }
+    .error-suggested-title {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .error-suggested-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .error-suggested-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+    .error-suggested-link:hover {
+      border-color: var(--border-glow);
+      color: var(--accent-blue);
+      box-shadow: var(--shadow-glow);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+    .error-suggested-link svg { width: 16px; height: 16px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <main class="main-content" style="margin-left:0">
+      <div class="error-page">
+        <div class="error-code">404</div>
+        <h1 class="error-title">页面未找到</h1>
+        <p class="error-desc">您访问的页面可能已被删除、名称已更改或暂时不可用。请检查网址或返回首页。</p>
+        <a href="index.html" class="error-home-link">
+          <i data-lucide="home" style="width:18px;height:18px"></i>
+          返回首页
+        </a>
+        <div class="error-suggested-title">热门页面</div>
+        <div class="error-suggested-links">
+          <a href="knowledge/index.html" class="error-suggested-link">
+            <i data-lucide="book-open" style="width:16px;height:16px"></i>
+            知识库
+          </a>
+          <a href="tasks/index.html" class="error-suggested-link">
+            <i data-lucide="target" style="width:16px;height:16px"></i>
+            核心任务
+          </a>
+          <a href="dashboard.html" class="error-suggested-link">
+            <i data-lucide="bar-chart-3" style="width:16px;height:16px"></i>
+            数据看板
+          </a>
+        </div>
+      </div>
+
+      <footer class="site-footer" style="margin-top:0">
+        <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一二级市场联动资本运作 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 高速网卡团队融资结构方案</span></a>
+          <a href="p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 上市公司收购交易结构</span></a>
+          <a href="p3-capital-operation.html" class="sidebar-item active"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 一二级市场联动资本运作</span></a>
+          <a href="p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 业务优化管理意见</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">P3 一二级市场联动资本运作</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title" id="taskTitle">P3: 一二级市场联动资本运作</h1>
+          <div class="detail-tags">
+            <span class="priority-badge p3">P3</span>
+            <span class="status-badge pending">待启动</span>
+            <span class="tag blue"><i data-lucide="trending-up" style="width:12px;height:12px"></i>资本运作</span>
+            <span class="tag purple"><i data-lucide="bar-chart-2" style="width:12px;height:12px"></i>市场联动</span>
+          </div>
+        </div>
+
+        <!-- Background -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="file-text" style="width:20px;height:20px"></i>背景</h2>
+          <div class="detail-text" id="taskBackground"></div>
+        </section>
+
+        <!-- Core Demands -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="target" style="width:20px;height:20px"></i>核心诉求</h2>
+          <ul class="styled-list" id="coreDemands"></ul>
+        </section>
+
+        <!-- Key Questions -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="help-circle" style="width:20px;height:20px"></i>关键问题</h2>
+          <ul class="styled-list" id="keyQuestions"></ul>
+        </section>
+
+        <!-- 一二级市场联动 Flow SVG Diagram -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="workflow" style="width:20px;height:20px"></i>一二级市场联动流程</h2>
+          <div class="diagram-container">
+            <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;margin:0 auto;display:block">
+              <defs>
+                <marker id="flowArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#89b4fa"/>
+                </marker>
+              </defs>
+
+              <!-- Step 1: 二级市场建仓 -->
+              <rect x="20" y="50" width="160" height="100" rx="12" fill="#252536" stroke="#89b4fa" stroke-width="2"/>
+              <text x="100" y="85" text-anchor="middle" fill="#89b4fa" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">第一步</text>
+              <text x="100" y="110" text-anchor="middle" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="12">二级市场建仓</text>
+              <text x="100" y="132" text-anchor="middle" fill="#6c7086" font-family="Inter, system-ui, sans-serif" font-size="10">上海导师团队操作</text>
+
+              <!-- Arrow 1→2 -->
+              <line x1="180" y1="100" x2="220" y2="100" stroke="#89b4fa" stroke-width="2" marker-end="url(#flowArrow)"/>
+
+              <!-- Step 2: 资产注入方案 -->
+              <rect x="220" y="50" width="160" height="100" rx="12" fill="#252536" stroke="#a6e3a1" stroke-width="2"/>
+              <text x="300" y="85" text-anchor="middle" fill="#a6e3a1" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">第二步</text>
+              <text x="300" y="110" text-anchor="middle" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="12">资产注入方案</text>
+              <text x="300" y="132" text-anchor="middle" fill="#6c7086" font-family="Inter, system-ui, sans-serif" font-size="10">芯片/算力资产装入</text>
+
+              <!-- Arrow 2→3 -->
+              <line x1="380" y1="100" x2="420" y2="100" stroke="#89b4fa" stroke-width="2" marker-end="url(#flowArrow)"/>
+
+              <!-- Step 3: 上市公司联动 -->
+              <rect x="420" y="50" width="160" height="100" rx="12" fill="#252536" stroke="#cba6f7" stroke-width="2"/>
+              <text x="500" y="85" text-anchor="middle" fill="#cba6f7" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">第三步</text>
+              <text x="500" y="110" text-anchor="middle" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="12">上市公司联动</text>
+              <text x="500" y="132" text-anchor="middle" fill="#6c7086" font-family="Inter, system-ui, sans-serif" font-size="10">定增+股价管理</text>
+
+              <!-- Arrow 3→4 -->
+              <line x1="580" y1="100" x2="620" y2="100" stroke="#89b4fa" stroke-width="2" marker-end="url(#flowArrow)"/>
+
+              <!-- Step 4: 资产端变现 -->
+              <rect x="620" y="50" width="160" height="100" rx="12" fill="#252536" stroke="#f9e2af" stroke-width="2"/>
+              <text x="700" y="85" text-anchor="middle" fill="#f9e2af" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">第四步</text>
+              <text x="700" y="110" text-anchor="middle" fill="#cdd6f4" font-family="Inter, system-ui, sans-serif" font-size="12">资产端变现</text>
+              <text x="700" y="132" text-anchor="middle" fill="#6c7086" font-family="Inter, system-ui, sans-serif" font-size="10">增发融资+减持退出</text>
+
+              <!-- Flow label -->
+              <text x="400" y="30" text-anchor="middle" fill="#6c7086" font-family="Inter, system-ui, sans-serif" font-size="11" font-style="italic">二级市场为一级市场服务 — 两线并行操作</text>
+            </svg>
+          </div>
+        </section>
+
+        <!-- Dependencies -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>依赖关系</h2>
+          <div id="dependencies"></div>
+        </section>
+
+        <!-- Agents -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="users" style="width:20px;height:20px"></i>涉及专业Agent</h2>
+          <div class="related-nodes" id="agents"></div>
+        </section>
+
+        <!-- Deliverables -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="package" style="width:20px;height:20px"></i>交付物</h2>
+          <ul class="styled-list" id="deliverables"></ul>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof SITE_DATA === 'undefined') return;
+      const task = SITE_DATA.tasks['P3'];
+
+      // Background
+      document.getElementById('taskBackground').textContent = task.background;
+
+      // Core Demands
+      const demandsList = document.getElementById('coreDemands');
+      task.coreDemands.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        demandsList.appendChild(li);
+      });
+
+      // Key Questions
+      const questionsList = document.getElementById('keyQuestions');
+      task.keyQuestions.forEach(q => {
+        const li = document.createElement('li');
+        li.textContent = q;
+        questionsList.appendChild(li);
+      });
+
+      // Dependencies
+      const depsContainer = document.getElementById('dependencies');
+      task.dependencies.forEach(dep => {
+        const target = SITE_DATA.tasks[dep.target];
+        const depEl = document.createElement('a');
+        depEl.href = target.href;
+        depEl.className = 'related-node';
+        depEl.style.marginBottom = '8px';
+        const isBidirectional = dep.type === 'bidirectional';
+        depEl.innerHTML = `
+          <i data-lucide="${isBidirectional ? 'arrow-left-right' : 'arrow-right'}" style="width:14px;height:14px;color:var(--accent-${dep.target === 'P2' ? 'yellow' : 'blue'})"></i>
+          <span><strong>${dep.target}</strong>: ${target.title}</span>
+          <span class="tag ${isBidirectional ? 'red' : 'blue'}" style="margin-left:8px">${isBidirectional ? '双向依赖' : '单向依赖'}</span>
+        `;
+        depsContainer.appendChild(depEl);
+        const desc = document.createElement('div');
+        desc.style.cssText = 'font-size:0.8125rem;color:var(--text-muted);margin-bottom:12px;margin-left:22px';
+        desc.textContent = dep.desc;
+        depsContainer.appendChild(desc);
+      });
+
+      // Agents
+      const agentsContainer = document.getElementById('agents');
+      task.agents.forEach(agent => {
+        const el = document.createElement('span');
+        el.className = 'tag blue';
+        el.style.cursor = 'default';
+        el.textContent = agent.replace(/_/g, ' ');
+        agentsContainer.appendChild(el);
+      });
+
+      // Deliverables
+      const deliverablesList = document.getElementById('deliverables');
+      task.deliverables.forEach(d => {
+        const li = document.createElement('li');
+        li.textContent = d;
+        deliverablesList.appendChild(li);
+      });
+
+      // Re-init icons for dynamically added elements
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

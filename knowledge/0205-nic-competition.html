@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高速网卡竞争格局 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
+          <a href="0101-chip-classification.html" class="sidebar-item"><span>芯片分类与架构</span></a>
+          <a href="0102-process-nodes.html" class="sidebar-item"><span>制程与工艺节点</span></a>
+          <a href="0103-tape-out.html" class="sidebar-item"><span>流片与量产</span></a>
+          <a href="0104-eda-ip.html" class="sidebar-item"><span>EDA与IP</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><span>封装与测试</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>高速网卡芯片</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0201-nic-overview.html" class="sidebar-item"><span>网卡芯片概览</span></a>
+          <a href="0202-smartnic-dpu.html" class="sidebar-item"><span>SmartNIC与DPU</span></a>
+          <a href="0203-rdma.html" class="sidebar-item"><span>RDMA与高速互联</span></a>
+          <a href="0204-ub-huawei.html" class="sidebar-item"><span>UB底座与华为灵衢</span></a>
+          <a href="0205-nic-competition.html" class="sidebar-item active"><span>高速网卡竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI推理芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0301-ai-chip-overview.html" class="sidebar-item"><span>AI芯片概览</span></a>
+          <a href="0302-inference-training.html" class="sidebar-item"><span>推理与训练</span></a>
+          <a href="0303-gpu-architecture.html" class="sidebar-item"><span>GPU架构与算力</span></a>
+          <a href="0304-zhiyun-inference.html" class="sidebar-item"><span>智云推理芯片</span></a>
+          <a href="0305-ai-competition.html" class="sidebar-item"><span>AI推理芯片竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体产业链</span></div>
+        <ul class="sidebar-items">
+          <a href="0401-design-manufacture-test.html" class="sidebar-item"><span>设计-制造-封测</span></a>
+          <a href="0402-foundry.html" class="sidebar-item"><span>晶圆代工</span></a>
+          <a href="0403-packaging-test-industry.html" class="sidebar-item"><span>封测产业</span></a>
+          <a href="0404-domestic-substitution.html" class="sidebar-item"><span>国产替代与政策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>智云数科业务上下文</span></div>
+        <ul class="sidebar-items">
+          <a href="0501-business-landscape.html" class="sidebar-item"><span>智云芯片业务版图</span></a>
+          <a href="0502-acquisition-target.html" class="sidebar-item"><span>收购标的与技术迁移</span></a>
+          <a href="0503-self-consumption.html" class="sidebar-item"><span>芯片自消纳与生态</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <div class="detail-header">
+          <div class="detail-breadcrumb">
+            <a href="../index.html">首页</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>高速网卡芯片</span>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span style="color:var(--accent-blue)">高速网卡竞争格局</span>
+          </div>
+          <h1 class="detail-title">高速网卡竞争格局</h1>
+          <div class="detail-tags">
+            <span class="tag blue"><i data-lucide="network" style="width:12px;height:12px"></i>02-高速网卡芯片</span>
+            <span class="tag yellow"><i data-lucide="star" style="width:12px;height:12px"></i>重要</span>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
+          <div class="detail-text">
+            <p><strong>高速网卡芯片市场：</strong>全球数据中心网络接口芯片市场，正从传统网卡向SmartNIC/DPU快速演进。</p>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
+          <div class="detail-text">
+            <p>这个市场就像"数据中心快递行业"——以前只要能送快递就行，现在客户要求快递公司还能分拣、打包、检查，所以整个行业在升级换代，机会巨大。</p>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="sliders" style="width:20px;height:20px"></i>关键参数</h2>
+          <table class="data-table">
+            <thead>
+              <tr><th>参数</th><th>值</th><th>说明</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>NVIDIA份额</td><td>~60%</td><td>绝对霸主</td></tr>
+              <tr><td>Broadcom份额</td><td>~20%</td><td>传统强企</td></tr>
+              <tr><td>Intel份额</td><td>~10%</td><td>第二梯队</td></tr>
+              <tr><td>SmartNIC CAGR</td><td>~35%</td><td>2024-2028年</td></tr>
+              <tr><td>DPU CAGR</td><td>~40%</td><td>2024-2028年</td></tr>
+              <tr><td>中国DPU CAGR</td><td>~50%</td><td>2024-2028年</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>与智云的关系</h2>
+          <div class="detail-text">
+            <p>"全球第五"定位：前四为NVIDIA、Broadcom、Intel、AMD/Marvell，收购标的是中国唯一进入全球前五的SmartNIC/DPU公司。差异化竞争策略：不与NVIDIA正面竞争IB市场，聚焦UB信创生态和RoCE国产替代。估值逻辑：全球第五稀缺性 + UB国标唯一适配 + AI算力爆发。</p>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>SmartNIC/DPU市场增长曲线</h2>
+          <div class="chart-container">
+            <div class="chart-title">SmartNIC/DPU市场规模预测（亿美金）</div>
+            <canvas id="nicMarketChart" style="height:360px"></canvas>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联知识节点</h2>
+          <div class="related-nodes">
+            <a href="0202-smartnic-dpu.html" class="related-node"><i data-lucide="layers" style="width:14px;height:14px"></i>SmartNIC与DPU</a>
+            <a href="0204-ub-huawei.html" class="related-node"><i data-lucide="shield" style="width:14px;height:14px"></i>UB底座与华为灵衢</a>
+            <a href="0305-ai-competition.html" class="related-node"><i data-lucide="swords" style="width:14px;height:14px"></i>AI推理芯片竞争格局</a>
+            <a href="0404-domestic-substitution.html" class="related-node"><i data-lucide="flag" style="width:14px;height:14px"></i>国产替代与政策</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/charts.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      createMarketGrowthChart('nicMarketChart', SITE_DATA.knowledgeNodes['0205'].chartConfig.data);
+    });
+  </script>
+</body>
+</html>

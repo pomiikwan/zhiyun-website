@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>制程与工艺节点 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
+          <a href="0102-process-nodes.html" class="sidebar-item active"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
+          <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
+          <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>高速网卡芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0201-nic-overview.html" class="sidebar-item"><i data-lucide="network" style="width:16px;height:16px"></i><span>网卡芯片概览</span></a>
+          <a href="0202-smartnic-dpu.html" class="sidebar-item"><i data-lucide="layers" style="width:16px;height:16px"></i><span>SmartNIC与DPU</span></a>
+          <a href="0203-rdma.html" class="sidebar-item"><i data-lucide="zap" style="width:16px;height:16px"></i><span>RDMA与高速互联</span></a>
+          <a href="0204-ub-huawei.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>UB底座与华为灵衢</span></a>
+          <a href="0205-nic-competition.html" class="sidebar-item"><i data-lucide="bar-chart-2" style="width:16px;height:16px"></i><span>高速网卡竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI推理芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0301-ai-chip-overview.html" class="sidebar-item"><i data-lucide="brain" style="width:16px;height:16px"></i><span>AI芯片概览</span></a>
+          <a href="0302-inference-training.html" class="sidebar-item"><i data-lucide="git-compare" style="width:16px;height:16px"></i><span>推理与训练</span></a>
+          <a href="0303-gpu-architecture.html" class="sidebar-item"><i data-lucide="monitor" style="width:16px;height:16px"></i><span>GPU架构与算力</span></a>
+          <a href="0304-zhiyun-inference.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>智云推理芯片</span></a>
+          <a href="0305-ai-competition.html" class="sidebar-item"><i data-lucide="swords" style="width:16px;height:16px"></i><span>AI推理芯片竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体产业链</span></div>
+        <ul class="sidebar-items">
+          <a href="0401-design-manufacture-test.html" class="sidebar-item"><i data-lucide="factory" style="width:16px;height:16px"></i><span>设计-制造-封测</span></a>
+          <a href="0402-foundry.html" class="sidebar-item"><i data-lucide="circle" style="width:16px;height:16px"></i><span>晶圆代工</span></a>
+          <a href="0403-packaging-test-industry.html" class="sidebar-item"><i data-lucide="check-circle" style="width:16px;height:16px"></i><span>封测产业</span></a>
+          <a href="0404-domestic-substitution.html" class="sidebar-item"><i data-lucide="flag" style="width:16px;height:16px"></i><span>国产替代与政策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>智云数科业务上下文</span></div>
+        <ul class="sidebar-items">
+          <a href="0501-business-landscape.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>智云芯片业务版图</span></a>
+          <a href="0502-acquisition-target.html" class="sidebar-item"><i data-lucide="arrow-right-circle" style="width:16px;height:16px"></i><span>收购标的与技术迁移</span></a>
+          <a href="0503-self-consumption.html" class="sidebar-item"><i data-lucide="repeat" style="width:16px;height:16px"></i><span>芯片自消纳与生态</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-header">
+          <div class="detail-breadcrumb">
+            <a href="../index.html">首页</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="0102-process-nodes.html">半导体基础</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>制程与工艺节点</span>
+          </div>
+
+          <h1 class="detail-title">制程与工艺节点</h1>
+          <div class="detail-tags">
+            <span class="tag blue"><i data-lucide="cpu" style="width:12px;height:12px"></i> 半导体基础</span>
+            <span class="tag red"><i data-lucide="alert-circle" style="width:12px;height:12px"></i> 核心</span>
+          </div>
+        </div>
+
+        <!-- Term Definition -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
+          <p class="detail-text" id="termDefinition"></p>
+        </div>
+
+        <!-- Plain Explanation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
+          <p class="detail-text" id="plainExplanation"></p>
+        </div>
+
+        <!-- Key Parameters -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>关键参数</h2>
+          <div style="overflow-x:auto">
+            <table class="data-table" id="keyParamsTable">
+              <thead>
+                <tr>
+                  <th>参数</th>
+                  <th>值</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody id="keyParamsBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="bar-chart-3" style="width:20px;height:20px"></i>制程演进时间线</h2>
+          <div class="chart-container">
+            <div class="chart-title" id="chartTitle"></div>
+            <canvas id="processChart" style="height:300px"></canvas>
+          </div>
+        </div>
+
+        <!-- Zhiyun Relation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云关联</h2>
+          <p class="detail-text" id="zhiyunRelation"></p>
+        </div>
+
+        <!-- Related Nodes -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联节点</h2>
+          <div class="related-nodes" id="relatedNodes"></div>
+        </div>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="../js/charts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const node = SITE_DATA.knowledgeNodes['0102'];
+      if (!node) return;
+
+      // Term Definition
+      document.getElementById('termDefinition').textContent = node.term;
+
+      // Plain Explanation
+      document.getElementById('plainExplanation').textContent = node.plainExplain;
+
+      // Key Parameters Table
+      const tbody = document.getElementById('keyParamsBody');
+      node.keyParams.forEach(param => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td><code>${param.name}</code></td><td>${param.value}</td><td>${param.desc}</td>`;
+        tbody.appendChild(tr);
+      });
+
+      // Chart
+      if (node.chartConfig) {
+        document.getElementById('chartTitle').textContent = node.chartConfig.title;
+        createProcessTimelineChart('processChart', node.chartConfig.data);
+      }
+
+      // Zhiyun Relation
+      document.getElementById('zhiyunRelation').textContent = node.zhiyunRelation;
+
+      // Related Nodes
+      const relatedContainer = document.getElementById('relatedNodes');
+      const relatedLinks = {
+        '0103': '0103-tape-out.html',
+        '0402': '0402-foundry.html',
+        '0304': '0304-zhiyun-inference.html',
+        '0404': '0404-domestic-substitution.html'
+      };
+      node.related.forEach(relatedId => {
+        const relatedNode = SITE_DATA.knowledgeNodes[relatedId];
+        if (relatedNode) {
+          const a = document.createElement('a');
+          a.href = relatedLinks[relatedId] || relatedNode.href;
+          a.className = 'related-node';
+          a.innerHTML = `<i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>${relatedNode.title}`;
+          relatedContainer.appendChild(a);
+        }
+      });
+
+      // Re-init lucide icons for dynamically added elements
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
