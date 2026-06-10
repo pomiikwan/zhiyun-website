@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P1方案内部决策版 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="p1-internal-decision.html" class="sidebar-item active"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="p1-financing.html">P1融资结构</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">内部决策版</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">P1方案内部决策版</h1>
+          <div class="detail-tags">
+            <span class="tag red"><i data-lucide="shield" style="width:12px;height:12px"></i>风险披露</span>
+            <span class="tag purple"><i data-lucide="check-circle" style="width:12px;height:12px"></i>决策事项</span>
+            <span class="tag blue"><i data-lucide="git-branch" style="width:12px;height:12px"></i>执行路径</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">受众：智云方内部决策层（关总、杨总、核心团队） | 版本：v0.2 | 日期：2026-06-11</p>
+        </div>
+
+        <!-- 核心决策矩阵 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="check-square" style="width:20px;height:20px"></i>核心决策矩阵</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">必须立即决策的事项（阻塞项）</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>决策编号</th>
+                  <th>决策事项</th>
+                  <th>推荐方案</th>
+                  <th>决策人</th>
+                  <th>截止时间</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="tag red">D1</span></td>
+                  <td>SPV股权比例</td>
+                  <td><strong>A→C渐进路径</strong>：先以情形A启动，流片成功后升级至情形C</td>
+                  <td>杨总</td>
+                  <td>T+0前</td>
+                </tr>
+                <tr>
+                  <td><span class="tag red">D6</span></td>
+                  <td>广西授信主体选择</td>
+                  <td><strong>两者并行</strong>，优先产业园区（固投天然契合智算中心）</td>
+                  <td>关总</td>
+                  <td>T+2月前</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">已确定的关键决策</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">D3 SPV注册地</div>
+              <div class="metric-value blue">双SPV结构</div>
+              <div class="metric-sub">境内深圳/郑州 + 境外开曼/BVI</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">D4 QFLP试点地区</div>
+              <div class="metric-value green">海南</div>
+              <div class="metric-sub">外汇便利+税收优惠+审批效率</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">D5 外汇对冲方案</div>
+              <div class="metric-value yellow">方案B</div>
+              <div class="metric-sub">远期+期权组合，成本85bp</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 风险评估 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="alert-triangle" style="width:20px;height:20px"></i>风险评估与缓解措施</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--accent-red)">高风险项（需重点关注）</h3>
+          <div class="risk-cards">
+            <div class="risk-card high">
+              <div class="risk-header">
+                <span class="risk-level">最高风险</span>
+                <span class="risk-title">制裁风险（7nm制程）</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>缓解措施：</strong></p>
+                <ul>
+                  <li>立即聘请出口管制合规律师审查IP迁移方案</li>
+                  <li>在里程碑付款协议中加入制裁免责条款</li>
+                  <li>建立制裁名单日监控机制</li>
+                </ul>
+                <p class="risk-owner">责任方：法务/合规总监</p>
+              </div>
+            </div>
+            <div class="risk-card medium">
+              <div class="risk-header">
+                <span class="risk-level">高风险</span>
+                <span class="risk-title">ODI备案延误</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>缓解措施：</strong></p>
+                <ul>
+                  <li>T+0即启动备案准备</li>
+                  <li>申请前期费用备用金解决首期付款</li>
+                  <li>多通道并行（ODI+QFLP+内保外贷）</li>
+                </ul>
+                <p class="risk-owner">责任方：法务</p>
+              </div>
+            </div>
+            <div class="risk-card medium">
+              <div class="risk-header">
+                <span class="risk-level">高风险</span>
+                <span class="risk-title">DSCR不达标</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>缓解措施：</strong>Y3基准DSCR仅1.00x，压力测试0.71x</p>
+                <ul>
+                  <li>宽限期延长至Y3-Q2</li>
+                  <li>智云数据现金流归集（Cash Sweep）</li>
+                  <li>广西贸易合同加速回款</li>
+                </ul>
+                <p class="risk-owner">责任方：财务</p>
+              </div>
+            </div>
+            <div class="risk-card medium">
+              <div class="risk-header">
+                <span class="risk-level">高风险</span>
+                <span class="risk-title">资金链断裂</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>缓解措施：</strong></p>
+                <ul>
+                  <li>建立资金缺口预警机制</li>
+                  <li>预留10%应急资金</li>
+                  <li>与标的公司协商里程碑付款弹性条款</li>
+                </ul>
+                <p class="risk-owner">责任方：财务</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 资金安全边际分析 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="shield-check" style="width:20px;height:20px"></i>资金安全边际分析</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">资金到位时间表</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>时间</th>
+                  <th>资金来源</th>
+                  <th>金额（USD）</th>
+                  <th>累计到位</th>
+                  <th>里程碑付款需求</th>
+                  <th>缺口/盈余</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>T+0</td>
+                  <td>ODI备用金</td>
+                  <td>600万</td>
+                  <td>600万</td>
+                  <td>600万</td>
+                  <td><span class="status-badge success">0</span></td>
+                </tr>
+                <tr>
+                  <td>T+2月</td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>600万</td>
+                  <td>1800万</td>
+                  <td><span class="status-badge pending">-1200万</span></td>
+                </tr>
+                <tr>
+                  <td>T+3月</td>
+                  <td>ODI首批</td>
+                  <td>8000万</td>
+                  <td>8600万</td>
+                  <td>3300万</td>
+                  <td><span class="status-badge success">+5300万</span></td>
+                </tr>
+                <tr>
+                  <td>T+5月</td>
+                  <td>银团贷款+QFLP</td>
+                  <td>8000万</td>
+                  <td>16600万</td>
+                  <td>7800万</td>
+                  <td><span class="status-badge success">+8800万</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="alert-box warning" style="margin-top:16px">
+            <i data-lucide="alert-circle" style="width:18px;height:18px"></i>
+            <span><strong>关键结论：</strong>T+2月存在1200万USD短期缺口，需通过智云数据短期资金调度或过桥融资解决。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">对冲成本预算</h3>
+          <div class="grid-2" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">远期交易成本</div>
+              <div class="metric-value yellow">400万</div>
+              <div class="metric-sub">CNY | Bid/Offer spread</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">期权权利金</div>
+              <div class="metric-value yellow">907万</div>
+              <div class="metric-sub">CNY | 7000万USD名义本金 x 1.8%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">资金+操作成本</div>
+              <div class="metric-value yellow">450万</div>
+              <div class="metric-sub">CNY | 保证金占用+手续费</div>
+            </div>
+            <div class="metric-card" style="border:2px solid var(--accent-blue)">
+              <div class="metric-label">总对冲成本</div>
+              <div class="metric-value blue">1,757万</div>
+              <div class="metric-sub">CNY | 综合成本约81bp</div>
+            </div>
+          </div>
+          <div class="alert-box info" style="margin-top:16px">
+            <i data-lucide="info" style="width:18px;height:18px"></i>
+            <span><strong>成本效益比：12.3倍</strong>（每支付1元对冲成本，可获得12.3元下行保护）</span>
+          </div>
+        </section>
+
+        <!-- 关键合规检查点 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="file-check" style="width:20px;height:20px"></i>关键合规检查点</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">监管报告矩阵</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>监管机构</th>
+                  <th>报告事项</th>
+                  <th>截止日期</th>
+                  <th>责任人</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SAFE</td>
+                  <td>跨境担保外汇登记（内保外贷）</td>
+                  <td>签约后15天</td>
+                  <td>法务</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+                <tr>
+                  <td>SAFE</td>
+                  <td>ODI备案（发改委+商务部+外汇局）</td>
+                  <td>资金出境前</td>
+                  <td>法务</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+                <tr>
+                  <td>SAFE</td>
+                  <td>QFLP外汇登记</td>
+                  <td>基金设立后T+30~T+35日</td>
+                  <td>GP合规团队</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+                <tr>
+                  <td>AMAC</td>
+                  <td>私募基金管理人登记</td>
+                  <td>基金设立前</td>
+                  <td>GP合规团队</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+                <tr>
+                  <td>税务局</td>
+                  <td>对外支付税务备案（单笔>5万USD）</td>
+                  <td>付款时</td>
+                  <td>财务</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--accent-red)">制裁风险缓释措施（最高优先级）</h3>
+          <div class="alert-box error" style="margin-bottom:16px">
+            <i data-lucide="alert-octagon" style="width:18px;height:18px"></i>
+            <span><strong>立即行动项：</strong></span>
+          </div>
+          <div class="grid-3" style="gap:16px">
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">1. 聘请出口管制合规律师</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">建议：金杜/中伦/君合</p>
+              <ul style="font-size:0.875rem;color:var(--text-secondary);margin-top:8px;padding-left:16px">
+                <li>审查IP迁移方案是否触发EAR管辖</li>
+                <li>确认每项IP的技术等级和来源国</li>
+                <li>出具出口管制合规意见书</li>
+              </ul>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">2. 合同条款设计</div>
+              <ul style="font-size:0.875rem;color:var(--text-secondary);padding-left:16px">
+                <li>在里程碑付款协议中加入"制裁免责条款"</li>
+                <li>如因制裁导致IP迁移无法完成，智云方不承担违约责任</li>
+              </ul>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">3. 持续监控</div>
+              <ul style="font-size:0.875rem;color:var(--text-secondary);padding-left:16px">
+                <li>建立制裁名单日监控机制</li>
+                <li>一旦标的公司或核心成员被列入制裁名单，立即阻断交易</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 执行检查点 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="check-circle-2" style="width:20px;height:20px"></i>执行检查点</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>检查点</th>
+                  <th>时点</th>
+                  <th>检查内容</th>
+                  <th>通过标准</th>
+                  <th>责任方</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="tag blue">CP1</span></td>
+                  <td>T+1月</td>
+                  <td>SPV设立完成、首期付款完成</td>
+                  <td>执照齐全、付款凭证</td>
+                  <td>法务/财务</td>
+                </tr>
+                <tr>
+                  <td><span class="tag blue">CP2</span></td>
+                  <td>T+3月</td>
+                  <td>ODI备案完成、QFLP设立完成</td>
+                  <td>备案通知书、批准文件</td>
+                  <td>法务/基金团队</td>
+                </tr>
+                <tr>
+                  <td><span class="tag blue">CP3</span></td>
+                  <td>T+6月</td>
+                  <td>资金到位>50%、里程碑完成>40%</td>
+                  <td>资金凭证、迁移确认</td>
+                  <td>财务/项目组</td>
+                </tr>
+                <tr>
+                  <td><span class="tag blue">CP4</span></td>
+                  <td>T+9月</td>
+                  <td>资金到位>80%、二轮融资启动</td>
+                  <td>资金凭证、路演报告</td>
+                  <td>财务/杨总</td>
+                </tr>
+                <tr>
+                  <td><span class="tag green">CP5</span></td>
+                  <td>T+12月</td>
+                  <td>全部里程碑完成、资金全覆盖</td>
+                  <td>完成确认书、资金对账</td>
+                  <td>项目组/财务</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 待补充事项 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="clipboard-list" style="width:20px;height:20px"></i>待补充事项（杨总需提供）</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>待补充事项</th>
+                  <th>紧急程度</th>
+                  <th>影响模块</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>S1</td>
+                  <td>标的公司详细信息（团队构成、其他买家、时间压力）</td>
+                  <td><span class="tag red">最高</span></td>
+                  <td>D1估值、D3合规审查</td>
+                </tr>
+                <tr>
+                  <td>S2</td>
+                  <td>IP迁移细节（EDA/IP清单、迁移期数、技术来源国）</td>
+                  <td><span class="tag red">最高</span></td>
+                  <td>制裁风险评估、出口管制审查</td>
+                </tr>
+                <tr>
+                  <td>S3</td>
+                  <td>海外SmartNIC团队核心成员国籍</td>
+                  <td><span class="tag yellow">高</span></td>
+                  <td>制裁筛查、KYC/AML</td>
+                </tr>
+                <tr>
+                  <td>S4</td>
+                  <td>标的公司最终受益人（UBO）穿透信息</td>
+                  <td><span class="tag yellow">高</span></td>
+                  <td>KYC/AML、制裁筛查</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/app.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .risk-cards { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px }
+    .risk-card { background:var(--bg-card);border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border) }
+    .risk-card.high { border-left:4px solid var(--accent-red) }
+    .risk-card.medium { border-left:4px solid var(--accent-yellow) }
+    .risk-header { padding:12px 16px;border-bottom:1px solid var(--border) }
+    .risk-level { font-size:0.75rem;font-weight:600;text-transform:uppercase;padding:2px 8px;border-radius:var(--radius-sm);margin-right:8px }
+    .risk-card.high .risk-level { background:rgba(243,139,168,0.2);color:var(--accent-red) }
+    .risk-card.medium .risk-level { background:rgba(249,226,175,0.2);color:var(--accent-yellow) }
+    .risk-title { font-weight:600;color:var(--text-primary) }
+    .risk-body { padding:16px }
+    .risk-body p { margin-bottom:8px;color:var(--text-secondary) }
+    .risk-body ul { margin:8px 0;padding-left:20px;color:var(--text-secondary) }
+    .risk-body ul li { margin-bottom:4px }
+    .risk-owner { margin-top:12px;font-size:0.8125rem;color:var(--text-muted) }
+    .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.error { background:rgba(243,139,168,0.1);border:1px solid var(--accent-red) }
+    .alert-box.warning { background:rgba(249,226,175,0.1);border:1px solid var(--accent-yellow) }
+    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .alert-box i { flex-shrink:0 }
+    .alert-box.error i { color:var(--accent-red) }
+    .alert-box.warning i { color:var(--accent-yellow) }
+    .alert-box.info i { color:var(--accent-blue) }
+    .status-badge.success { background:rgba(166,227,161,0.2);color:var(--accent-green) }
+  </style>
+  <script>if(typeof lucide!=='undefined')lucide.createIcons()</script>
+</body>
+</html>

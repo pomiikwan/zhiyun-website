@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P1方案杨总版 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="p1-yang.html" class="sidebar-item active"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="p1-financing.html">P1融资结构</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">杨总版</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">P1方案执行手册</h1>
+          <div class="detail-tags">
+            <span class="tag yellow"><i data-lucide="banknote" style="width:12px;height:12px"></i>资金实力</span>
+            <span class="tag blue"><i data-lucide="handshake" style="width:12px;height:12px"></i>谈判筹码</span>
+            <span class="tag green"><i data-lucide="check-circle" style="width:12px;height:12px"></i>决策点明确</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">受众：杨总（智云方商务代表+董事会决策人） | 版本：v0.2 | 日期：2026-06-11</p>
+        </div>
+
+        <!-- 资金实力全景图 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="wallet" style="width:20px;height:20px"></i>资金实力全景图</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">资金导入能力总览</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>渠道</th>
+                  <th>可撬动量级</th>
+                  <th>关总影响力</th>
+                  <th>当前状态</th>
+                  <th>预计到位时间</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>广西700亿授信</strong></td>
+                  <td>7-35亿</td>
+                  <td><span class="tag yellow">C</span> 中间人/撮合者</td>
+                  <td><span class="status-badge pending">接洽中</span></td>
+                  <td>T+3~6月</td>
+                </tr>
+                <tr>
+                  <td><strong>蓝瞳140亿</strong></td>
+                  <td>140亿规模内</td>
+                  <td><span class="tag green">B</span> 核心影响者</td>
+                  <td><span class="status-badge pending">合作深化中</span></td>
+                  <td>T+4月（QFLP）</td>
+                </tr>
+                <tr>
+                  <td><strong>上海二级市场100亿</strong></td>
+                  <td>约100亿</td>
+                  <td><span class="tag yellow">C</span> 中间人/撮合者</td>
+                  <td><span class="status-badge pending">M1建仓待执行</span></td>
+                  <td>T+6~12月</td>
+                </tr>
+                <tr>
+                  <td><strong>银团贷款</strong></td>
+                  <td>10-15亿</td>
+                  <td><span class="tag blue">直接控制</span></td>
+                  <td><span class="status-badge pending">待签约</span></td>
+                  <td>T+1~3月</td>
+                </tr>
+                <tr>
+                  <td><strong>智云数据自有资金</strong></td>
+                  <td>1-2亿</td>
+                  <td><span class="tag blue">直接控制</span></td>
+                  <td><span class="status-badge success">可调动</span></td>
+                  <td>T+0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="total-funds">
+            <div class="total-label">总资金导入能力</div>
+            <div class="total-value">超过50亿人民币</div>
+            <div class="total-note">（保守估计）</div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">里程碑付款资金保障</h3>
+          <div class="chart-container">
+            <div class="chart-title">资金来源组合（总需求：3亿USD）</div>
+            <div style="height:280px;position:relative">
+              <canvas id="fundChart"></canvas>
+            </div>
+          </div>
+          <div class="alert-box success" style="margin-top:16px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>资金全额覆盖</strong>，安全边际充足</span>
+          </div>
+        </section>
+
+        <!-- 谈判筹码增强 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>谈判筹码增强</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">向标的公司展示的筹码</h3>
+          <div class="chips-grid">
+            <div class="chip-card featured">
+              <div class="chip-header">
+                <i data-lucide="dollar-sign" style="width:24px;height:24px"></i>
+                <span class="chip-title">资金确定性</span>
+              </div>
+              <div class="chip-body">首期600万USD即时到位，后续资金通道明确</div>
+              <div class="chip-value">
+                <span class="stars">5星</span>
+                <span class="chip-impact">消除标的公司顾虑</span>
+              </div>
+            </div>
+            <div class="chip-card">
+              <div class="chip-header">
+                <i data-lucide="git-branch" style="width:24px;height:24px"></i>
+                <span class="chip-title">渠道广度</span>
+              </div>
+              <div class="chip-body">广西+蓝瞳+上海三重资金来源，不依赖单一渠道</div>
+              <div class="chip-value">
+                <span class="stars">4星</span>
+                <span class="chip-impact">展示资源调动能力</span>
+              </div>
+            </div>
+            <div class="chip-card featured">
+              <div class="chip-header">
+                <i data-lucide="handshake" style="width:24px;height:24px"></i>
+                <span class="chip-title">产业协同</span>
+              </div>
+              <div class="chip-body">蓝瞳900亿项目核心供应商身份，确定性需求锚点</div>
+              <div class="chip-value">
+                <span class="stars">5星</span>
+                <span class="chip-impact">证明智云非纯财务买家</span>
+              </div>
+            </div>
+            <div class="chip-card">
+              <div class="chip-header">
+                <i data-lucide="cpu" style="width:24px;height:24px"></i>
+                <span class="chip-title">技术承接能力</span>
+              </div>
+              <div class="chip-body">自研推理芯片团队+智算中心运营经验</div>
+              <div class="chip-value">
+                <span class="stars">4星</span>
+                <span class="chip-impact">证明技术消化能力</span>
+              </div>
+            </div>
+            <div class="chip-card">
+              <div class="chip-header">
+                <i data-lucide="shield" style="width:24px;height:24px"></i>
+                <span class="chip-title">政策背书</span>
+              </div>
+              <div class="chip-body">UB国标适配+信创市场+国企授信渠道</div>
+              <div class="chip-value">
+                <span class="stars">4星</span>
+                <span class="chip-impact">展示中国市场优势</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关键谈判要点</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>谈判要点</th>
+                  <th>智云立场</th>
+                  <th>底线</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>里程碑付款节奏</strong></td>
+                  <td>分10-12期，与IP迁移进度强挂钩</td>
+                  <td><span class="tag yellow">最少8期</span></td>
+                </tr>
+                <tr>
+                  <td><strong>超期降价条款</strong></td>
+                  <td>一年内完成全部迁移里程碑，超期后续里程碑降价/取消</td>
+                  <td><span class="tag yellow">总对价不低于2亿美金</span></td>
+                </tr>
+                <tr>
+                  <td><strong>团队锁定</strong></td>
+                  <td>核心团队作价入股智云SPV，3年锁定期</td>
+                  <td><span class="tag red">核心团队必须到位</span></td>
+                </tr>
+                <tr>
+                  <td><strong>IP授权方式</strong></td>
+                  <td>先授权-买断-人才转移-国内重新注册</td>
+                  <td><span class="tag red">最终获得IP完全所有权</span></td>
+                </tr>
+                <tr>
+                  <td><strong>制裁免责条款</strong></td>
+                  <td>因制裁导致IP迁移无法完成，智云不承担违约责任</td>
+                  <td><span class="tag red">必须保留</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 关键决策事项 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="check-square" style="width:20px;height:20px"></i>关键决策事项</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--accent-red)">杨总需立即决策（T+0前）</h3>
+          <div class="decision-card urgent">
+            <div class="decision-header">
+              <span class="decision-id">D1</span>
+              <span class="decision-title">SPV股权比例</span>
+            </div>
+            <div class="decision-body">
+              <div class="decision-recommend">
+                <strong>推荐方案：</strong>A-C渐进路径
+              </div>
+              <div class="decision-reason">
+                先以情形A（约3.9亿估值）启动，降低前期风险；流片成功后升级至情形C（约10.2亿估值），估值跳升自然合理
+              </div>
+              <div class="decision-factors">
+                <div class="factor">
+                  <div class="factor-title">情形A优势</div>
+                  <ul>
+                    <li>团队作价2亿易论证</li>
+                    <li>实控人质押压力小</li>
+                    <li>银团认可度逐步建立</li>
+                  </ul>
+                </div>
+                <div class="factor">
+                  <div class="factor-title">情形C优势</div>
+                  <ul>
+                    <li>二轮融资叙事能力强</li>
+                    <li>银团贷款容量大</li>
+                    <li>DSCR略好</li>
+                  </ul>
+                </div>
+                <div class="factor highlight">
+                  <div class="factor-title">渐进路径优势</div>
+                  <ul>
+                    <li>兼顾风险控制与估值增长</li>
+                    <li>流片成功作为估值跳升触发点</li>
+                    <li>是稳健选择</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--accent-yellow)">杨总需在T+2月前决策</h3>
+          <div class="decision-card">
+            <div class="decision-header">
+              <span class="decision-id">D6</span>
+              <span class="decision-title">广西授信主体选择</span>
+            </div>
+            <div class="decision-body">
+              <div class="decision-recommend">
+                <strong>推荐方案：</strong>两者并行
+              </div>
+              <div class="decision-reason">
+                产业园区固投挂钩天然契合智算中心，大型国企经营性授信灵活度高，并行推进择优落地
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 执行路线图 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="map" style="width:20px;height:20px"></i>执行路线图（杨总视角）</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键时间节点与行动</h3>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="timeline-marker blue">T+0前</div>
+              <div class="timeline-content">
+                <div class="timeline-title">决策D1（SPV股权比例）</div>
+                <div class="timeline-detail">配合方：关总 | 交付物：决策确认书</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker green">T+0</div>
+              <div class="timeline-content">
+                <div class="timeline-title">签约启动首期付款</div>
+                <div class="timeline-detail">配合方：法务/财务 | 交付物：签约协议、付款凭证</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker">T+1月</div>
+              <div class="timeline-content">
+                <div class="timeline-title">二轮融资预热</div>
+                <div class="timeline-detail">配合方：-- | 交付物：投资者意向清单</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker yellow">T+2月</div>
+              <div class="timeline-content">
+                <div class="timeline-title">决策D6（广西授信主体选择）</div>
+                <div class="timeline-detail">配合方：关总 | 交付物：决策确认书</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker">T+3月</div>
+              <div class="timeline-content">
+                <div class="timeline-title">银团贷款签约</div>
+                <div class="timeline-detail">配合方：财务 | 交付物：贷款协议</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker purple">T+6月</div>
+              <div class="timeline-content">
+                <div class="timeline-title">二轮融资路演启动</div>
+                <div class="timeline-detail">配合方：基金团队 | 交付物：路演材料、BP</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker">T+9月</div>
+              <div class="timeline-content">
+                <div class="timeline-title">二轮融资意向确定</div>
+                <div class="timeline-detail">配合方：-- | 交付物：意向书</div>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-marker blue">T+12月</div>
+              <div class="timeline-content">
+                <div class="timeline-title">二轮融资交割</div>
+                <div class="timeline-detail">配合方：法务 | 交付物：交割文件</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关键检查点</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>检查点</th>
+                  <th>时点</th>
+                  <th>检查内容</th>
+                  <th>杨总关注点</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="tag blue">CP1</span></td>
+                  <td>T+1月</td>
+                  <td>SPV设立完成、首期付款完成</td>
+                  <td>标的公司反馈、团队到位情况</td>
+                </tr>
+                <tr>
+                  <td><span class="tag blue">CP2</span></td>
+                  <td>T+3月</td>
+                  <td>ODI备案完成、QFLP设立完成</td>
+                  <td>资金通道畅通性</td>
+                </tr>
+                <tr>
+                  <td><span class="tag yellow">CP3</span></td>
+                  <td>T+6月</td>
+                  <td>资金到位>50%、里程碑完成>40%</td>
+                  <td>IP迁移进度、技术承接质量</td>
+                </tr>
+                <tr>
+                  <td><span class="tag yellow">CP4</span></td>
+                  <td>T+9月</td>
+                  <td>资金到位>80%、二轮融资启动</td>
+                  <td>投资者反馈、估值预期</td>
+                </tr>
+                <tr>
+                  <td><span class="tag green">CP5</span></td>
+                  <td>T+12月</td>
+                  <td>全部里程碑完成、资金全覆盖</td>
+                  <td>最终交割、下一阶段规划</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 风险预警与应急响应 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="alert-triangle" style="width:20px;height:20px"></i>风险预警与应急响应</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">杨总需关注的风险信号</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>风险信号</th>
+                  <th>触发条件</th>
+                  <th>响应动作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>标的团队配合度下降</strong></td>
+                  <td>核心成员离职或消极怠工</td>
+                  <td>立即暂停后续里程碑付款、启动合同违约条款</td>
+                </tr>
+                <tr>
+                  <td><strong>IP迁移进度滞后</strong></td>
+                  <td>连续2个月里程碑未达标</td>
+                  <td>调整付款节奏、协商延期条款</td>
+                </tr>
+                <tr>
+                  <td><strong>其他买家出现</strong></td>
+                  <td>标的公司透露有更高报价买家</td>
+                  <td>启动排他协议、加速签约</td>
+                </tr>
+                <tr>
+                  <td><strong>政策环境恶化</strong></td>
+                  <td>制裁风险上升或外汇管制收紧</td>
+                  <td>启动备用通道、调整交易结构</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">应急预案</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="emergency-card">
+              <div class="emergency-title">ODI备案严重延误</div>
+              <div class="emergency-action">启动QFLP+内保外贷备用通道，确保资金到位</div>
+              <div class="emergency-owner">决策人：杨总</div>
+            </div>
+            <div class="emergency-card">
+              <div class="emergency-title">资金链断裂风险</div>
+              <div class="emergency-action">智云数据母公司垫资、过桥融资</div>
+              <div class="emergency-owner">决策人：关总</div>
+            </div>
+            <div class="emergency-card">
+              <div class="emergency-title">标的公司违约</div>
+              <div class="emergency-action">启动合同违约条款、法律追索</div>
+              <div class="emergency-owner">决策人：杨总+法务</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 待补充事项 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="clipboard-list" style="width:20px;height:20px"></i>待补充事项（杨总需提供）</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关于标的公司</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>待补充事项</th>
+                  <th>用途</th>
+                  <th>紧急程度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>S1</td>
+                  <td>标的公司详细团队构成（人数、核心成员背景、技术专长）</td>
+                  <td>估值论证、技术承接方案</td>
+                  <td><span class="tag red">最高</span></td>
+                </tr>
+                <tr>
+                  <td>S2</td>
+                  <td>是否有其他买家接触？时间压力如何？</td>
+                  <td>谈判策略、优先级排序</td>
+                  <td><span class="tag red">最高</span></td>
+                </tr>
+                <tr>
+                  <td>S3</td>
+                  <td>IP清单（EDA、设计数据库、专利、技术文档）完整列表</td>
+                  <td>制裁风险评估、IP价值评估</td>
+                  <td><span class="tag red">最高</span></td>
+                </tr>
+                <tr>
+                  <td>S4</td>
+                  <td>核心成员国籍、是否涉及敏感国家</td>
+                  <td>制裁筛查、KYC/AML</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+                <tr>
+                  <td>S5</td>
+                  <td>最终受益人（UBO）穿透信息</td>
+                  <td>KYC/AML、合规审查</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关于上市公司标的</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>编号</th>
+                  <th>待补充事项</th>
+                  <th>用途</th>
+                  <th>紧急程度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>S6</td>
+                  <td>上市公司A详细财务数据（近三年财报）</td>
+                  <td>P2收购方案设计</td>
+                  <td><span class="tag blue">中</span></td>
+                </tr>
+                <tr>
+                  <td>S7</td>
+                  <td>实控人质押意愿确认（质押比例、变现量级）</td>
+                  <td>SPV第一轮资金规模确定</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+                <tr>
+                  <td>S8</td>
+                  <td>流通股出让配合意愿确认</td>
+                  <td>上海M1建仓执行</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 关总-杨总分工 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="users" style="width:20px;height:20px"></i>关总-杨总分工</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>工作事项</th>
+                  <th>关总</th>
+                  <th>杨总</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>融资方案设计</td>
+                  <td><span class="tag blue">主导</span></td>
+                  <td>配合</td>
+                </tr>
+                <tr>
+                  <td>资金渠道开拓</td>
+                  <td><span class="tag blue">主导</span></td>
+                  <td>配合</td>
+                </tr>
+                <tr>
+                  <td>标的公司商务接洽</td>
+                  <td>配合</td>
+                  <td><span class="tag blue">主导</span></td>
+                </tr>
+                <tr>
+                  <td>投资者对接</td>
+                  <td>配合</td>
+                  <td><span class="tag blue">主导</span></td>
+                </tr>
+                <tr>
+                  <td>风险决策</td>
+                  <td>共同决策</td>
+                  <td><span class="tag red">最终拍板</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .stars { color:var(--accent-yellow);font-weight:600 }
+    .total-funds { background:linear-gradient(135deg,rgba(137,180,250,0.15),rgba(166,227,161,0.15));border-radius:var(--radius-lg);padding:24px;text-align:center;margin:16px 0;border:2px solid var(--accent-blue) }
+    .total-label { font-size:0.9375rem;color:var(--text-secondary);margin-bottom:8px }
+    .total-value { font-size:2rem;font-weight:700;color:var(--accent-blue) }
+    .total-note { font-size:0.8125rem;color:var(--text-muted);margin-top:4px }
+    .chart-container { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;margin:16px 0;border:1px solid var(--border) }
+    .chart-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .alert-box { display:flex;align-items:center;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box.success i { color:var(--accent-green) }
+    .chips-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px }
+    .chip-card { background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border) }
+    .chip-card.featured { border:2px solid var(--accent-blue) }
+    .chip-header { display:flex;align-items:center;gap:12px;margin-bottom:12px }
+    .chip-header i { color:var(--accent-blue) }
+    .chip-title { font-weight:600;color:var(--text-primary) }
+    .chip-body { font-size:0.875rem;color:var(--text-secondary);margin-bottom:12px;line-height:1.5 }
+    .chip-value { display:flex;align-items:center;justify-content:space-between;font-size:0.8125rem }
+    .chip-impact { color:var(--accent-blue) }
+    .decision-card { background:var(--bg-card);border-radius:var(--radius-md);border:1px solid var(--border);overflow:hidden;margin-bottom:16px }
+    .decision-card.urgent { border:2px solid var(--accent-red) }
+    .decision-header { background:var(--bg-secondary);padding:16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border) }
+    .decision-id { background:var(--accent-yellow);color:var(--bg-primary);padding:4px 12px;border-radius:var(--radius-sm);font-weight:600;font-size:0.875rem }
+    .decision-card.urgent .decision-id { background:var(--accent-red) }
+    .decision-title { font-weight:600;color:var(--text-primary) }
+    .decision-body { padding:16px }
+    .decision-recommend { font-size:1rem;color:var(--text-primary);margin-bottom:12px }
+    .decision-reason { font-size:0.875rem;color:var(--text-secondary);margin-bottom:16px;line-height:1.6 }
+    .decision-factors { display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px }
+    .factor { background:var(--bg-secondary);padding:12px;border-radius:var(--radius-md) }
+    .factor.highlight { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .factor-title { font-weight:600;color:var(--text-primary);font-size:0.875rem;margin-bottom:8px }
+    .factor ul { margin:0;padding-left:16px;font-size:0.8125rem;color:var(--text-secondary) }
+    .factor ul li { margin-bottom:4px }
+    .timeline-steps { position:relative;padding-left:80px }
+    .timeline-step { position:relative;margin-bottom:20px }
+    .timeline-marker { position:absolute;left:-80px;width:60px;height:32px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:0.8125rem;font-weight:600;background:var(--bg-hover);color:var(--text-primary) }
+    .timeline-marker.blue { background:var(--accent-blue);color:white }
+    .timeline-marker.green { background:var(--accent-green);color:var(--bg-primary) }
+    .timeline-marker.yellow { background:var(--accent-yellow);color:var(--bg-primary) }
+    .timeline-marker.purple { background:var(--accent-purple);color:white }
+    .timeline-title { font-weight:600;color:var(--text-primary) }
+    .timeline-detail { font-size:0.8125rem;color:var(--text-muted);margin-top:4px }
+    .emergency-card { background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border);border-left:4px solid var(--accent-yellow) }
+    .emergency-title { font-weight:600;color:var(--text-primary);margin-bottom:8px }
+    .emergency-action { font-size:0.875rem;color:var(--text-secondary);margin-bottom:12px }
+    .emergency-owner { font-size:0.8125rem;color:var(--accent-blue) }
+  </style>
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    // Fund Distribution Chart
+    const ctx = document.getElementById('fundChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['ODI通道 (60%)', 'QFLP基金 (13%)', '银团USD贷款 (13%)', '内保外贷 (11%)', '自有资金 (2%)'],
+          datasets: [{
+            data: [1.8, 0.4, 0.4, 0.34, 0.06],
+            backgroundColor: [
+              'rgba(137, 180, 250, 0.8)',
+              'rgba(166, 227, 161, 0.8)',
+              'rgba(249, 226, 175, 0.8)',
+              'rgba(203, 166, 247, 0.8)',
+              'rgba(148, 226, 213, 0.8)'
+            ],
+            borderColor: '#1e1e2e',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: { color: '#a6adc8', font: { size: 12 } }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
