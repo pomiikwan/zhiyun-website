@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投资亮点深度解读 - 智云数科</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+    </ul>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="../index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="../p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="../p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="../p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items">
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="../p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="../p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="../p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1 次级详情页</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-framework.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值框架详解</span></a>
+          <a href="financing-channels.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>融资渠道详解</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+          <a href="fund-safety-margin.html" class="sidebar-item"><i data-lucide="shield-check" style="width:16px;height:16px"></i><span>资金安全边际</span></a>
+          <a href="compliance-checkpoints.html" class="sidebar-item"><i data-lucide="file-check" style="width:16px;height:16px"></i><span>合规检查点</span></a>
+          <a href="investment-highlights.html" class="sidebar-item active"><i data-lucide="star" style="width:16px;height:16px"></i><span>投资亮点</span></a>
+          <a href="transaction-structure.html" class="sidebar-item"><i data-lucide="git-merge" style="width:16px;height:16px"></i><span>交易结构</span></a>
+          <a href="exit-paths.html" class="sidebar-item"><i data-lucide="log-out" style="width:16px;height:16px"></i><span>退出路径</span></a>
+          <a href="investor-profiles.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>战略投资者画像</span></a>
+          <a href="fund-capability.html" class="sidebar-item"><i data-lucide="wallet" style="width:16px;height:16px"></i><span>资金导入能力</span></a>
+          <a href="negotiation-chips.html" class="sidebar-item"><i data-lucide="award" style="width:16px;height:16px"></i><span>谈判筹码</span></a>
+          <a href="execution-timeline.html" class="sidebar-item"><i data-lucide="calendar" style="width:16px;height:16px"></i><span>执行时序</span></a>
+          <a href="fx-risk-management.html" class="sidebar-item"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i><span>外汇风险管理</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../p1-investor.html">P1投资方版</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">投资亮点深度解读</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">投资亮点深度解读</h1>
+          <div class="detail-tags">
+            <span class="tag green"><i data-lucide="trending-up" style="width:12px;height:12px"></i>战略卡位</span>
+            <span class="tag blue"><i data-lucide="shield" style="width:12px;height:12px"></i>技术壁垒</span>
+            <span class="tag purple"><i data-lucide="repeat" style="width:12px;height:12px"></i>自消纳闭环</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">受众：潜在投资方 | 版本：v1.0 | 日期：2026-06-11</p>
+        </div>
+
+        <!-- 核心投资逻辑 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="star" style="width:20px;height:20px"></i>核心投资逻辑</h2>
+
+          <div class="highlights-grid">
+            <div class="highlight-card featured">
+              <div class="highlight-icon blue"><i data-lucide="globe" style="width:28px;height:28px"></i></div>
+              <div class="highlight-title">战略卡位</div>
+              <div class="highlight-desc">收购全球第五SmartNIC团队，布局高速网卡芯片赛道，契合AI算力基础设施建设浪潮</div>
+              <div class="highlight-detail">
+                <div class="detail-item">
+                  <span class="detail-label">市场地位</span>
+                  <span class="detail-value">全球SmartNIC第五</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">收购对价</span>
+                  <span class="detail-value">3亿USD</span>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-card featured">
+              <div class="highlight-icon green"><i data-lucide="rocket" style="width:28px;height:28px"></i></div>
+              <div class="highlight-title">技术壁垒</div>
+              <div class="highlight-desc">自研推理芯片对标4090，8月流片，7nm制程，具备国产替代潜力</div>
+              <div class="highlight-detail">
+                <div class="detail-item">
+                  <span class="detail-label">制程工艺</span>
+                  <span class="detail-value">7nm</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">流片时间</span>
+                  <span class="detail-value">2026年8月</span>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon purple"><i data-lucide="repeat" style="width:28px;height:28px"></i></div>
+              <div class="highlight-title">自消纳闭环</div>
+              <div class="highlight-desc">智算中心+液冷一体机已验证商业模式，2万P储备项目超50亿元</div>
+              <div class="highlight-detail">
+                <div class="detail-item">
+                  <span class="detail-label">储备项目</span>
+                  <span class="detail-value">2万P/50亿+</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">市场验证</span>
+                  <span class="detail-value">多所高校中标</span>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon yellow"><i data-lucide="handshake" style="width:28px;height:28px"></i></div>
+              <div class="highlight-title">产业协同</div>
+              <div class="highlight-desc">蓝瞳900亿半导体项目核心供应商+投资方双重身份，确定性需求锚点</div>
+              <div class="highlight-detail">
+                <div class="detail-item">
+                  <span class="detail-label">蓝瞳总投资</span>
+                  <span class="detail-value">约900亿</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">P1可撬动量级</span>
+                  <span class="detail-value">140亿规模内</span>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon teal"><i data-lucide="trending-up" style="width:28px;height:28px"></i></div>
+              <div class="highlight-title">一二级联动</div>
+              <div class="highlight-desc">SPV估值增长后反向并购上市公司，多重退出路径设计</div>
+              <div class="highlight-detail">
+                <div class="detail-item">
+                  <span class="detail-label">退出路径</span>
+                  <span class="detail-value">多重设计</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">预期收益</span>
+                  <span class="detail-value">3-10x估值倍数</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 自消纳体系详解 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="server" style="width:20px;height:20px"></i>自消纳体系详解</h2>
+
+          <div class="alert-box info" style="margin-bottom:20px">
+            <i data-lucide="info" style="width:18px;height:18px"></i>
+            <span><strong>核心优势：</strong>智云数科独特的自消纳体系为投资者提供了确定性收入保障，降低市场拓展风险。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">自消纳收入结构</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>收入来源</th>
+                  <th>2027E</th>
+                  <th>2028E</th>
+                  <th>2029E</th>
+                  <th>2030E</th>
+                  <th>占比趋势</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>智算中心</strong></td>
+                  <td>1.5亿</td>
+                  <td>4.0亿</td>
+                  <td>8.0亿</td>
+                  <td>12.0亿</td>
+                  <td><span class="tag blue">核心驱动</span></td>
+                </tr>
+                <tr>
+                  <td><strong>液冷一体机</strong></td>
+                  <td>1.0亿</td>
+                  <td>2.0亿</td>
+                  <td>3.0亿</td>
+                  <td>4.0亿</td>
+                  <td><span class="tag green">稳定增长</span></td>
+                </tr>
+                <tr>
+                  <td><strong>蓝瞳SmartNIC需求</strong></td>
+                  <td>0.5亿</td>
+                  <td>1.5亿</td>
+                  <td>3.0亿</td>
+                  <td>5.0亿</td>
+                  <td><span class="tag yellow">确定性锚点</span></td>
+                </tr>
+                <tr>
+                  <td><strong>边缘计算</strong></td>
+                  <td>0</td>
+                  <td>0.5亿</td>
+                  <td>1.5亿</td>
+                  <td>3.0亿</td>
+                  <td><span class="tag purple">未来增长</span></td>
+                </tr>
+                <tr style="border-top:2px solid var(--border)">
+                  <td><strong>自消纳合计</strong></td>
+                  <td><strong>3.0亿</strong></td>
+                  <td><strong>8.0亿</strong></td>
+                  <td><strong>15.5亿</strong></td>
+                  <td><strong>24.0亿</strong></td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">自消纳收入占比趋势</h3>
+          <div class="chart-container">
+            <div class="chart-title">自消纳 vs 外部市场收入占比</div>
+            <div style="height:300px;position:relative">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- 市场机会分析 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="bar-chart-3" style="width:20px;height:20px"></i>市场机会分析</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">目标市场规模</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="market-card">
+              <div class="market-title">全球SmartNIC市场</div>
+              <div class="market-stats">
+                <div class="stat">
+                  <span class="stat-label">2026年规模</span>
+                  <span class="stat-value">50亿USD</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">2030年预期</span>
+                  <span class="stat-value">200亿USD</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">CAGR</span>
+                  <span class="stat-value highlight">40%+</span>
+                </div>
+              </div>
+              <div class="market-position">智云定位：<strong>技术领先者</strong></div>
+            </div>
+            <div class="market-card">
+              <div class="market-title">中国AI推理芯片市场</div>
+              <div class="market-stats">
+                <div class="stat">
+                  <span class="stat-label">2026年规模</span>
+                  <span class="stat-value">100亿CNY</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">2030年预期</span>
+                  <span class="stat-value">500亿CNY</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">CAGR</span>
+                  <span class="stat-value highlight">50%+</span>
+                </div>
+              </div>
+              <div class="market-position">智云定位：<strong>国产替代先锋</strong></div>
+            </div>
+            <div class="market-card">
+              <div class="market-title">信创服务器市场</div>
+              <div class="market-stats">
+                <div class="stat">
+                  <span class="stat-label">2026年规模</span>
+                  <span class="stat-value">300亿CNY</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">2030年预期</span>
+                  <span class="stat-value">1000亿CNY</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">CAGR</span>
+                  <span class="stat-value highlight">35%+</span>
+                </div>
+              </div>
+              <div class="market-position">智云定位：<strong>UB国标核心供应商</strong></div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">竞争优势矩阵</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>维度</th>
+                  <th>智云数科</th>
+                  <th>传统芯片厂商</th>
+                  <th>优势判断</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>收入确定性</strong></td>
+                  <td>自消纳体系保障70%+收入</td>
+                  <td>完全依赖市场拓展</td>
+                  <td><span class="tag green">显著优势</span></td>
+                </tr>
+                <tr>
+                  <td><strong>技术团队</strong></td>
+                  <td>全球第五SmartNIC团队+自研推理芯片</td>
+                  <td>自建团队，周期长</td>
+                  <td><span class="tag green">显著优势</span></td>
+                </tr>
+                <tr>
+                  <td><strong>产业协同</strong></td>
+                  <td>蓝瞳900亿项目核心供应商</td>
+                  <td>无产业锚点</td>
+                  <td><span class="tag green">显著优势</span></td>
+                </tr>
+                <tr>
+                  <td><strong>信创适配</strong></td>
+                  <td>UB国标适配，信创市场准入</td>
+                  <td>需额外投入适配</td>
+                  <td><span class="tag blue">优势</span></td>
+                </tr>
+                <tr>
+                  <td><strong>退出路径</strong></td>
+                  <td>SPV反向并购上市公司，多重退出</td>
+                  <td>IPO或股权转让</td>
+                  <td><span class="tag blue">优势</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 蓝瞳协同价值 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="handshake" style="width:20px;height:20px"></i>蓝瞳协同价值</h2>
+
+          <div class="alert-box success" style="margin-bottom:20px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>核心锚点：</strong>蓝瞳900亿半导体项目为智云SmartNIC/DPU提供确定性需求，是整个投资逻辑的核心支撑。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">蓝瞳协同模式</h3>
+          <div class="flow-diagram">
+            <div class="flow-step">
+              <div class="flow-icon blue"><i data-lucide="cpu" style="width:20px;height:20px"></i></div>
+              <div class="flow-content">
+                <div class="flow-title">SmartNIC/DPU供应</div>
+                <div class="flow-desc">蓝瞳算力基础设施的网卡芯片刚性需求</div>
+              </div>
+            </div>
+            <div class="flow-arrow"><i data-lucide="arrow-down" style="width:20px;height:20px"></i></div>
+            <div class="flow-step">
+              <div class="flow-icon green"><i data-lucide="dollar-sign" style="width:20px;height:20px"></i></div>
+              <div class="flow-content">
+                <div class="flow-title">产业基金LP出资</div>
+                <div class="flow-desc">蓝瞳作为LP入资产业基金，深度绑定</div>
+              </div>
+            </div>
+            <div class="flow-arrow"><i data-lucide="arrow-down" style="width:20px;height:20px"></i></div>
+            <div class="flow-step">
+              <div class="flow-icon purple"><i data-lucide="shopping-cart" style="width:20px;height:20px"></i></div>
+              <div class="flow-content">
+                <div class="flow-title">推理芯片/GPU采购</div>
+                <div class="flow-desc">边缘计算场景的推理芯片采购需求</div>
+              </div>
+            </div>
+            <div class="flow-arrow"><i data-lucide="arrow-down" style="width:20px;height:20px"></i></div>
+            <div class="flow-step">
+              <div class="flow-icon yellow"><i data-lucide="building-2" style="width:20px;height:20px"></i></div>
+              <div class="flow-content">
+                <div class="flow-title">智算中心共建</div>
+                <div class="flow-desc">联合投建智算中心，共享算力运营收益</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">协同价值量化</h3>
+          <div class="grid-2" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">SmartNIC采购需求</div>
+              <div class="metric-value blue">5-8亿/年（预测）</div>
+              <div class="metric-sub">蓝瞳算力建设带来的网卡需求估算</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">产业基金LP出资</div>
+              <div class="metric-value green">3-5亿</div>
+              <div class="metric-sub">蓝瞳作为战略LP入资基金</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">推理芯片采购</div>
+              <div class="metric-value yellow">2-3亿/年</div>
+              <div class="metric-sub">边缘计算场景的芯片需求</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">信用杠杆倍数</div>
+              <div class="metric-value purple">5-8x</div>
+              <div class="metric-sub">产业协同带来的信用放大效应</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 返回链接 -->
+        <section class="detail-section">
+          <a href="../p1-investor.html" class="card" style="display:block;padding:16px;text-decoration:none;border:2px solid var(--accent-blue)">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div>
+                <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px">
+                  <i data-lucide="arrow-left" style="width:18px;height:18px;color:var(--accent-blue);margin-right:8px"></i>
+                  返回P1投资方版
+                </div>
+                <div style="font-size:0.8125rem;color:var(--text-secondary)">投资方版完整内容、交易结构、退出路径</div>
+              </div>
+              <i data-lucide="chevron-right" style="width:20px;height:20px;color:var(--accent-blue)"></i>
+            </div>
+          </a>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../../js/app.js"></script>
+  <style>
+    .highlights-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:20px 0 }
+    .highlight-card { background:var(--bg-card);border-radius:var(--radius-md);padding:24px;border:1px solid var(--border);text-align:center;transition:all 0.2s }
+    .highlight-card:hover { transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.2) }
+    .highlight-card.featured { border:2px solid var(--accent-blue) }
+    .highlight-icon { width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px }
+    .highlight-icon.blue { background:rgba(137,180,250,0.15) }
+    .highlight-icon.green { background:rgba(166,227,161,0.15) }
+    .highlight-icon.purple { background:rgba(203,166,247,0.15) }
+    .highlight-icon.yellow { background:rgba(249,226,175,0.15) }
+    .highlight-icon.teal { background:rgba(148,226,213,0.15) }
+    .highlight-title { font-weight:700;color:var(--text-primary);margin-bottom:12px;font-size:1.125rem }
+    .highlight-desc { font-size:0.875rem;color:var(--text-secondary);line-height:1.6;margin-bottom:16px }
+    .highlight-detail { border-top:1px solid var(--border);padding-top:12px;margin-top:12px }
+    .detail-item { display:flex;justify-content:space-between;padding:8px 0 }
+    .detail-label { color:var(--text-muted);font-size:0.8125rem }
+    .detail-value { color:var(--text-primary);font-weight:600;font-size:0.875rem }
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .market-card { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border) }
+    .market-title { font-weight:600;color:var(--accent-blue);margin-bottom:16px;font-size:1rem }
+    .market-stats { display:flex;flex-direction:column;gap:12px;margin-bottom:16px }
+    .stat { display:flex;justify-content:space-between }
+    .stat-label { color:var(--text-muted);font-size:0.875rem }
+    .stat-value { font-weight:600;color:var(--text-primary) }
+    .stat-value.highlight { color:var(--accent-green) }
+    .market-position { font-size:0.875rem;color:var(--text-secondary);padding-top:12px;border-top:1px solid var(--border) }
+    .flow-diagram { display:flex;flex-direction:column;align-items:center;padding:24px;background:var(--bg-secondary);border-radius:var(--radius-md) }
+    .flow-step { display:flex;align-items:center;gap:16px;width:100%;max-width:500px;background:var(--bg-card);padding:16px;border-radius:var(--radius-md) }
+    .flow-icon { width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0 }
+    .flow-icon.blue { background:rgba(137,180,250,0.2) }
+    .flow-icon.green { background:rgba(166,227,161,0.2) }
+    .flow-icon.purple { background:rgba(203,166,247,0.2) }
+    .flow-icon.yellow { background:rgba(249,226,175,0.2) }
+    .flow-title { font-weight:600;color:var(--text-primary) }
+    .flow-desc { font-size:0.8125rem;color:var(--text-muted) }
+    .flow-arrow { padding:8px;color:var(--text-muted) }
+    .chart-container { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;margin:16px 0;border:1px solid var(--border) }
+    .chart-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .metric-card { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border) }
+    .metric-label { font-size:0.875rem;color:var(--text-muted);margin-bottom:8px }
+    .metric-value { font-size:1.75rem;font-weight:700;margin-bottom:8px }
+    .metric-value.blue { color:var(--accent-blue) }
+    .metric-value.green { color:var(--accent-green) }
+    .metric-value.yellow { color:var(--accent-yellow) }
+    .metric-value.purple { color:var(--accent-purple) }
+    .metric-sub { font-size:0.8125rem;color:var(--text-secondary) }
+    .alert-box { display:flex;align-items:center;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .alert-box.info i { color:var(--accent-blue) }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box.success i { color:var(--accent-green) }
+  </style>
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    // Revenue Chart
+    const ctx = document.getElementById('revenueChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2027', '2028', '2029', '2030'],
+          datasets: [
+            {
+              label: '自消纳收入',
+              data: [3.0, 8.0, 15.5, 24.0],
+              backgroundColor: 'rgba(137, 180, 250, 0.7)',
+              borderColor: 'rgba(137, 180, 250, 1)',
+              borderWidth: 1
+            },
+            {
+              label: '外部市场收入',
+              data: [1.0, 3.0, 8.0, 16.0],
+              backgroundColor: 'rgba(166, 227, 161, 0.7)',
+              borderColor: 'rgba(166, 227, 161, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { color: '#a6adc8' }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: 'rgba(69, 71, 90, 0.3)' },
+              ticks: { color: '#a6adc8' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#a6adc8' }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

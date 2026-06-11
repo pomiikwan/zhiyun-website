@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>退出路径详解 - 智云数科</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+    </ul>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="../index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="../p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="../p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="../p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items">
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="../p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="../p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="../p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1 次级详情页</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-framework.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值框架详解</span></a>
+          <a href="financing-channels.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>融资渠道详解</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+          <a href="fund-safety-margin.html" class="sidebar-item"><i data-lucide="shield-check" style="width:16px;height:16px"></i><span>资金安全边际</span></a>
+          <a href="compliance-checkpoints.html" class="sidebar-item"><i data-lucide="file-check" style="width:16px;height:16px"></i><span>合规检查点</span></a>
+          <a href="investment-highlights.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>投资亮点</span></a>
+          <a href="transaction-structure.html" class="sidebar-item"><i data-lucide="git-merge" style="width:16px;height:16px"></i><span>交易结构</span></a>
+          <a href="exit-paths.html" class="sidebar-item active"><i data-lucide="log-out" style="width:16px;height:16px"></i><span>退出路径</span></a>
+          <a href="investor-profiles.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>战略投资者画像</span></a>
+          <a href="fund-capability.html" class="sidebar-item"><i data-lucide="wallet" style="width:16px;height:16px"></i><span>资金导入能力</span></a>
+          <a href="negotiation-chips.html" class="sidebar-item"><i data-lucide="award" style="width:16px;height:16px"></i><span>谈判筹码</span></a>
+          <a href="execution-timeline.html" class="sidebar-item"><i data-lucide="calendar" style="width:16px;height:16px"></i><span>执行时序</span></a>
+          <a href="fx-risk-management.html" class="sidebar-item"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i><span>外汇风险管理</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../p1-investor.html">P1投资方版</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">退出路径详解</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">投资退出路径详解</h1>
+          <div class="detail-tags">
+            <span class="tag green"><i data-lucide="log-out" style="width:12px;height:12px"></i>多重退出</span>
+            <span class="tag blue"><i data-lucide="trending-up" style="width:12px;height:12px"></i>估值增长</span>
+            <span class="tag purple"><i data-lucide="check-circle" style="width:12px;height:12px"></i>路径清晰</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v1.0 | 日期：2026-06-11 | 整合自：CFA国际投资顾问、并购融资专家</p>
+        </div>
+
+        <!-- 退出概览 -->
+        <section class="detail-section" id="overview">
+          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>退出路径概览</h2>
+
+          <div class="alert-box success" style="margin-bottom:20px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>核心优势：</strong>多重退出设计，投资方可根据市场情况选择最优退出路径，最大程度保障投资回报。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">退出路径对比</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>退出路径</th>
+                  <th>预计时间</th>
+                  <th>预期收益</th>
+                  <th>可行性</th>
+                  <th>适用投资方</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="highlight-row">
+                  <td><strong>SPV反向并购上市公司</strong></td>
+                  <td>T+24~36月</td>
+                  <td>估值倍数3-5x</td>
+                  <td><span class="stars">★★★★★</span> 最优路径</td>
+                  <td>全体投资方</td>
+                </tr>
+                <tr>
+                  <td><strong>独立IPO</strong></td>
+                  <td>T+36~48月</td>
+                  <td>估值倍数5-10x</td>
+                  <td><span class="stars">★★★★☆</span> 长期路径</td>
+                  <td>战略投资者</td>
+                </tr>
+                <tr>
+                  <td><strong>股权转让</strong></td>
+                  <td>T+18月后</td>
+                  <td>按估值协商</td>
+                  <td><span class="stars">★★★☆☆</span> 灵活退出</td>
+                  <td>财务投资者</td>
+                </tr>
+                <tr>
+                  <td><strong>上市公司收购</strong></td>
+                  <td>T+24月后</td>
+                  <td>溢价收购</td>
+                  <td><span class="stars">★★★★☆</span> 战略退出</td>
+                  <td>产业资本</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 四大路径 -->
+        <section class="detail-section" id="paths">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>四大退出路径详解</h2>
+
+          <div class="exit-path-cards">
+            <div class="exit-path-card primary">
+              <div class="path-rank">最优路径</div>
+              <div class="path-header">
+                <div class="path-icon"><i data-lucide="building-2" style="width:28px;height:28px"></i></div>
+                <div class="path-title">SPV反向并购上市公司</div>
+              </div>
+              <div class="path-body">
+                <div class="path-detail">
+                  <div class="detail-label">预计时间</div>
+                  <div class="detail-value">T+24~36月</div>
+                </div>
+                <div class="path-detail">
+                  <div class="detail-label">预期收益</div>
+                  <div class="detail-value green">估值倍数3-5x</div>
+                </div>
+                <div class="path-desc">
+                  <p><strong>执行路径：</strong></p>
+                  <ol style="padding-left:20px;color:var(--text-secondary);font-size:0.875rem">
+                    <li>SPV估值增长至50-80亿</li>
+                    <li>反向并购上市公司40%股权</li>
+                    <li>芯片业务装入上市公司</li>
+                    <li>股价上涨，投资方通过二级市场退出</li>
+                  </ol>
+                </div>
+                <div class="path-advantage">
+                  <span class="advantage-title">核心优势：</span>
+                  <span class="advantage-desc">确定性高、时间可控、监管审批相对简便</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exit-path-card">
+              <div class="path-rank secondary">长期路径</div>
+              <div class="path-header">
+                <div class="path-icon"><i data-lucide="trending-up" style="width:28px;height:28px"></i></div>
+                <div class="path-title">独立IPO</div>
+              </div>
+              <div class="path-body">
+                <div class="path-detail">
+                  <div class="detail-label">预计时间</div>
+                  <div class="detail-value">T+36~48月</div>
+                </div>
+                <div class="path-detail">
+                  <div class="detail-label">预期收益</div>
+                  <div class="detail-value blue">估值倍数5-10x</div>
+                </div>
+                <div class="path-desc">
+                  <p><strong>执行路径：</strong></p>
+                  <ul style="padding-left:20px;color:var(--text-secondary);font-size:0.875rem">
+                    <li>SPV业绩持续增长</li>
+                    <li>满足上市条件（营收、利润、合规）</li>
+                    <li>科创板/创业板IPO</li>
+                    <li>锁定期后减持退出</li>
+                  </ul>
+                </div>
+                <div class="path-advantage">
+                  <span class="advantage-title">潜在收益：</span>
+                  <span class="advantage-desc">估值倍数最高，但周期长、不确定性大</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exit-path-card">
+              <div class="path-rank tertiary">灵活退出</div>
+              <div class="path-header">
+                <div class="path-icon"><i data-lucide="repeat" style="width:28px;height:28px"></i></div>
+                <div class="path-title">股权转让</div>
+              </div>
+              <div class="path-body">
+                <div class="path-detail">
+                  <div class="detail-label">预计时间</div>
+                  <div class="detail-value">T+18月后</div>
+                </div>
+                <div class="path-detail">
+                  <div class="detail-label">预期收益</div>
+                  <div class="detail-value yellow">按估值协商</div>
+                </div>
+                <div class="path-desc">
+                  <p><strong>执行路径：</strong></p>
+                  <ul style="padding-left:20px;color:var(--text-secondary);font-size:0.875rem">
+                    <li>投资方通过优先购买权/共同出售权条款保护</li>
+                    <li>向后续轮次投资者转让</li>
+                    <li>向产业资本转让</li>
+                    <li>向创始股东回购</li>
+                  </ul>
+                </div>
+                <div class="path-advantage">
+                  <span class="advantage-title">灵活性：</span>
+                  <span class="advantage-desc">时间灵活、手续简便，适合财务投资者快速退出</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exit-path-card">
+              <div class="path-rank tertiary">战略退出</div>
+              <div class="path-header">
+                <div class="path-icon"><i data-lucide="handshake" style="width:28px;height:28px"></i></div>
+                <div class="path-title">上市公司收购</div>
+              </div>
+              <div class="path-body">
+                <div class="path-detail">
+                  <div class="detail-label">预计时间</div>
+                  <div class="detail-value">T+24月后</div>
+                </div>
+                <div class="path-detail">
+                  <div class="detail-label">预期收益</div>
+                  <div class="detail-value purple">溢价收购</div>
+                </div>
+                <div class="path-desc">
+                  <p><strong>执行路径：</strong></p>
+                  <ul style="padding-left:20px;color:var(--text-secondary);font-size:0.875rem">
+                    <li>SPV被产业上市公司并购</li>
+                    <li>投资方获得上市公司股票+现金对价</li>
+                    <li>通过二级市场减持实现退出</li>
+                  </ul>
+                </div>
+                <div class="path-advantage">
+                  <span class="advantage-title">战略价值：</span>
+                  <span class="advantage-desc">产业协同溢价，收购方愿意支付溢价</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 估值增长 -->
+        <section class="detail-section" id="valuation">
+          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>估值增长预期</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">SPV估值增长曲线</h3>
+          <div class="chart-container">
+            <div class="chart-title">SPV估值增长预期（亿CNY）</div>
+            <div style="height:320px;position:relative">
+              <canvas id="valuationChart"></canvas>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">估值里程碑</h3>
+          <div class="valuation-timeline">
+            <div class="valuation-item">
+              <div class="valuation-marker blue">T+0</div>
+              <div class="valuation-content">
+                <div class="valuation-title">第一轮（当前）</div>
+                <div class="valuation-value">3.9-10.2亿</div>
+                <div class="valuation-desc">团队作价+实控人出资</div>
+              </div>
+            </div>
+            <div class="valuation-item">
+              <div class="valuation-marker green">T+12月</div>
+              <div class="valuation-content">
+                <div class="valuation-title">第二轮</div>
+                <div class="valuation-value">20-30亿</div>
+                <div class="valuation-desc">流片成功+IP迁移过半</div>
+              </div>
+            </div>
+            <div class="valuation-item">
+              <div class="valuation-marker purple">T+24月</div>
+              <div class="valuation-content">
+                <div class="valuation-title">后阶段</div>
+                <div class="valuation-value">50-80亿</div>
+                <div class="valuation-desc">产品规模化+上市公司装入溢价</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">投资回报测算</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>投资轮次</th>
+                  <th>投资估值</th>
+                  <th>退出估值（保守）</th>
+                  <th>退出估值（中性）</th>
+                  <th>退出估值（乐观）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>第一轮投资</strong></td>
+                  <td>3.9-10.2亿</td>
+                  <td>50亿<br><span class="tag green">5-13x</span></td>
+                  <td>65亿<br><span class="tag blue">6-17x</span></td>
+                  <td>80亿<br><span class="tag purple">8-21x</span></td>
+                </tr>
+                <tr>
+                  <td><strong>第二轮投资</strong></td>
+                  <td>20-30亿</td>
+                  <td>50亿<br><span class="tag green">2-3x</span></td>
+                  <td>65亿<br><span class="tag blue">2-3x</span></td>
+                  <td>80亿<br><span class="tag purple">3-4x</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 财务预测 -->
+        <section class="detail-section" id="financial">
+          <h2 class="detail-section-title"><i data-lucide="bar-chart-3" style="width:20px;height:20px"></i>财务预测</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">SPV收入预测（5年）</h3>
+          <div class="chart-container">
+            <div class="chart-title">收入预测（亿CNY）</div>
+            <div style="height:280px;position:relative">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关键财务指标</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>指标</th>
+                  <th>Y1</th>
+                  <th>Y2</th>
+                  <th>Y3</th>
+                  <th>Y4</th>
+                  <th>Y5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>营收（亿元）</strong></td>
+                  <td>0.5</td>
+                  <td>2.0</td>
+                  <td>5.0</td>
+                  <td>8.0</td>
+                  <td>12.0</td>
+                </tr>
+                <tr>
+                  <td><strong>EBITDA（亿元）</strong></td>
+                  <td>0.05</td>
+                  <td>0.30</td>
+                  <td>1.00</td>
+                  <td>1.60</td>
+                  <td>2.40</td>
+                </tr>
+                <tr>
+                  <td><strong>EBITDA率</strong></td>
+                  <td>10%</td>
+                  <td>15%</td>
+                  <td>20%</td>
+                  <td>20%</td>
+                  <td>20%</td>
+                </tr>
+                <tr>
+                  <td><strong>净利润（亿元）</strong></td>
+                  <td>-0.5</td>
+                  <td>-0.2</td>
+                  <td>0.5</td>
+                  <td>1.0</td>
+                  <td>1.5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关键假设</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="assumption-card">
+              <div class="assumption-title"><i data-lucide="cpu" style="width:18px;height:18px;color:var(--accent-blue)"></i> 技术假设</div>
+              <ul style="padding-left:16px;font-size:0.8125rem;color:var(--text-secondary)">
+                <li>8月流片成功</li>
+                <li>IP迁移按计划完成</li>
+                <li>产品性能达标</li>
+              </ul>
+            </div>
+            <div class="assumption-card">
+              <div class="assumption-title"><i data-lucide="trending-up" style="width:18px;height:18px;color:var(--accent-green)"></i> 市场假设</div>
+              <ul style="padding-left:16px;font-size:0.8125rem;color:var(--text-secondary)">
+                <li>自消纳体系稳定执行</li>
+                <li>蓝瞳采购订单落地</li>
+                <li>信创市场持续增长</li>
+              </ul>
+            </div>
+            <div class="assumption-card">
+              <div class="assumption-title"><i data-lucide="landmark" style="width:18px;height:18px;color:var(--accent-purple)"></i> 政策假设</div>
+              <ul style="padding-left:16px;font-size:0.8125rem;color:var(--text-secondary)">
+                <li>制裁风险可控</li>
+                <li>产业政策支持</li>
+                <li>资本市场环境良好</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box warning" style="margin-top:20px">
+            <i data-lucide="alert-triangle" style="width:18px;height:18px"></i>
+            <span><strong>风险提示：</strong>财务预测基于当前市场环境和政策假设，实际情况可能因市场变化、技术风险、政策调整等因素产生偏差。投资方应关注关键假设的变化并及时调整预期。</span>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../../js/app.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .data-table tr.highlight-row { background:rgba(166,227,161,0.15) }
+    .stars { color:var(--accent-yellow);font-weight:600;letter-spacing:2px }
+    .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box.warning { background:rgba(249,226,175,0.1);border:1px solid var(--accent-yellow) }
+    .alert-box i { flex-shrink:0 }
+    .alert-box.success i { color:var(--accent-green) }
+    .alert-box.warning i { color:var(--accent-yellow) }
+    .exit-path-cards { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px }
+    .exit-path-card { background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden }
+    .exit-path-card.primary { border:2px solid var(--accent-blue) }
+    .path-rank { font-size:0.75rem;font-weight:600;padding:8px 16px;text-transform:uppercase }
+    .exit-path-card.primary .path-rank { background:var(--accent-blue);color:white }
+    .exit-path-card .path-rank.secondary { background:var(--accent-green);color:var(--bg-primary) }
+    .exit-path-card .path-rank.tertiary { background:var(--bg-secondary);color:var(--text-muted) }
+    .path-header { padding:16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border) }
+    .path-icon { width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg-secondary) }
+    .exit-path-card.primary .path-icon { background:rgba(137,180,250,0.2) }
+    .path-icon i { color:var(--accent-blue) }
+    .path-title { font-weight:600;color:var(--text-primary);font-size:1rem }
+    .path-body { padding:16px }
+    .path-detail { display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border) }
+    .detail-label { color:var(--text-muted);font-size:0.8125rem }
+    .detail-value { font-weight:600;color:var(--text-primary) }
+    .detail-value.green { color:var(--accent-green) }
+    .detail-value.blue { color:var(--accent-blue) }
+    .detail-value.yellow { color:var(--accent-yellow) }
+    .detail-value.purple { color:var(--accent-purple) }
+    .path-desc { padding:12px 0 }
+    .path-desc p { margin-bottom:8px;font-weight:600;color:var(--text-primary) }
+    .path-advantage { padding:12px;background:var(--bg-secondary);border-radius:var(--radius-sm);margin-top:12px }
+    .advantage-title { font-weight:600;color:var(--accent-blue);font-size:0.875rem }
+    .advantage-desc { font-size:0.8125rem;color:var(--text-secondary) }
+    .chart-container { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;margin:16px 0;border:1px solid var(--border) }
+    .chart-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .valuation-timeline { display:flex;gap:16px;overflow-x:auto;padding:16px 0 }
+    .valuation-item { display:flex;gap:16px;background:var(--bg-card);padding:16px 20px;border-radius:var(--radius-md);border:1px solid var(--border);min-width:200px }
+    .valuation-marker { padding:8px 16px;border-radius:var(--radius-sm);font-weight:600;color:white;white-space:nowrap }
+    .valuation-marker.blue { background:var(--accent-blue) }
+    .valuation-marker.green { background:var(--accent-green) }
+    .valuation-marker.purple { background:var(--accent-purple) }
+    .valuation-title { font-weight:600;color:var(--text-primary);margin-bottom:4px }
+    .valuation-value { font-size:1.25rem;font-weight:700;color:var(--accent-blue);margin-bottom:4px }
+    .valuation-desc { font-size:0.8125rem;color:var(--text-secondary) }
+    .assumption-card { background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border) }
+    .assumption-title { font-weight:600;color:var(--text-primary);margin-bottom:8px;display:flex;align-items:center;gap:8px }
+  </style>
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // Valuation Chart
+    const valuationCtx = document.getElementById('valuationChart');
+    if (valuationCtx) {
+      new Chart(valuationCtx, {
+        type: 'line',
+        data: {
+          labels: ['T+0', 'T+6月', 'T+12月', 'T+18月', 'T+24月', 'T+30月', 'T+36月'],
+          datasets: [{
+            label: '保守估值',
+            data: [3.9, 10, 20, 30, 40, 45, 50],
+            borderColor: 'rgba(249, 226, 175, 1)',
+            backgroundColor: 'rgba(249, 226, 175, 0.1)',
+            fill: true,
+            tension: 0.3
+          }, {
+            label: '中性估值',
+            data: [7, 15, 25, 40, 55, 60, 65],
+            borderColor: 'rgba(137, 180, 250, 1)',
+            backgroundColor: 'rgba(137, 180, 250, 0.1)',
+            fill: true,
+            tension: 0.3
+          }, {
+            label: '乐观估值',
+            data: [10.2, 20, 30, 50, 65, 75, 80],
+            borderColor: 'rgba(166, 227, 161, 1)',
+            backgroundColor: 'rgba(166, 227, 161, 0.1)',
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top', labels: { color: '#a6adc8' } }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: 'rgba(69, 71, 90, 0.3)' },
+              ticks: { color: '#a6adc8' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#a6adc8' }
+            }
+          }
+        }
+      });
+    }
+
+    // Revenue Chart
+    const revenueCtx = document.getElementById('revenueChart');
+    if (revenueCtx) {
+      new Chart(revenueCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Y1', 'Y2', 'Y3', 'Y4', 'Y5'],
+          datasets: [{
+            label: '收入（亿CNY）',
+            data: [0.5, 2.0, 5.0, 8.0, 12.0],
+            backgroundColor: 'rgba(137, 180, 250, 0.7)',
+            borderColor: 'rgba(137, 180, 250, 1)',
+            borderWidth: 1,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: 'rgba(69, 71, 90, 0.3)' },
+              ticks: { color: '#a6adc8' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#a6adc8' }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

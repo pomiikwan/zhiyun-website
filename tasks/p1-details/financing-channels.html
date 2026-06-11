@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>融资渠道详解 - 智云数科</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+    </ul>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="../index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="../p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="../p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="../p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items">
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="../p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="../p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="../p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1 次级详情页</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-framework.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值框架详解</span></a>
+          <a href="financing-channels.html" class="sidebar-item active"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>融资渠道详解</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+          <a href="fund-safety-margin.html" class="sidebar-item"><i data-lucide="shield-check" style="width:16px;height:16px"></i><span>资金安全边际</span></a>
+          <a href="compliance-checkpoints.html" class="sidebar-item"><i data-lucide="file-check" style="width:16px;height:16px"></i><span>合规检查点</span></a>
+          <a href="investment-highlights.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>投资亮点</span></a>
+          <a href="transaction-structure.html" class="sidebar-item"><i data-lucide="git-merge" style="width:16px;height:16px"></i><span>交易结构</span></a>
+          <a href="exit-paths.html" class="sidebar-item"><i data-lucide="log-out" style="width:16px;height:16px"></i><span>退出路径</span></a>
+          <a href="investor-profiles.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>战略投资者画像</span></a>
+          <a href="fund-capability.html" class="sidebar-item"><i data-lucide="wallet" style="width:16px;height:16px"></i><span>资金导入能力</span></a>
+          <a href="negotiation-chips.html" class="sidebar-item"><i data-lucide="award" style="width:16px;height:16px"></i><span>谈判筹码</span></a>
+          <a href="execution-timeline.html" class="sidebar-item"><i data-lucide="calendar" style="width:16px;height:16px"></i><span>执行时序</span></a>
+          <a href="fx-risk-management.html" class="sidebar-item"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i><span>外汇风险管理</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../p1-financing.html">P1融资结构</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">融资渠道详解</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">P1方案融资渠道详解</h1>
+          <div class="detail-tags">
+            <span class="tag blue"><i data-lucide="banknote" style="width:12px;height:12px"></i>多渠道并行</span>
+            <span class="tag green"><i data-lucide="shield-check" style="width:12px;height:12px"></i>风险分散</span>
+            <span class="tag purple"><i data-lucide="git-branch" style="width:12px;height:12px"></i>信用杠杆</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v1.0 | 日期：2026-06-11 | 整合自：M&A融资专家、国企央企资金端设计者</p>
+        </div>
+
+        <!-- 渠道概览 -->
+        <section class="detail-section" id="overview">
+          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>渠道概览</h2>
+
+          <div class="alert-box info" style="margin-bottom:20px">
+            <i data-lucide="info" style="width:18px;height:18px"></i>
+            <span><strong>核心原则：</strong>管道C（产业基金）→管道B（上市公司平台）→管道A（SPV纯财务）优先级排序，多渠道并行推进，动态择优。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">四大资金渠道对比</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>渠道</th>
+                  <th>可撬动量级</th>
+                  <th>关总影响力</th>
+                  <th>信用杠杆倍数</th>
+                  <th>启动周期</th>
+                  <th>确定性</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>广西700亿授信</strong></td>
+                  <td>7-35亿</td>
+                  <td><span class="tag yellow">C级</span> 中间人/撮合者</td>
+                  <td><span class="tag blue">3-5×</span></td>
+                  <td>3-6个月</td>
+                  <td><span class="tag yellow">中</span></td>
+                </tr>
+                <tr>
+                  <td><strong>蓝瞳140亿</strong></td>
+                  <td>10-30亿</td>
+                  <td><span class="tag green">B级</span> 核心影响者</td>
+                  <td><span class="tag green">5-8×</span></td>
+                  <td>6-12个月</td>
+                  <td><span class="tag green">中高</span></td>
+                </tr>
+                <tr>
+                  <td><strong>上海二级市场100亿</strong></td>
+                  <td>5-15亿</td>
+                  <td><span class="tag yellow">C级</span> 中间人/撮合者</td>
+                  <td><span class="tag yellow">2-3×</span></td>
+                  <td>1-3个月</td>
+                  <td><span class="tag green">中高</span></td>
+                </tr>
+                <tr>
+                  <td><strong>银团贷款</strong></td>
+                  <td>10-15亿</td>
+                  <td><span class="tag blue">直接控制</span></td>
+                  <td><span class="tag purple">债务杠杆</span></td>
+                  <td>1.5-2个月</td>
+                  <td><span class="tag green">高</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">资金来源组合（总需求3亿USD）</h3>
+          <div class="chart-container">
+            <div class="chart-title">资金来源占比</div>
+            <div style="height:280px;position:relative">
+              <canvas id="fundChart"></canvas>
+            </div>
+          </div>
+
+          <div class="total-funds">
+            <div class="total-label">总资金导入能力</div>
+            <div class="total-value">超过50亿人民币</div>
+            <div class="total-note">（保守估计，三渠道叠加）</div>
+          </div>
+        </section>
+
+        <!-- 广西渠道 -->
+        <section class="detail-section" id="guangxi">
+          <h2 class="detail-section-title"><i data-lucide="building-2" style="width:20px;height:20px"></i>广西渠道详解</h2>
+
+          <div class="channel-header">
+            <div class="channel-badge yellow">管道C - 最优先</div>
+            <div class="channel-title">广西700亿授信主体</div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">授信主体分类</h3>
+          <div class="grid-2" style="gap:16px">
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-blue)">
+              <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
+                <i data-lucide="building" style="width:20px;height:20px;color:var(--accent-blue)"></i>
+                产业园区/开发区
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:12px">资金用途挂钩固投，天然契合智算中心投建+设备采购</p>
+              <div class="metric-mini">
+                <span class="label">综合得分</span>
+                <span class="value">50-57分</span>
+              </div>
+              <div class="metric-mini">
+                <span class="label">优势</span>
+                <span class="value green">用途灵活度高</span>
+              </div>
+              <div class="metric-mini">
+                <span class="label">短板</span>
+                <span class="value red">资金到位慢（90-180天）</span>
+              </div>
+            </div>
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-green)">
+              <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
+                <i data-lucide="landmark" style="width:20px;height:20px;color:var(--accent-green)"></i>
+                大型国企（非城投）
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:12px">经营性授信用途灵活，但受经营范围约束</p>
+              <div class="metric-mini">
+                <span class="label">综合得分</span>
+                <span class="value">36-56分</span>
+              </div>
+              <div class="metric-mini">
+                <span class="label">优势</span>
+                <span class="value green">资金到位快（60-90天）</span>
+              </div>
+              <div class="metric-mini">
+                <span class="label">短板</span>
+                <span class="value red">关总影响力弱</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">三条资金转化路径</h3>
+          <div class="path-cards">
+            <div class="path-card primary">
+              <div class="path-header">
+                <span class="path-number">路径①</span>
+                <span class="path-name">采购→自消纳→里程碑付款</span>
+              </div>
+              <div class="path-body">
+                <div class="path-flow">
+                  <div class="flow-item">贸易合同</div>
+                  <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+                  <div class="flow-item">营收增长</div>
+                  <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+                  <div class="flow-item">银行授信提升</div>
+                  <i data-lucide="arrow-right" style="width:16px;height:16px;color:var(--text-muted)"></i>
+                  <div class="flow-item highlight">里程碑付款资金</div>
+                </div>
+                <p style="font-size:0.875rem;color:var(--text-secondary);margin-top:12px"><strong>双轨并行：</strong></p>
+                <ul style="font-size:0.875rem;color:var(--text-secondary);padding-left:20px">
+                  <li><strong>A-信用杠杆路径：</strong>贸易合同做大营收规模→以营收规模为信用基础→获得银行贷款/供应链融资</li>
+                  <li><strong>B-资金腾挪路径：</strong>贸易合同回款→替换智云数据原本用于其他业务的资金→腾出来用于里程碑付款</li>
+                </ul>
+              </div>
+            </div>
+            <div class="path-card">
+              <div class="path-header">
+                <span class="path-number">路径②</span>
+                <span class="path-name">产业基金</span>
+              </div>
+              <div class="path-body">
+                <p style="font-size:0.875rem;color:var(--text-secondary)">授信主体通过LP入芯片产业基金→基金投资智云数科股权</p>
+                <div class="alert-box info" style="margin-top:12px">
+                  <i data-lucide="info" style="width:16px;height:16px"></i>
+                  <span>合规门槛高、周期长，但量级大</span>
+                </div>
+              </div>
+            </div>
+            <div class="path-card">
+              <div class="path-header">
+                <span class="path-number">路径③</span>
+                <span class="path-name">股权直投</span>
+              </div>
+              <div class="path-body">
+                <p style="font-size:0.875rem;color:var(--text-secondary)">授信主体直接投资智云数科股权</p>
+                <div class="alert-box warning" style="margin-top:12px">
+                  <i data-lucide="alert-triangle" style="width:16px;height:16px"></i>
+                  <span>需授信主体有股权投资资质，可能需设立投资子公司</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">低成本资金工具匹配</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>工具</th>
+                  <th>成本区间</th>
+                  <th>到账时间</th>
+                  <th>适配路径</th>
+                  <th>核心条件</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>银票</strong></td>
+                  <td><span class="tag green">0.05%-1.2%</span></td>
+                  <td>T+0</td>
+                  <td>路径①采购</td>
+                  <td>保证金到账确认，核心企业开票</td>
+                </tr>
+                <tr>
+                  <td><strong>反向保理</strong></td>
+                  <td><span class="tag blue">2.8%-4.0%</span></td>
+                  <td>3-5日</td>
+                  <td>路径①采购</td>
+                  <td>核心企业确权（付款确认书），确权率≥95%</td>
+                </tr>
+                <tr>
+                  <td><strong>国内证+福费廷</strong></td>
+                  <td><span class="tag blue">2.2%-3.2%</span></td>
+                  <td>T+2</td>
+                  <td>路径①采购</td>
+                  <td>国企为开证申请人，智云为受益人</td>
+                </tr>
+                <tr>
+                  <td><strong>供应链ABS</strong></td>
+                  <td><span class="tag blue">2.5%-3.8%</span></td>
+                  <td>45-60日</td>
+                  <td>路径①采购（大额）</td>
+                  <td>核心企业评级AA+以上，不占贷款规模</td>
+                </tr>
+                <tr>
+                  <td><strong>产业基金LP出资</strong></td>
+                  <td><span class="tag green">贴息后≤2%</span></td>
+                  <td>60-90日</td>
+                  <td>路径②产业基金</td>
+                  <td>授信主体以LP身份入基金</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 蓝瞳渠道 -->
+        <section class="detail-section" id="lantong">
+          <h2 class="detail-section-title"><i data-lucide="handshake" style="width:20px;height:20px"></i>蓝瞳渠道详解</h2>
+
+          <div class="channel-header">
+            <div class="channel-badge green">管道B - 核心影响者</div>
+            <div class="channel-title">蓝瞳900亿半导体项目</div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">蓝瞳-智云协同矩阵</h3>
+          <div class="synergy-grid">
+            <div class="synergy-card">
+              <div class="synergy-direction">蓝瞳 → 智云</div>
+              <div class="synergy-title">A系列：客户+投资+合作</div>
+              <div class="synergy-items">
+                <div class="synergy-item">
+                  <span class="item-tag blue">A1</span>
+                  <span class="item-text">蓝瞳采购智云推理芯片/GPU（客户关系）</span>
+                </div>
+                <div class="synergy-item">
+                  <span class="item-tag green">A2</span>
+                  <span class="item-text">蓝瞳做LP入智云产业基金（投资关系）</span>
+                </div>
+                <div class="synergy-item">
+                  <span class="item-tag purple">A3</span>
+                  <span class="item-text">蓝瞳与智云共建智算中心（联合投资）</span>
+                </div>
+              </div>
+            </div>
+            <div class="synergy-card">
+              <div class="synergy-direction">智云 → 蓝瞳</div>
+              <div class="synergy-title">B系列：核心供给</div>
+              <div class="synergy-items">
+                <div class="synergy-item featured">
+                  <span class="item-tag red">B1核心锚点</span>
+                  <span class="item-text">智云SmartNIC/DPU供给蓝瞳算力基础设施</span>
+                </div>
+                <div class="synergy-item">
+                  <span class="item-tag blue">B2</span>
+                  <span class="item-text">智云数据与蓝瞳在GPU加改配方向共同业务对接</span>
+                </div>
+                <div class="synergy-item">
+                  <span class="item-tag blue">B3</span>
+                  <span class="item-text">智算中心运营配合</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-box success" style="margin:20px 0">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>核心锚点：</strong>蓝瞳900亿算力建设的确定性网卡需求（B1），每万P算力需200-300万SmartNIC/DPU，这是智云数科确定性收入的基石。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">信用杠杆传导机制</h3>
+          <div class="leverage-flow">
+            <div class="leverage-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <div class="step-title">SmartNIC/DPU采购合同</div>
+                <div class="step-value">5-8亿/年</div>
+              </div>
+            </div>
+            <i data-lucide="arrow-down" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+            <div class="leverage-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <div class="step-title">蓝瞳LP出资产业基金</div>
+                <div class="step-value">3-5亿</div>
+              </div>
+            </div>
+            <i data-lucide="arrow-down" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+            <div class="leverage-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <div class="step-title">蓝瞳采购推理芯片/GPU</div>
+                <div class="step-value">2-3亿/年</div>
+              </div>
+            </div>
+            <i data-lucide="arrow-down" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+            <div class="leverage-step result">
+              <div class="step-number">结果</div>
+              <div class="step-content">
+                <div class="step-title">双通道信用叠加</div>
+                <div class="step-value green">信用杠杆倍数 5-8×</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关键约束</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="constraint-card">
+              <i data-lucide="clock" style="width:20px;height:20px;color:var(--accent-yellow)"></i>
+              <div class="constraint-title">投产延迟</div>
+              <div class="constraint-desc">蓝瞳首批封测厂60亿尚未投产，采购需求有6-12个月延迟</div>
+            </div>
+            <div class="constraint-card">
+              <i data-lucide="file-check" style="width:20px;height:20px;color:var(--accent-yellow)"></i>
+              <div class="constraint-title">基金先行</div>
+              <div class="constraint-desc">A2蓝瞳LP入基金需基金架构先确立</div>
+            </div>
+            <div class="constraint-card">
+              <i data-lucide="cpu" style="width:20px;height:20px;color:var(--accent-yellow)"></i>
+              <div class="constraint-title">产品验证</div>
+              <div class="constraint-desc">B1是核心锚点但需产品先通过蓝瞳验证</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 上海渠道 -->
+        <section class="detail-section" id="shanghai">
+          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>上海渠道详解</h2>
+
+          <div class="channel-header">
+            <div class="channel-badge blue">执行基础设施</div>
+            <div class="channel-title">上海二级市场100亿级</div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">三重功能定位</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>功能模块</th>
+                  <th>功能描述</th>
+                  <th>作用</th>
+                  <th>关键约束</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>M1 二级市场建仓</strong></td>
+                  <td>主板上市公司实控人已愿意配合出让对应流通股</td>
+                  <td>无需二级抢筹，只需对接上海基金承接</td>
+                  <td>如何对接上海基金</td>
+                </tr>
+                <tr>
+                  <td><strong>M3 大宗交易/协议转让</strong></td>
+                  <td>为P2收购提供股权受让执行路径</td>
+                  <td>收购执行通道</td>
+                  <td>需P2收购方案确定</td>
+                </tr>
+                <tr>
+                  <td><strong>M4 质押融资</strong></td>
+                  <td>收购完成后股票质押融资变现→投入SPV</td>
+                  <td>资金放大</td>
+                  <td>股价波动风险</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert-box warning" style="margin:20px 0">
+            <i data-lucide="alert-triangle" style="width:18px;height:18px"></i>
+            <span><strong>核心定位：</strong>上海渠道本质是P2收购的"手术台"，而非P1融资的直接资金来源。但通过P2完成后管道B反哺P1。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">上市公司实控人质押场景</h3>
+          <div class="grid-2" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">实控人持股</div>
+              <div class="metric-value blue">60%</div>
+              <div class="metric-sub">21亿市值（总市值35亿×60%）</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">质押变现（50%质押率）</div>
+              <div class="metric-value green">10.5亿</div>
+              <div class="metric-sub">投入SPV第一轮</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">信用杠杆倍数</div>
+              <div class="metric-value yellow">2-3×</div>
+              <div class="metric-sub">受质押率上限和股价波动约束</div>
+            </div>
+            <div class="metric-card" style="border:2px solid var(--accent-red)">
+              <div class="metric-label">关键风险</div>
+              <div class="metric-value red">股价下跌</div>
+              <div class="metric-sub">导致补仓压力，杠杆倍数受市场波动影响</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 银团贷款 -->
+        <section class="detail-section" id="bank-consortium">
+          <h2 class="detail-section-title"><i data-lucide="landmark" style="width:20px;height:20px"></i>银团贷款详解</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">核心参数设计</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>参数</th>
+                  <th>方案设计</th>
+                  <th>监管依据</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>贷款总额</strong></td>
+                  <td>10-15亿人民币</td>
+                  <td>银保监会2024：LTV≤60%</td>
+                </tr>
+                <tr>
+                  <td><strong>综合成本</strong></td>
+                  <td><span class="tag green">3.3%</span>（3个月LPR 3.45% - 15bp）</td>
+                  <td>央行2022-9利差下限</td>
+                </tr>
+                <tr>
+                  <td><strong>期限</strong></td>
+                  <td>7年（一次性到期）</td>
+                  <td>银保监会2024：并购贷款最长7年</td>
+                </tr>
+                <tr>
+                  <td><strong>宽限期</strong></td>
+                  <td>2年（仅付息不还本）</td>
+                  <td>银保监会2024：宽限期≤2年</td>
+                </tr>
+                <tr>
+                  <td><strong>币种</strong></td>
+                  <td>60% CNY + 40% USD</td>
+                  <td>里程碑付款为美金，需多币种分层</td>
+                </tr>
+                <tr>
+                  <td><strong>DSCR要求</strong></td>
+                  <td>≥1.25×（基准）/ ≥1.10×（压力测试）</td>
+                  <td>银保监会2024：DSCR≥1.25×</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">牵头行/参贷行分配</h3>
+          <div class="bank-grid">
+            <div class="bank-card lead">
+              <div class="bank-role">牵头安排行（MLA）</div>
+              <div class="bank-name">工行（ICBC）</div>
+              <div class="bank-commitment">≥4亿 | 30%+</div>
+            </div>
+            <div class="bank-card lead">
+              <div class="bank-role">牵头安排行（MLA）</div>
+              <div class="bank-name">中行（BOC）</div>
+              <div class="bank-commitment">≥3亿 | 25%</div>
+            </div>
+            <div class="bank-card lead">
+              <div class="bank-role">牵头安排行（MLA）</div>
+              <div class="bank-name">招行（CMB）</div>
+              <div class="bank-commitment">≥2亿 | 15%</div>
+            </div>
+            <div class="bank-card">
+              <div class="bank-role">参贷行</div>
+              <div class="bank-name">建行（CCB）</div>
+              <div class="bank-commitment">1-2亿 | 10%</div>
+            </div>
+            <div class="bank-card">
+              <div class="bank-role">参贷行</div>
+              <div class="bank-name">国开行（CDB）</div>
+              <div class="bank-commitment">1-2亿 | 10%</div>
+              <div class="bank-note">政策性银行，适配产业导向</div>
+            </div>
+            <div class="bank-card">
+              <div class="bank-role">参贷行</div>
+              <div class="bank-name">外资行（北向）</div>
+              <div class="bank-commitment">1-2亿 | 10%</div>
+              <div class="bank-note">覆盖美金里程碑付款需求</div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">三层担保体系</h3>
+          <div class="guarantee-layers">
+            <div class="guarantee-layer first">
+              <div class="layer-number">第一层</div>
+              <div class="layer-content">
+                <div class="layer-title">维好担保（Keep-well）</div>
+                <div class="layer-detail">智云数据母公司保证，覆盖SPV未偿债务的120%（≈18亿）</div>
+              </div>
+            </div>
+            <div class="guarantee-layer second">
+              <div class="layer-number">第二层</div>
+              <div class="layer-content">
+                <div class="layer-title">资产质押</div>
+                <div class="layer-detail">
+                  <ul style="padding-left:16px;font-size:0.875rem;color:var(--text-secondary)">
+                    <li>SPV股权质押（Scenario A: 3.9亿 / Scenario C: 10.2亿）</li>
+                    <li>SPV知识产权（IP）质押</li>
+                    <li>里程碑付款形成的IP权利</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="guarantee-layer third">
+              <div class="layer-number">第三层</div>
+              <div class="layer-content">
+                <div class="layer-title">个人担保</div>
+                <div class="layer-detail">上市公司A实控人个人连带保证，覆盖未偿债务的30%（≈4.5亿）</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 信用杠杆倍数汇总 -->
+        <section class="detail-section" id="leverage">
+          <h2 class="detail-section-title"><i data-lucide="scale" style="width:20px;height:20px"></i>信用杠杆倍数汇总</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">三渠道信用杠杆对比</h3>
+          <div class="chart-container">
+            <div class="chart-title">信用杠杆倍数对比</div>
+            <div style="height:280px;position:relative">
+              <canvas id="leverageChart"></canvas>
+            </div>
+          </div>
+
+          <div class="alert-box success" style="margin-top:20px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>核心发现：</strong>蓝瞳渠道的信用杠杆倍数最高（5-8×），因其产业协同深度绑定提供了采购合同+基金LP双重信用基础。广西渠道量级最大但影响力最弱，是核心风险点。上海渠道启动最快但杠杆倍数最低。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">三渠道叠加效果</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">加权信用杠杆倍数</div>
+              <div class="metric-value blue">4-6×</div>
+              <div class="metric-sub">三渠道综合效应</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">可撬动总资金量</div>
+              <div class="metric-value green">22-80亿</div>
+              <div class="metric-sub">保守-乐观区间</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">覆盖里程碑付款</div>
+              <div class="metric-value green">✅ 充足</div>
+              <div class="metric-sub">总需求21.4亿人民币</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../../js/app.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .chart-container { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;margin:16px 0;border:1px solid var(--border) }
+    .chart-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .alert-box.warning { background:rgba(249,226,175,0.1);border:1px solid var(--accent-yellow) }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box i { flex-shrink:0 }
+    .alert-box.info i { color:var(--accent-blue) }
+    .alert-box.warning i { color:var(--accent-yellow) }
+    .alert-box.success i { color:var(--accent-green) }
+    .total-funds { background:linear-gradient(135deg,rgba(137,180,250,0.15),rgba(166,227,161,0.15));border-radius:var(--radius-lg);padding:24px;text-align:center;margin:16px 0;border:2px solid var(--accent-blue) }
+    .total-label { font-size:0.9375rem;color:var(--text-secondary);margin-bottom:8px }
+    .total-value { font-size:2rem;font-weight:700;color:var(--accent-blue) }
+    .total-note { font-size:0.8125rem;color:var(--text-muted);margin-top:4px }
+    .channel-header { display:flex;align-items:center;gap:16px;margin-bottom:20px }
+    .channel-badge { padding:6px 16px;border-radius:var(--radius-md);font-size:0.875rem;font-weight:600 }
+    .channel-badge.yellow { background:rgba(249,226,175,0.2);color:var(--accent-yellow) }
+    .channel-badge.green { background:rgba(166,227,161,0.2);color:var(--accent-green) }
+    .channel-badge.blue { background:rgba(137,180,250,0.2);color:var(--accent-blue) }
+    .channel-title { font-size:1.25rem;font-weight:600;color:var(--text-primary) }
+    .metric-mini { display:flex;justify-content:space-between;padding:8px 0;font-size:0.875rem;border-top:1px solid var(--border) }
+    .metric-mini .label { color:var(--text-secondary) }
+    .metric-mini .value { font-weight:600;color:var(--text-primary) }
+    .metric-mini .value.green { color:var(--accent-green) }
+    .metric-mini .value.red { color:var(--accent-red) }
+    .path-cards { display:flex;flex-direction:column;gap:16px }
+    .path-card { background:var(--bg-card);border-radius:var(--radius-md);border:1px solid var(--border);overflow:hidden }
+    .path-card.primary { border:2px solid var(--accent-blue) }
+    .path-header { background:var(--bg-secondary);padding:12px 16px;display:flex;align-items:center;gap:12px }
+    .path-number { background:var(--accent-blue);color:white;padding:4px 12px;border-radius:var(--radius-sm);font-size:0.8125rem;font-weight:600 }
+    .path-name { font-weight:600;color:var(--text-primary) }
+    .path-body { padding:16px }
+    .path-flow { display:flex;align-items:center;gap:8px;flex-wrap:wrap }
+    .flow-item { background:var(--bg-secondary);padding:8px 16px;border-radius:var(--radius-sm);font-size:0.8125rem;color:var(--text-primary) }
+    .flow-item.highlight { background:rgba(137,180,250,0.2);color:var(--accent-blue);font-weight:600 }
+    .synergy-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px }
+    .synergy-card { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border) }
+    .synergy-direction { font-size:0.8125rem;color:var(--text-muted);margin-bottom:8px }
+    .synergy-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .synergy-items { display:flex;flex-direction:column;gap:12px }
+    .synergy-item { display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-secondary);border-radius:var(--radius-sm) }
+    .synergy-item.featured { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .item-tag { padding:4px 8px;border-radius:var(--radius-sm);font-size:0.75rem;font-weight:600 }
+    .item-tag.blue { background:rgba(137,180,250,0.2);color:var(--accent-blue) }
+    .item-tag.green { background:rgba(166,227,161,0.2);color:var(--accent-green) }
+    .item-tag.purple { background:rgba(203,166,247,0.2);color:var(--accent-purple) }
+    .item-tag.red { background:rgba(243,139,168,0.2);color:var(--accent-red) }
+    .item-text { font-size:0.875rem;color:var(--text-primary) }
+    .leverage-flow { display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--bg-secondary);padding:24px;border-radius:var(--radius-md) }
+    .leverage-step { display:flex;align-items:center;gap:16px;background:var(--bg-card);padding:16px 24px;border-radius:var(--radius-md);width:100%;max-width:400px }
+    .leverage-step.result { border:2px solid var(--accent-green) }
+    .step-number { width:32px;height:32px;border-radius:50%;background:var(--accent-blue);color:white;display:flex;align-items:center;justify-content:center;font-weight:600 }
+    .leverage-step.result .step-number { background:var(--accent-green) }
+    .step-title { font-weight:600;color:var(--text-primary) }
+    .step-value { font-size:0.875rem;color:var(--text-muted) }
+    .step-value.green { color:var(--accent-green);font-weight:600 }
+    .constraint-card { background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border) }
+    .constraint-title { font-weight:600;color:var(--text-primary);margin:8px 0 4px }
+    .constraint-desc { font-size:0.8125rem;color:var(--text-secondary) }
+    .bank-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px }
+    .bank-card { background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border);text-align:center }
+    .bank-card.lead { border:2px solid var(--accent-blue) }
+    .bank-role { font-size:0.75rem;color:var(--text-muted);margin-bottom:4px }
+    .bank-name { font-weight:600;color:var(--text-primary);margin-bottom:8px }
+    .bank-commitment { font-size:0.875rem;color:var(--accent-blue) }
+    .bank-note { font-size:0.75rem;color:var(--text-muted);margin-top:4px }
+    .guarantee-layers { display:flex;flex-direction:column;gap:12px }
+    .guarantee-layer { display:flex;gap:16px;background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border) }
+    .guarantee-layer.first { border-left:4px solid var(--accent-green) }
+    .guarantee-layer.second { border-left:4px solid var(--accent-blue) }
+    .guarantee-layer.third { border-left:4px solid var(--accent-yellow) }
+    .layer-number { width:60px;font-weight:600;color:var(--text-muted);font-size:0.875rem;flex-shrink:0 }
+    .layer-title { font-weight:600;color:var(--text-primary);margin-bottom:4px }
+    .layer-detail { font-size:0.875rem;color:var(--text-secondary) }
+  </style>
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // Fund Distribution Chart
+    const fundCtx = document.getElementById('fundChart');
+    if (fundCtx) {
+      new Chart(fundCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['ODI通道 (60%)', 'QFLP基金 (13%)', '银团USD贷款 (13%)', '内保外贷 (11%)', '自有资金 (3%)'],
+          datasets: [{
+            data: [60, 13, 13, 11, 3],
+            backgroundColor: [
+              'rgba(137, 180, 250, 0.8)',
+              'rgba(166, 227, 161, 0.8)',
+              'rgba(249, 226, 175, 0.8)',
+              'rgba(203, 166, 247, 0.8)',
+              'rgba(148, 226, 213, 0.8)'
+            ],
+            borderColor: '#1e1e2e',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: { color: '#a6adc8', font: { size: 12 } }
+            }
+          }
+        }
+      });
+    }
+
+    // Leverage Chart
+    const leverageCtx = document.getElementById('leverageChart');
+    if (leverageCtx) {
+      new Chart(leverageCtx, {
+        type: 'bar',
+        data: {
+          labels: ['广西渠道', '蓝瞳渠道', '上海渠道'],
+          datasets: [{
+            label: '信用杠杆倍数',
+            data: [4, 6.5, 2.5],
+            backgroundColor: [
+              'rgba(249, 226, 175, 0.8)',
+              'rgba(166, 227, 161, 0.8)',
+              'rgba(137, 180, 250, 0.8)'
+            ],
+            borderColor: [
+              'rgba(249, 226, 175, 1)',
+              'rgba(166, 227, 161, 1)',
+              'rgba(137, 180, 250, 1)'
+            ],
+            borderWidth: 1,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 10,
+              grid: { color: 'rgba(69, 71, 90, 0.3)' },
+              ticks: { color: '#a6adc8' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#a6adc8' }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

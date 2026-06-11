@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资金安全边际分析 - 智云数科</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+    </ul>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="../index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="../p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="../p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="../p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items">
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="../p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="../p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="../p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1 次级详情页</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-framework.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值框架详解</span></a>
+          <a href="financing-channels.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>融资渠道详解</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+          <a href="fund-safety-margin.html" class="sidebar-item active"><i data-lucide="shield-check" style="width:16px;height:16px"></i><span>资金安全边际</span></a>
+          <a href="compliance-checkpoints.html" class="sidebar-item"><i data-lucide="file-check" style="width:16px;height:16px"></i><span>合规检查点</span></a>
+          <a href="investment-highlights.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>投资亮点</span></a>
+          <a href="transaction-structure.html" class="sidebar-item"><i data-lucide="git-merge" style="width:16px;height:16px"></i><span>交易结构</span></a>
+          <a href="exit-paths.html" class="sidebar-item"><i data-lucide="log-out" style="width:16px;height:16px"></i><span>退出路径</span></a>
+          <a href="investor-profiles.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>战略投资者画像</span></a>
+          <a href="fund-capability.html" class="sidebar-item"><i data-lucide="wallet" style="width:16px;height:16px"></i><span>资金导入能力</span></a>
+          <a href="negotiation-chips.html" class="sidebar-item"><i data-lucide="award" style="width:16px;height:16px"></i><span>谈判筹码</span></a>
+          <a href="execution-timeline.html" class="sidebar-item"><i data-lucide="calendar" style="width:16px;height:16px"></i><span>执行时序</span></a>
+          <a href="fx-risk-management.html" class="sidebar-item"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i><span>外汇风险管理</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../p1-internal-decision.html">P1内部决策版</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">资金安全边际分析</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">资金安全边际分析</h1>
+          <div class="detail-tags">
+            <span class="tag green"><i data-lucide="check-circle" style="width:12px;height:12px"></i>资金全额覆盖</span>
+            <span class="tag blue"><i data-lucide="shield-check" style="width:12px;height:12px"></i>安全边际充足</span>
+            <span class="tag yellow"><i data-lucide="alert-triangle" style="width:12px;height:12px"></i>短期缺口预警</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v1.0 | 日期：2026-06-11 | 整合自：M&A融资专家、资金运营</p>
+        </div>
+
+        <!-- 资金概览 -->
+        <section class="detail-section" id="overview">
+          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>资金概览</h2>
+
+          <div class="summary-cards">
+            <div class="summary-card success">
+              <div class="summary-icon"><i data-lucide="check-circle" style="width:32px;height:32px"></i></div>
+              <div class="summary-content">
+                <div class="summary-value">全额覆盖</div>
+                <div class="summary-label">里程碑付款资金保障</div>
+              </div>
+            </div>
+            <div class="summary-card warning">
+              <div class="summary-icon"><i data-lucide="alert-triangle" style="width:32px;height:32px"></i></div>
+              <div class="summary-content">
+                <div class="summary-value">T+2月</div>
+                <div class="summary-label">短期缺口预警时点</div>
+              </div>
+            </div>
+            <div class="summary-card info">
+              <div class="summary-icon"><i data-lucide="trending-up" style="width:32px;height:32px"></i></div>
+              <div class="summary-content">
+                <div class="summary-value">12.3倍</div>
+                <div class="summary-label">对冲成本效益比</div>
+              </div>
+            </div>
+            <div class="summary-card primary">
+              <div class="summary-icon"><i data-lucide="shield-check" style="width:32px;height:32px"></i></div>
+              <div class="summary-content">
+                <div class="summary-value">81bp</div>
+                <div class="summary-label">综合对冲成本</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 资金时间表 -->
+        <section class="detail-section" id="timeline">
+          <h2 class="detail-section-title"><i data-lucide="calendar" style="width:20px;height:20px"></i>资金到位时间表</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">详细资金流</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>时间节点</th>
+                  <th>资金来源</th>
+                  <th>通道</th>
+                  <th>金额（USD）</th>
+                  <th>累计到位</th>
+                  <th>里程碑付款需求</th>
+                  <th>缺口/盈余</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>T+0</strong></td>
+                  <td>智云数据自有资金</td>
+                  <td>ODI备用金</td>
+                  <td>600万</td>
+                  <td>600万</td>
+                  <td>600万</td>
+                  <td><span class="status-badge success">0</span></td>
+                </tr>
+                <tr class="warning-row">
+                  <td><strong>T+2月</strong></td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>600万</td>
+                  <td>2400万</td>
+                  <td><span class="status-badge pending">-1800万</span></td>
+                </tr>
+                <tr>
+                  <td><strong>T+3月</strong></td>
+                  <td>ODI首批出境</td>
+                  <td>ODI</td>
+                  <td>8000万</td>
+                  <td>8600万</td>
+                  <td>3300万</td>
+                  <td><span class="status-badge success">+5300万</span></td>
+                </tr>
+                <tr>
+                  <td><strong>T+4月</strong></td>
+                  <td>QFLP基金</td>
+                  <td>QFLP</td>
+                  <td>4000万</td>
+                  <td>12600万</td>
+                  <td>5900万</td>
+                  <td><span class="status-badge success">+6700万</span></td>
+                </tr>
+                <tr>
+                  <td><strong>T+5月</strong></td>
+                  <td>银团USD贷款</td>
+                  <td>跨境借款</td>
+                  <td>4000万</td>
+                  <td>16600万</td>
+                  <td>8400万</td>
+                  <td><span class="status-badge success">+8200万</span></td>
+                </tr>
+                <tr>
+                  <td><strong>T+6月</strong></td>
+                  <td>ODI续期出境</td>
+                  <td>ODI</td>
+                  <td>10000万</td>
+                  <td>26600万</td>
+                  <td>11400万</td>
+                  <td><span class="status-badge success">+15200万</span></td>
+                </tr>
+                <tr>
+                  <td><strong>T+8月</strong></td>
+                  <td>内保外贷</td>
+                  <td>内保外贷</td>
+                  <td>3400万</td>
+                  <td>30000万</td>
+                  <td>17400万</td>
+                  <td><span class="status-badge success">+12600万</span></td>
+                </tr>
+                <tr>
+                  <td><strong>T+12月</strong></td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>30000万</td>
+                  <td>余额</td>
+                  <td><span class="status-badge success">完全覆盖</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert-box error" style="margin-top:16px">
+            <i data-lucide="alert-octagon" style="width:18px;height:18px"></i>
+            <span><strong>关键结论：</strong>T+2月存在1800万USD短期缺口，需通过智云数据短期资金调度或过桥融资解决。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">资金流入流出示意图</h3>
+          <div class="chart-container">
+            <div class="chart-title">累计资金到位 vs 里程碑付款需求（万USD）</div>
+            <div style="height:320px;position:relative">
+              <canvas id="fundsChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- 缺口分析 -->
+        <section class="detail-section" id="gap">
+          <h2 class="detail-section-title"><i data-lucide="alert-triangle" style="width:20px;height:20px"></i>资金缺口分析</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">缺口期识别</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>缺口期</th>
+                  <th>时间窗口</th>
+                  <th>缺口量级</th>
+                  <th>缺口原因</th>
+                  <th>风险等级</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>缺口1：SPV成立前</strong></td>
+                  <td>T-3月至T0</td>
+                  <td>≈0.43亿（首期600万USD）</td>
+                  <td>SPV尚未成立，银团未到位</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+                <tr>
+                  <td><strong>缺口2：银团组建期</strong></td>
+                  <td>T0至T+45天</td>
+                  <td>≈1.0-1.5亿</td>
+                  <td>银团承诺→首次提款有45天间隔</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+                <tr class="danger-row">
+                  <td><strong>缺口3：M4-M6密集付款期</strong></td>
+                  <td>T+3月至T+5月</td>
+                  <td>≈4.3亿</td>
+                  <td>里程碑付款加速，贸易回款尚未到位</td>
+                  <td><span class="tag red">最高</span></td>
+                </tr>
+                <tr>
+                  <td><strong>缺口4：第二轮到位前</strong></td>
+                  <td>T+8月至T+10月</td>
+                  <td>≈6-8亿</td>
+                  <td>M10-M12大额付款需第二轮资金支撑</td>
+                  <td><span class="tag yellow">高</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">桥接融资方案</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>缺口期</th>
+                  <th>桥接方案</th>
+                  <th>量级</th>
+                  <th>成本</th>
+                  <th>期限</th>
+                  <th>退出方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>缺口1</strong></td>
+                  <td>智云数据过桥贷款</td>
+                  <td>0.5亿</td>
+                  <td>3.0%</td>
+                  <td>90天</td>
+                  <td>银团首次提款偿还</td>
+                </tr>
+                <tr>
+                  <td>缺口1备选</td>
+                  <td>实控人质押首期预付</td>
+                  <td>0.5亿</td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>并入SPV第一轮出资</td>
+                </tr>
+                <tr>
+                  <td><strong>缺口2</strong></td>
+                  <td>供应链融资/应收账款保理</td>
+                  <td>1.5亿</td>
+                  <td>4.5-5.0%</td>
+                  <td>90天滚动</td>
+                  <td>银团提款接续</td>
+                </tr>
+                <tr>
+                  <td><strong>缺口3</strong></td>
+                  <td>银团提前提款+信用杠杆加速</td>
+                  <td>3-5亿</td>
+                  <td>3.3%+3.5%</td>
+                  <td>--</td>
+                  <td>经营现金流</td>
+                </tr>
+                <tr>
+                  <td>缺口3备选</td>
+                  <td>蓝瞳A1采购预付款</td>
+                  <td>0.5-1.0亿</td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>抵扣后续货款</td>
+                </tr>
+                <tr>
+                  <td><strong>缺口4</strong></td>
+                  <td>第二轮战略投资者优先到账</td>
+                  <td>5-8亿</td>
+                  <td>12-15% IRR</td>
+                  <td>--</td>
+                  <td>长期股权</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 对冲成本 -->
+        <section class="detail-section" id="hedging">
+          <h2 class="detail-section-title"><i data-lucide="shield" style="width:20px;height:20px"></i>外汇对冲成本分析</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">对冲方案设计</h3>
+          <div class="alert-box info" style="margin-bottom:16px">
+            <i data-lucide="info" style="width:18px;height:18px"></i>
+            <span><strong>推荐方案：</strong>方案B - 远期+期权组合，综合成本约85bp，下行保护完整。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">成本构成</h3>
+          <div class="grid-4" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">远期交易成本</div>
+              <div class="metric-value yellow">400万</div>
+              <div class="metric-sub">CNY | Bid/Offer spread</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">期权权利金</div>
+              <div class="metric-value yellow">907万</div>
+              <div class="metric-sub">CNY | 7000万USD名义本金 × 1.8%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">资金+操作成本</div>
+              <div class="metric-value yellow">450万</div>
+              <div class="metric-sub">CNY | 保证金占用+手续费</div>
+            </div>
+            <div class="metric-card" style="border:2px solid var(--accent-blue)">
+              <div class="metric-label">总对冲成本</div>
+              <div class="metric-value blue">1,757万</div>
+              <div class="metric-sub">CNY | 综合成本约81bp</div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">成本效益分析</h3>
+          <div class="chart-container">
+            <div class="chart-title">对冲成本 vs 下行保护</div>
+            <div style="height:280px;position:relative">
+              <canvas id="hedgeChart"></canvas>
+            </div>
+          </div>
+
+          <div class="alert-box success" style="margin-top:16px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>成本效益比：12.3倍</strong>（每支付1元对冲成本，可获得12.3元下行保护）</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">汇率压力测试</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>汇率情景</th>
+                  <th>汇率值</th>
+                  <th>影响</th>
+                  <th>对冲保护</th>
+                  <th>触发动作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CNY贬值>10%</strong></td>
+                  <td>>7.92</td>
+                  <td>购汇成本上升</td>
+                  <td>全额行权期权保护</td>
+                  <td>行权USD看涨期权</td>
+                </tr>
+                <tr>
+                  <td><strong>CNY贬值>15%</strong></td>
+                  <td>>8.28</td>
+                  <td>成本大幅上升</td>
+                  <td>增持对冲至80%</td>
+                  <td>追加期权头寸</td>
+                </tr>
+                <tr>
+                  <td><strong>CNY升值>10%</strong></td>
+                  <td><6.48</td>
+                  <td>购汇成本下降</td>
+                  <td>评估期权头寸减持</td>
+                  <td>平仓部分期权</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 安全边际 -->
+        <section class="detail-section" id="buffer">
+          <h2 class="detail-section-title"><i data-lucide="check-circle" style="width:20px;height:20px"></i>安全边际分析</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">累计净现金流</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>月份</th>
+                  <th>累计流入（亿CNY）</th>
+                  <th>累计流出（亿CNY）</th>
+                  <th>累计净额（亿CNY）</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>M0</td>
+                  <td>3.0</td>
+                  <td>0.43</td>
+                  <td>2.57</td>
+                  <td><span class="tag green">充裕</span></td>
+                </tr>
+                <tr>
+                  <td>M+3</td>
+                  <td>10.0</td>
+                  <td>2.78</td>
+                  <td>7.22</td>
+                  <td><span class="tag green">充裕</span></td>
+                </tr>
+                <tr>
+                  <td>M+6</td>
+                  <td>24.0</td>
+                  <td>10.93</td>
+                  <td>13.07</td>
+                  <td><span class="tag green">充裕</span></td>
+                </tr>
+                <tr>
+                  <td>M+9</td>
+                  <td>35.0</td>
+                  <td>18.36</td>
+                  <td>16.64</td>
+                  <td><span class="tag green">充裕</span></td>
+                </tr>
+                <tr>
+                  <td>M+12</td>
+                  <td>44-50</td>
+                  <td>21.43</td>
+                  <td>22.57-28.57</td>
+                  <td><span class="tag green">充裕</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert-box info" style="margin-top:16px">
+            <i data-lucide="info" style="width:18px;height:18px"></i>
+            <span><strong>注：</strong>上述为"中等乐观"情景。如广西贸易回款延迟3个月或银团提款延迟1个月，M+3至M+5的净现金流将显著收紧。建议保持2-3亿流动性缓冲。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">风险缓释措施</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-blue)">
+              <div class="card-title" style="margin-bottom:12px">建立预警机制</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">资金缺口提前30天预警，预留10%应急资金（约2.1亿CNY）</p>
+            </div>
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-green)">
+              <div class="card-title" style="margin-bottom:12px">弹性付款条款</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">与标的公司协商里程碑付款弹性条款，允许合理延期</p>
+            </div>
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-yellow)">
+              <div class="card-title" style="margin-bottom:12px">母公司支持</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">智云数据母公司提供过桥融资支持，确保资金链安全</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../../js/app.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .data-table tr.warning-row { background:rgba(249,226,175,0.1) }
+    .data-table tr.danger-row { background:rgba(243,139,168,0.1) }
+    .summary-cards { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0 }
+    .summary-card { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;display:flex;align-items:center;gap:16px;border:1px solid var(--border) }
+    .summary-card.success { border-left:4px solid var(--accent-green) }
+    .summary-card.warning { border-left:4px solid var(--accent-yellow) }
+    .summary-card.info { border-left:4px solid var(--accent-blue) }
+    .summary-card.primary { border-left:4px solid var(--accent-purple) }
+    .summary-icon { width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center }
+    .summary-card.success .summary-icon { background:rgba(166,227,161,0.2) }
+    .summary-card.warning .summary-icon { background:rgba(249,226,175,0.2) }
+    .summary-card.info .summary-icon { background:rgba(137,180,250,0.2) }
+    .summary-card.primary .summary-icon { background:rgba(203,166,247,0.2) }
+    .summary-card.success .summary-icon i { color:var(--accent-green) }
+    .summary-card.warning .summary-icon i { color:var(--accent-yellow) }
+    .summary-card.info .summary-icon i { color:var(--accent-blue) }
+    .summary-card.primary .summary-icon i { color:var(--accent-purple) }
+    .summary-value { font-size:1.5rem;font-weight:700;color:var(--text-primary) }
+    .summary-label { font-size:0.8125rem;color:var(--text-secondary) }
+    .chart-container { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;margin:16px 0;border:1px solid var(--border) }
+    .chart-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box.error { background:rgba(243,139,168,0.1);border:1px solid var(--accent-red) }
+    .alert-box i { flex-shrink:0 }
+    .alert-box.info i { color:var(--accent-blue) }
+    .alert-box.success i { color:var(--accent-green) }
+    .alert-box.error i { color:var(--accent-red) }
+    .status-badge.success { background:rgba(166,227,161,0.2);color:var(--accent-green) }
+    .status-badge.pending { background:rgba(249,226,175,0.2);color:var(--accent-yellow) }
+    .grid-4 { display:grid;grid-template-columns:repeat(4,1fr);gap:16px }
+    @media (max-width: 768px) { .grid-4 { grid-template-columns:repeat(2,1fr) } }
+  </style>
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // Funds Chart
+    const fundsCtx = document.getElementById('fundsChart');
+    if (fundsCtx) {
+      new Chart(fundsCtx, {
+        type: 'line',
+        data: {
+          labels: ['T+0', 'T+1月', 'T+2月', 'T+3月', 'T+4月', 'T+5月', 'T+6月', 'T+8月', 'T+12月'],
+          datasets: [{
+            label: '累计资金到位',
+            data: [600, 600, 600, 8600, 12600, 16600, 26600, 30000, 30000],
+            borderColor: 'rgba(166, 227, 161, 1)',
+            backgroundColor: 'rgba(166, 227, 161, 0.1)',
+            fill: true,
+            tension: 0.3
+          }, {
+            label: '累计里程碑付款需求',
+            data: [600, 1400, 2400, 3900, 5900, 8400, 11400, 17400, 30000],
+            borderColor: 'rgba(243, 139, 168, 1)',
+            backgroundColor: 'rgba(243, 139, 168, 0.1)',
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top', labels: { color: '#a6adc8' } }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: 'rgba(69, 71, 90, 0.3)' },
+              ticks: { color: '#a6adc8' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#a6adc8' }
+            }
+          }
+        }
+      });
+    }
+
+    // Hedge Chart
+    const hedgeCtx = document.getElementById('hedgeChart');
+    if (hedgeCtx) {
+      new Chart(hedgeCtx, {
+        type: 'bar',
+        data: {
+          labels: ['对冲成本', '下行保护'],
+          datasets: [{
+            label: '金额（万CNY）',
+            data: [1757, 21570],
+            backgroundColor: [
+              'rgba(249, 226, 175, 0.8)',
+              'rgba(166, 227, 161, 0.8)'
+            ],
+            borderColor: [
+              'rgba(249, 226, 175, 1)',
+              'rgba(166, 227, 161, 1)'
+            ],
+            borderWidth: 1,
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: 'rgba(69, 71, 90, 0.3)' },
+              ticks: { color: '#a6adc8' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#a6adc8' }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

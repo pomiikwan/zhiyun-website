@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>合规检查点详解 - 智云数科</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+    </ul>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="../index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="../p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="../p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="../p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items">
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="../p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="../p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="../p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1 次级详情页</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-framework.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值框架详解</span></a>
+          <a href="financing-channels.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>融资渠道详解</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+          <a href="fund-safety-margin.html" class="sidebar-item"><i data-lucide="shield-check" style="width:16px;height:16px"></i><span>资金安全边际</span></a>
+          <a href="compliance-checkpoints.html" class="sidebar-item active"><i data-lucide="file-check" style="width:16px;height:16px"></i><span>合规检查点</span></a>
+          <a href="investment-highlights.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>投资亮点</span></a>
+          <a href="transaction-structure.html" class="sidebar-item"><i data-lucide="git-merge" style="width:16px;height:16px"></i><span>交易结构</span></a>
+          <a href="exit-paths.html" class="sidebar-item"><i data-lucide="log-out" style="width:16px;height:16px"></i><span>退出路径</span></a>
+          <a href="investor-profiles.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>战略投资者画像</span></a>
+          <a href="fund-capability.html" class="sidebar-item"><i data-lucide="wallet" style="width:16px;height:16px"></i><span>资金导入能力</span></a>
+          <a href="negotiation-chips.html" class="sidebar-item"><i data-lucide="award" style="width:16px;height:16px"></i><span>谈判筹码</span></a>
+          <a href="execution-timeline.html" class="sidebar-item"><i data-lucide="calendar" style="width:16px;height:16px"></i><span>执行时序</span></a>
+          <a href="fx-risk-management.html" class="sidebar-item"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i><span>外汇风险管理</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../p1-internal-decision.html">P1内部决策版</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">合规检查点详解</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">P1方案合规检查点详解</h1>
+          <div class="detail-tags">
+            <span class="tag red"><i data-lucide="alert-triangle" style="width:12px;height:12px"></i>制裁风险</span>
+            <span class="tag blue"><i data-lucide="file-check" style="width:12px;height:12px"></i>监管报告</span>
+            <span class="tag purple"><i data-lucide="shield" style="width:12px;height:12px"></i>防火墙</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v1.0 | 日期：2026-06-11 | 整合自：法律合规总监输出</p>
+        </div>
+
+        <!-- 合规概览 -->
+        <section class="detail-section" id="overview">
+          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>合规概览</h2>
+
+          <div class="alert-box warning" style="margin-bottom:20px">
+            <i data-lucide="alert-triangle" style="width:18px;height:18px"></i>
+            <span><strong>总体评级：</strong>⚠️ 有条件通过 — 需在SPV成立前完成制裁风险评估、利益冲突防火墙搭建、内幕信息隔离措施三项整改。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">合规审查结果</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>审查模块</th>
+                  <th>结果</th>
+                  <th>发现</th>
+                  <th>整改截止</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>内幕信息</strong></td>
+                  <td><span class="tag yellow">⚠️ 需关注</span></td>
+                  <td>上市公司A实控人三重角色构成重大未公开信息；上海M1建仓操作涉及内幕信息敏感期</td>
+                  <td>SPV成立前</td>
+                </tr>
+                <tr>
+                  <td><strong>利益冲突</strong></td>
+                  <td><span class="tag yellow">⚠️ 需缓释</span></td>
+                  <td>蓝瞳LP+GP双角色存在重大利益冲突；实控人既是SPV股东又是未来被并购方</td>
+                  <td>基金设立前</td>
+                </tr>
+                <tr class="danger-row">
+                  <td><strong>制裁风险</strong></td>
+                  <td><span class="tag red">🔴 高风险</span></td>
+                  <td>海外SmartNIC团队IP迁移涉及7nm制程技术，受EUV制裁</td>
+                  <td><strong>立即</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>合格投资者</strong></td>
+                  <td><span class="tag green">✅ 合规</span></td>
+                  <td>广西授信主体、蓝瞳净资产均≥1000万；第二轮战略投资者画像均为机构投资者</td>
+                  <td>持续监控</td>
+                </tr>
+                <tr>
+                  <td><strong>信息披露</strong></td>
+                  <td><span class="tag yellow">⚠️ 需完善</span></td>
+                  <td>实控人三重角色需向全体LP充分披露；银团贷款费用已全量披露</td>
+                  <td>基金设立前</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 监管报告 -->
+        <section class="detail-section" id="regulatory">
+          <h2 class="detail-section-title"><i data-lucide="landmark" style="width:20px;height:20px"></i>监管报告矩阵</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键监管报告</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>监管机构</th>
+                  <th>报告事项</th>
+                  <th>截止日期</th>
+                  <th>责任人</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CSRC</strong></td>
+                  <td>上市公司收购报告书（要约收购/协议转让）</td>
+                  <td>P2收购启动后3日内</td>
+                  <td>实控人+智云方</td>
+                  <td><span class="status-badge pending">待P2启动</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SAFE</strong></td>
+                  <td>跨境担保外汇登记（内保外贷）</td>
+                  <td>签约后15天内</td>
+                  <td>智云数科法务</td>
+                  <td><span class="status-badge pending">待银团签约</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SAFE</strong></td>
+                  <td>ODI备案（境内SPV→境外SPV资金出境）</td>
+                  <td>资金出境前</td>
+                  <td>智云数科</td>
+                  <td><span class="status-badge pending">待SPV成立</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SAFE</strong></td>
+                  <td>QFLP外汇登记（海南QFLP基金）</td>
+                  <td>基金设立后T+30~T+35</td>
+                  <td>GP合规团队</td>
+                  <td><span class="status-badge pending">待QFLP设立</span></td>
+                </tr>
+                <tr>
+                  <td><strong>AMAC</strong></td>
+                  <td>私募基金管理人登记</td>
+                  <td>基金设立前</td>
+                  <td>GP合规团队</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+                <tr>
+                  <td><strong>AMAC</strong></td>
+                  <td>私募基金产品备案</td>
+                  <td>基金设立后T+60~T+70</td>
+                  <td>GP合规团队</td>
+                  <td><span class="status-badge pending">待基金设立</span></td>
+                </tr>
+                <tr>
+                  <td><strong>AMAC</strong></td>
+                  <td>CRS报送（境外LP税收居民信息）</td>
+                  <td>每年6月30日前</td>
+                  <td>GP合规团队</td>
+                  <td><span class="status-badge pending">待境外LP入资</span></td>
+                </tr>
+                <tr>
+                  <td><strong>税务局</strong></td>
+                  <td>对外支付税务备案（单笔>5万USD）</td>
+                  <td>付款时</td>
+                  <td>财务</td>
+                  <td><span class="status-badge pending">待启动</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 制裁筛查 -->
+        <section class="detail-section" id="sanctions">
+          <h2 class="detail-section-title"><i data-lucide="alert-octagon" style="width:20px;height:20px"></i>制裁筛查结果</h2>
+
+          <div class="alert-box error" style="margin-bottom:20px">
+            <i data-lucide="alert-octagon" style="width:18px;height:18px"></i>
+            <span><strong>立即行动项：</strong>制裁风险是整个交易的核心阻塞项，需立即启动专项审查！</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">核心筛查结果</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>制裁名单</th>
+                  <th>命中状态</th>
+                  <th>处理方式</th>
+                  <th>检查日期</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>OFAC SDN</strong>（美国特别指定国民名单）</td>
+                  <td><span class="status-badge success">❌ 未命中</span></td>
+                  <td>无需阻断</td>
+                  <td>2026-06-10</td>
+                </tr>
+                <tr>
+                  <td><strong>EU 2024/1975</strong>（欧盟制裁名单）</td>
+                  <td><span class="status-badge success">❌ 未命中</span></td>
+                  <td>无需阻断</td>
+                  <td>2026-06-10</td>
+                </tr>
+                <tr>
+                  <td><strong>UN 1267/1989</strong>（联合国制裁名单）</td>
+                  <td><span class="status-badge success">❌ 未命中</span></td>
+                  <td>无需阻断</td>
+                  <td>2026-06-10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--accent-red)">7nm制裁敏感技术分析</h3>
+          <div class="risk-cards">
+            <div class="risk-card high">
+              <div class="risk-header">
+                <span class="risk-level">最高风险</span>
+                <span class="risk-title">EUV光刻技术管制</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>风险描述：</strong>智云推理芯片采用7nm制程（中芯国际代工），受荷兰ASML EUV光刻机出口管制影响。</p>
+                <p><strong>合规依据：</strong>美国EAR第744部分、瓦森纳协定</p>
+                <div style="margin-top:12px;padding:12px;background:var(--bg-secondary);border-radius:var(--radius-md)">
+                  <p style="font-weight:600;margin-bottom:8px">关键确认事项：</p>
+                  <ul style="padding-left:20px;color:var(--text-secondary)">
+                    <li>海外SmartNIC团队的IP是否包含EUV相关技术</li>
+                    <li>技术来源国是否为美国/荷兰/日本等管制国</li>
+                    <li>最终用户是否在实体清单上</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="risk-card high">
+              <div class="risk-header">
+                <span class="risk-level">最高风险</span>
+                <span class="risk-title">最终用途审查</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>风险描述：</strong>收购标的IP迁移至中国境内，美国BIS（工业与安全局）可能触发最终用途审查。</p>
+                <p><strong>合规依据：</strong>EAR 744.11</p>
+                <p style="margin-top:12px"><strong>缓解措施：</strong>在IP授权协议中明确最终用途为<strong>"民用商用芯片设计"</strong>，避免军用关联。</p>
+              </div>
+            </div>
+            <div class="risk-card medium">
+              <div class="risk-header">
+                <span class="risk-level">高风险</span>
+                <span class="risk-title">实体清单风险</span>
+              </div>
+              <div class="risk-body">
+                <p><strong>风险描述：</strong>如中芯国际被列入实体清单（2020年曾列入后移除），7nm代工能力受限。</p>
+                <p><strong>合规依据：</strong>EAR实体清单</p>
+                <p style="margin-top:12px"><strong>缓解措施：</strong></p>
+                <ul style="padding-left:20px;color:var(--text-secondary)">
+                  <li>监控中芯国际实体清单状态</li>
+                  <li>备选方案：华虹/晶合12nm降级方案</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--accent-red)">制裁风险缓释建议</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-red)">
+              <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
+                <span style="background:var(--accent-red);color:white;padding:2px 8px;border-radius:var(--radius-sm);font-size:0.75rem">立即</span>
+                聘请专业律所
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">聘请出口管制合规律师（建议：金杜/中伦/君合）对IP迁移方案进行专项审查</p>
+            </div>
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-yellow)">
+              <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
+                <span style="background:var(--accent-yellow);color:var(--bg-primary);padding:2px 8px;border-radius:var(--radius-sm);font-size:0.75rem">合同</span>
+                制裁免责条款
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">在里程碑付款协议中加入"制裁免责条款"——如因制裁导致IP迁移无法完成，智云方不承担违约责任</p>
+            </div>
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-blue)">
+              <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
+                <span style="background:var(--accent-blue);color:white;padding:2px 8px;border-radius:var(--radius-sm);font-size:0.75rem">持续</span>
+                日监控机制
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">建立制裁名单日监控机制，一旦标的公司或核心成员被列入制裁名单，立即阻断交易</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 防火墙设计 -->
+        <section class="detail-section" id="firewall">
+          <h2 class="detail-section-title"><i data-lucide="shield" style="width:20px;height:20px"></i>防火墙设计</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">三层防火墙架构</h3>
+
+          <div class="firewall-layer">
+            <div class="layer-header">
+              <span class="layer-number">第一道</span>
+              <span class="layer-title">信息隔离墙</span>
+            </div>
+            <div class="layer-content">
+              <div class="isolation-item">
+                <div class="isolation-title"><i data-lucide="users" style="width:18px;height:18px;color:var(--accent-blue)"></i> 上海M1建仓团队</div>
+                <div class="isolation-desc">知悉上市公司A实控人配合出让流通股的未公开信息<br><strong>⚠️ 严禁与SPV融资团队、银团贷款团队、产业基金团队共享内幕信息</strong></div>
+              </div>
+              <div class="isolation-item">
+                <div class="isolation-title"><i data-lucide="building-2" style="width:18px;height:18px;color:var(--accent-green)"></i> SPV融资团队</div>
+                <div class="isolation-desc">知悉SPV三轮结构、实控人质押变现计划<br><strong>⚠️ 严禁与上海M1建仓团队共享信息</strong></div>
+              </div>
+              <div class="isolation-item">
+                <div class="isolation-title"><i data-lucide="git-branch" style="width:18px;height:18px;color:var(--accent-purple)"></i> 产业基金投委会</div>
+                <div class="isolation-desc">蓝瞳委派委员参与投资决策<br><strong>关联交易时蓝瞳委员回避表决</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="firewall-layer">
+            <div class="layer-header">
+              <span class="layer-number">第二道</span>
+              <span class="layer-title">决策隔离墙</span>
+            </div>
+            <div class="layer-content">
+              <div class="grid-3" style="gap:16px">
+                <div class="decision-box">
+                  <div class="decision-title">上市公司A实控人决策</div>
+                  <div class="decision-desc">质押变现投入SPV<br>需上市公司董事会独立审议+独立董事发表意见</div>
+                </div>
+                <div class="decision-box">
+                  <div class="decision-title">智云方决策</div>
+                  <div class="decision-desc">SPV成立、融资、收购<br>需智云数据股东会/董事会审议</div>
+                </div>
+                <div class="decision-box">
+                  <div class="decision-title">基金投委会决策</div>
+                  <div class="decision-desc">投资SPV<br>蓝瞳委员在关联交易时回避，独立委员表决</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="firewall-layer">
+            <div class="layer-header">
+              <span class="layer-number">第三道</span>
+              <span class="layer-title">资金隔离墙</span>
+            </div>
+            <div class="layer-content">
+              <div class="grid-3" style="gap:16px">
+                <div class="fund-box">
+                  <div class="fund-title">上海M1建仓资金</div>
+                  <div class="fund-desc">二级市场买入上市公司A流通股<br>与SPV第一轮资金独立账户管理</div>
+                </div>
+                <div class="fund-box">
+                  <div class="fund-title">银团贷款资金</div>
+                  <div class="fund-desc">SPV债务融资<br>托管户监管，专款专用</div>
+                </div>
+                <div class="fund-box">
+                  <div class="fund-title">产业基金资金</div>
+                  <div class="fund-desc">SPV股权融资<br>基金托管户监管，按投资协议拨付</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SPV注册地 -->
+        <section class="detail-section" id="d3">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>D3决策：SPV注册地</h2>
+
+          <div class="alert-box success" style="margin-bottom:20px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>已决策：</strong>方案C — 双SPV结构（境内+境外），境内SPV负责运营，境外SPV负责支付里程碑付款。</span>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">三种方案对比</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>方案</th>
+                  <th>税务影响</th>
+                  <th>外汇管制</th>
+                  <th>资金出境便利性</th>
+                  <th>制裁风险</th>
+                  <th>合规复杂度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>方案A：境内SPV</strong></td>
+                  <td>企业所得税25%；无避税优势</td>
+                  <td>受SAFE外汇管制；每笔需审批</td>
+                  <td><span class="tag red">低</span></td>
+                  <td><span class="tag green">低</span></td>
+                  <td><span class="tag blue">中</span></td>
+                </tr>
+                <tr>
+                  <td><strong>方案B：境外SPV</strong></td>
+                  <td>开曼/BVI无法人税；但CFC规则避税效果有限</td>
+                  <td>境外资金自由流动；境内注入需ODI备案</td>
+                  <td><span class="tag green">高</span></td>
+                  <td><span class="tag yellow">中</span></td>
+                  <td><span class="tag red">高</span></td>
+                </tr>
+                <tr class="highlight-row">
+                  <td><strong>方案C：双SPV结构 ✅</strong></td>
+                  <td>可通过转让定价优化税负</td>
+                  <td>境内→境外需ODI；境外→标的自由</td>
+                  <td><span class="tag green">高</span></td>
+                  <td><span class="tag yellow">中</span></td>
+                  <td><span class="tag red">高</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">推荐方案理由</h3>
+          <div class="grid-2" style="gap:16px">
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">里程碑付款节奏匹配</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">12个月累计付款3亿美金，月均≈2,500万美金，节奏较快；境外SPV可避免逐笔外汇审批</p>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">币种匹配</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">银团贷款60% CNY + 40% USD，境外SPV可直接使用USD份额支付里程碑付款</p>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">第二轮灵活性</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">境外SPV可为境外机构投资者（如台积电旗下基金）提供投资通道</p>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="margin-bottom:12px">产业政策适配</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">境内SPV负责实际运营，可享受国内芯片产业政策（税收优惠、政府补贴、信创采购）</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../../js/app.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .data-table tr.danger-row { background:rgba(243,139,168,0.1) }
+    .data-table tr.highlight-row { background:rgba(166,227,161,0.15) }
+    .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .alert-box.warning { background:rgba(249,226,175,0.1);border:1px solid var(--accent-yellow) }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box.error { background:rgba(243,139,168,0.1);border:1px solid var(--accent-red) }
+    .alert-box i { flex-shrink:0 }
+    .alert-box.info i { color:var(--accent-blue) }
+    .alert-box.warning i { color:var(--accent-yellow) }
+    .alert-box.success i { color:var(--accent-green) }
+    .alert-box.error i { color:var(--accent-red) }
+    .risk-cards { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px }
+    .risk-card { background:var(--bg-card);border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border) }
+    .risk-card.high { border-left:4px solid var(--accent-red) }
+    .risk-card.medium { border-left:4px solid var(--accent-yellow) }
+    .risk-header { padding:12px 16px;border-bottom:1px solid var(--border) }
+    .risk-level { font-size:0.75rem;font-weight:600;text-transform:uppercase;padding:2px 8px;border-radius:var(--radius-sm);margin-right:8px }
+    .risk-card.high .risk-level { background:rgba(243,139,168,0.2);color:var(--accent-red) }
+    .risk-card.medium .risk-level { background:rgba(249,226,175,0.2);color:var(--accent-yellow) }
+    .risk-title { font-weight:600;color:var(--text-primary) }
+    .risk-body { padding:16px }
+    .risk-body p { margin-bottom:8px;color:var(--text-secondary) }
+    .risk-body ul { margin:8px 0;padding-left:20px;color:var(--text-secondary) }
+    .risk-body ul li { margin-bottom:4px }
+    .firewall-layer { background:var(--bg-card);border-radius:var(--radius-md);border:1px solid var(--border);margin-bottom:16px;overflow:hidden }
+    .layer-header { background:var(--bg-secondary);padding:12px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border) }
+    .layer-number { background:var(--accent-blue);color:white;padding:4px 12px;border-radius:var(--radius-sm);font-size:0.8125rem;font-weight:600 }
+    .layer-title { font-weight:600;color:var(--text-primary) }
+    .layer-content { padding:16px }
+    .isolation-item { padding:12px;background:var(--bg-secondary);border-radius:var(--radius-md);margin-bottom:12px }
+    .isolation-item:last-child { margin-bottom:0 }
+    .isolation-title { font-weight:600;color:var(--text-primary);margin-bottom:8px;display:flex;align-items:center;gap:8px }
+    .isolation-desc { font-size:0.875rem;color:var(--text-secondary) }
+    .decision-box { background:var(--bg-secondary);padding:16px;border-radius:var(--radius-md) }
+    .decision-title { font-weight:600;color:var(--text-primary);margin-bottom:8px }
+    .decision-desc { font-size:0.8125rem;color:var(--text-secondary) }
+    .fund-box { background:var(--bg-secondary);padding:16px;border-radius:var(--radius-md);border-left:3px solid var(--accent-blue) }
+    .fund-title { font-weight:600;color:var(--text-primary);margin-bottom:8px }
+    .fund-desc { font-size:0.8125rem;color:var(--text-secondary) }
+    .status-badge.success { background:rgba(166,227,161,0.2);color:var(--accent-green) }
+    .status-badge.pending { background:rgba(249,226,175,0.2);color:var(--accent-yellow) }
+  </style>
+  <script>if(typeof lucide!=='undefined')lucide.createIcons()</script>
+</body>
+</html>

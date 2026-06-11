@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>估值框架详解 - 智云数科</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+    </ul>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心任务</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="../index.html" class="sidebar-item"><i data-lucide="layout-grid" style="width:16px;height:16px"></i><span>概览</span></a>
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>P1 - 融资结构</span></a>
+          <a href="../p2-acquisition.html" class="sidebar-item"><i data-lucide="building" style="width:16px;height:16px"></i><span>P2 - 收购交易</span></a>
+          <a href="../p3-capital-operation.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>P3 - 一二级市场联动</span></a>
+          <a href="../p4-business-optimization.html" class="sidebar-item"><i data-lucide="settings" style="width:16px;height:16px"></i><span>P4 - 业务优化</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1方案版本</span></div>
+        <ul class="sidebar-items">
+          <a href="../p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1概览</span></a>
+          <a href="../p1-internal-decision.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>内部决策版</span></a>
+          <a href="../p1-investor.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>投资方版</span></a>
+          <a href="../p1-yang.html" class="sidebar-item"><i data-lucide="user" style="width:16px;height:16px"></i><span>杨总版</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>P1 次级详情页</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-framework.html" class="sidebar-item active"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值框架详解</span></a>
+          <a href="financing-channels.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>融资渠道详解</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+          <a href="fund-safety-margin.html" class="sidebar-item"><i data-lucide="shield-check" style="width:16px;height:16px"></i><span>资金安全边际</span></a>
+          <a href="compliance-checkpoints.html" class="sidebar-item"><i data-lucide="file-check" style="width:16px;height:16px"></i><span>合规检查点</span></a>
+          <a href="investment-highlights.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>投资亮点</span></a>
+          <a href="transaction-structure.html" class="sidebar-item"><i data-lucide="git-merge" style="width:16px;height:16px"></i><span>交易结构</span></a>
+          <a href="exit-paths.html" class="sidebar-item"><i data-lucide="log-out" style="width:16px;height:16px"></i><span>退出路径</span></a>
+          <a href="investor-profiles.html" class="sidebar-item"><i data-lucide="users" style="width:16px;height:16px"></i><span>战略投资者画像</span></a>
+          <a href="fund-capability.html" class="sidebar-item"><i data-lucide="wallet" style="width:16px;height:16px"></i><span>资金导入能力</span></a>
+          <a href="negotiation-chips.html" class="sidebar-item"><i data-lucide="award" style="width:16px;height:16px"></i><span>谈判筹码</span></a>
+          <a href="execution-timeline.html" class="sidebar-item"><i data-lucide="calendar" style="width:16px;height:16px"></i><span>执行时序</span></a>
+          <a href="fx-risk-management.html" class="sidebar-item"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i><span>外汇风险管理</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-breadcrumb">
+          <a href="../../index.html">首页</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../index.html">核心任务</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <a href="../p1-financing.html">P1融资结构</a>
+          <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+          <span style="color:var(--text-primary)">估值框架详解</span>
+        </div>
+
+        <!-- Title -->
+        <div class="detail-header">
+          <h1 class="detail-title">智云数科芯片业务估值框架</h1>
+          <div class="detail-tags">
+            <span class="tag blue"><i data-lucide="calculator" style="width:12px;height:12px"></i>三种方法</span>
+            <span class="tag green"><i data-lucide="check-circle" style="width:12px;height:12px"></i>交叉验证</span>
+            <span class="tag purple"><i data-lucide="refresh-cw" style="width:12px;height:12px"></i>估值重估</span>
+          </div>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v1.0 | 日期：2026-06-10 | 角色：CFA国际投资顾问</p>
+        </div>
+
+        <!-- 估值概览 -->
+        <section class="detail-section" id="overview">
+          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>估值概览</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">估值标的界定</h3>
+          <div class="card" style="padding:20px;margin-bottom:16px">
+            <p style="margin-bottom:12px"><strong>本次估值标的为智云数科芯片业务整体</strong>，包含：</p>
+            <div class="grid-2" style="gap:16px">
+              <div>
+                <p style="font-weight:600;color:var(--accent-blue);margin-bottom:8px">资产端</p>
+                <ul style="padding-left:20px;color:var(--text-secondary)">
+                  <li>高速网卡芯片（SmartNIC/DPU）IP + 海外研发团队</li>
+                  <li>自研推理芯片（2026年8月流片，7nm制程，对标4090）</li>
+                  <li>智云自有团队技术积累与知识产权</li>
+                </ul>
+              </div>
+              <div>
+                <p style="font-weight:600;color:var(--accent-green);margin-bottom:8px">收入端</p>
+                <ul style="padding-left:20px;color:var(--text-secondary)">
+                  <li>自消纳体系产生的确定性收入（智算中心2万P/50亿+、液冷一体机）</li>
+                  <li>外部市场拓展潜力（信创市场、蓝瞳SmartNIC/DPU供应）</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">三种方法加权估值结论</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>方法</th>
+                  <th>保守值</th>
+                  <th>中值</th>
+                  <th>乐观值</th>
+                  <th>权重</th>
+                  <th>加权中值</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>自消纳体系折现（DCF）</strong></td>
+                  <td>52亿</td>
+                  <td>66亿</td>
+                  <td>95亿</td>
+                  <td>35%</td>
+                  <td>23.1亿</td>
+                </tr>
+                <tr>
+                  <td><strong>可比公司Comps（PS倍数）</strong></td>
+                  <td>49亿</td>
+                  <td>56亿</td>
+                  <td>67亿</td>
+                  <td>30%</td>
+                  <td>16.8亿</td>
+                </tr>
+                <tr>
+                  <td><strong>交易对价锚定</strong></td>
+                  <td>47.5亿</td>
+                  <td>63.5亿</td>
+                  <td>80.5亿</td>
+                  <td>35%</td>
+                  <td>22.2亿</td>
+                </tr>
+                <tr style="background:var(--bg-secondary)">
+                  <td><strong>加权合计</strong></td>
+                  <td><strong>49.5亿</strong></td>
+                  <td><strong>62.1亿</strong></td>
+                  <td><strong>81.6亿</strong></td>
+                  <td>100%</td>
+                  <td><strong class="accent-blue">62.1亿</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert-box info" style="margin-top:16px">
+            <i data-lucide="info" style="width:18px;height:18px"></i>
+            <span><strong>核心结论：</strong>智云数科芯片业务整体估值区间为<strong>49.5亿—81.6亿元</strong>，中性值<strong>62.1亿元</strong>。当前20亿投后估值显著低估（约为中性估值的32%）。</span>
+          </div>
+        </section>
+
+        <!-- DCF折现法 -->
+        <section class="detail-section" id="dcf">
+          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>方法一：自消纳体系折现（DCF变体）</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">方法论说明</h3>
+          <div class="card" style="padding:20px;margin-bottom:16px">
+            <p style="color:var(--text-secondary);line-height:1.6">
+              传统DCF模型对早期芯片公司适用性有限——尚未产生稳定现金流、收入预测高度不确定。但智云数科具有独特的<strong>自消纳体系</strong>，使传统DCF"不可预测收入"的假设被部分打破：
+            </p>
+            <div class="grid-3" style="gap:12px;margin-top:16px">
+              <div class="metric-card">
+                <div class="metric-label">智算中心储备</div>
+                <div class="metric-value blue">2万P</div>
+                <div class="metric-sub">预计总规模超50亿元，资金已到位</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">液冷一体机</div>
+                <div class="metric-value green">已验证</div>
+                <div class="metric-sub">已中标多所高校，市场验证通过</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">蓝瞳需求</div>
+                <div class="metric-value yellow">确定性</div>
+                <div class="metric-sub">900亿算力基础设施的SmartNIC/DPU刚性需求</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">收入预测（5年，2027—2031）</h3>
+          <div class="chart-container">
+            <div class="chart-title">年收入预测（亿元）</div>
+            <div style="height:300px;position:relative">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">折现率设定</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>收入类型</th>
+                  <th>折现率（WACC）</th>
+                  <th>理由</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>自消纳收入</strong></td>
+                  <td><span class="tag green">12%</span></td>
+                  <td>智算中心合同在签、液冷一体机已验证、蓝瞳需求刚性，风险显著低于市场平均</td>
+                </tr>
+                <tr>
+                  <td><strong>外部市场收入</strong></td>
+                  <td><span class="tag red">22%</span></td>
+                  <td>信创市场政策依赖、竞争格局未定、客户拓展不确定性高</td>
+                </tr>
+                <tr style="background:var(--bg-secondary)">
+                  <td><strong>加权平均</strong></td>
+                  <td><span class="tag blue">16%</span></td>
+                  <td>按自消纳/外部占比加权（2027年自消纳占71%）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">自由现金流折现</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>年份</th>
+                  <th>EBIT（亿元）</th>
+                  <th>税后NOPAT</th>
+                  <th>CapEx</th>
+                  <th>FCFF（亿元）</th>
+                  <th>现值（亿元）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2027</td>
+                  <td>0.9</td>
+                  <td>0.77</td>
+                  <td>-1.5</td>
+                  <td><span class="tag red">-1.23</span></td>
+                  <td>-1.06</td>
+                </tr>
+                <tr>
+                  <td>2028</td>
+                  <td>3.5</td>
+                  <td>2.98</td>
+                  <td>-2.0</td>
+                  <td>0.18</td>
+                  <td>0.13</td>
+                </tr>
+                <tr>
+                  <td>2029</td>
+                  <td>8.5</td>
+                  <td>7.23</td>
+                  <td>-2.5</td>
+                  <td><span class="tag green">3.73</span></td>
+                  <td>2.39</td>
+                </tr>
+                <tr>
+                  <td>2030</td>
+                  <td>15.0</td>
+                  <td>12.75</td>
+                  <td>-3.0</td>
+                  <td><span class="tag green">8.55</span></td>
+                  <td>4.72</td>
+                </tr>
+                <tr>
+                  <td>2031</td>
+                  <td>22.5</td>
+                  <td>19.13</td>
+                  <td>-3.5</td>
+                  <td><span class="tag green">14.13</span></td>
+                  <td>6.73</td>
+                </tr>
+                <tr style="background:var(--bg-secondary)">
+                  <td colspan="5"><strong>5年FCFF现值合计</strong></td>
+                  <td><strong>12.91亿</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">终值计算</h3>
+          <div class="grid-2" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">终值增长率</div>
+              <div class="metric-value blue">3%</div>
+              <div class="metric-sub">半导体行业长期增长率</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">终值</div>
+              <div class="metric-value green">112.0亿</div>
+              <div class="metric-sub">14.55 / (16% - 3%)</div>
+            </div>
+            <div class="metric-card" style="border:2px solid var(--accent-blue)">
+              <div class="metric-label">终值现值</div>
+              <div class="metric-value blue">53.3亿</div>
+              <div class="metric-sub">112.0 × 0.476</div>
+            </div>
+            <div class="metric-card" style="border:2px solid var(--accent-green)">
+              <div class="metric-label">企业价值（EV）</div>
+              <div class="metric-value green">66.21亿</div>
+              <div class="metric-sub">12.91 + 53.30</div>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">敏感性分析</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>WACC \ 终值增长率</th>
+                  <th>1%</th>
+                  <th>3%</th>
+                  <th>5%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>12%</strong></td>
+                  <td>78亿</td>
+                  <td>95亿</td>
+                  <td>121亿</td>
+                </tr>
+                <tr style="background:rgba(137,180,250,0.2)">
+                  <td><strong>16%</strong></td>
+                  <td>52亿</td>
+                  <td><strong class="accent-blue">66亿</strong></td>
+                  <td>88亿</td>
+                </tr>
+                <tr>
+                  <td><strong>20%</strong></td>
+                  <td>40亿</td>
+                  <td>49亿</td>
+                  <td>62亿</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 可比公司法 -->
+        <section class="detail-section" id="comps">
+          <h2 class="detail-section-title"><i data-lucide="bar-chart-2" style="width:20px;height:20px"></i>方法二：可比公司Comps</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">可比公司选择</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>公司</th>
+                  <th>代码</th>
+                  <th>主营</th>
+                  <th>2025E营收（亿元）</th>
+                  <th>PS倍数</th>
+                  <th>PE倍数</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>海光信息</strong></td>
+                  <td>688041</td>
+                  <td>CPU/DCU（AI加速器）</td>
+                  <td>≈120</td>
+                  <td>18x—22x</td>
+                  <td>80x—100x</td>
+                </tr>
+                <tr>
+                  <td><strong>寒武纪</strong></td>
+                  <td>688256</td>
+                  <td>AI推理/训练芯片</td>
+                  <td>≈12</td>
+                  <td>35x—45x</td>
+                  <td>N/A（亏损）</td>
+                </tr>
+                <tr>
+                  <td><strong>澜起科技</strong></td>
+                  <td>688008</td>
+                  <td>内存接口/PCIe Retimer</td>
+                  <td>≈45</td>
+                  <td>15x—20x</td>
+                  <td>40x—55x</td>
+                </tr>
+                <tr>
+                  <td><strong>兆易创新</strong></td>
+                  <td>603986</td>
+                  <td>存储/MCU芯片</td>
+                  <td>≈85</td>
+                  <td>6x—8x</td>
+                  <td>30x—40x</td>
+                </tr>
+                <tr>
+                  <td><strong>紫光国微</strong></td>
+                  <td>002049</td>
+                  <td>安全芯片/FPGA</td>
+                  <td>≈90</td>
+                  <td>5x—7x</td>
+                  <td>25x—35x</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">智云数科的可比性分析</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>维度</th>
+                  <th>智云数科 vs 可比公司</th>
+                  <th>调整系数</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>成长阶段</strong></td>
+                  <td>早期（收入0→3.5亿），类似寒武纪2020—2022阶段</td>
+                  <td>PS倍数应偏高</td>
+                </tr>
+                <tr>
+                  <td><strong>自消纳溢价</strong></td>
+                  <td>独有的自消纳体系赋予收入确定性，上市可比公司不具备</td>
+                  <td><span class="tag green">+15%—25%</span></td>
+                </tr>
+                <tr>
+                  <td><strong>流动性折价</strong></td>
+                  <td>非上市公司，缺乏二级市场流动性</td>
+                  <td><span class="tag red">-20%—30%</span></td>
+                </tr>
+                <tr>
+                  <td><strong>双产品线</strong></td>
+                  <td>推理芯片+SmartNIC/DPU双产品线，类似澜起科技多产品线逻辑</td>
+                  <td>参考澜起</td>
+                </tr>
+                <tr>
+                  <td><strong>信创催化</strong></td>
+                  <td>UB底座/信创市场提供政策性增长驱动</td>
+                  <td>类似紫光国微的政策溢价</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">PS倍数法估值</h3>
+          <div class="card" style="padding:20px">
+            <p style="margin-bottom:12px"><strong>加权平均PS倍数：14x—19x</strong></p>
+            <p style="margin-bottom:12px">以2027年预测收入<strong>3.5亿元</strong>为基数：</p>
+            <div class="grid-3" style="gap:16px">
+              <div class="metric-card">
+                <div class="metric-label">保守（14x）</div>
+                <div class="metric-value blue">49亿</div>
+              </div>
+              <div class="metric-card" style="border:2px solid var(--accent-blue)">
+                <div class="metric-label">中值（16x）</div>
+                <div class="metric-value blue">56亿</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">乐观（19x）</div>
+                <div class="metric-value blue">67亿</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 交易对价锚定 -->
+        <section class="detail-section" id="anchor">
+          <h2 class="detail-section-title"><i data-lucide="anchor" style="width:20px;height:20px"></i>方法三：交易对价锚定</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">3亿美金对价的价值拆解</h3>
+          <div class="chart-container">
+            <div class="chart-title">3亿美金对价构成（约合21.5亿人民币）</div>
+            <div style="height:280px;position:relative">
+              <canvas id="dealChart"></canvas>
+            </div>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">增量价值叠加</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>增量资产</th>
+                  <th>估值方法</th>
+                  <th>保守（亿元）</th>
+                  <th>中性（亿元）</th>
+                  <th>乐观（亿元）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>SmartNIC/DPU资产（3亿美金对价）</strong></td>
+                  <td>实际交易价格</td>
+                  <td>21.5</td>
+                  <td>21.5</td>
+                  <td>21.5</td>
+                </tr>
+                <tr>
+                  <td>自研推理芯片</td>
+                  <td>替代成本法：流片NRE+研发团队+IP授权</td>
+                  <td>8</td>
+                  <td>12</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>自消纳体系</td>
+                  <td>收入确定性溢价：2万P智算中心订单可归属价值</td>
+                  <td>10</td>
+                  <td>15</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>液冷一体机业务</td>
+                  <td>已验证订单的NPV</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>自有团队技术积累</td>
+                  <td>重建成本法</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>信创/UB底座期权</td>
+                  <td>实物期权法</td>
+                  <td>0</td>
+                  <td>4</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>蓝瞳供应链锚点</td>
+                  <td>战略协同溢价</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>5</td>
+                </tr>
+                <tr style="background:var(--bg-secondary)">
+                  <td colspan="2"><strong>合计</strong></td>
+                  <td><strong>47.5亿</strong></td>
+                  <td><strong class="accent-blue">63.5亿</strong></td>
+                  <td><strong>80.5亿</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SPV估值支撑 -->
+        <section class="detail-section" id="spv">
+          <h2 class="detail-section-title"><i data-lucide="share-2" style="width:20px;height:20px"></i>SPV股权比例估值支撑</h2>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">情形对比</h3>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>情形</th>
+                  <th>智云方（团队作价+现金）</th>
+                  <th>上市公司A实控人（质押变现）</th>
+                  <th>SPV投后估值</th>
+                  <th>智云方股权</th>
+                  <th>实控人股权</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>情形A</strong></td>
+                  <td>≈2亿</td>
+                  <td>≈1.9亿</td>
+                  <td><span class="tag yellow">≈3.9亿</span></td>
+                  <td>≈51%</td>
+                  <td>≈49%</td>
+                </tr>
+                <tr>
+                  <td><strong>情形C</strong></td>
+                  <td>≈5.2亿</td>
+                  <td>≈5亿</td>
+                  <td><span class="tag blue">≈10.2亿</span></td>
+                  <td>≈51%</td>
+                  <td>≈49%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">情形A合理性分析</h3>
+          <div class="alert-box warning" style="margin-bottom:16px">
+            <i data-lucide="alert-triangle" style="width:18px;height:18px"></i>
+            <span><strong>核心问题：</strong>SPV估值严重偏低，3.9亿远低于任何估值方法得出的合理区间（49.5亿—81.6亿）</span>
+          </div>
+          <div class="card" style="padding:20px">
+            <ul style="padding-left:20px;color:var(--text-secondary)">
+              <li style="margin-bottom:8px"><strong>与3亿美金对价关系：</strong>3.9亿RMB ≈ 0.55亿USD，仅为收购对价的<strong>18%</strong></li>
+              <li style="margin-bottom:8px"><strong>与中性估值62.1亿关系：</strong>3.9亿仅为中性估值的<strong>6.3%</strong></li>
+              <li style="margin-bottom:8px"><strong>二轮稀释灾难：</strong>以3.9亿投后估值为起点，二轮融资12.5亿将导致原有股东稀释76%，几乎丧失控制权</li>
+            </ul>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">情形C合理性分析</h3>
+          <div class="alert-box success" style="margin-bottom:16px">
+            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+            <span><strong>推荐方案：</strong>情形C估值更合理，团队作价与替代成本基本匹配</span>
+          </div>
+          <div class="card" style="padding:20px">
+            <ul style="padding-left:20px;color:var(--text-secondary)">
+              <li style="margin-bottom:8px"><strong>与3亿美金对价关系：</strong>10.2亿RMB ≈ 1.43亿USD，为收购对价的<strong>48%</strong></li>
+              <li style="margin-bottom:8px"><strong>团队作价合理性：</strong>推理芯片流片NRE 3-5亿+自有团队技术1-2亿 ≈ 5.2亿，与替代成本法估算基本匹配</li>
+              <li style="margin-bottom:8px"><strong>二轮稀释可控：</strong>以10.2亿投后为起点，二轮12.5亿稀释约55%，若二轮前SPV估值重估至30亿+，稀释可降至30%以下</li>
+            </ul>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">并购融资专家建议</h3>
+          <div class="grid-3" style="gap:16px">
+            <div class="card" style="padding:16px;border-left:4px solid var(--accent-blue)">
+              <div style="font-weight:600;color:var(--text-primary);margin-bottom:8px">短期执行（8月流片前）</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">先以情形A启动SPV，确保2亿首期到位+首期600万美金里程碑付款启动</p>
+            </div>
+            <div class="card" style="padding:16px;border-left:4px solid var(--accent-green)">
+              <div style="font-weight:600;color:var(--text-primary);margin-bottom:8px">中期升级（8月流片后）</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">流片成功作为估值重估触发事件，将SPV估值从3.9亿升级至10.2亿量级</p>
+            </div>
+            <div class="card" style="padding:16px;border-left:4px solid var(--accent-purple)">
+              <div style="font-weight:600;color:var(--text-primary);margin-bottom:8px">长期增信</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">第二轮10-15亿战略投资者到位后，SPV估值进一步确认</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../../js/app.js"></script>
+  <style>
+    .table-wrapper { overflow-x:auto;margin:16px 0 }
+    .data-table { width:100%;border-collapse:collapse;font-size:0.875rem }
+    .data-table th, .data-table td { padding:12px 16px;text-align:left;border-bottom:1px solid var(--border) }
+    .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
+    .data-table tr:hover { background:var(--bg-hover) }
+    .chart-container { background:var(--bg-card);border-radius:var(--radius-md);padding:20px;margin:16px 0;border:1px solid var(--border) }
+    .chart-title { font-weight:600;color:var(--text-primary);margin-bottom:16px }
+    .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
+    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
+    .alert-box.warning { background:rgba(249,226,175,0.1);border:1px solid var(--accent-yellow) }
+    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
+    .alert-box i { flex-shrink:0 }
+    .alert-box.info i { color:var(--accent-blue) }
+    .alert-box.warning i { color:var(--accent-yellow) }
+    .alert-box.success i { color:var(--accent-green) }
+    .accent-blue { color:var(--accent-blue);font-weight:700 }
+  </style>
+  <script>
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // Revenue Chart
+    const revenueCtx = document.getElementById('revenueChart');
+    if (revenueCtx) {
+      new Chart(revenueCtx, {
+        type: 'bar',
+        data: {
+          labels: ['2027', '2028', '2029', '2030', '2031'],
+          datasets: [
+            {
+              label: '自消纳收入',
+              data: [2.5, 7.0, 12.0, 16.0, 18.0],
+              backgroundColor: 'rgba(166, 227, 161, 0.8)',
+            },
+            {
+              label: '外部市场收入',
+              data: [1.0, 3.0, 8.0, 16.0, 27.0],
+              backgroundColor: 'rgba(137, 180, 250, 0.8)',
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top', labels: { color: '#a6adc8' } }
+          },
+          scales: {
+            x: { stacked: true, grid: { display: false }, ticks: { color: '#a6adc8' } },
+            y: { stacked: true, beginAtZero: true, grid: { color: 'rgba(69, 71, 90, 0.3)' }, ticks: { color: '#a6adc8' } }
+          }
+        }
+      });
+    }
+
+    // Deal Structure Chart
+    const dealCtx = document.getElementById('dealChart');
+    if (dealCtx) {
+      new Chart(dealCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['SmartNIC/DPU IP资产 (40%)', '研发团队（海外）(30%)', '客户关系/渠道 (15%)', '里程碑激励机制 (15%)'],
+          datasets: [{
+            data: [40, 30, 15, 15],
+            backgroundColor: [
+              'rgba(137, 180, 250, 0.8)',
+              'rgba(166, 227, 161, 0.8)',
+              'rgba(249, 226, 175, 0.8)',
+              'rgba(203, 166, 247, 0.8)'
+            ],
+            borderColor: '#1e1e2e',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: { color: '#a6adc8', font: { size: 12 } }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
