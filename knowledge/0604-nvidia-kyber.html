@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIDIA生态与Kyber架构 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
+          <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
+          <a href="0102-process-nodes.html" class="sidebar-item"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
+          <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
+          <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>高速网卡芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0201-nic-overview.html" class="sidebar-item"><i data-lucide="network" style="width:16px;height:16px"></i><span>网卡芯片概览</span></a>
+          <a href="0202-smartnic-dpu.html" class="sidebar-item"><i data-lucide="layers" style="width:16px;height:16px"></i><span>SmartNIC与DPU</span></a>
+          <a href="0203-rdma.html" class="sidebar-item"><i data-lucide="zap" style="width:16px;height:16px"></i><span>RDMA与高速互联</span></a>
+          <a href="0204-ub-huawei.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>UB底座与华为灵衢</span></a>
+          <a href="0205-nic-competition.html" class="sidebar-item"><i data-lucide="bar-chart-2" style="width:16px;height:16px"></i><span>高速网卡竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI推理芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0301-ai-chip-overview.html" class="sidebar-item"><i data-lucide="brain" style="width:16px;height:16px"></i><span>AI芯片概览</span></a>
+          <a href="0302-inference-training.html" class="sidebar-item"><i data-lucide="git-compare" style="width:16px;height:16px"></i><span>推理与训练</span></a>
+          <a href="0303-gpu-architecture.html" class="sidebar-item"><i data-lucide="monitor" style="width:16px;height:16px"></i><span>GPU架构与算力</span></a>
+          <a href="0304-zhiyun-inference.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>智云推理芯片</span></a>
+          <a href="0305-ai-competition.html" class="sidebar-item"><i data-lucide="swords" style="width:16px;height:16px"></i><span>AI推理芯片竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体产业链</span></div>
+        <ul class="sidebar-items">
+          <a href="0401-design-manufacture-test.html" class="sidebar-item"><i data-lucide="factory" style="width:16px;height:16px"></i><span>设计-制造-封测</span></a>
+          <a href="0402-foundry.html" class="sidebar-item"><i data-lucide="circle" style="width:16px;height:16px"></i><span>晶圆代工</span></a>
+          <a href="0403-packaging-test-industry.html" class="sidebar-item"><i data-lucide="check-circle" style="width:16px;height:16px"></i><span>封测产业</span></a>
+          <a href="0404-domestic-substitution.html" class="sidebar-item"><i data-lucide="flag" style="width:16px;height:16px"></i><span>国产替代与政策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>智云数科业务上下文</span></div>
+        <ul class="sidebar-items">
+          <a href="0501-business-landscape.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>智云芯片业务版图</span></a>
+          <a href="0502-acquisition-target.html" class="sidebar-item"><i data-lucide="arrow-right-circle" style="width:16px;height:16px"></i><span>收购标的与技术迁移</span></a>
+          <a href="0503-self-consumption.html" class="sidebar-item"><i data-lucide="repeat" style="width:16px;height:16px"></i><span>芯片自消纳与生态</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0601-ai-three-barriers.html" class="sidebar-item"><i data-lucide="mountain" style="width:16px;height:16px"></i><span>AI发展三道坎理论</span></a>
+          <a href="0602-optical-module-chip.html" class="sidebar-item"><i data-lucide="cable" style="width:16px;height:16px"></i><span>光模块与光芯片</span></a>
+          <a href="0603-cpo-lpo-npo.html" class="sidebar-item"><i data-lucide="settings-2" style="width:16px;height:16px"></i><span>CPO/LPO/NPO技术路线</span></a>
+          <a href="0604-nvidia-kyber.html" class="sidebar-item active"><i data-lucide="boxes" style="width:16px;height:16px"></i><span>NVIDIA生态与Kyber架构</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-header">
+          <div class="detail-breadcrumb">
+            <a href="../index.html">首页</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="0601-ai-three-barriers.html">AI产业链连接赛道</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>NVIDIA生态与Kyber架构</span>
+          </div>
+
+          <h1 class="detail-title">NVIDIA生态与Kyber架构</h1>
+          <div class="detail-tags">
+            <span class="tag orange"><i data-lucide="link" style="width:12px;height:12px"></i> AI产业链连接</span>
+            <span class="tag green"><i data-lucide="star" style="width:12px;height:12px"></i> 行业标杆</span>
+          </div>
+        </div>
+
+        <!-- Term Definition -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
+          <p class="detail-text">
+            <strong>NVLink Fusion</strong>：NVIDIA于2025年5月发布的开放互联平台，允许第三方厂商的芯片通过NVLink协议接入NVIDIA生态系统，带宽比PCIe Gen5快14倍。<br><br>
+            <strong>GB200 NVL72</strong>：NVIDIA当前旗舰AI超算系统，集成72个B200 GPU，功耗120kW，2025年Q1量产。<br><br>
+            <strong>Kyber架构</strong>：NVIDIA下一代AI超算架构，计划2027年量产，支持576 GPU互联，功耗600kW，采用800V高压直流供电。
+          </p>
+        </div>
+
+        <!-- Plain Explanation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
+          <p class="detail-text">NVLink Fusion是NVIDIA"建高速公路"——把自家高速互联技术开放给其他芯片厂商，让它们也能接入NVIDIA的生态。GB200是当前的"超级跑车"，72个GPU协同工作。Kyber是下一代"超级战舰"，576个GPU一起跑，但功耗高达600kW，需要专门的供电系统。</p>
+        </div>
+
+        <!-- NVLink Fusion -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link-2" style="width:20px;height:20px"></i>NVLink Fusion开放平台</h2>
+          <div class="grid-3" style="gap:16px">
+            <div class="metric-card" style="border:2px solid #a6e3a1">
+              <div class="metric-label">带宽对比PCIe Gen5</div>
+              <div class="metric-value green">14x</div>
+              <div class="metric-sub">高速互联优势</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">发布时间</div>
+              <div class="metric-value blue">2025.05</div>
+              <div class="metric-sub">开放互联平台</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">生态策略</div>
+              <div class="metric-value purple">开放</div>
+              <div class="metric-sub">第三方芯片可接入</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GB200 NVL72 -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="server" style="width:20px;height:20px"></i>GB200 NVL72系统</h2>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>参数</th>
+                  <th>值</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>GPU数量</code></td>
+                  <td><strong>72个 B200</strong></td>
+                  <td>单机架集成</td>
+                </tr>
+                <tr>
+                  <td><code>功耗</code></td>
+                  <td><span style="color:#f9e2af;font-weight:600">120 kW</span></td>
+                  <td>需要液冷散热</td>
+                </tr>
+                <tr>
+                  <td><code>量产时间</code></td>
+                  <td>2025年Q1</td>
+                  <td>当前旗舰产品</td>
+                </tr>
+                <tr>
+                  <td><code>互联技术</code></td>
+                  <td>NVLink 4.0</td>
+                  <td>传统光互联</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Kyber Architecture -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="rocket" style="width:20px;height:20px"></i>Kyber架构（2027年）</h2>
+          <div class="grid-2" style="gap:20px">
+            <div class="card" style="padding:20px;border:2px solid #cba6f7">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+                <i data-lucide="cpu" style="width:22px;height:22px;color:#cba6f7"></i>
+                系统规格
+              </div>
+              <div class="grid-2" style="gap:12px">
+                <div class="metric-card" style="padding:12px">
+                  <div class="metric-label">GPU数量</div>
+                  <div class="metric-value purple">576</div>
+                </div>
+                <div class="metric-card" style="padding:12px">
+                  <div class="metric-label">系统功耗</div>
+                  <div class="metric-value red">600 kW</div>
+                </div>
+                <div class="metric-card" style="padding:12px">
+                  <div class="metric-label">量产时间</div>
+                  <div class="metric-value blue">2027</div>
+                </div>
+                <div class="metric-card" style="padding:12px">
+                  <div class="metric-label">互联技术</div>
+                  <div class="metric-value green">CPO</div>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="padding:20px;border:2px solid #fab387">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+                <i data-lucide="zap" style="width:22px;height:22px;color:#fab387"></i>
+                供电创新
+              </div>
+              <div class="metric-card" style="padding:16px;border:2px solid #fab387">
+                <div class="metric-label">供电方案</div>
+                <div class="metric-value yellow">800V HVDC</div>
+                <div class="metric-sub">高压直流供电，降低传输损耗</div>
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-top:12px">
+                600kW功耗需要全新供电架构，800V高压直流（HVDC）可大幅降低传输损耗，是数据中心供电的未来方向。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marvell Partnership -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="handshake" style="width:20px;height:20px"></i>Marvell战略合作</h2>
+          <div class="grid-2" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">投资时间</div>
+              <div class="metric-value blue">2026.03</div>
+              <div class="metric-sub">NVIDIA投资Marvell</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">投资金额</div>
+              <div class="metric-value green">20亿美元</div>
+              <div class="metric-sub">深化光互联合作</div>
+            </div>
+          </div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);margin-top:16px">
+            NVIDIA投资Marvell，重点布局CPO光互联技术，为Kyber架构的576 GPU互联做准备。这也验证了"连接坎"的战略重要性。
+          </p>
+        </div>
+
+        <!-- Industry Impact -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>产业影响</h2>
+          <div class="grid-3" style="gap:16px">
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="cpu" style="width:18px;height:18px;color:#89b4fa"></i>
+                算力侧
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">GPU算力持续提升，但单卡互联带宽成为瓶颈</p>
+            </div>
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide"link" style="width:18px;height:18px;color:#a6e3a1"></i>
+                连接侧
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">光互联、CPO、高速网卡需求爆发，市场规模扩大</p>
+            </div>
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="zap" style="width:18px;height:18px;color:#f9e2af"></i>
+                供电侧
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">高压直流、液冷散热、数据中心基础设施升级</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zhiyun Relation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云关联</h2>
+          <p class="detail-text">智云收购的高速网卡芯片公司，技术定位与NVIDIA NVLink生态形成互补。NVLink Fusion开放平台为智云网卡芯片提供了接入NVIDIA生态的可能性，潜在合作空间巨大。同时，Kyber架构的高功耗、高互联需求，进一步验证了"连接坎"的战略价值。</p>
+          <div class="grid-2" style="gap:16px;margin-top:16px">
+            <a href="0201-nic-overview.html" class="card" style="padding:16px;text-decoration:none">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="network" style="width:18px;height:18px;color:#a6e3a1"></i>
+                高速网卡芯片
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">NVLink Fusion潜在合作方向</p>
+            </a>
+            <a href="0601-ai-three-barriers.html" class="card" style="padding:16px;text-decoration:none">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="mountain" style="width:18px;height:18px;color:#fab387"></i>
+                AI发展三道坎
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">连接坎的战略价值验证</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Nodes -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联节点</h2>
+          <div class="related-nodes">
+            <a href="0601-ai-three-barriers.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>AI发展三道坎理论</a>
+            <a href="0602-optical-module-chip.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>光模块与光芯片</a>
+            <a href="0603-cpo-lpo-npo.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>CPO/LPO/NPO技术路线</a>
+            <a href="0301-ai-chip-overview.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>AI芯片概览</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

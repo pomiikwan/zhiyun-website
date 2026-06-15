@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>封装与测试 - 智云数科</title>
+  <title>光模块与光芯片 - 智云数科</title>
   <link rel="stylesheet" href="../css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -32,13 +32,13 @@
   <div class="app-layout">
     <aside class="sidebar">
       <div class="sidebar-section">
-        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
-        <ul class="sidebar-items" style="max-height:500px">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
           <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
           <a href="0102-process-nodes.html" class="sidebar-item"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
           <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
           <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
-          <a href="0105-packaging-testing.html" class="sidebar-item active"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
         </ul>
       </div>
       <div class="sidebar-section">
@@ -79,77 +79,170 @@
         </ul>
       </div>
       <div class="sidebar-section">
-        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
-        <ul class="sidebar-items">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
           <a href="0601-ai-three-barriers.html" class="sidebar-item"><i data-lucide="mountain" style="width:16px;height:16px"></i><span>AI发展三道坎理论</span></a>
-          <a href="0602-optical-module-chip.html" class="sidebar-item"><i data-lucide="cable" style="width:16px;height:16px"></i><span>光模块与光芯片</span></a>
+          <a href="0602-optical-module-chip.html" class="sidebar-item active"><i data-lucide="cable" style="width:16px;height:16px"></i><span>光模块与光芯片</span></a>
           <a href="0603-cpo-lpo-npo.html" class="sidebar-item"><i data-lucide="settings-2" style="width:16px;height:16px"></i><span>CPO/LPO/NPO技术路线</span></a>
           <a href="0604-nvidia-kyber.html" class="sidebar-item"><i data-lucide="boxes" style="width:16px;height:16px"></i><span>NVIDIA生态与Kyber架构</span></a>
         </ul>
       </div>
-
     </aside>
 
     <main class="main-content">
       <div class="page-container">
-        <!-- 面包屑导航 -->
+        <!-- Breadcrumb -->
         <div class="detail-header">
           <div class="detail-breadcrumb">
             <a href="../index.html">首页</a>
             <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
             <a href="index.html">知识库</a>
             <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-            <a href="0101-chip-classification.html">半导体基础</a>
+            <a href="0601-ai-three-barriers.html">AI产业链连接赛道</a>
             <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-            <span>封装与测试</span>
+            <span>光模块与光芯片</span>
           </div>
 
-          <h1 class="detail-title">封装与测试</h1>
+          <h1 class="detail-title">光模块与光芯片</h1>
           <div class="detail-tags">
-            <span class="tag blue"><i data-lucide="cpu" style="width:12px;height:12px"></i> 半导体基础</span>
-            <span class="tag yellow"><i data-lucide="alert-triangle" style="width:12px;height:12px"></i> 重要</span>
+            <span class="tag orange"><i data-lucide="link" style="width:12px;height:12px"></i> AI产业链连接</span>
+            <span class="tag green"><i data-lucide="trending-up" style="width:12px;height:12px"></i> 高增长赛道</span>
           </div>
         </div>
 
-        <!-- 术语定义 -->
+        <!-- Term Definition -->
         <div class="detail-section">
           <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
-          <p class="detail-text" id="termDefinition"></p>
+          <p class="detail-text">
+            <strong>光模块（Optical Module）</strong>：实现光电信号转换的核心器件，将电信号转换为光信号进行传输，再将光信号转换回电信号。是数据中心互联的基础设施。<br><br>
+            <strong>光芯片（Optical Chip）</strong>：光模块的核心元器件，包括激光器芯片（EML/DFB）、探测器芯片（PD）、调制器芯片等。决定光模块的性能和成本。
+          </p>
         </div>
 
-        <!-- 通俗解释 -->
+        <!-- Plain Explanation -->
         <div class="detail-section">
           <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
-          <p class="detail-text" id="plainExplanation"></p>
+          <p class="detail-text">光模块就像"光电翻译官"，把GPU算出来的电信号变成光信号，通过光纤传到另一个数据中心，再变回电信号给另一边的GPU用。光芯片是这个翻译官的"心脏"，决定翻译速度和质量。AI时代，GPU算力暴涨，但数据传输成为瓶颈，光模块需求随之爆发。</p>
         </div>
 
-        <!-- 关键参数 -->
+        <!-- Market Share -->
         <div class="detail-section">
-          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>关键参数</h2>
+          <h2 class="detail-section-title"><i data-lucide="pie-chart" style="width:20px;height:20px"></i>市场格局</h2>
+          <div class="grid-2" style="gap:20px">
+            <div class="metric-card" style="border:2px solid #a6e3a1">
+              <div class="metric-label">中国高端光模块市场份额</div>
+              <div class="metric-value green">70%+</div>
+              <div class="metric-sub">全球市场，中国厂商主导</div>
+            </div>
+            <div class="metric-card" style="border:2px solid #f9e2af">
+              <div class="metric-label">高端EML激光芯片国产化率</div>
+              <div class="metric-value yellow">&lt;20%</div>
+              <div class="metric-sub">主要依赖进口，国产替代空间大</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Companies -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="building" style="width:20px;height:20px"></i>核心公司</h2>
           <div style="overflow-x:auto">
-            <table class="data-table" id="keyParamsTable">
+            <table class="data-table">
               <thead>
                 <tr>
-                  <th>参数</th>
-                  <th>值</th>
-                  <th>说明</th>
+                  <th>公司</th>
+                  <th>业务定位</th>
+                  <th>市场地位</th>
+                  <th>技术路线</th>
                 </tr>
               </thead>
-              <tbody id="keyParamsBody"></tbody>
+              <tbody>
+                <tr>
+                  <td><strong>中际旭创</strong></td>
+                  <td>高端光模块</td>
+                  <td><span style="color:#a6e3a1;font-weight:600">全球第一</span></td>
+                  <td>800G/1.6T光模块、CPO</td>
+                </tr>
+                <tr>
+                  <td><strong>新易盛</strong></td>
+                  <td>高速光模块</td>
+                  <td>国内领先</td>
+                  <td><span style="color:#fab387;font-weight:600">LPO路线领先</span></td>
+                </tr>
+                <tr>
+                  <td><strong>天孚通信</strong></td>
+                  <td>光器件组件</td>
+                  <td>光引擎龙头</td>
+                  <td>TOSA/ROSA、CWDM</td>
+                </tr>
+                <tr>
+                  <td><strong>源杰科技</strong></td>
+                  <td>EML激光芯片</td>
+                  <td>国产替代先锋</td>
+                  <td>25G/50G EML芯片</td>
+                </tr>
+                <tr>
+                  <td><strong>长光华芯</strong></td>
+                  <td>高功率激光芯片</td>
+                  <td>国产突破</td>
+                  <td>VCSEL、EML</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
 
-        <!-- 智云数科关联 -->
+        <!-- Technology Barriers -->
         <div class="detail-section">
-          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云数科关联</h2>
-          <p class="detail-text" id="zhiyunRelation"></p>
+          <h2 class="detail-section-title"><i data-lucide="shield-alert" style="width:20px;height:20px"></i>技术壁垒</h2>
+          <div class="grid-3" style="gap:16px">
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <i data-lucide="chip" style="width:20px;height:20px;color:#cba6f7"></i>
+                EML激光芯片
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">高速调制+激光集成，国产化率低，主要依赖博通、Lumentum、三菱</p>
+              <div class="card-meta" style="margin-top:12px">
+                <span class="tag red">卡脖子环节</span>
+              </div>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <i data-lucide="settings" style="width:20px;height:20px;color:#89b4fa"></i>
+                DSP芯片
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">数字信号处理芯片，用于信号补偿和纠错，主要被Marvell、Broadcom垄断</p>
+              <div class="card-meta" style="margin-top:12px">
+                <span class="tag yellow">LPO可省略</span>
+              </div>
+            </div>
+            <div class="card" style="padding:20px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <i data-lucide="package" style="width:20px;height:20px;color:#94e2d5"></i>
+                封装工艺
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">光芯片耦合封装精度要求极高，中国厂商具备成本和工艺优势</p>
+              <div class="card-meta" style="margin-top:12px">
+                <span class="tag green">中国优势</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- 关联知识节点 -->
+        <!-- Zhiyun Relation -->
         <div class="detail-section">
-          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联知识节点</h2>
-          <div class="related-nodes" id="relatedNodes"></div>
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云关联</h2>
+          <p class="detail-text">智云数科收购的高速网卡芯片公司，产品与光模块紧密配合，共同解决数据中心互联瓶颈。光模块与高速网卡是"连接坎"的两大核心组件，形成完整的端到端互联解决方案。</p>
+        </div>
+
+        <!-- Related Nodes -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联节点</h2>
+          <div class="related-nodes">
+            <a href="0601-ai-three-barriers.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>AI发展三道坎理论</a>
+            <a href="0603-cpo-lpo-npo.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>CPO/LPO/NPO技术路线</a>
+            <a href="0201-nic-overview.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>高速网卡芯片概览</a>
+            <a href="0203-rdma.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>RDMA与高速互联</a>
+          </div>
         </div>
 
         <footer class="site-footer">
@@ -160,52 +253,7 @@
   </div>
 
   <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
-
   <script src="../js/data.js"></script>
   <script src="../js/app.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const node = SITE_DATA.knowledgeNodes['0105'];
-      if (!node) return;
-
-      // 术语定义
-      document.getElementById('termDefinition').textContent = node.term;
-
-      // 通俗解释
-      document.getElementById('plainExplanation').textContent = node.plainExplain;
-
-      // 关键参数表格
-      const tbody = document.getElementById('keyParamsBody');
-      node.keyParams.forEach(param => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td><code>${param.name}</code></td><td>${param.value}</td><td>${param.desc}</td>`;
-        tbody.appendChild(tr);
-      });
-
-      // 智云数科关联
-      document.getElementById('zhiyunRelation').textContent = node.zhiyunRelation;
-
-      // 关联知识节点
-      const relatedContainer = document.getElementById('relatedNodes');
-      const relatedLinks = {
-        '0403': '0403-packaging-test-industry.html',
-        '0304': '0304-zhiyun-inference.html',
-        '0401': '0401-design-manufacture-test.html'
-      };
-      node.related.forEach(relatedId => {
-        const relatedNode = SITE_DATA.knowledgeNodes[relatedId];
-        if (relatedNode) {
-          const a = document.createElement('a');
-          a.href = relatedLinks[relatedId] || relatedNode.href;
-          a.className = 'related-node';
-          a.innerHTML = `<i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>${relatedNode.title}`;
-          relatedContainer.appendChild(a);
-        }
-      });
-
-      // 重新初始化 lucide 图标
-      if (typeof lucide !== 'undefined') lucide.createIcons();
-    });
-  </script>
 </body>
 </html>

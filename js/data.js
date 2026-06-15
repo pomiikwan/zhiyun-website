@@ -52,7 +52,7 @@ const SITE_DATA = {
     ]
   },
 
-  /* --- Knowledge Nodes (22 total) --- */
+  /* --- Knowledge Nodes (26 total) --- */
   knowledgeNodes: {
 
     /* === 01 - Semiconductor Basics === */
@@ -588,7 +588,7 @@ const SITE_DATA = {
         { name: 'Step 3', value: '人才转移', desc: '核心工程师转移到国内' },
         { name: 'Step 4', value: '国内重新注册', desc: '在国内重新办产权证' }
       ],
-      zhiyunRelation: 'IP迁移完成度是P1估值的关键变量：迁移越完整，智云芯片资产估值越高。3亿vs2亿对价机制：需要在对赌协议中精确设计。EDA迁移是最脆弱环节：美国三大EDA均受限。人才是真正的核心资产：IP可以买，但会设计IP的人才是不可替代的。',
+      zhiyunRelation: 'IP迁移完成度是P1估值的关键变量：迁移越完整，智云芯片资产估值越高。3亿vs2亿对价机制：需要在里程碑付款协议中精确设计（分5期付款，与迁移进度挂钩）。EDA迁移是最脆弱环节：美国三大EDA均受限。人才是真正的核心资产：IP可以买，但会设计IP的人才是不可替代的。',
       related: ['0501', '0104', '0201', '0202']
     },
 
@@ -611,6 +611,100 @@ const SITE_DATA = {
       ],
       zhiyunRelation: '自消纳是智云数科的"安全网"：即使商业市场开拓不顺，自消纳可保底30-50%的芯片出货。智算中心7.6亿已到位：最确定的自消纳渠道。超充站+边缘计算是推理芯片的新消纳场景。垂类大模型是自消纳的"升级版"：从"卖算力"升级到"卖行业解决方案"。',
       related: ['0501', '0304', '0204', '0404']
+    },
+
+    /* === 06 - AI Interconnect Track === */
+    '0601': {
+      id: '0601',
+      title: 'AI发展三道坎理论',
+      category: '06-AI产业链连接赛道',
+      icon: 'link',
+      priority: '核心',
+      href: '0601-ai-three-barriers.html',
+      term: 'AI发展三道坎（Three Barriers of AI Development）：AI产业发展像过关卡，每过一道坎就会诞生一批万亿级公司——算力坎（NVIDIA）、内存坎（HBM三巨头）、连接坎（Marvell被预言下一家万亿）。',
+      plainExplain: 'AI产业发展不是一条直线，而是像过关卡一样，每过一道坎就会诞生一批超级大公司。这三道坎分别是：算力坎（模型要聪明，得堆算力）→ 内存坎（模型大了，喂数据的速度跟不上）→ 连接坎（算力和内存都有了，但几十万张卡之间怎么互联？）。',
+      keyParams: [
+        { name: '第一道坎：算力', value: 'NVIDIA 5万亿美元市值', desc: 'GPU成为AI时代的发动机' },
+        { name: '第二道坎：内存', value: 'HBM三巨头均破1万亿美元', desc: '美光、SK海力士、三星' },
+        { name: '第三道坎：连接', value: 'Marvell被预言下一家万亿', desc: '黄仁勋2024年Computex预言' },
+        { name: '提出者', value: 'Matt Murphy（Marvell CEO）', desc: '2024年6月台北Computex' }
+      ],
+      zhiyunRelation: '智云数科的两条核心产品线均处于第三道坎（连接）：高速网卡芯片解决节点间数据传输，属于"连接"核心环节；AI推理芯片从训练转向推理，算力更分散，连接需求更迫切。',
+      related: ['0602', '0203', '0302'],
+      chartConfig: {
+        type: 'threeBarriers',
+        title: 'AI发展三道坎与市值'
+      }
+    },
+
+    '0602': {
+      id: '0602',
+      title: '光模块与光芯片',
+      category: '06-AI产业链连接赛道',
+      icon: 'zap',
+      priority: '核心',
+      href: '0602-optical-module-chip.html',
+      term: '光模块（Optical Module）：实现光电信号转换的核心器件，用于数据中心内服务器、交换机之间的高速数据传输。光芯片（Optical Chip）：光模块中的核心芯片，包括激光器芯片（EML/DML）、探测器芯片（PD）、调制器等。',
+      plainExplain: '光模块就像是数据中心的"快递站"，把电信号变成光信号传输，再把光信号变回电信号。光芯片是光模块里最值钱的核心零件，高端的光芯片目前主要被海外公司垄断，是国产替代的关键卡脖子环节。',
+      keyParams: [
+        { name: '中国光模块份额', value: '全球70%+', desc: '最高端1.6T几乎说一不二' },
+        { name: '中际旭创', value: '全球第一', desc: '2025年净利润超100亿' },
+        { name: '新易盛', value: 'LPO技术路线', desc: '800G/1.6T LPO开发中' },
+        { name: '源杰科技', value: 'EML激光芯片', desc: '100G EML已量产' },
+        { name: '长光华芯', value: '100G EML量产', desc: '良率70%+，填补国内空白' },
+        { name: 'Lumentum', value: '>60%份额', desc: '全球最大EML供应商' }
+      ],
+      zhiyunRelation: '光芯片是卡脖子环节：高端EML激光芯片国产化率低，主要依赖进口。需求爆发+供给被卡=国产替代最大机会。源杰科技、长光华芯100G EML量产是关键突破。',
+      related: ['0601', '0603', '0201'],
+      chartConfig: {
+        type: 'opticalModuleShare',
+        title: '全球光模块市场份额'
+      }
+    },
+
+    '0603': {
+      id: '0603',
+      title: 'CPO/LPO/NPO技术路线',
+      category: '06-AI产业链连接赛道',
+      icon: 'git-merge',
+      priority: '核心',
+      href: '0603-cpo-lpo-npo.html',
+      term: 'CPO（Co-Packaged Optics）：共封装光学，将光芯片与计算芯片封装在一起。LPO（Linear Pluggable Optics）：线性可插拔光学，去掉DSP芯片的简化方案。NPO（Near-Packaged Optics）：近封装光学，CPO的过渡方案。',
+      plainExplain: 'CPO把光模块直接"长"在GPU/交换机芯片旁边，省掉中间的传输线，速度更快、功耗更低。LPO把光模块里又贵又费电的DSP芯片裁掉，让交换机芯片来干这活，更省电、更便宜。',
+      keyParams: [
+        { name: 'CPO商用', value: '2025年进入商用化', desc: '2026年在Rubin Ultra中应用' },
+        { name: 'LPO功耗', value: '从13W降到<4W', desc: '800G模块' },
+        { name: 'UEC 1.0', value: '2025年6月发布', desc: '565页规范，10万+XPU集群' },
+        { name: 'Ethernet份额', value: '2025年>67%', desc: '首次超越InfiniBand' },
+        { name: '800G时代', value: '2025-2026年', desc: 'NVIDIA/Broadcom均已推出' }
+      ],
+      zhiyunRelation: 'CPO是光电融合的终极方案，激光器是最高壁垒环节。LPO功耗优势明显，适配边缘推理场景。UEC标准成熟推动Ethernet超越InfiniBand。',
+      related: ['0601', '0602', '0604', '0203']
+    },
+
+    '0604': {
+      id: '0604',
+      title: 'NVIDIA生态与Kyber架构',
+      category: '06-AI产业链连接赛道',
+      icon: 'cpu',
+      priority: '核心',
+      href: '0604-nvidia-kyber.html',
+      term: 'NVLink Fusion：NVIDIA机架级开放互联平台，2025年5月Computex发布，带宽比PCIe Gen5快14倍。Kyber架构：NVIDIA下一代机架系统，2027年量产，单机架576 GPU，功耗600kW。',
+      plainExplain: 'NVLink Fusion是NVIDIA宣布"欢迎其他芯片厂商接入我的高速公路"——你想用自己的定制芯片？可以，但要用我的互联协议。Kyber架构是NVIDIA的下一代超级机柜，一台机柜装576个GPU，功耗600kW，全部液冷。',
+      keyParams: [
+        { name: 'NVLink Fusion', value: '2025年5月发布', desc: '带宽比PCIe Gen5快14倍' },
+        { name: 'GB200 NVL72', value: '2025年Q1量产', desc: '72 GPU，120kW功耗' },
+        { name: 'Kyber架构', value: '2027年量产', desc: '576 GPU，600kW功耗' },
+        { name: 'Marvell合作', value: '2026年3月', desc: 'NVIDIA投资20亿美元' },
+        { name: '800V HVDC', value: 'Kyber采用', desc: '效率从92%提升至97%' },
+        { name: '沪电股份', value: '正交背板PCB', desc: '唯一通过78层M9认证' }
+      ],
+      zhiyunRelation: 'NVLink Fusion开放生态，Marvell接入后，智云网卡芯片是否可考虑兼容NVLink协议？液冷趋势：智云液冷一体机已验证，可关注Kyber架构带来的液冷升级需求。',
+      related: ['0601', '0603', '0204', '0303'],
+      chartConfig: {
+        type: 'nvidiaArchitecture',
+        title: 'NVIDIA机柜架构演进'
+      }
     }
   },
 
@@ -636,7 +730,7 @@ const SITE_DATA = {
       keyQuestions: [
         '各期融资金额、估值、出让比例？',
         '资金用途分配（收购IP/人才转移/研发投入/运营）？',
-        '对赌协议条款设计（一年内3亿vs超期2亿）？',
+        '里程碑付款计划设计（分5期付款，一年内3亿vs超期2亿）？',
         '投资方组合策略（财务投资vs战略投资的比例）？',
         '与P2联动：芯片资产在不同估值下，SPV中51%的股权如何对应？'
       ],
@@ -810,6 +904,87 @@ const SITE_DATA = {
       { risk: '人才流失', severity: '中高', probability: '中', impact: '技术能力削弱', color: 'yellow' },
       { risk: 'NVIDIA捆绑销售挤压', severity: '中', probability: '高', impact: '独立网卡市场份额下降', color: 'orange' },
       { risk: '市场窗口关闭', severity: '中', probability: '低', impact: '竞品迭代快', color: 'teal' }
-    ]
+    ],
+
+    /* --- Milestone Payment Plan --- */
+    milestonePayment: {
+      title: '阶段性里程碑付款计划',
+      totalAmount: '3亿美元',
+      totalAmountCNY: '约21亿人民币',
+      period: '签约日起12个月',
+      phases: [
+        {
+          id: 1,
+          name: '首付款',
+          milestone: '合同生效 & 初步落地准备',
+          percentage: '15%',
+          amount: '4500万美元',
+          timing: '第0个月（签约后7日内）',
+          deliverables: [
+            '合同签署并生效',
+            '初步落地准备工作启动'
+          ],
+          riskControl: '要求对方提供银行保函或第三方托管账户（Escrow Account），确保资金专用于本项目；若3个月内未完成第二阶段目标，甲方有权终止合同并追回部分款项。'
+        },
+        {
+          id: 2,
+          name: '第二期',
+          milestone: '完成中国子公司注册 + 核心团队到位',
+          percentage: '20%',
+          amount: '6000万美元',
+          timing: '第3个月末',
+          deliverables: [
+            '在中国完成外商独资企业（WFOE）或合资企业注册',
+            '至少5名核心工程师（含原公司技术骨干）签署劳动合同并到岗',
+            '提供社保/个税缴纳记录作为佐证'
+          ],
+          legalBasis: '符合《外商投资法》及《劳动合同法》相关要求。'
+        },
+        {
+          id: 3,
+          name: '第三期',
+          milestone: '办公场地设立 + 设计环境部署完成',
+          percentage: '20%',
+          amount: '6000万美元',
+          timing: '第6个月末',
+          deliverables: [
+            '租赁/购置办公场地的合同及付款凭证',
+            'EDA工具授权、服务器集群、验证平台等基础设施部署完成',
+            '内部研发流程文档（如IP管理、版本控制策略）提交备案'
+          ]
+        },
+        {
+          id: 4,
+          name: '第四期',
+          milestone: '首版芯片架构冻结 + RTL代码初版交付',
+          percentage: '25%',
+          amount: '7500万美元',
+          timing: '第9个月末',
+          deliverables: [
+            '芯片架构规格书（Architecture Specification）经双方签字确认',
+            'RTL（Register Transfer Level）代码初版上传至指定代码仓库',
+            '提供功能仿真结果及覆盖率报告'
+          ]
+        },
+        {
+          id: 5,
+          name: '尾款',
+          milestone: '团队完整运营 + 项目阶段性验收通过',
+          percentage: '20%',
+          amount: '6000万美元',
+          timing: '第12个月末',
+          deliverables: [
+            '团队规模达到协议约定人数（例如≥30人）且稳定运行至少1个月',
+            '提交季度研发进展报告，包含路线图更新、风险评估',
+            '由甲方指定技术专家进行现场评审并签署验收文件'
+          ]
+        }
+      ],
+      summary: {
+        totalPhases: 5,
+        keyMilestones: ['公司注册', '团队到位', '设计环境', '架构冻结', 'RTL交付', '项目验收'],
+        riskMitigation: '分阶段付款+里程碑验证+银行保函托管，确保资金安全和项目进度可控。'
+      }
+    }
   }
 };

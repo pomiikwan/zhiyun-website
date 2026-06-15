@@ -87,6 +87,7 @@
     .category-card[data-color="purple"]::before { background: var(--accent-purple); }
     .category-card[data-color="teal"]::before { background: var(--accent-teal); }
     .category-card[data-color="yellow"]::before { background: var(--accent-yellow); }
+.category-card[data-color="orange"]::before { background: #fab387; }
 
     .category-card-header {
       display: flex;
@@ -109,6 +110,7 @@
     .category-card-icon.purple { background: rgba(203,166,247,0.12); color: var(--accent-purple); }
     .category-card-icon.teal { background: rgba(148,226,213,0.12); color: var(--accent-teal); }
     .category-card-icon.yellow { background: rgba(249,226,175,0.12); color: var(--accent-yellow); }
+.category-card-icon.orange { background: rgba(250,179,135,0.12); color: #fab387; }
 
     .category-card-info { flex: 1; }
     .category-card-title {
@@ -178,6 +180,7 @@
     .category-card[data-color="purple"] .category-card-link { color: var(--accent-purple); }
     .category-card[data-color="teal"] .category-card-link { color: var(--accent-teal); }
     .category-card[data-color="yellow"] .category-card-link { color: var(--accent-yellow); }
+.category-card[data-color="orange"] .category-card-link { color: #fab387; }
     .category-card-link svg { width: 16px; height: 16px; transition: transform var(--transition-fast); }
     .category-card:hover .category-card-link svg { transform: translateX(3px); }
 
@@ -328,6 +331,15 @@
           <a href="0503-self-consumption.html" class="sidebar-item"><i data-lucide="repeat" style="width:16px;height:16px"></i><span>芯片自消纳与生态</span></a>
         </ul>
       </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
+        <ul class="sidebar-items">
+          <a href="0601-ai-three-barriers.html" class="sidebar-item"><i data-lucide="mountain" style="width:16px;height:16px"></i><span>AI发展三道坎理论</span></a>
+          <a href="0602-optical-module-chip.html" class="sidebar-item"><i data-lucide="cable" style="width:16px;height:16px"></i><span>光模块与光芯片</span></a>
+          <a href="0603-cpo-lpo-npo.html" class="sidebar-item"><i data-lucide="settings-2" style="width:16px;height:16px"></i><span>CPO/LPO/NPO技术路线</span></a>
+          <a href="0604-nvidia-kyber.html" class="sidebar-item"><i data-lucide="boxes" style="width:16px;height:16px"></i><span>NVIDIA生态与Kyber架构</span></a>
+        </ul>
+      </div>
     </aside>
 
     <main class="main-content">
@@ -336,16 +348,16 @@
         <!-- Hero Section -->
         <section class="knowledge-hero">
           <h1 class="knowledge-hero-title">专业领域<span style="color:var(--accent-blue)">知识库</span></h1>
-          <p class="knowledge-hero-subtitle">智云数科芯片业务知识体系，覆盖半导体基础、高速网卡、AI推理、产业链及业务上下文五大模块，帮助投资方快速理解"计算+互联"双引擎战略的技术逻辑。</p>
+          <p class="knowledge-hero-subtitle">智云数科芯片业务知识体系，覆盖半导体基础、高速网卡、AI推理、产业链、业务上下文及AI产业链连接六大模块，帮助投资方快速理解"计算+互联"双引擎战略的技术逻辑。</p>
           <div class="knowledge-hero-stats">
             <div class="knowledge-hero-stat">
-              <span class="stat-num blue">22</span> 知识节点
+              <span class="stat-num blue">26</span> 知识节点
             </div>
             <div class="knowledge-hero-stat">
-              <span class="stat-num green">5</span> 核心分类
+              <span class="stat-num green">6</span> 核心分类
             </div>
             <div class="knowledge-hero-stat">
-              <span class="stat-num purple">3</span> 智云专属
+              <span class="stat-num purple">4</span> AI产业链节点
             </div>
           </div>
         </section>
@@ -487,6 +499,28 @@
               </div>
             </div>
 
+            <!-- 06 AI产业链连接赛道 -->
+            <div class="category-card" data-color="orange" onclick="location.href='0601-ai-three-barriers.html'">
+              <div class="category-card-header">
+                <div class="category-card-icon orange"><i data-lucide="link" style="width:26px;height:26px"></i></div>
+                <div class="category-card-info">
+                  <div class="category-card-title">AI产业链连接赛道</div>
+                  <div class="category-card-count count-yellow"><span>4</span>个节点</div>
+                </div>
+              </div>
+              <div class="category-card-desc">AI发展三道坎理论（算力→内存→连接），光模块与光芯片产业链，CPO/LPO/NPO技术路线，NVIDIA NVLink Fusion生态与Kyber架构，解读黄仁勋"下一家万亿公司"预言背后的产业逻辑。</div>
+              <div class="category-card-children">
+                <span class="category-child-tag">AI三道坎</span>
+                <span class="category-child-tag">光模块/光芯片</span>
+                <span class="category-child-tag">CPO/LPO/NPO</span>
+                <span class="category-child-tag">NVLink/Kyber</span>
+              </div>
+              <div class="category-card-footer">
+                <span style="font-size:0.75rem;color:var(--text-muted)">06 - AI产业链连接赛道</span>
+                <span class="category-card-link">探索 <i data-lucide="arrow-right" style="width:16px;height:16px"></i></span>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -497,7 +531,7 @@
             知识图谱
           </h2>
           <div class="graph-container">
-            <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
               <!-- Background grid pattern -->
               <defs>
                 <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -511,7 +545,7 @@
                   </feMerge>
                 </filter>
               </defs>
-              <rect width="800" height="400" fill="url(#grid)" opacity="0.3"/>
+              <rect width="900" height="480" fill="url(#grid)" opacity="0.3"/>
 
               <!-- Connection lines (drawn first, behind nodes) -->
               <!-- 01-02: 半导体基础 <-> 高速网卡 -->
@@ -519,21 +553,29 @@
               <!-- 01-03: 半导体基础 <-> AI推理 -->
               <line x1="160" y1="120" x2="640" y2="120" stroke="#a6e3a1" stroke-width="1.5" class="graph-link"/>
               <!-- 01-04: 半导体基础 <-> 产业链 -->
-              <line x1="160" y1="120" x2="280" y2="300" stroke="#94e2d5" stroke-width="1.5" class="graph-link"/>
+              <line x1="160" y1="120" x2="280" y2="340" stroke="#94e2d5" stroke-width="1.5" class="graph-link"/>
               <!-- 02-03: 高速网卡 <-> AI推理 -->
               <line x1="400" y1="80" x2="640" y2="120" stroke="#f9e2af" stroke-width="1.5" class="graph-link"/>
               <!-- 02-04: 高速网卡 <-> 产业链 -->
-              <line x1="400" y1="80" x2="280" y2="300" stroke="#89b4fa" stroke-width="1.5" class="graph-link"/>
+              <line x1="400" y1="80" x2="280" y2="340" stroke="#89b4fa" stroke-width="1.5" class="graph-link"/>
               <!-- 03-04: AI推理 <-> 产业链 -->
-              <line x1="640" y1="120" x2="280" y2="300" stroke="#cba6f7" stroke-width="1.5" class="graph-link"/>
+              <line x1="640" y1="120" x2="280" y2="340" stroke="#cba6f7" stroke-width="1.5" class="graph-link"/>
               <!-- 02-05: 高速网卡 <-> 业务上下文 -->
-              <line x1="400" y1="80" x2="520" y2="300" stroke="#f9e2af" stroke-width="1.5" class="graph-link"/>
+              <line x1="400" y1="80" x2="520" y2="340" stroke="#f9e2af" stroke-width="1.5" class="graph-link"/>
               <!-- 03-05: AI推理 <-> 业务上下文 -->
-              <line x1="640" y1="120" x2="520" y2="300" stroke="#f9e2af" stroke-width="1.5" class="graph-link"/>
+              <line x1="640" y1="120" x2="520" y2="340" stroke="#f9e2af" stroke-width="1.5" class="graph-link"/>
               <!-- 04-05: 产业链 <-> 业务上下文 -->
-              <line x1="280" y1="300" x2="520" y2="300" stroke="#94e2d5" stroke-width="1.5" class="graph-link"/>
+              <line x1="280" y1="340" x2="520" y2="340" stroke="#94e2d5" stroke-width="1.5" class="graph-link"/>
               <!-- 01-05: 半导体基础 <-> 业务上下文 (lighter) -->
-              <line x1="160" y1="120" x2="520" y2="300" stroke="#6c7086" stroke-width="1" class="graph-link" stroke-dasharray="6,4"/>
+              <line x1="160" y1="120" x2="520" y2="340" stroke="#6c7086" stroke-width="1" class="graph-link" stroke-dasharray="6,4"/>
+              <!-- 06-03: AI产业链连接 <-> AI推理 -->
+              <line x1="760" y1="280" x2="640" y2="120" stroke="#fab387" stroke-width="1.5" class="graph-link"/>
+              <!-- 06-02: AI产业链连接 <-> 高速网卡 -->
+              <line x1="760" y1="280" x2="400" y2="80" stroke="#fab387" stroke-width="1.5" class="graph-link"/>
+              <!-- 06-05: AI产业链连接 <-> 业务上下文 -->
+              <line x1="760" y1="280" x2="520" y2="340" stroke="#fab387" stroke-width="1.5" class="graph-link"/>
+              <!-- 06-04: AI产业链连接 <-> 产业链 -->
+              <line x1="760" y1="280" x2="280" y2="340" stroke="#fab387" stroke-width="1" class="graph-link" stroke-dasharray="6,4"/>
 
               <!-- Node 01: 半导体基础 -->
               <g class="graph-node" onclick="location.href='0101-chip-classification.html'" style="cursor:pointer">
@@ -570,32 +612,45 @@
 
               <!-- Node 04: 半导体产业链 -->
               <g class="graph-node" onclick="location.href='0401-design-manufacture-test.html'" style="cursor:pointer">
-                <circle cx="280" cy="300" r="42" fill="#1e1e2e" stroke="#94e2d5" stroke-width="2" class="node-circle" filter="url(#glow)"/>
-                <circle cx="280" cy="300" r="48" fill="none" stroke="#94e2d5" stroke-width="1" class="pulse-circle" opacity="0.3"/>
-                <text x="280" y="296" text-anchor="middle" fill="#94e2d5" font-size="20">
+                <circle cx="280" cy="340" r="42" fill="#1e1e2e" stroke="#94e2d5" stroke-width="2" class="node-circle" filter="url(#glow)"/>
+                <circle cx="280" cy="340" r="48" fill="none" stroke="#94e2d5" stroke-width="1" class="pulse-circle" opacity="0.3"/>
+                <text x="280" y="336" text-anchor="middle" fill="#94e2d5" font-size="20">
                   <tspan>&#x1F3ED;</tspan>
                 </text>
-                <text x="280" y="320" text-anchor="middle" fill="#cdd6f4" font-size="11" font-weight="600" class="node-label">半导体产业链</text>
-                <text x="280" y="335" text-anchor="middle" fill="#6c7086" font-size="9">4个节点</text>
+                <text x="280" y="360" text-anchor="middle" fill="#cdd6f4" font-size="11" font-weight="600" class="node-label">半导体产业链</text>
+                <text x="280" y="375" text-anchor="middle" fill="#6c7086" font-size="9">4个节点</text>
               </g>
 
               <!-- Node 05: 智云数科业务上下文 -->
               <g class="graph-node" onclick="location.href='0501-business-landscape.html'" style="cursor:pointer">
-                <circle cx="520" cy="300" r="42" fill="#1e1e2e" stroke="#f9e2af" stroke-width="2" class="node-circle" filter="url(#glow)"/>
-                <circle cx="520" cy="300" r="48" fill="none" stroke="#f9e2af" stroke-width="1" class="pulse-circle" opacity="0.3"/>
-                <text x="520" y="296" text-anchor="middle" fill="#f9e2af" font-size="20">
+                <circle cx="520" cy="340" r="42" fill="#1e1e2e" stroke="#f9e2af" stroke-width="2" class="node-circle" filter="url(#glow)"/>
+                <circle cx="520" cy="340" r="48" fill="none" stroke="#f9e2af" stroke-width="1" class="pulse-circle" opacity="0.3"/>
+                <text x="520" y="336" text-anchor="middle" fill="#f9e2af" font-size="20">
                   <tspan>&#x1F4BC;</tspan>
                 </text>
-                <text x="520" y="318" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="600" class="node-label">智云数科</text>
-                <text x="520" y="332" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="600" class="node-label">业务上下文</text>
-                <text x="520" y="348" text-anchor="middle" fill="#6c7086" font-size="9">3个节点</text>
+                <text x="520" y="358" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="600" class="node-label">智云数科</text>
+                <text x="520" y="372" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="600" class="node-label">业务上下文</text>
+                <text x="520" y="388" text-anchor="middle" fill="#6c7086" font-size="9">3个节点</text>
+              </g>
+
+              <!-- Node 06: AI产业链连接赛道 -->
+              <g class="graph-node" onclick="location.href='0601-ai-three-barriers.html'" style="cursor:pointer">
+                <circle cx="760" cy="280" r="42" fill="#1e1e2e" stroke="#fab387" stroke-width="2" class="node-circle" filter="url(#glow)"/>
+                <circle cx="760" cy="280" r="48" fill="none" stroke="#fab387" stroke-width="1" class="pulse-circle" opacity="0.3"/>
+                <text x="760" y="276" text-anchor="middle" fill="#fab387" font-size="20">
+                  <tspan>&#x1F517;</tspan>
+                </text>
+                <text x="760" y="298" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="600" class="node-label">AI产业链</text>
+                <text x="760" y="312" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="600" class="node-label">连接赛道</text>
+                <text x="760" y="328" text-anchor="middle" fill="#6c7086" font-size="9">4个节点</text>
               </g>
 
               <!-- Labels on key connections -->
               <text x="280" y="88" text-anchor="middle" fill="#6c7086" font-size="8" font-style="italic">NIC = 通信+DPU</text>
               <text x="400" y="108" text-anchor="middle" fill="#6c7086" font-size="8" font-style="italic">算力+互联</text>
-              <text x="520" y="210" text-anchor="middle" fill="#6c7086" font-size="8" font-style="italic">Fabless + 代工</text>
-              <text x="400" y="300" text-anchor="middle" fill="#6c7086" font-size="8" font-style="italic">国产替代</text>
+              <text x="520" y="230" text-anchor="middle" fill="#6c7086" font-size="8" font-style="italic">Fabless + 代工</text>
+              <text x="400" y="340" text-anchor="middle" fill="#6c7086" font-size="8" font-style="italic">国产替代</text>
+              <text x="700" y="180" text-anchor="middle" fill="#fab387" font-size="8" font-style="italic">光互联</text>
             </svg>
           </div>
         </section>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPO/LPO/NPO技术路线 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
+          <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
+          <a href="0102-process-nodes.html" class="sidebar-item"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
+          <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
+          <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>高速网卡芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0201-nic-overview.html" class="sidebar-item"><i data-lucide="network" style="width:16px;height:16px"></i><span>网卡芯片概览</span></a>
+          <a href="0202-smartnic-dpu.html" class="sidebar-item"><i data-lucide="layers" style="width:16px;height:16px"></i><span>SmartNIC与DPU</span></a>
+          <a href="0203-rdma.html" class="sidebar-item"><i data-lucide="zap" style="width:16px;height:16px"></i><span>RDMA与高速互联</span></a>
+          <a href="0204-ub-huawei.html" class="sidebar-item"><i data-lucide="shield" style="width:16px;height:16px"></i><span>UB底座与华为灵衢</span></a>
+          <a href="0205-nic-competition.html" class="sidebar-item"><i data-lucide="bar-chart-2" style="width:16px;height:16px"></i><span>高速网卡竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI推理芯片</span></div>
+        <ul class="sidebar-items">
+          <a href="0301-ai-chip-overview.html" class="sidebar-item"><i data-lucide="brain" style="width:16px;height:16px"></i><span>AI芯片概览</span></a>
+          <a href="0302-inference-training.html" class="sidebar-item"><i data-lucide="git-compare" style="width:16px;height:16px"></i><span>推理与训练</span></a>
+          <a href="0303-gpu-architecture.html" class="sidebar-item"><i data-lucide="monitor" style="width:16px;height:16px"></i><span>GPU架构与算力</span></a>
+          <a href="0304-zhiyun-inference.html" class="sidebar-item"><i data-lucide="star" style="width:16px;height:16px"></i><span>智云推理芯片</span></a>
+          <a href="0305-ai-competition.html" class="sidebar-item"><i data-lucide="swords" style="width:16px;height:16px"></i><span>AI推理芯片竞争格局</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体产业链</span></div>
+        <ul class="sidebar-items">
+          <a href="0401-design-manufacture-test.html" class="sidebar-item"><i data-lucide="factory" style="width:16px;height:16px"></i><span>设计-制造-封测</span></a>
+          <a href="0402-foundry.html" class="sidebar-item"><i data-lucide="circle" style="width:16px;height:16px"></i><span>晶圆代工</span></a>
+          <a href="0403-packaging-test-industry.html" class="sidebar-item"><i data-lucide="check-circle" style="width:16px;height:16px"></i><span>封测产业</span></a>
+          <a href="0404-domestic-substitution.html" class="sidebar-item"><i data-lucide="flag" style="width:16px;height:16px"></i><span>国产替代与政策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>智云数科业务上下文</span></div>
+        <ul class="sidebar-items">
+          <a href="0501-business-landscape.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>智云芯片业务版图</span></a>
+          <a href="0502-acquisition-target.html" class="sidebar-item"><i data-lucide="arrow-right-circle" style="width:16px;height:16px"></i><span>收购标的与技术迁移</span></a>
+          <a href="0503-self-consumption.html" class="sidebar-item"><i data-lucide="repeat" style="width:16px;height:16px"></i><span>芯片自消纳与生态</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0601-ai-three-barriers.html" class="sidebar-item"><i data-lucide="mountain" style="width:16px;height:16px"></i><span>AI发展三道坎理论</span></a>
+          <a href="0602-optical-module-chip.html" class="sidebar-item"><i data-lucide="cable" style="width:16px;height:16px"></i><span>光模块与光芯片</span></a>
+          <a href="0603-cpo-lpo-npo.html" class="sidebar-item active"><i data-lucide="settings-2" style="width:16px;height:16px"></i><span>CPO/LPO/NPO技术路线</span></a>
+          <a href="0604-nvidia-kyber.html" class="sidebar-item"><i data-lucide="boxes" style="width:16px;height:16px"></i><span>NVIDIA生态与Kyber架构</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Breadcrumb -->
+        <div class="detail-header">
+          <div class="detail-breadcrumb">
+            <a href="../index.html">首页</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="index.html">知识库</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <a href="0601-ai-three-barriers.html">AI产业链连接赛道</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
+            <span>CPO/LPO/NPO技术路线</span>
+          </div>
+
+          <h1 class="detail-title">CPO/LPO/NPO技术路线</h1>
+          <div class="detail-tags">
+            <span class="tag orange"><i data-lucide="link" style="width:12px;height:12px"></i> AI产业链连接</span>
+            <span class="tag blue"><i data-lucide="cpu" style="width:12px;height:12px"></i> 技术路线</span>
+          </div>
+        </div>
+
+        <!-- Term Definition -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
+          <p class="detail-text">
+            <strong>CPO（Co-Packaged Optics，共封装光学）</strong>：将光芯片与计算芯片（GPU/ASIC）封装在同一基板上，大幅缩短电信号传输距离，降低功耗和延迟。<br><br>
+            <strong>LPO（Linear Pluggable Optics，线性可插拔光学）</strong>：去掉传统光模块中的DSP芯片，使用线性模拟信号传输，功耗从13W降至4W以下，成本降低约30%。<br><br>
+            <strong>NPO（Near-Packaged Optics，近封装光学）</strong>：CPO的过渡方案，光芯片与计算芯片距离较近但不共封装，便于维护升级。
+          </p>
+        </div>
+
+        <!-- Plain Explanation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
+          <p class="detail-text">传统光模块像"外挂"，GPU发出的电信号要走很远才能变成光信号，途中损耗大、耗电多。CPO把光芯片"贴"到GPU旁边，距离近了，速度快了，功耗降了。LPO则是"砍掉翻译官"，让信号直接传输，省去DSP芯片的功耗和成本。NPO是折中方案，既有接近CPO的性能，又保持一定可维护性。</p>
+        </div>
+
+        <!-- Technology Comparison -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-compare" style="width:20px;height:20px"></i>技术路线对比</h2>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>技术路线</th>
+                  <th>原理</th>
+                  <th>功耗</th>
+                  <th>成本</th>
+                  <th>成熟度</th>
+                  <th>代表厂商</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code style="color:#cba6f7">CPO</code></td>
+                  <td>光芯片与GPU共封装</td>
+                  <td><span style="color:#a6e3a1;font-weight:600">最低</span></td>
+                  <td>初期高</td>
+                  <td>2025商用化</td>
+                  <td>NVIDIA、Intel、Broadcom</td>
+                </tr>
+                <tr>
+                  <td><code style="color:#fab387">LPO</code></td>
+                  <td>去掉DSP芯片</td>
+                  <td><span style="color:#a6e3a1;font-weight:600">4W以下</span><br>(原13W)</td>
+                  <td><span style="color:#a6e3a1;font-weight:600">降30%</span></td>
+                  <td>可量产</td>
+                  <td>新易盛、Marvell</td>
+                </tr>
+                <tr>
+                  <td><code style="color:#89b4fa">NPO</code></td>
+                  <td>近封装光学</td>
+                  <td>中等</td>
+                  <td>中等</td>
+                  <td>过渡方案</td>
+                  <td>Ayar Labs、多厂商</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Power Comparison -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="zap" style="width:20px;height:20px"></i>功耗对比</h2>
+          <div class="grid-3" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">传统光模块</div>
+              <div class="metric-value red">~13W</div>
+              <div class="metric-sub">含DSP芯片功耗</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">LPO光模块</div>
+              <div class="metric-value green">&lt;4W</div>
+              <div class="metric-sub">去除DSP后功耗</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">CPO光互联</div>
+              <div class="metric-value blue">最低</div>
+              <div class="metric-sub">共封装极致优化</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NVIDIA Roadmap -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="map" style="width:20px;height:20px"></i>NVIDIA CPO路线图</h2>
+          <div class="grid-2" style="gap:16px">
+            <div class="card" style="padding:20px;border:2px solid #a6e3a1">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <i data-lucide="calendar" style="width:20px;height:20px;color:#a6e3a1"></i>
+                2025年
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">GB200 NVL72量产，采用传统光互联</p>
+              <div class="card-meta" style="margin-top:12px">
+                <span class="tag green">当前阶段</span>
+              </div>
+            </div>
+            <div class="card" style="padding:20px;border:2px solid #cba6f7">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <i data-lucide="rocket" style="width:20px;height:20px;color:#cba6f7"></i>
+                2026年
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">Rubin Ultra系列引入CPO技术，576 GPU互联</p>
+              <div class="card-meta" style="margin-top:12px">
+                <span class="tag purple">CPO商用化</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LPO Advantage -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="star" style="width:20px;height:20px"></i>LPO核心优势</h2>
+          <div class="grid-2" style="gap:16px">
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="zap-off" style="width:18px;height:18px;color:#a6e3a1"></i>
+                低功耗
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">功耗从13W降至4W以下，降低70%+，大幅降低数据中心PUE</p>
+            </div>
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="dollar-sign" style="width:18px;height:18px;color:#f9e2af"></i>
+                低成本
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">省去DSP芯片，成本降低约30%，性价比优势明显</p>
+            </div>
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="clock" style="width:18px;height:18px;color:#89b4fa"></i>
+                低延迟
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">去除DSP处理环节，信号延迟更低，适合AI训练场景</p>
+            </div>
+            <div class="card" style="padding:16px">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="settings" style="width:18px;height:18px;color:#94e2d5"></i>
+                可维护
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">保持可插拔形态，便于更换维护，运维成本可控</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zhiyun Relation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云关联</h2>
+          <p class="detail-text">智云收购的高速网卡芯片与光互联技术深度协同。网卡负责机内和机架内高速互联，光模块负责机架间和数据中心间互联。随着CPO技术成熟，网卡芯片与光芯片将进一步融合，智云的技术资产具备长期增值潜力。</p>
+        </div>
+
+        <!-- Related Nodes -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联节点</h2>
+          <div class="related-nodes">
+            <a href="0601-ai-three-barriers.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>AI发展三道坎理论</a>
+            <a href="0602-optical-module-chip.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>光模块与光芯片</a>
+            <a href="0604-nvidia-kyber.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>NVIDIA生态与Kyber架构</a>
+            <a href="0201-nic-overview.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>高速网卡芯片概览</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>智云数科 &copy; 2026 | 智算芯片解决方案</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

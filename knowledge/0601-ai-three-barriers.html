@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>封装与测试 - 智云数科</title>
+  <title>AI发展三道坎理论 - 智云数科</title>
   <link rel="stylesheet" href="../css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -32,13 +32,13 @@
   <div class="app-layout">
     <aside class="sidebar">
       <div class="sidebar-section">
-        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
-        <ul class="sidebar-items" style="max-height:500px">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>半导体基础</span></div>
+        <ul class="sidebar-items">
           <a href="0101-chip-classification.html" class="sidebar-item"><i data-lucide="cpu" style="width:16px;height:16px"></i><span>芯片分类与架构</span></a>
           <a href="0102-process-nodes.html" class="sidebar-item"><i data-lucide="ruler" style="width:16px;height:16px"></i><span>制程与工艺节点</span></a>
           <a href="0103-tape-out.html" class="sidebar-item"><i data-lucide="play-circle" style="width:16px;height:16px"></i><span>流片与量产</span></a>
           <a href="0104-eda-ip.html" class="sidebar-item"><i data-lucide="pen-tool" style="width:16px;height:16px"></i><span>EDA与IP</span></a>
-          <a href="0105-packaging-testing.html" class="sidebar-item active"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
+          <a href="0105-packaging-testing.html" class="sidebar-item"><i data-lucide="package" style="width:16px;height:16px"></i><span>封装与测试</span></a>
         </ul>
       </div>
       <div class="sidebar-section">
@@ -79,77 +79,153 @@
         </ul>
       </div>
       <div class="sidebar-section">
-        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
-        <ul class="sidebar-items">
-          <a href="0601-ai-three-barriers.html" class="sidebar-item"><i data-lucide="mountain" style="width:16px;height:16px"></i><span>AI发展三道坎理论</span></a>
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>AI产业链连接赛道</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="0601-ai-three-barriers.html" class="sidebar-item active"><i data-lucide="mountain" style="width:16px;height:16px"></i><span>AI发展三道坎理论</span></a>
           <a href="0602-optical-module-chip.html" class="sidebar-item"><i data-lucide="cable" style="width:16px;height:16px"></i><span>光模块与光芯片</span></a>
           <a href="0603-cpo-lpo-npo.html" class="sidebar-item"><i data-lucide="settings-2" style="width:16px;height:16px"></i><span>CPO/LPO/NPO技术路线</span></a>
           <a href="0604-nvidia-kyber.html" class="sidebar-item"><i data-lucide="boxes" style="width:16px;height:16px"></i><span>NVIDIA生态与Kyber架构</span></a>
         </ul>
       </div>
-
     </aside>
 
     <main class="main-content">
       <div class="page-container">
-        <!-- 面包屑导航 -->
+        <!-- Breadcrumb -->
         <div class="detail-header">
           <div class="detail-breadcrumb">
             <a href="../index.html">首页</a>
             <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
             <a href="index.html">知识库</a>
             <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-            <a href="0101-chip-classification.html">半导体基础</a>
+            <a href="0601-ai-three-barriers.html">AI产业链连接赛道</a>
             <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-            <span>封装与测试</span>
+            <span>AI发展三道坎理论</span>
           </div>
 
-          <h1 class="detail-title">封装与测试</h1>
+          <h1 class="detail-title">AI发展三道坎理论</h1>
           <div class="detail-tags">
-            <span class="tag blue"><i data-lucide="cpu" style="width:12px;height:12px"></i> 半导体基础</span>
-            <span class="tag yellow"><i data-lucide="alert-triangle" style="width:12px;height:12px"></i> 重要</span>
+            <span class="tag orange"><i data-lucide="link" style="width:12px;height:12px"></i> AI产业链连接</span>
+            <span class="tag red"><i data-lucide="star" style="width:12px;height:12px"></i> 核心理论</span>
           </div>
         </div>
 
-        <!-- 术语定义 -->
+        <!-- Term Definition -->
         <div class="detail-section">
           <h2 class="detail-section-title"><i data-lucide="book-open" style="width:20px;height:20px"></i>术语定义</h2>
-          <p class="detail-text" id="termDefinition"></p>
+          <p class="detail-text"><strong>AI发展三道坎（Three Barriers of AI Development）</strong>：由迈威尔（Marvell）CEO Matt Murphy于2024年6月在台北Computex提出，描述AI产业发展的三个关键瓶颈：算力坎、内存坎、连接坎。每跨越一道坎，就会诞生一批万亿级市值公司。</p>
         </div>
 
-        <!-- 通俗解释 -->
+        <!-- Plain Explanation -->
         <div class="detail-section">
           <h2 class="detail-section-title"><i data-lucide="lightbulb" style="width:20px;height:20px"></i>通俗解释</h2>
-          <p class="detail-text" id="plainExplanation"></p>
+          <p class="detail-text">AI产业就像打关卡游戏，每过一道坎，就会诞生一批万亿公司。第一道是算力坎（GPU），NVIDIA跨过去了，市值5万亿美元；第二道是内存坎（HBM），SK海力士、三星、美光跨过去了，均破1万亿市值；第三道是连接坎（光互联），Marvell被预言是"下一家万亿公司"。</p>
         </div>
 
-        <!-- 关键参数 -->
+        <!-- Three Barriers Table -->
         <div class="detail-section">
-          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>关键参数</h2>
+          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>三道坎详解</h2>
           <div style="overflow-x:auto">
-            <table class="data-table" id="keyParamsTable">
+            <table class="data-table">
               <thead>
                 <tr>
-                  <th>参数</th>
-                  <th>值</th>
-                  <th>说明</th>
+                  <th>关卡</th>
+                  <th>核心瓶颈</th>
+                  <th>代表公司</th>
+                  <th>市值表现</th>
+                  <th>关键技术</th>
                 </tr>
               </thead>
-              <tbody id="keyParamsBody"></tbody>
+              <tbody>
+                <tr>
+                  <td><code style="color:#89b4fa">第一道坎</code></td>
+                  <td><strong>算力坎</strong><br>GPU计算能力不足</td>
+                  <td>NVIDIA</td>
+                  <td><span style="color:#a6e3a1;font-weight:600">~5万亿美元</span></td>
+                  <td>GPU架构、CUDA生态、Tensor Core</td>
+                </tr>
+                <tr>
+                  <td><code style="color:#cba6f7">第二道坎</code></td>
+                  <td><strong>内存坎</strong><br>HBM带宽瓶颈</td>
+                  <td>SK海力士、三星、美光</td>
+                  <td><span style="color:#a6e3a1;font-weight:600">均破1万亿</span></td>
+                  <td>HBM3e、HBM4、3D堆叠</td>
+                </tr>
+                <tr>
+                  <td><code style="color:#fab387">第三道坎</code></td>
+                  <td><strong>连接坎</strong><br>数据中心互联瓶颈</td>
+                  <td>Marvell、中际旭创</td>
+                  <td><span style="color:#f9e2af;font-weight:600">预言下一家万亿</span></td>
+                  <td>光模块、CPO、DSP、光芯片</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
 
-        <!-- 智云数科关联 -->
+        <!-- Key Insight -->
         <div class="detail-section">
-          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云数科关联</h2>
-          <p class="detail-text" id="zhiyunRelation"></p>
+          <h2 class="detail-section-title"><i data-lucide="sparkles" style="width:20px;height:20px"></i>核心洞察</h2>
+          <div class="grid-3" style="gap:16px">
+            <div class="metric-card">
+              <div class="metric-label">算力坎</div>
+              <div class="metric-value blue">已跨越</div>
+              <div class="metric-sub">NVIDIA GPU统治地位确立</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">内存坎</div>
+              <div class="metric-value purple">正在跨越</div>
+              <div class="metric-sub">HBM需求爆发，产能紧缺</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">连接坎</div>
+              <div class="metric-value yellow">即将突破</div>
+              <div class="metric-sub">光互联成为下一个战场</div>
+            </div>
+          </div>
         </div>
 
-        <!-- 关联知识节点 -->
+        <!-- Source -->
         <div class="detail-section">
-          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联知识节点</h2>
-          <div class="related-nodes" id="relatedNodes"></div>
+          <h2 class="detail-section-title"><i data-lucide="quote" style="width:20px;height:20px"></i>来源</h2>
+          <p class="detail-text">
+            <strong>发言人：</strong>Matt Murphy，Marvell CEO<br>
+            <strong>场合：</strong>2024年6月 台北Computex主题演讲<br>
+            <strong>预言：</strong>"Marvell将成为下一家万亿市值公司"
+          </p>
+        </div>
+
+        <!-- Zhiyun Relation -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="link" style="width:20px;height:20px"></i>智云关联</h2>
+          <p class="detail-text">智云数科"计算+互联"双引擎战略与三道坎理论高度契合：自研AI推理芯片（算力）+ 高速网卡芯片收购（连接）。网卡芯片正是连接坎的核心，而智云收购的标的在全球高速网卡领域排名第五，具备技术领先性。</p>
+          <div class="grid-2" style="gap:16px;margin-top:16px">
+            <a href="0201-nic-overview.html" class="card" style="padding:16px;text-decoration:none">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="network" style="width:18px;height:18px;color:#a6e3a1"></i>
+                高速网卡芯片
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">连接坎核心资产，3亿美金收购标的</p>
+            </a>
+            <a href="0304-zhiyun-inference.html" class="card" style="padding:16px;text-decoration:none">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <i data-lucide="star" style="width:18px;height:18px;color:#cba6f7"></i>
+                智云推理芯片
+              </div>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">算力坎布局，7nm自研对标RTX 4090</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Nodes -->
+        <div class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="git-branch" style="width:20px;height:20px"></i>关联节点</h2>
+          <div class="related-nodes">
+            <a href="0602-optical-module-chip.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>光模块与光芯片</a>
+            <a href="0603-cpo-lpo-npo.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>CPO/LPO/NPO技术路线</a>
+            <a href="0604-nvidia-kyber.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>NVIDIA生态与Kyber架构</a>
+            <a href="0201-nic-overview.html" class="related-node"><i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>高速网卡芯片概览</a>
+          </div>
         </div>
 
         <footer class="site-footer">
@@ -160,52 +236,7 @@
   </div>
 
   <button class="back-to-top" aria-label="回到顶部"><i data-lucide="chevron-up" style="width:18px;height:18px"></i></button>
-
   <script src="../js/data.js"></script>
   <script src="../js/app.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const node = SITE_DATA.knowledgeNodes['0105'];
-      if (!node) return;
-
-      // 术语定义
-      document.getElementById('termDefinition').textContent = node.term;
-
-      // 通俗解释
-      document.getElementById('plainExplanation').textContent = node.plainExplain;
-
-      // 关键参数表格
-      const tbody = document.getElementById('keyParamsBody');
-      node.keyParams.forEach(param => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td><code>${param.name}</code></td><td>${param.value}</td><td>${param.desc}</td>`;
-        tbody.appendChild(tr);
-      });
-
-      // 智云数科关联
-      document.getElementById('zhiyunRelation').textContent = node.zhiyunRelation;
-
-      // 关联知识节点
-      const relatedContainer = document.getElementById('relatedNodes');
-      const relatedLinks = {
-        '0403': '0403-packaging-test-industry.html',
-        '0304': '0304-zhiyun-inference.html',
-        '0401': '0401-design-manufacture-test.html'
-      };
-      node.related.forEach(relatedId => {
-        const relatedNode = SITE_DATA.knowledgeNodes[relatedId];
-        if (relatedNode) {
-          const a = document.createElement('a');
-          a.href = relatedLinks[relatedId] || relatedNode.href;
-          a.className = 'related-node';
-          a.innerHTML = `<i data-lucide="arrow-up-right" style="width:14px;height:14px"></i>${relatedNode.title}`;
-          relatedContainer.appendChild(a);
-        }
-      });
-
-      // 重新初始化 lucide 图标
-      if (typeof lucide !== 'undefined') lucide.createIcons();
-    });
-  </script>
 </body>
 </html>

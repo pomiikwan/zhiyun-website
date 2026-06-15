@@ -3,32 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>执行时序与甘特图 - 智云数科</title>
+  <title>执行时序与里程碑付款计划 - 智云数科</title>
   <link rel="stylesheet" href="../../css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     .gantt-container { overflow-x:auto;margin:16px 0 }
-    .gantt-chart { min-width:800px }
+    .gantt-chart { min-width:900px }
     .gantt-row { display:flex;align-items:center;border-bottom:1px solid var(--border) }
-    .gantt-label { width:180px;padding:8px 12px;font-size:0.8125rem;color:var(--text-primary);flex-shrink:0 }
-    .gantt-bars { flex:1;display:flex;height:36px;position:relative;background:var(--bg-secondary) }
-    .gantt-bar { position:absolute;height:24px;top:6px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:white;font-weight:500 }
+    .gantt-label { width:200px;padding:8px 12px;font-size:0.8125rem;color:var(--text-primary);flex-shrink:0 }
+    .gantt-bars { flex:1;display:flex;height:40px;position:relative;background:var(--bg-secondary) }
+    .gantt-bar { position:absolute;height:28px;top:6px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:white;font-weight:500;padding:0 8px }
     .gantt-months { display:flex;border-bottom:2px solid var(--border) }
     .gantt-month { flex:1;text-align:center;padding:8px;font-size:0.75rem;color:var(--text-muted);border-right:1px solid var(--border) }
     .gantt-month:last-child { border-right:none }
-    .timeline-vertical { position:relative;padding-left:32px }
-    .timeline-item { position:relative;padding-bottom:24px }
-    .timeline-marker { position:absolute;left:-32px;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:600;color:white }
-    .timeline-content { padding-left:16px }
-    .timeline-title { font-weight:600;color:var(--text-primary);margin-bottom:4px }
-    .timeline-desc { font-size:0.8125rem;color:var(--text-secondary) }
-    .timeline-time { font-size:0.75rem;color:var(--text-muted);margin-top:4px }
-    .checkpoint-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px }
-    .checkpoint-card { background:var(--bg-card);border-radius:var(--radius-md);padding:16px;border:1px solid var(--border) }
-    .checkpoint-id { font-size:0.75rem;font-weight:600;color:var(--accent-blue);margin-bottom:8px }
-    .checkpoint-title { font-weight:600;color:var(--text-primary);margin-bottom:8px }
-    .checkpoint-detail { font-size:0.8125rem;color:var(--text-secondary) }
-    .checkpoint-time { font-size:0.75rem;color:var(--text-muted);margin-top:8px }
+    .milestone-card { background:var(--bg-card);border-radius:var(--radius-lg);padding:24px;border:1px solid var(--border);margin-bottom:16px;position:relative;overflow:hidden }
+    .milestone-card::before { content:'';position:absolute;top:0;left:0;right:0;height:4px }
+    .milestone-card[data-phase="1"]::before { background:var(--accent-blue) }
+    .milestone-card[data-phase="2"]::before { background:var(--accent-green) }
+    .milestone-card[data-phase="3"]::before { background:var(--accent-yellow) }
+    .milestone-card[data-phase="4"]::before { background:var(--accent-purple) }
+    .milestone-card[data-phase="5"]::before { background:var(--accent-teal) }
+    .milestone-header { display:flex;align-items:center;justify-content:space-between;margin-bottom:16px }
+    .milestone-title { font-size:1.125rem;font-weight:700;color:var(--text-primary) }
+    .milestone-amount { font-size:1.5rem;font-weight:800 }
+    .milestone-amount.blue { color:var(--accent-blue) }
+    .milestone-amount.green { color:var(--accent-green) }
+    .milestone-amount.yellow { color:var(--accent-yellow) }
+    .milestone-amount.purple { color:var(--accent-purple) }
+    .milestone-amount.teal { color:var(--accent-teal) }
+    .deliverable-list { list-style:none;padding:0;margin:0 }
+    .deliverable-list li { padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:8px }
+    .deliverable-list li:last-child { border-bottom:none }
+    .deliverable-list li::before { content:'✓';color:var(--accent-green);font-weight:bold }
+    .risk-control-box { background:rgba(243,139,168,0.1);border:1px solid var(--accent-red);border-radius:var(--radius-md);padding:16px;margin-top:16px }
+    .risk-control-box h4 { color:var(--accent-red);margin-bottom:8px;display:flex;align-items:center;gap:8px }
+    .legal-basis-box { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue);border-radius:var(--radius-md);padding:16px;margin-top:16px }
+    .legal-basis-box h4 { color:var(--accent-blue);margin-bottom:8px;display:flex;align-items:center;gap:8px }
   </style>
 </head>
 <body>
@@ -40,7 +50,9 @@
     </div>
     <ul class="navbar-nav">
       <li><a href="../../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
       <li><a href="../index.html" class="active"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="../../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
     </ul>
   </nav>
 
@@ -93,31 +105,55 @@
           <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
           <a href="../index.html">核心任务</a>
           <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-          <a href="../p1-yang.html">P1杨总版</a>
+          <a href="../p1-financing.html">P1融资结构</a>
           <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-          <span style="color:var(--text-primary)">执行时序详解</span>
+          <span style="color:var(--text-primary)">执行时序与里程碑付款计划</span>
         </div>
 
         <!-- Title -->
         <div class="detail-header">
-          <h1 class="detail-title">P1方案执行时序与甘特图</h1>
+          <h1 class="detail-title">阶段性里程碑付款计划</h1>
           <div class="detail-tags">
             <span class="tag blue"><i data-lucide="calendar" style="width:12px;height:12px"></i>12个月周期</span>
             <span class="tag green"><i data-lucide="flag" style="width:12px;height:12px"></i>5个阶段</span>
-            <span class="tag purple"><i data-lucide="check-circle-2" style="width:12px;height:12px"></i>5个检查点</span>
+            <span class="tag purple"><i data-lucide="banknote" style="width:12px;height:12px"></i>3亿美元总对价</span>
           </div>
-          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v1.0 | 日期：2026-06-11 | 整合自：M-11执行时序与甘特图</p>
+          <p style="color:var(--text-muted);margin-top:12px;font-size:0.875rem">版本：v2.0 | 日期：2026-06-15 | 来源：阶段性付款计划.docx</p>
         </div>
 
         <!-- 总览 -->
-        <section class="detail-section" id="overview">
-          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>执行总览</h2>
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="eye" style="width:20px;height:20px"></i>付款计划总览</h2>
 
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">12个月里程碑时间轴</h3>
+          <div class="grid-4" style="gap:16px;margin-bottom:24px">
+            <div class="metric-card">
+              <div class="metric-label">总对价</div>
+              <div class="metric-value blue">3亿 USD</div>
+              <div class="metric-sub">约21亿人民币</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">付款阶段</div>
+              <div class="metric-value green">5期</div>
+              <div class="metric-sub">12个月内完成</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">首付款</div>
+              <div class="metric-value yellow">15%</div>
+              <div class="metric-sub">4500万美元</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">最高付款</div>
+              <div class="metric-value purple">25%</div>
+              <div class="metric-sub">第四期7500万美元</div>
+            </div>
+          </div>
+
+          <!-- 甘特图 -->
+          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">付款时间线甘特图</h3>
           <div class="gantt-container">
             <div class="gantt-chart">
               <div class="gantt-months">
-                <div class="gantt-month">T+0</div>
+                <div class="gantt-month">签约日</div>
                 <div class="gantt-month">T+1月</div>
                 <div class="gantt-month">T+2月</div>
                 <div class="gantt-month">T+3月</div>
@@ -132,630 +168,262 @@
                 <div class="gantt-month">T+12月</div>
               </div>
 
-              <!-- 阶段条 -->
+              <!-- 首付款 -->
               <div class="gantt-row">
-                <div class="gantt-label"><strong>阶段划分</strong></div>
+                <div class="gantt-label"><strong>首付款 (15%)</strong></div>
                 <div class="gantt-bars">
-                  <div class="gantt-bar" style="left:0%;width:8.3%;background:var(--accent-blue)">启动期</div>
-                  <div class="gantt-bar" style="left:8.3%;width:16.7%;background:var(--accent-green)">落地期</div>
-                  <div class="gantt-bar" style="left:25%;width:25%;background:var(--accent-yellow)">扩张期</div>
-                  <div class="gantt-bar" style="left:50%;width:16.7%;background:var(--accent-purple)">深化期</div>
-                  <div class="gantt-bar" style="left:66.7%;width:33.3%;background:var(--accent-teal)">收尾期</div>
+                  <div class="gantt-bar" style="left:0;width:8.3%;background:var(--accent-blue)">4500万USD</div>
                 </div>
               </div>
 
-              <!-- 资金流 -->
+              <!-- 第二期 -->
               <div class="gantt-row">
-                <div class="gantt-label">资金到位</div>
+                <div class="gantt-label"><strong>第二期 (20%)</strong></div>
                 <div class="gantt-bars">
-                  <div class="gantt-bar" style="left:0%;width:8.3%;background:rgba(137,180,250,0.8)">首期600万</div>
-                  <div class="gantt-bar" style="left:25%;width:8.3%;background:rgba(166,227,161,0.8)">ODI首批</div>
-                  <div class="gantt-bar" style="left:33%;width:8.3%;background:rgba(249,226,175,0.8)">QFLP</div>
-                  <div class="gantt-bar" style="left:41.7%;width:8.3%;background:rgba(203,166,247,0.8)">银团提款</div>
-                  <div class="gantt-bar" style="left:66.7%;width:16.7%;background:rgba(148,226,213,0.8)">二轮融资</div>
+                  <div class="gantt-bar" style="left:25%;width:8.3%;background:var(--accent-green)">6000万USD</div>
                 </div>
               </div>
 
-              <!-- 里程碑付款 -->
+              <!-- 第三期 -->
               <div class="gantt-row">
-                <div class="gantt-label">里程碑付款</div>
+                <div class="gantt-label"><strong>第三期 (20%)</strong></div>
                 <div class="gantt-bars">
-                  <div class="gantt-bar" style="left:0%;width:8.3%;background:rgba(243,139,168,0.8)">M1</div>
-                  <div class="gantt-bar" style="left:8.3%;width:8.3%;background:rgba(243,139,168,0.7)">M2</div>
-                  <div class="gantt-bar" style="left:16.7%;width:8.3%;background:rgba(243,139,168,0.6)">M3</div>
-                  <div class="gantt-bar" style="left:25%;width:25%;background:rgba(243,139,168,0.5)">M4-M6</div>
-                  <div class="gantt-bar" style="left:50%;width:16.7%;background:rgba(243,139,168,0.5)">M7-M9</div>
-                  <div class="gantt-bar" style="left:66.7%;width:33.3%;background:rgba(243,139,168,0.5)">M10-M12</div>
+                  <div class="gantt-bar" style="left:50%;width:8.3%;background:var(--accent-yellow)">6000万USD</div>
                 </div>
               </div>
 
-              <!-- 关键事件 -->
+              <!-- 第四期 -->
               <div class="gantt-row">
-                <div class="gantt-label">关键事件</div>
+                <div class="gantt-label"><strong>第四期 (25%)</strong></div>
                 <div class="gantt-bars">
-                  <div class="gantt-bar" style="left:0%;width:8.3%;background:var(--accent-blue)">SPV成立</div>
-                  <div class="gantt-bar" style="left:25%;width:8.3%;background:var(--accent-green)">ODI获批</div>
-                  <div class="gantt-bar" style="left:50%;width:8.3%;background:var(--accent-yellow)">8月流片</div>
-                  <div class="gantt-bar" style="left:66.7%;width:8.3%;background:var(--accent-purple)">二轮路演</div>
-                  <div class="gantt-bar" style="left:91.7%;width:8.3%;background:var(--accent-teal)">全部完成</div>
+                  <div class="gantt-bar" style="left:75%;width:8.3%;background:var(--accent-purple)">7500万USD</div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">核心里程碑概览</h3>
-          <div class="grid-5" style="gap:12px">
-            <div class="metric-card">
-              <div class="metric-label">T+0</div>
-              <div class="metric-value blue">SPV成立</div>
-              <div class="metric-sub">首期付款启动</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">T+3月</div>
-              <div class="metric-value green">ODI获批</div>
-              <div class="metric-sub">首批资金出境</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">T+6月</div>
-              <div class="metric-value yellow">二轮启动</div>
-              <div class="metric-sub">路演开始</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">T+8月</div>
-              <div class="metric-value purple">流片成功</div>
-              <div class="metric-sub">估值重估</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">T+12月</div>
-              <div class="metric-value teal">全部完成</div>
-              <div class="metric-sub">IP迁移过半</div>
+              <!-- 尾款 -->
+              <div class="gantt-row">
+                <div class="gantt-label"><strong>尾款 (20%)</strong></div>
+                <div class="gantt-bars">
+                  <div class="gantt-bar" style="left:91.7%;width:8.3%;background:var(--accent-teal)">6000万USD</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- 阶段一：启动期 -->
-        <section class="detail-section" id="phase1">
-          <h2 class="detail-section-title"><i data-lucide="rocket" style="width:20px;height:20px"></i>阶段一：启动期（T+0 ~ T+1月）</h2>
+        <!-- 阶段一：首付款 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="rocket" style="width:20px;height:20px"></i>阶段一：首付款</h2>
 
-          <div class="alert-box info" style="margin-bottom:20px">
-            <i data-lucide="info" style="width:18px;height:18px"></i>
-            <span><strong>核心目标：</strong>SPV设立完成，首期600万USD里程碑付款启动，合规登记完成，外汇对冲建立。</span>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键任务</h3>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>工作流</th>
-                  <th>关键任务</th>
-                  <th>责任方</th>
-                  <th>开始</th>
-                  <th>结束</th>
-                  <th>状态</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>SPV设立</strong></td>
-                  <td>境内SPV注册（深圳/郑州）</td>
-                  <td>法务</td>
-                  <td>T+0</td>
-                  <td>T+15天</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>境外SPV注册（开曼/BVI）</td>
-                  <td>境外律师</td>
-                  <td>T+0</td>
-                  <td>T+30天</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>里程碑付款</strong></td>
-                  <td>首期600万USD付款启动</td>
-                  <td>财务</td>
-                  <td>T+0</td>
-                  <td>T+0</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>ODI备用金申请</td>
-                  <td>财务</td>
-                  <td>T+0</td>
-                  <td>T+15天</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>合规登记</strong></td>
-                  <td>内保外贷登记（如适用）</td>
-                  <td>法务</td>
-                  <td>T+0</td>
-                  <td>T+15天</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>外汇对冲</strong></td>
-                  <td>首期付款汇率锁定</td>
-                  <td>财务</td>
-                  <td>T+0</td>
-                  <td>T+0</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>建立期权保护头寸（4000万USD）</td>
-                  <td>财务</td>
-                  <td>T+0</td>
-                  <td>T+7天</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">关键交付物</h3>
-          <div class="grid-3" style="gap:16px">
-            <div class="card" style="padding:16px">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-                <i data-lucide="file-check" style="width:18px;height:18px;color:var(--accent-blue)"></i>
-                <span style="font-weight:600;color:var(--text-primary)">境内SPV营业执照</span>
+          <div class="milestone-card" data-phase="1">
+            <div class="milestone-header">
+              <div>
+                <div class="milestone-title">合同生效 & 初步落地准备</div>
+                <div style="font-size:0.875rem;color:var(--text-muted);margin-top:4px">时间节点：第0个月（签约后7日内）</div>
               </div>
-              <p style="font-size:0.8125rem;color:var(--text-secondary)">完成工商注册登记</p>
+              <div class="milestone-amount blue">4500万美元 (15%)</div>
             </div>
-            <div class="card" style="padding:16px">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-                <i data-lucide="file-check" style="width:18px;height:18px;color:var(--accent-green)"></i>
-                <span style="font-weight:600;color:var(--text-primary)">境外SPV注册证书</span>
-              </div>
-              <p style="font-size:0.8125rem;color:var(--text-secondary)">开曼/BVI注册完成</p>
-            </div>
-            <div class="card" style="padding:16px">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-                <i data-lucide="file-check" style="width:18px;height:18px;color:var(--accent-yellow)"></i>
-                <span style="font-weight:600;color:var(--text-primary)">首期付款凭证</span>
-              </div>
-              <p style="font-size:0.8125rem;color:var(--text-secondary)">600万USD汇出确认</p>
+
+            <h4 style="font-size:0.875rem;font-weight:600;margin:16px 0 8px;color:var(--text-primary)">付款用途</h4>
+            <p style="font-size:0.875rem;color:var(--text-secondary)">用于启动资金，包括律师费、注册咨询、初步人员招募等。</p>
+
+            <div class="risk-control-box">
+              <h4><i data-lucide="shield-alert" style="width:18px;height:18px"></i>风控要求</h4>
+              <ul class="deliverable-list">
+                <li>要求对方提供银行保函或第三方托管账户（Escrow Account），确保资金专用于本项目</li>
+                <li>若3个月内未完成第二阶段目标，甲方有权终止合同并追回部分款项</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        <!-- 阶段二：落地期 -->
-        <section class="detail-section" id="phase2">
-          <h2 class="detail-section-title"><i data-lucide="package" style="width:20px;height:20px"></i>阶段二：落地期（T+1月 ~ T+3月）</h2>
+        <!-- 阶段二：第二期 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="building-2" style="width:20px;height:20px"></i>阶段二：第二期付款</h2>
 
-          <div class="alert-box success" style="margin-bottom:20px">
-            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
-            <span><strong>核心目标：</strong>ODI备案完成、QFLP设立完成、M2-M3付款执行、广西渠道接洽启动。</span>
-          </div>
+          <div class="milestone-card" data-phase="2">
+            <div class="milestone-header">
+              <div>
+                <div class="milestone-title">完成中国子公司注册 + 核心团队到位</div>
+                <div style="font-size:0.875rem;color:var(--text-muted);margin-top:4px">时间节点：第3个月末</div>
+              </div>
+              <div class="milestone-amount green">6000万美元 (20%)</div>
+            </div>
 
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键任务</h3>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>工作流</th>
-                  <th>关键任务</th>
-                  <th>责任方</th>
-                  <th>时间窗口</th>
-                  <th>状态</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="4"><strong>ODI备案</strong></td>
-                  <td>发改委备案提交</td>
-                  <td>法务</td>
-                  <td>T+2周 ~ T+8周</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td>发改委备案获批</td>
-                  <td>发改委</td>
-                  <td>T+8周</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td>商务部备案提交</td>
-                  <td>法务</td>
-                  <td>T+8周 ~ T+9周</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td>商务部备案获批</td>
-                  <td>商务厅</td>
-                  <td>T+9周 ~ T+12周</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td rowspan="2"><strong>QFLP基金</strong></td>
-                  <td>海南QFLP设立启动</td>
-                  <td>基金团队</td>
-                  <td>T+1月</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td>地方金融监管局审批</td>
-                  <td>监管局</td>
-                  <td>T+3周 ~ T+6周</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td rowspan="2"><strong>里程碑付款</strong></td>
-                  <td>M2付款（800万USD）</td>
-                  <td>财务</td>
-                  <td>T+1月</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td>M3付款（1000万USD）</td>
-                  <td>财务</td>
-                  <td>T+2月</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td rowspan="2"><strong>广西渠道</strong></td>
-                  <td>授信主体接洽启动</td>
-                  <td>关总</td>
-                  <td>T+1月 ~ T+2月</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td>授信用途确认</td>
-                  <td>关总</td>
-                  <td>T+2月 ~ T+3月</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-              </tbody>
-            </table>
+            <h4 style="font-size:0.875rem;font-weight:600;margin:16px 0 8px;color:var(--text-primary)">交付物要求</h4>
+            <ul class="deliverable-list">
+              <li>在中国完成外商独资企业（WFOE）或合资企业注册</li>
+              <li>至少5名核心工程师（含原公司技术骨干）签署劳动合同并到岗</li>
+              <li>提供社保/个税缴纳记录作为佐证</li>
+            </ul>
+
+            <div class="legal-basis-box">
+              <h4><i data-lucide="scale" style="width:18px;height:18px"></i>法律依据</h4>
+              <p style="font-size:0.875rem;color:var(--text-secondary)">符合《外商投资法》及《劳动合同法》相关要求。</p>
+            </div>
           </div>
         </section>
 
-        <!-- 阶段三：扩张期 -->
-        <section class="detail-section" id="phase3">
-          <h2 class="detail-section-title"><i data-lucide="trending-up" style="width:20px;height:20px"></i>阶段三：扩张期（T+3月 ~ T+6月）</h2>
+        <!-- 阶段三：第三期 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="office" style="width:20px;height:20px"></i>阶段三：第三期付款</h2>
 
-          <div class="alert-box warning" style="margin-bottom:20px">
-            <i data-lucide="alert-triangle" style="width:18px;height:18px"></i>
-            <span><strong>最高风险期：</strong>M4-M6密集付款期，资金缺口风险最高，需确保银团提款和贸易回款到位。</span>
+          <div class="milestone-card" data-phase="3">
+            <div class="milestone-header">
+              <div>
+                <div class="milestone-title">办公场地设立 + 设计环境部署完成</div>
+                <div style="font-size:0.875rem;color:var(--text-muted);margin-top:4px">时间节点：第6个月末</div>
+              </div>
+              <div class="milestone-amount yellow">6000万美元 (20%)</div>
+            </div>
+
+            <h4 style="font-size:0.875rem;font-weight:600;margin:16px 0 8px;color:var(--text-primary)">交付物要求</h4>
+            <ul class="deliverable-list">
+              <li>租赁/购置办公场地的合同及付款凭证</li>
+              <li>EDA工具授权、服务器集群、验证平台等基础设施部署完成</li>
+              <li>内部研发流程文档（如IP管理、版本控制策略）提交备案</li>
+            </ul>
           </div>
+        </section>
 
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键任务</h3>
+        <!-- 阶段四：第四期 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="cpu" style="width:20px;height:20px"></i>阶段四：第四期付款</h2>
+
+          <div class="milestone-card" data-phase="4">
+            <div class="milestone-header">
+              <div>
+                <div class="milestone-title">首版芯片架构冻结 + RTL代码初版交付</div>
+                <div style="font-size:0.875rem;color:var(--text-muted);margin-top:4px">时间节点：第9个月末</div>
+              </div>
+              <div class="milestone-amount purple">7500万美元 (25%)</div>
+            </div>
+
+            <div class="alert-box warning" style="margin-bottom:16px">
+              <i data-lucide="alert-triangle" style="width:18px;height:18px"></i>
+              <span><strong>最高付款比例</strong> — 此阶段为技术交付核心里程碑，付款比例最高。</span>
+            </div>
+
+            <h4 style="font-size:0.875rem;font-weight:600;margin:16px 0 8px;color:var(--text-primary)">交付物要求</h4>
+            <ul class="deliverable-list">
+              <li>芯片架构规格书（Architecture Specification）经双方签字确认</li>
+              <li>RTL（Register Transfer Level）代码初版上传至指定代码仓库</li>
+              <li>提供功能仿真结果及覆盖率报告</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 阶段五：尾款 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="check-circle" style="width:20px;height:20px"></i>阶段五：尾款</h2>
+
+          <div class="milestone-card" data-phase="5">
+            <div class="milestone-header">
+              <div>
+                <div class="milestone-title">团队完整运营 + 项目阶段性验收通过</div>
+                <div style="font-size:0.875rem;color:var(--text-muted);margin-top:4px">时间节点：第12个月末</div>
+              </div>
+              <div class="milestone-amount teal">6000万美元 (20%)</div>
+            </div>
+
+            <h4 style="font-size:0.875rem;font-weight:600;margin:16px 0 8px;color:var(--text-primary)">交付物要求</h4>
+            <ul class="deliverable-list">
+              <li>团队规模达到协议约定人数（例如≥30人）且稳定运行至少1个月</li>
+              <li>提交季度研发进展报告，包含路线图更新、风险评估</li>
+              <li>由甲方指定技术专家进行现场评审并签署验收文件</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 付款汇总表 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="table" style="width:20px;height:20px"></i>付款计划汇总表</h2>
+
           <div class="table-wrapper">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>工作流</th>
-                  <th>关键任务</th>
-                  <th>责任方</th>
-                  <th>时间窗口</th>
-                  <th>里程碑</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>ODI资金出境</strong></td>
-                  <td>首批资金出境（8000万USD）</td>
-                  <td>银行</td>
-                  <td>T+13周 ~ T+16周</td>
-                  <td>资金到位>50%</td>
-                </tr>
-                <tr>
-                  <td><strong>QFLP基金</strong></td>
-                  <td>境外LP资金汇入（4000万USD）</td>
-                  <td>银行</td>
-                  <td>T+10周 ~ T+12周</td>
-                  <td>QFLP设立完成</td>
-                </tr>
-                <tr>
-                  <td><strong>银团贷款</strong></td>
-                  <td>USD份额提款（4000万USD）</td>
-                  <td>银行</td>
-                  <td>T+3月 ~ T+5月</td>
-                  <td>银团提款启动</td>
-                </tr>
-                <tr>
-                  <td><strong>里程碑付款</strong></td>
-                  <td>M4-M6付款（约3000万USD）</td>
-                  <td>财务</td>
-                  <td>T+3月 ~ T+6月</td>
-                  <td>里程碑完成>40%</td>
-                </tr>
-                <tr>
-                  <td><strong>二轮融资</strong></td>
-                  <td>二轮融资路演启动</td>
-                  <td>杨总</td>
-                  <td>T+6月</td>
-                  <td>投资者意向清单</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--accent-red)">资金缺口分析</h3>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
+                  <th>阶段</th>
+                  <th>里程碑目标</th>
+                  <th>付款比例</th>
+                  <th>金额（美元）</th>
                   <th>时间节点</th>
-                  <th>累计资金到位</th>
-                  <th>累计里程碑付款</th>
-                  <th>缺口/盈余</th>
-                  <th>风险等级</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>T+0</td>
-                  <td>600万USD</td>
-                  <td>600万USD</td>
-                  <td><span class="tag green">0</span></td>
-                  <td>✅ 平衡</td>
+                  <td><strong>首付款</strong></td>
+                  <td>合同生效 & 初步落地准备</td>
+                  <td><span class="tag blue">15%</span></td>
+                  <td><strong>4500万</strong></td>
+                  <td>第0个月（签约后7日内）</td>
                 </tr>
                 <tr>
-                  <td>T+2月</td>
-                  <td>600万USD</td>
-                  <td>2400万USD</td>
-                  <td><span class="tag red">-1800万USD</span></td>
-                  <td>🔴 最高风险</td>
+                  <td><strong>第二期</strong></td>
+                  <td>完成中国子公司注册 + 核心团队到位</td>
+                  <td><span class="tag green">20%</span></td>
+                  <td><strong>6000万</strong></td>
+                  <td>第3个月末</td>
                 </tr>
                 <tr>
-                  <td>T+3月</td>
-                  <td>8600万USD</td>
-                  <td>3300万USD</td>
-                  <td><span class="tag green">+5300万USD</span></td>
-                  <td>✅ 充裕</td>
+                  <td><strong>第三期</strong></td>
+                  <td>办公场地设立 + 设计环境部署完成</td>
+                  <td><span class="tag yellow">20%</span></td>
+                  <td><strong>6000万</strong></td>
+                  <td>第6个月末</td>
                 </tr>
                 <tr>
-                  <td>T+5月</td>
-                  <td>16600万USD</td>
-                  <td>7800万USD</td>
-                  <td><span class="tag green">+8800万USD</span></td>
-                  <td>✅ 充裕</td>
+                  <td><strong>第四期</strong></td>
+                  <td>首版芯片架构冻结 + RTL代码初版交付</td>
+                  <td><span class="tag purple">25%</span></td>
+                  <td><strong>7500万</strong></td>
+                  <td>第9个月末</td>
+                </tr>
+                <tr>
+                  <td><strong>尾款</strong></td>
+                  <td>团队完整运营 + 项目阶段性验收通过</td>
+                  <td><span class="tag teal">20%</span></td>
+                  <td><strong>6000万</strong></td>
+                  <td>第12个月末</td>
+                </tr>
+                <tr style="background:var(--bg-secondary);font-weight:700">
+                  <td colspan="2">合计</td>
+                  <td>100%</td>
+                  <td>3亿美元</td>
+                  <td>12个月</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <!-- 阶段四：深化期 -->
-        <section class="detail-section" id="phase4">
-          <h2 class="detail-section-title"><i data-lucide="layers" style="width:20px;height:20px"></i>阶段四：深化期（T+6月 ~ T+8月）</h2>
+        <!-- 风控要点 -->
+        <section class="detail-section">
+          <h2 class="detail-section-title"><i data-lucide="shield" style="width:20px;height:20px"></i>风控要点总结</h2>
 
-          <div class="alert-box info" style="margin-bottom:20px">
-            <i data-lucide="info" style="width:18px;height:18px"></i>
-            <span><strong>核心事件：</strong>8月流片成功 → 估值重估触发点 → 二轮融资估值提升。</span>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键任务</h3>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>工作流</th>
-                  <th>关键任务</th>
-                  <th>责任方</th>
-                  <th>状态</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>ODI续期</strong></td>
-                  <td>后续资金出境（1亿USD）</td>
-                  <td>银行</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>内保外贷</strong></td>
-                  <td>境外融资到位（3400万USD）</td>
-                  <td>境外SPV</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>里程碑付款</strong></td>
-                  <td>M7-M9付款（约7000万USD）</td>
-                  <td>财务</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>税务合规</strong></td>
-                  <td>转让定价文档准备</td>
-                  <td>税务顾问</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>合规审查</strong></td>
-                  <td>制裁风险中期审查</td>
-                  <td>合规总监</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">流片成功的影响</h3>
           <div class="grid-2" style="gap:16px">
-            <div class="card" style="padding:20px;border-left:4px solid var(--accent-green)">
+            <div class="card" style="padding:20px;border-left:4px solid var(--accent-red)">
               <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
-                <i data-lucide="trending-up" style="width:20px;height:20px;color:var(--accent-green)"></i>
-                估值重估
+                <i data-lucide="alert-circle" style="width:20px;height:20px;color:var(--accent-red)"></i>
+                首付款风控
               </div>
-              <p style="font-size:0.875rem;color:var(--text-secondary)">SPV估值从3.9亿升级至10.2亿量级，二轮融资溢价空间增大</p>
+              <ul style="font-size:0.875rem;color:var(--text-secondary);margin:0;padding-left:20px">
+                <li>银行保函或第三方托管账户</li>
+                <li>资金专用监控</li>
+                <li>3个月未达标可终止合同</li>
+              </ul>
             </div>
             <div class="card" style="padding:20px;border-left:4px solid var(--accent-blue)">
               <div class="card-title" style="margin-bottom:12px;display:flex;align-items:center;gap:8px">
-                <i data-lucide="users" style="width:20px;height:20px;color:var(--accent-blue)"></i>
-                投资者信心
+                <i data-lucide="file-check" style="width:20px;height:20px;color:var(--accent-blue)"></i>
+                法律合规
               </div>
-              <p style="font-size:0.875rem;color:var(--text-secondary)">技术风险降低，战略投资者决策意愿增强，银团认可度提升</p>
+              <ul style="font-size:0.875rem;color:var(--text-secondary);margin:0;padding-left:20px">
+                <li>符合《外商投资法》</li>
+                <li>符合《劳动合同法》</li>
+                <li>社保/个税缴纳凭证</li>
+              </ul>
             </div>
-          </div>
-        </section>
-
-        <!-- 阶段五：收尾期 -->
-        <section class="detail-section" id="phase5">
-          <h2 class="detail-section-title"><i data-lucide="check-circle" style="width:20px;height:20px"></i>阶段五：收尾期（T+8月 ~ T+12月）</h2>
-
-          <div class="alert-box success" style="margin-bottom:20px">
-            <i data-lucide="check-circle" style="width:18px;height:18px"></i>
-            <span><strong>核心目标：</strong>全部里程碑完成、二轮融资交割、估值重估完成、资金全覆盖。</span>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">关键任务</h3>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>工作流</th>
-                  <th>关键任务</th>
-                  <th>责任方</th>
-                  <th>状态</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>里程碑付款</strong></td>
-                  <td>M10-M12付款（约余额）</td>
-                  <td>财务</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>全部里程碑完成确认</td>
-                  <td>标的公司</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>二轮融资</strong></td>
-                  <td>二轮融资交割</td>
-                  <td>杨总</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>估值重估完成</td>
-                  <td>评估机构</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>税务合规</strong></td>
-                  <td>年度税务申报</td>
-                  <td>税务顾问</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-                <tr>
-                  <td><strong>合规审查</strong></td>
-                  <td>最终合规检查</td>
-                  <td>合规总监</td>
-                  <td><span class="status-badge pending">待启动</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- 检查点 -->
-        <section class="detail-section" id="checkpoints">
-          <h2 class="detail-section-title"><i data-lucide="flag" style="width:20px;height:20px"></i>执行检查点</h2>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:20px 0 12px;color:var(--text-primary)">5个关键检查点</h3>
-          <div class="checkpoint-grid">
-            <div class="checkpoint-card" style="border-left:4px solid var(--accent-blue)">
-              <div class="checkpoint-id">CP1</div>
-              <div class="checkpoint-title">SPV设立完成</div>
-              <div class="checkpoint-detail">首期付款完成</div>
-              <div class="checkpoint-time">T+1月</div>
-              <div style="margin-top:8px"><span class="tag blue">责任方：法务/财务</span></div>
-            </div>
-            <div class="checkpoint-card" style="border-left:4px solid var(--accent-green)">
-              <div class="checkpoint-id">CP2</div>
-              <div class="checkpoint-title">ODI备案完成</div>
-              <div class="checkpoint-detail">QFLP设立完成</div>
-              <div class="checkpoint-time">T+3月</div>
-              <div style="margin-top:8px"><span class="tag green">责任方：法务/基金团队</span></div>
-            </div>
-            <div class="checkpoint-card" style="border-left:4px solid var(--accent-yellow)">
-              <div class="checkpoint-id">CP3</div>
-              <div class="checkpoint-title">资金到位>50%</div>
-              <div class="checkpoint-detail">里程碑完成>40%</div>
-              <div class="checkpoint-time">T+6月</div>
-              <div style="margin-top:8px"><span class="tag yellow">责任方：财务/项目组</span></div>
-            </div>
-            <div class="checkpoint-card" style="border-left:4px solid var(--accent-purple)">
-              <div class="checkpoint-id">CP4</div>
-              <div class="checkpoint-title">资金到位>80%</div>
-              <div class="checkpoint-detail">二轮融资启动</div>
-              <div class="checkpoint-time">T+9月</div>
-              <div style="margin-top:8px"><span class="tag purple">责任方：财务/杨总</span></div>
-            </div>
-            <div class="checkpoint-card" style="border-left:4px solid var(--accent-teal)">
-              <div class="checkpoint-id">CP5</div>
-              <div class="checkpoint-title">全部里程碑完成</div>
-              <div class="checkpoint-detail">资金全覆盖</div>
-              <div class="checkpoint-time">T+12月</div>
-              <div style="margin-top:8px"><span class="tag teal">责任方：项目组/财务</span></div>
-            </div>
-          </div>
-
-          <h3 style="font-size:1rem;font-weight:600;margin:24px 0 12px;color:var(--text-primary)">监控仪表盘</h3>
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>风险指标</th>
-                  <th>当前值</th>
-                  <th>预警阈值</th>
-                  <th>触发动作</th>
-                  <th>监控频率</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>ODI备案进度</strong></td>
-                  <td>未启动</td>
-                  <td>延迟>2周</td>
-                  <td>启动备用通道</td>
-                  <td>周</td>
-                </tr>
-                <tr>
-                  <td><strong>资金到位率</strong></td>
-                  <td>0%</td>
-                  <td><80%计划</td>
-                  <td>资金缺口预警</td>
-                  <td>月</td>
-                </tr>
-                <tr>
-                  <td><strong>汇率波动</strong></td>
-                  <td>7.20</td>
-                  <td>±5%</td>
-                  <td>调整对冲策略</td>
-                  <td>日</td>
-                </tr>
-                <tr>
-                  <td><strong>制裁风险</strong></td>
-                  <td>未命中</td>
-                  <td>命中≥1</td>
-                  <td>立即阻断交易</td>
-                  <td>日</td>
-                </tr>
-                <tr>
-                  <td><strong>IP迁移进度</strong></td>
-                  <td>0%</td>
-                  <td>延迟>1月</td>
-                  <td>里程碑付款调整</td>
-                  <td>月</td>
-                </tr>
-                <tr>
-                  <td><strong>二轮融资进度</strong></td>
-                  <td>未启动</td>
-                  <td>延迟>2月</td>
-                  <td>调整估值预期</td>
-                  <td>月</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </section>
 
@@ -775,16 +443,9 @@
     .data-table th { background:var(--bg-secondary);font-weight:600;color:var(--text-primary) }
     .data-table tr:hover { background:var(--bg-hover) }
     .alert-box { display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:var(--radius-md);font-size:0.875rem }
-    .alert-box.info { background:rgba(137,180,250,0.1);border:1px solid var(--accent-blue) }
     .alert-box.warning { background:rgba(249,226,175,0.1);border:1px solid var(--accent-yellow) }
-    .alert-box.success { background:rgba(166,227,161,0.1);border:1px solid var(--accent-green) }
     .alert-box i { flex-shrink:0 }
-    .alert-box.info i { color:var(--accent-blue) }
     .alert-box.warning i { color:var(--accent-yellow) }
-    .alert-box.success i { color:var(--accent-green) }
-    .grid-5 { display:grid;grid-template-columns:repeat(5,1fr);gap:12px }
-    @media (max-width: 768px) { .grid-5 { grid-template-columns:repeat(2,1fr) } }
-    @media (max-width: 480px) { .grid-5 { grid-template-columns:1fr } }
   </style>
   <script>if(typeof lucide!=='undefined')lucide.createIcons()</script>
 </body>
