@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>估值建模详解 - 核心方案二 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心方案一</a></li>
+      <li><a href="index.html"><i data-lucide="zap" style="width:18px;height:18px"></i>核心方案二</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心方案二导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-dashboard" style="width:16px;height:16px"></i><span>方案总览</span></a>
+          <a href="equity-structure.html" class="sidebar-item"><i data-lucide="git-branch" style="width:16px;height:16px"></i><span>顶层股权架构</span></a>
+          <a href="business-operation.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>业务运营架构</span></a>
+          <a href="capital-operation.html" class="sidebar-item"><i data-lucide="landmark" style="width:16px;height:16px"></i><span>资本运作架构</span></a>
+          <a href="risk-decision.html" class="sidebar-item"><i data-lucide="shield-alert" style="width:16px;height:16px"></i><span>风险与决策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>详细文档</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="valuation-model.html" class="sidebar-item active"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值建模详解</span></a>
+          <a href="equity-detail.html" class="sidebar-item"><i data-lucide="pie-chart" style="width:16px;height:16px"></i><span>股权结构细化</span></a>
+          <a href="cross-border.html" class="sidebar-item"><i data-lucide="globe" style="width:16px;height:16px"></i><span>跨境收购路径</span></a>
+          <a href="revenue-model.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>授权模式收益</span></a>
+          <a href="fundraising-plan.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>原始股募资计划</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- 页面标题 -->
+        <div style="margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <a href="index.html" style="color:var(--accent-blue);font-size:13px">核心方案二</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px;color:var(--text-muted)"></i>
+            <span style="color:var(--text-muted);font-size:13px">估值建模详解</span>
+          </div>
+          <h1 style="font-size:1.75rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;background:rgba(137,180,250,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="calculator" style="width:22px;height:22px;color:var(--accent-blue)"></i>
+            </div>
+            估值建模详解
+          </h1>
+        </div>
+
+        <!-- 核心参数 -->
+        <section class="mb-8">
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-label">投后估值</div>
+              <div class="metric-value blue">47亿 CNY</div>
+              <div class="metric-sub">约6.6亿美金</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">资产方估值</div>
+              <div class="metric-value green">24亿</div>
+              <div class="metric-sub">持股51%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">现金方出资</div>
+              <div class="metric-value purple">23亿</div>
+              <div class="metric-sub">持股49%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">跨境收购对价</div>
+              <div class="metric-value yellow">3亿 USD</div>
+              <div class="metric-sub">约21.5亿人民币</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 估值计算公式 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">估值计算公式</div>
+            </div>
+            <div class="card-body">
+              <pre style="background:var(--bg-secondary);padding:20px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.8">
+投后估值 = 资产方估值 + 现金方出资
+         = 24亿 + 23亿
+         = <strong style="color:var(--accent-green)">47亿人民币</strong>
+
+资产方持股比例 = 24 / 47 = 51.06% ≈ <strong style="color:var(--accent-blue)">51%</strong>
+现金方持股比例 = 23 / 47 = 48.94% ≈ <strong style="color:var(--accent-purple)">49%</strong></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- 资产方估值拆解 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary)">资产方估值拆解</h2>
+          <div class="grid-2">
+            <div class="card" style="border-left:3px solid var(--accent-green)">
+              <div class="card-header">
+                <div class="card-icon green"><i data-lucide="zap" style="width:18px;height:18px"></i></div>
+                <div class="card-title" style="font-size:1rem">蓝瞳方资产</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0">
+                  <tr><td style="width:100px;font-weight:600">充电桩业务</td><td>合约订单优势，已签中石油/中石化超1000亿合约</td></tr>
+                  <tr><td style="font-weight:600">光模块业务</td><td>产业链优势，蓝瞳900亿半导体生态协同</td></tr>
+                  <tr><td style="font-weight:600">估值方法</td><td>市场法(PS 2-4x) + 收益法</td></tr>
+                </table>
+              </div>
+            </div>
+            <div class="card" style="border-left:3px solid var(--accent-blue)">
+              <div class="card-header">
+                <div class="card-icon blue"><i data-lucide="cpu" style="width:18px;height:18px"></i></div>
+                <div class="card-title" style="font-size:1rem">智云方资产</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0">
+                  <tr><td style="width:100px;font-weight:600">推理芯片</td><td>对标RTX 4090，1000+ TOPS，8月流片</td></tr>
+                  <tr><td style="font-weight:600">服务器业务</td><td>新爱算品牌，2026年目标100-150亿</td></tr>
+                  <tr><td style="font-weight:600">估值方法</td><td>市场法(PS 15-25x) + DCF法</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 可比公司分析 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary)">可比公司分析</h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th>公司</th>
+                    <th>业务类型</th>
+                    <th>市值/估值</th>
+                    <th>PE/PS</th>
+                    <th>参考价值</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600">寒武纪</td>
+                    <td>AI芯片设计</td>
+                    <td>约400亿 CNY</td>
+                    <td>PS 20-30x</td>
+                    <td>亏损阶段估值参考</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">地平线</td>
+                    <td>自动驾驶芯片</td>
+                    <td>约500亿 HKD</td>
+                    <td>PS 10-15x</td>
+                    <td>成长期估值参考</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">中际旭创</td>
+                    <td>光模块龙头</td>
+                    <td>约1500亿 CNY</td>
+                    <td>PE 30-40x</td>
+                    <td>全球第一，高估值</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">特来电</td>
+                    <td>充电桩运营</td>
+                    <td>约200亿 CNY</td>
+                    <td>PS 3-5x</td>
+                    <td>充电桩业务参考</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 敏感性分析 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary)">估值敏感性分析</h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th>情景</th>
+                    <th>假设条件</th>
+                    <th>估值范围</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="color:var(--accent-green);font-weight:600">乐观情景</td>
+                    <td>流片成功 + 合约全部履约</td>
+                    <td><strong>55-60亿 CNY</strong></td>
+                  </tr>
+                  <tr style="background:var(--bg-hover)">
+                    <td style="font-weight:600">基准情景</td>
+                    <td>按当前计划推进</td>
+                    <td><strong style="color:var(--accent-blue)">47亿 CNY</strong></td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--accent-yellow);font-weight:600">保守情景</td>
+                    <td>部分风险发生</td>
+                    <td><strong>35-40亿 CNY</strong></td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--accent-red);font-weight:600">悲观情景</td>
+                    <td>多重风险发生</td>
+                    <td><strong>25-30亿 CNY</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 关键风险 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary)">关键风险提示</h2>
+          <div class="grid-2">
+            <div style="background:rgba(243,139,168,0.1);border:1px solid rgba(243,139,168,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-red);color:white;font-size:11px;padding:2px 8px;border-radius:4px">高</span>
+                <span style="font-weight:600">推理芯片流片失败</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">智云方估值下降30-50%</div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 8px;border-radius:4px">中高</span>
+                <span style="font-weight:600">充电桩合约履约不及预期</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">蓝瞳方估值下降20-40%</div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 8px;border-radius:4px">中高</span>
+                <span style="font-weight:600">跨境收购受阻</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">整体估值下降30-40%</div>
+            </div>
+            <div style="background:rgba(166,227,161,0.1);border:1px solid rgba(166,227,161,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-green);color:white;font-size:11px;padding:2px 8px;border-radius:4px">中</span>
+                <span style="font-weight:600">新爱算营收目标未达成</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">智云方估值下降20-30%</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 图表区域 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary)">可视化图表</h2>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.95rem">股权结构分布</div>
+              </div>
+              <div class="card-body" style="height:280px">
+                <canvas id="equityPieChart"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.95rem">估值结构分解</div>
+              </div>
+              <div class="card-body" style="height:280px">
+                <canvas id="valuationBreakdownChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 智云数科 - 超充算网方案 | ADR-0011</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/scheme2-charts.js"></script>
+  <script>lucide.createIcons()</script>
+</body>
+</html>

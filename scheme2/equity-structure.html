@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>顶层股权架构 - 核心方案二 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心方案一</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="zap" style="width:18px;height:18px"></i>核心方案二</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心方案二导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-dashboard" style="width:16px;height:16px"></i><span>方案总览</span></a>
+          <a href="equity-structure.html" class="sidebar-item active"><i data-lucide="git-branch" style="width:16px;height:16px"></i><span>顶层股权架构</span></a>
+          <a href="business-operation.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>业务运营架构</span></a>
+          <a href="capital-operation.html" class="sidebar-item"><i data-lucide="landmark" style="width:16px;height:16px"></i><span>资本运作架构</span></a>
+          <a href="risk-decision.html" class="sidebar-item"><i data-lucide="shield-alert" style="width:16px;height:16px"></i><span>风险与决策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>详细文档</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-model.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值建模详解</span></a>
+          <a href="equity-detail.html" class="sidebar-item"><i data-lucide="pie-chart" style="width:16px;height:16px"></i><span>股权结构细化</span></a>
+          <a href="cross-border.html" class="sidebar-item"><i data-lucide="globe" style="width:16px;height:16px"></i><span>跨境收购路径</span></a>
+          <a href="revenue-model.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>授权模式收益</span></a>
+          <a href="fundraising-plan.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>原始股募资计划</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- 页面标题 -->
+        <div style="margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <a href="index.html" style="color:var(--accent-blue);font-size:13px">核心方案二</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px;color:var(--text-muted)"></i>
+            <span style="color:var(--text-muted);font-size:13px">顶层股权架构</span>
+          </div>
+          <h1 style="font-size:1.75rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;background:rgba(137,180,250,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="git-branch" style="width:22px;height:22px;color:var(--accent-blue)"></i>
+            </div>
+            顶层股权架构
+          </h1>
+        </div>
+
+        <!-- 核心指标 -->
+        <section class="mb-8">
+          <div class="grid-3">
+            <div class="metric-card">
+              <div class="metric-label">投后总估值</div>
+              <div class="metric-value blue">47亿 CNY</div>
+              <div class="metric-sub">约6.6亿美金</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">资产方持股</div>
+              <div class="metric-value green">51%</div>
+              <div class="metric-sub">蓝瞳+智云资产作价24亿</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">现金方持股</div>
+              <div class="metric-value purple">49%</div>
+              <div class="metric-sub">原始股募资23亿</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 股权架构图 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">股权架构图</div>
+            </div>
+            <div class="card-body">
+              <pre style="background:var(--bg-secondary);padding:20px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6">
+                    ┌─────────────────────────────────────────────────────────┐
+                    │                    超充算网主体 (SPV)                    │
+                    │                    投后估值: 47亿CNY                     │
+                    │                                                          │
+                    │   ┌───────────────────────────────────────────────────┐   │
+                    │   │              资产方持股 (51%)                       │   │
+                    │   │                                                     │   │
+                    │   │   蓝瞳半导体 ─────────┬── 充电桩业务               │   │
+                    │   │   (资产作价入股)      ├── 光模块业务               │   │
+                    │   │                       │                            │   │
+                    │   │   智云数科 ───────────┴── 推理芯片                 │   │
+                    │   │   (资产作价入股)          服务器业务               │   │
+                    │   │                                                     │   │
+                    │   │   估值合计: 24亿CNY                                 │   │
+                    │   └───────────────────────────────────────────────────┘   │
+                    │                              │                             │
+                    │   ┌───────────────────────────────────────────────────┐   │
+                    │   │              现金方持股 (49%)                       │   │
+                    │   │                                                     │   │
+                    │   │   原始股募资: 23亿CNY (约3.3亿USD)                  │   │
+                    │   │   (含充电桩设备厂投资现金 2亿)                       │   │
+                    │   │                                                     │   │
+                    │   │   ├── 首轮资金                                      │   │
+                    │   │   │   ├── 股东自有资金                              │   │
+                    │   │   │   ├── 战略产业资金                              │   │
+                    │   │   │   └── 充电桩设备厂投资 (2亿)                    │   │
+                    │   │   │                                                 │   │
+                    │   │   └── 二轮资金                                      │   │
+                    │   │       ├── 供应链合伙人                              │   │
+                    │   │       ├── 战略资金                                  │   │
+                    │   │       └── 国家大基金                                │   │
+                    │   └───────────────────────────────────────────────────┘   │
+                    └──────────────────────────────────────────────────────────┘</pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- 出资明细 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="file-spreadsheet" style="width:20px;height:20px;color:var(--accent-blue)"></i>出资明细表
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th>出资方</th>
+                    <th>出资形式</th>
+                    <th>估值/金额</th>
+                    <th>持股比例</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600">蓝瞳方</td>
+                    <td>资产作价（充电桩+光模块）</td>
+                    <td>估值24亿的一部分</td>
+                    <td>51%的一部分</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">智云方</td>
+                    <td>资产作价（推理芯片+服务器）</td>
+                    <td>待再评估</td>
+                    <td>51%的一部分</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">现金方</td>
+                    <td>现金出资</td>
+                    <td style="color:var(--accent-purple);font-weight:600">23亿人民币</td>
+                    <td style="color:var(--accent-purple);font-weight:600">49%</td>
+                  </tr>
+                  <tr style="background:var(--bg-hover)">
+                    <td style="font-weight:700">投后总估值</td>
+                    <td>—</td>
+                    <td style="color:var(--accent-blue);font-weight:700">≈47亿人民币</td>
+                    <td style="font-weight:700">100%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 原始股募资设计 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="banknote" style="width:20px;height:20px;color:var(--accent-purple)"></i>原始股募资设计
+          </h2>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon blue"><i data-lucide="coins" style="width:18px;height:18px"></i></div>
+                <div class="card-title" style="font-size:1rem">首轮资金</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0;font-size:13px">
+                  <tr><td style="width:120px">股东自有资金</td><td>蓝瞳/智云自有资金、强关联上市公司资金</td></tr>
+                  <tr><td>战略产业资金</td><td>蓝瞳产业或相关产业并购资金</td></tr>
+                  <tr><td>设备厂投资</td><td>新品牌充电桩厂房建设资金 <strong style="color:var(--accent-green)">2亿</strong></td></tr>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon purple"><i data-lucide="building" style="width:18px;height:18px"></i></div>
+                <div class="card-title" style="font-size:1rem">二轮资金</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0;font-size:13px">
+                  <tr><td style="width:120px">供应链合伙人</td><td>通富微电、建广科技、哈勃投资、海淀国资、苏州国新</td></tr>
+                  <tr><td>战略资金</td><td>其他战略投资者</td></tr>
+                  <tr><td>国家大基金</td><td>国家级专项产业基金</td></tr>
+                </table>
+                <div style="margin-top:12px;padding:10px;background:var(--bg-secondary);border-radius:6px;font-size:12px">
+                  <strong>入股方式：</strong>老股溢价30% 或 SPV层面定增
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 股权计算 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon teal"><i data-lucide="calculator" style="width:18px;height:18px"></i></div>
+              <div class="card-title">股权计算公式</div>
+            </div>
+            <div class="card-body">
+              <div style="background:var(--bg-secondary);padding:16px;border-radius:8px;font-family:monospace;font-size:14px">
+                <div style="margin-bottom:8px"><span style="color:var(--accent-blue)">投后估值</span> = 资产方估值 + 现金方出资</div>
+                <div style="margin-bottom:8px;padding-left:20px">= 24亿 + 23亿 = <strong style="color:var(--accent-green)">47亿人民币</strong></div>
+                <div style="margin-bottom:8px;margin-top:16px"><span style="color:var(--accent-purple)">资产方持股</span> = 24 / 47 = 51.06% ≈ <strong>51%</strong></div>
+                <div><span style="color:var(--accent-yellow)">现金方持股</span> = 23 / 47 = 48.94% ≈ <strong>49%</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 图表区域 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="pie-chart" style="width:20px;height:20px;color:var(--accent-blue)"></i>可视化图表
+          </h2>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.95rem">股权结构分布</div>
+              </div>
+              <div class="card-body" style="height:280px">
+                <canvas id="equityPieChart"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.95rem">投后估值47亿分解</div>
+              </div>
+              <div class="card-body" style="height:280px">
+                <canvas id="valuationBreakdownChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 决策权安排 -->
+        <section>
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="scale" style="width:20px;height:20px;color:var(--accent-teal)"></i>决策权安排
+          </h2>
+          <div class="card">
+            <div class="card-body">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                <div>
+                  <div style="font-weight:600;margin-bottom:12px;color:var(--accent-blue)">资产方联合控股 (51%)</div>
+                  <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                    <li>重大决策需资产方过半数同意</li>
+                    <li>包括：业务方向、重大投资、股权转让</li>
+                    <li>资产方内部按各自持股比例投票</li>
+                  </ul>
+                </div>
+                <div>
+                  <div style="font-weight:600;margin-bottom:12px;color:var(--accent-purple)">现金方参与权 (49%)</div>
+                  <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                    <li>派驻董事席位</li>
+                    <li>重大事项知情权</li>
+                    <li>否决权：仅限于特定重大事项</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="margin-top:16px;padding:12px;background:rgba(137,180,250,0.1);border-radius:8px;font-size:13px">
+                <strong>日常经营决策：</strong>CEO/管理层负责制，董事会监督，按公司章程执行
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 智云数科 - 超充算网方案 | ADR-0011</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/scheme2-charts.js"></script>
+  <script>lucide.createIcons()</script>
+</body>
+</html>

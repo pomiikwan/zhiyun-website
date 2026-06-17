@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资本运作架构 - 核心方案二 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心方案一</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="zap" style="width:18px;height:18px"></i>核心方案二</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心方案二导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-dashboard" style="width:16px;height:16px"></i><span>方案总览</span></a>
+          <a href="equity-structure.html" class="sidebar-item"><i data-lucide="git-branch" style="width:16px;height:16px"></i><span>顶层股权架构</span></a>
+          <a href="business-operation.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>业务运营架构</span></a>
+          <a href="capital-operation.html" class="sidebar-item active"><i data-lucide="landmark" style="width:16px;height:16px"></i><span>资本运作架构</span></a>
+          <a href="risk-decision.html" class="sidebar-item"><i data-lucide="shield-alert" style="width:16px;height:16px"></i><span>风险与决策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>详细文档</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-model.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值建模详解</span></a>
+          <a href="equity-detail.html" class="sidebar-item"><i data-lucide="pie-chart" style="width:16px;height:16px"></i><span>股权结构细化</span></a>
+          <a href="cross-border.html" class="sidebar-item"><i data-lucide="globe" style="width:16px;height:16px"></i><span>跨境收购路径</span></a>
+          <a href="revenue-model.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>授权模式收益</span></a>
+          <a href="fundraising-plan.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>原始股募资计划</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- 页面标题 -->
+        <div style="margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <a href="index.html" style="color:var(--accent-blue);font-size:13px">核心方案二</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px;color:var(--text-muted)"></i>
+            <span style="color:var(--text-muted);font-size:13px">资本运作架构</span>
+          </div>
+          <h1 style="font-size:1.75rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;background:rgba(203,166,247,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="landmark" style="width:22px;height:22px;color:var(--accent-purple)"></i>
+            </div>
+            资本运作架构
+          </h1>
+        </div>
+
+        <!-- 核心指标 -->
+        <section class="mb-8">
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-label">原始股募资</div>
+              <div class="metric-value blue">23亿 CNY</div>
+              <div class="metric-sub">约3.3亿美金</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">项目SPV杠杆</div>
+              <div class="metric-value purple">1:9</div>
+              <div class="metric-sub">领投10% + 配套90%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">资金渠道</div>
+              <div class="metric-value yellow">3大渠道</div>
+              <div class="metric-sub">上市公司/基金/国资</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">变现路径</div>
+              <div class="metric-value green">5种方式</div>
+              <div class="metric-sub">IPO/并购/RWA等</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 原始股募资流程 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="banknote" style="width:20px;height:20px;color:var(--accent-blue)"></i>原始股募资流程
+          </h2>
+          <div class="card">
+            <div class="card-body">
+              <pre style="background:var(--bg-secondary);padding:20px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6">
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                    原始股募资 (23亿CNY / 约3.3亿USD)                           │
+│                     (含充电桩设备厂投资现金2亿)                                │
+│                                                                               │
+│   首轮资金                              二轮资金                              │
+│   ├── 股东自有资金                     ├── 供应链合伙人                      │
+│   │   (蓝瞳/智云/上市公司)             │   (通富微电/建广/哈勃等)            │
+│   ├── 战略产业资金                     ├── 战略资金                          │
+│   │   (蓝瞳产业/并购资金)              ├── 国家大基金                        │
+│   ├── 充电桩设备厂投资 (2亿)           │                                      │
+│   │   计入现金出资                     └── 方式: 老股溢价30% / 定增          │
+└───────────────────────────────────────────────────────────────────────────────┘</pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- 首轮与二轮资金对比 -->
+        <section class="mb-8">
+          <div class="grid-2">
+            <div class="card" style="border-left:3px solid var(--accent-blue)">
+              <div class="card-header">
+                <div class="card-icon blue"><i data-lucide="coins" style="width:18px;height:18px"></i></div>
+                <div class="card-title" style="font-size:1rem">首轮资金</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0;font-size:13px">
+                  <tr>
+                    <td style="width:100px;font-weight:600">股东自有资金</td>
+                    <td>蓝瞳/智云自有资金、强关联上市公司资金</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">战略产业资金</td>
+                    <td>蓝瞳产业或相关产业并购资金</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">设备厂投资</td>
+                    <td>新品牌充电桩厂房建设资金 <strong style="color:var(--accent-green)">2亿</strong></td>
+                  </tr>
+                </table>
+                <div style="margin-top:12px;padding:10px;background:rgba(137,180,250,0.1);border-radius:6px;font-size:12px">
+                  <strong>特点：</strong>资金来源稳定，与核心利益方绑定
+                </div>
+              </div>
+            </div>
+            <div class="card" style="border-left:3px solid var(--accent-purple)">
+              <div class="card-header">
+                <div class="card-icon purple"><i data-lucide="building" style="width:18px;height:18px"></i></div>
+                <div class="card-title" style="font-size:1rem">二轮资金</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0;font-size:13px">
+                  <tr>
+                    <td style="width:100px;font-weight:600">供应链合伙人</td>
+                    <td>通富微电、建广科技、哈勃投资（华为）、海淀国资、苏州国新</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">战略资金</td>
+                    <td>其他战略投资者</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">国家大基金</td>
+                    <td>国家级专项产业基金</td>
+                  </tr>
+                </table>
+                <div style="margin-top:12px;padding:10px;background:rgba(203,166,247,0.1);border-radius:6px;font-size:12px">
+                  <strong>入股方式：</strong>老股溢价30% 或 SPV层面定增
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 二轮入股方式对比 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">二轮入股方式对比</div>
+            </div>
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th style="width:120px">考量因素</th>
+                    <th>老股溢价30%</th>
+                    <th>SPV层面定增</th>
+                    <th style="width:100px">建议</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600">首轮投资者意愿</td>
+                    <td>需同意</td>
+                    <td>不影响</td>
+                    <td style="font-size:12px;color:var(--text-muted)">协商确定</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">资金用途</td>
+                    <td>投资者退出</td>
+                    <td>SPV运营</td>
+                    <td style="font-size:12px;color:var(--text-muted)">按需选择</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">股权稀释</td>
+                    <td style="color:var(--accent-green)">仅转让方</td>
+                    <td>全股东</td>
+                    <td style="font-size:12px;color:var(--accent-green)">老股溢价更优</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">估值确认</td>
+                    <td style="color:var(--accent-green)">按溢价确认</td>
+                    <td>需重新评估</td>
+                    <td style="font-size:12px;color:var(--accent-green)">老股溢价更简单</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">执行效率</td>
+                    <td style="color:var(--accent-green)">较快</td>
+                    <td>较慢</td>
+                    <td style="font-size:12px;color:var(--accent-green)">老股溢价更快</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 项目SPV杠杆运作 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="scale" style="width:20px;height:20px;color:var(--accent-purple)"></i>项目SPV杠杆运作 (1:9)
+          </h2>
+          <div class="card">
+            <div class="card-body">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+                <div>
+                  <h3 style="font-size:1rem;font-weight:600;margin-bottom:12px;color:var(--accent-blue)">杠杆结构</h3>
+                  <pre style="background:var(--bg-secondary);padding:16px;border-radius:8px;font-size:13px">
+项目SPV (单个超充站/智算中心项目)
+
+┌─────────────────────────────────────────────┐
+│  领投方 (10%)          配套资金 (90%)        │
+│  ┌─────────────┐       ┌─────────────────┐  │
+│  │ • 上市公司  │       │ • 银行项目贷款  │  │
+│  │ • 股权基金  │ 1:9   │   (主)          │  │
+│  │ • 国资授信  │ ───→  │ • 融资租赁      │  │
+│  │             │ 杠杆  │ • ABS资产证券化 │  │
+│  │ 各渠道均可  │       │ • 收益权质押    │  │
+│  │ 51%控股     │       └─────────────────┘  │
+│  └─────────────┘                            │
+└─────────────────────────────────────────────┘</pre>
+                </div>
+                <div>
+                  <h3 style="font-size:1rem;font-weight:600;margin-bottom:12px;color:var(--accent-green)">资产包收益构成</h3>
+                  <div style="background:var(--bg-secondary);padding:16px;border-radius:8px">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+                      <div style="width:36px;height:36px;background:rgba(137,180,250,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center">
+                        <i data-lucide="trending-up" style="width:18px;height:18px;color:var(--accent-blue)"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:600">运营规模增值 (V)</div>
+                        <div style="font-size:12px;color:var(--text-muted)">项目扩张、资产增值、规模溢价</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+                      <div style="width:36px;height:36px;background:rgba(166,227,161,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center">
+                        <i data-lucide="zap" style="width:18px;height:18px;color:var(--accent-green)"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:600">电力服务收益 (W)</div>
+                        <div style="font-size:12px;color:var(--text-muted)">充电服务费、超充站收入、电力配套</div>
+                      </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px">
+                      <div style="width:36px;height:36px;background:rgba(203,166,247,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center">
+                        <i data-lucide="cpu" style="width:18px;height:18px;color:var(--accent-purple)"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:600">算力服务收益 (X)</div>
+                        <div style="font-size:12px;color:var(--text-muted)">算力出租、边缘计算、推理服务</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 杠杆风险提示 -->
+        <section class="mb-8">
+          <div style="background:rgba(243,139,168,0.1);border:1px solid rgba(243,139,168,0.3);padding:16px;border-radius:8px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <i data-lucide="alert-triangle" style="width:18px;height:18px;color:var(--accent-red)"></i>
+              <span style="font-weight:600;color:var(--accent-red)">杠杆风险提示</span>
+            </div>
+            <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+              <li><strong>现金流覆盖：</strong>需稳定的充电+算力收入支撑90%配套资金本息</li>
+              <li><strong>风险隔离：</strong>单个SPV违约不应影响其他SPV</li>
+              <li><strong>还款优先级：</strong>需明确先还本息还是先分红</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 运营资金渠道 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="route" style="width:20px;height:20px;color:var(--accent-yellow)"></i>运营资金渠道
+          </h2>
+          <div class="grid-3">
+            <div class="card" style="border-top:3px solid var(--accent-blue)">
+              <div class="card-header">
+                <div class="card-title" style="font-size:1rem">渠道A：上市公司</div>
+              </div>
+              <div class="card-body">
+                <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                  <li>自有资金</li>
+                  <li>股票质押</li>
+                  <li>非公开定增</li>
+                  <li>可转债</li>
+                </ul>
+                <div style="margin-top:12px;font-size:12px;color:var(--text-muted)">
+                  泛指可合作上市公司
+                </div>
+              </div>
+            </div>
+            <div class="card" style="border-top:3px solid var(--accent-purple)">
+              <div class="card-header">
+                <div class="card-title" style="font-size:1rem">渠道B：股权基金</div>
+              </div>
+              <div class="card-body">
+                <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                  <li>一级基金投SPV</li>
+                  <li>二级基金投上市公司</li>
+                  <li>并购基金模式</li>
+                </ul>
+                <div style="margin-top:12px;font-size:12px;color:var(--text-muted)">
+                  一二级联动（非关联）
+                </div>
+              </div>
+            </div>
+            <div class="card" style="border-top:3px solid var(--accent-teal)">
+              <div class="card-header">
+                <div class="card-title" style="font-size:1rem">渠道C：国资授信</div>
+              </div>
+              <div class="card-body">
+                <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                  <li>设备用途（算力设备采购）</li>
+                  <li>置业用途（需转化）</li>
+                  <li>投资用途（股权投资）</li>
+                </ul>
+                <div style="margin-top:12px;font-size:12px;color:var(--text-muted)">
+                  信用杠杆模式
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 远期变现路径 -->
+        <section>
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="rocket" style="width:20px;height:20px;color:var(--accent-green)"></i>远期变现路径
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th style="width:80px">路径</th>
+                    <th>方式</th>
+                    <th>估值依据</th>
+                    <th style="width:100px">预期溢价</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-blue)">AI</td>
+                    <td>打包上市（IPO独立上市或借壳上市）</td>
+                    <td>全资产打包</td>
+                    <td style="color:var(--accent-green);font-weight:600">溢价10倍</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-purple)">AJ</td>
+                    <td>内部受让（合作上市资方内部受让，资产注入上市公司）</td>
+                    <td>按合作资方市盈率估值</td>
+                    <td style="color:var(--accent-green);font-weight:600">按PE估值</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-yellow)">AF</td>
+                    <td>RWA上链（资产/收益权代币化）</td>
+                    <td>需合规设计</td>
+                    <td style="color:var(--accent-green);font-weight:600">溢价10倍</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-teal)">AG</td>
+                    <td>第三方股权基金收购</td>
+                    <td>年化15%溢价</td>
+                    <td style="color:var(--accent-green);font-weight:600">年化15%</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-green)">AH</td>
+                    <td>第三方上市公司并表</td>
+                    <td>按市盈率溢价</td>
+                    <td style="color:var(--accent-green);font-weight:600">按PE溢价</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding:12px;background:rgba(137,180,250,0.1);border-radius:8px;font-size:13px">
+            <strong>变现策略：</strong>五种变现路径<strong>并行可选</strong>，根据届时市场情况择优执行。
+          </div>
+        </section>
+
+        <!-- 图表区域 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="bar-chart-3" style="width:20px;height:20px;color:var(--accent-blue)"></i>可视化图表
+          </h2>
+          <div class="grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.9rem">募资进度</div>
+              </div>
+              <div class="card-body" style="height:220px">
+                <canvas id="fundraisingTimelineChart"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.9rem">1:9杠杆结构</div>
+              </div>
+              <div class="card-body" style="height:220px">
+                <canvas id="leverageStructureChart"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.9rem">资金渠道分布</div>
+              </div>
+              <div class="card-body" style="height:220px">
+                <canvas id="capitalChannelChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="grid-2" style="margin-top:16px">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.95rem">里程碑付款计划</div>
+              </div>
+              <div class="card-body" style="height:260px">
+                <canvas id="milestonePaymentChart"></canvas>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:0.95rem">变现路径时间线</div>
+              </div>
+              <div class="card-body" style="height:260px">
+                <canvas id="exitPathChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 智云数科 - 超充算网方案 | ADR-0011</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/scheme2-charts.js"></script>
+  <script>lucide.createIcons()</script>
+</body>
+</html>

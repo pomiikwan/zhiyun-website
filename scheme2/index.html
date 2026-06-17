@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>核心方案二：超充算网方案 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心方案一</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="zap" style="width:18px;height:18px"></i>核心方案二</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心方案二导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item active"><i data-lucide="layout-dashboard" style="width:16px;height:16px"></i><span>方案总览</span></a>
+          <a href="equity-structure.html" class="sidebar-item"><i data-lucide="git-branch" style="width:16px;height:16px"></i><span>顶层股权架构</span></a>
+          <a href="business-operation.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>业务运营架构</span></a>
+          <a href="capital-operation.html" class="sidebar-item"><i data-lucide="landmark" style="width:16px;height:16px"></i><span>资本运作架构</span></a>
+          <a href="risk-decision.html" class="sidebar-item"><i data-lucide="shield-alert" style="width:16px;height:16px"></i><span>风险与决策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>详细文档</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-model.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值建模详解</span></a>
+          <a href="equity-detail.html" class="sidebar-item"><i data-lucide="pie-chart" style="width:16px;height:16px"></i><span>股权结构细化</span></a>
+          <a href="cross-border.html" class="sidebar-item"><i data-lucide="globe" style="width:16px;height:16px"></i><span>跨境收购路径</span></a>
+          <a href="revenue-model.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>授权模式收益</span></a>
+          <a href="fundraising-plan.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>原始股募资计划</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>相关方案</span></div>
+        <ul class="sidebar-items">
+          <a href="../tasks/p1-financing.html" class="sidebar-item"><i data-lucide="file-text" style="width:16px;height:16px"></i><span>P1 融资结构（原方案）</span></a>
+          <a href="../knowledge/0503-self-consumption.html" class="sidebar-item"><i data-lucide="link" style="width:16px;height:16px"></i><span>自消纳场景</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- Hero Section -->
+        <section class="hero" style="padding:30px 0 20px">
+          <h1 class="hero-title" style="font-size:2rem">核心方案二<br><span style="color:var(--accent-blue)">超充算网全面合作方案</span></h1>
+          <p class="hero-subtitle">蓝瞳半导体深度合作，充电桩+边缘计算+推理芯片+高速网卡融合的运营主体，打造超充算网生态闭环。</p>
+        </section>
+
+        <!-- 核心指标 -->
+        <section class="mb-8">
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-label">投后估值</div>
+              <div class="metric-value blue">47亿 CNY</div>
+              <div class="metric-sub">资产方51% / 现金方49%</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">原始股募资</div>
+              <div class="metric-value purple">23亿 CNY</div>
+              <div class="metric-sub">约3.3亿USD，含设备厂投资2亿</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">跨境收购</div>
+              <div class="metric-value yellow">3亿 USD</div>
+              <div class="metric-sub">全球第五SmartNIC团队</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">多产品体系</div>
+              <div class="metric-value green">5类产品</div>
+              <div class="metric-sub">充电桩|光模块|网卡|芯片|服务器</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 方案定位 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon blue"><i data-lucide="info" style="width:20px;height:20px"></i></div>
+              <div class="card-title">方案定位</div>
+            </div>
+            <div class="card-body">
+              <table class="data-table">
+                <tr><td style="width:140px;font-weight:600">方案名称</td><td>超充算网全面合作方案（ADR-0011）</td></tr>
+                <tr><td style="font-weight:600">核心主体</td><td>超充算网主体（充电桩+边缘计算+推理芯片+高速网卡）</td></tr>
+                <tr><td style="font-weight:600">合作方</td><td>蓝瞳半导体（联合创始股东）、智云数科（技术/业务提供方）</td></tr>
+                <tr><td style="font-weight:600">融资目标</td><td>募集原始股资金约3.3亿美金（23亿人民币，含设备厂投资2亿）</td></tr>
+                <tr><td style="font-weight:600">与原方案关系</td><td>并行推进，本方案为主路径，原ADR-0006方案为备选</td></tr>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 核心架构图 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon purple"><i data-lucide="git-merge" style="width:20px;height:20px"></i></div>
+              <div class="card-title">核心架构图</div>
+            </div>
+            <div class="card-body">
+              <pre style="background:var(--bg-secondary);padding:20px;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.6">
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        超充算网方案核心架构                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│   步骤1: 资产注入                                                            │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  蓝瞳半导体 ─┐                                                       │   │
+│   │              ├──→ 多产品体系 (估值24亿, 51%)                         │   │
+│   │  智云数科 ───┘        │                                              │   │
+│   │                       ├── 充电桩 (蓝瞳装入)                          │   │
+│   │                       ├── 光模块 (蓝瞳装入)                          │   │
+│   │                       ├── 推理芯片 (智云装入)                        │   │
+│   │                       └── 服务器 (智云装入)                          │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                      │                                       │
+│                                      ▼                                       │
+│   步骤2: 现金募资                                                            │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  原始股募资 23亿 (占49%)                                             │   │
+│   │  ├── 首轮: 股东自有资金 + 战略产业资金 + 设备厂投资(2亿)            │   │
+│   │  └── 二轮: 供应链合伙人 + 战略资金 + 国家大基金                      │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                      │                                       │
+│                                      ▼                                       │
+│   最终: 超充算网主体 (投后估值47亿)                                          │
+│   ┌─────────────────────────────────────────────────────────────────────┐   │
+│   │  ├── 跨境收购: 海外SmartNIC团队 (里程碑付款: 3亿USD, 5期)           │   │
+│   │  └── 高速网卡: 收购后装入多产品体系                                  │   │
+│   └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘</pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- 三大维度 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="layers" style="width:20px;height:20px;color:var(--accent-blue)"></i>三大核心维度
+          </h2>
+          <div class="grid-3">
+            <div class="card" onclick="location.href='equity-structure.html'" style="cursor:pointer">
+              <div class="card-icon blue"><i data-lucide="git-branch" style="width:22px;height:22px"></i></div>
+              <div class="card-title">顶层股权架构</div>
+              <div class="card-desc">资产方51%（蓝瞳+智云资产作价24亿）+ 现金方49%（原始股募资23亿）</div>
+              <div class="card-meta">
+                <span><i data-lucide="users" style="width:14px;height:14px"></i>51%:49%</span>
+                <span><i data-lucide="banknote" style="width:14px;height:14px"></i>47亿估值</span>
+              </div>
+            </div>
+            <div class="card" onclick="location.href='business-operation.html'" style="cursor:pointer">
+              <div class="card-icon green"><i data-lucide="briefcase" style="width:22px;height:22px"></i></div>
+              <div class="card-title">业务运营架构</div>
+              <div class="card-desc">三大业务模式：运营模式（项目SPV）、授权模式（IP授权80%+毛利）、生产模式（产品供应）</div>
+              <div class="card-meta">
+                <span><i data-lucide="trending-up" style="width:14px;height:14px"></i>高毛利</span>
+                <span><i data-lucide="repeat" style="width:14px;height:14px"></i>内部闭环</span>
+              </div>
+            </div>
+            <div class="card" onclick="location.href='capital-operation.html'" style="cursor:pointer">
+              <div class="card-icon purple"><i data-lucide="landmark" style="width:22px;height:22px"></i></div>
+              <div class="card-title">资本运作架构</div>
+              <div class="card-desc">原始股募资分两轮 + 项目SPV 1:9杠杆 + 三大资金渠道 + 五种变现路径</div>
+              <div class="card-meta">
+                <span><i data-lucide="percent" style="width:14px;height:14px"></i>1:9杠杆</span>
+                <span><i data-lucide="route" style="width:14px;height:14px"></i>多渠道</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 核心逻辑 -->
+        <section class="mb-8">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon teal"><i data-lucide="workflow" style="width:20px;height:20px"></i></div>
+              <div class="card-title">核心逻辑</div>
+            </div>
+            <div class="card-body">
+              <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:20px 0">
+                <div style="background:var(--bg-card);padding:12px 20px;border-radius:8px;border:1px solid var(--border)">
+                  <div style="font-size:12px;color:var(--text-muted)">Step 1</div>
+                  <div style="font-weight:600;color:var(--accent-blue)">估值对价协商</div>
+                </div>
+                <i data-lucide="chevron-right" style="width:20px;height:20px;color:var(--text-muted)"></i>
+                <div style="background:var(--bg-card);padding:12px 20px;border-radius:8px;border:1px solid var(--border)">
+                  <div style="font-size:12px;color:var(--text-muted)">Step 2</div>
+                  <div style="font-weight:600;color:var(--accent-green)">资产注入24亿</div>
+                </div>
+                <i data-lucide="chevron-right" style="width:20px;height:20px;color:var(--text-muted)"></i>
+                <div style="background:var(--bg-card);padding:12px 20px;border-radius:8px;border:1px solid var(--border)">
+                  <div style="font-size:12px;color:var(--text-muted)">Step 3</div>
+                  <div style="font-weight:600;color:var(--accent-purple)">募资23亿</div>
+                </div>
+                <i data-lucide="chevron-right" style="width:20px;height:20px;color:var(--text-muted)"></i>
+                <div style="background:var(--bg-card);padding:12px 20px;border-radius:8px;border:1px solid var(--border)">
+                  <div style="font-size:12px;color:var(--text-muted)">Step 4</div>
+                  <div style="font-weight:600;color:var(--accent-yellow)">跨境收购</div>
+                </div>
+                <i data-lucide="chevron-right" style="width:20px;height:20px;color:var(--text-muted)"></i>
+                <div style="background:var(--bg-card);padding:12px 20px;border-radius:8px;border:1px solid var(--border)">
+                  <div style="font-size:12px;color:var(--text-muted)">Step 5</div>
+                  <div style="font-weight:600;color:var(--accent-teal)">运营变现</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 多产品体系 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="package" style="width:20px;height:20px;color:var(--accent-blue)"></i>多产品体系 (估值24亿)
+          </h2>
+          <div class="grid-5" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px">
+            <div style="background:var(--bg-card);padding:16px;border-radius:8px;border:1px solid var(--border);text-align:center">
+              <div style="width:40px;height:40px;background:rgba(166,227,161,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">
+                <i data-lucide="zap" style="width:20px;height:20px;color:var(--accent-green)"></i>
+              </div>
+              <div style="font-weight:600;font-size:14px;margin-bottom:4px">充电桩</div>
+              <div style="font-size:11px;color:var(--text-muted)">蓝瞳装入<br>已签1000亿+合约</div>
+            </div>
+            <div style="background:var(--bg-card);padding:16px;border-radius:8px;border:1px solid var(--border);text-align:center">
+              <div style="width:40px;height:40px;background:rgba(137,180,250,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">
+                <i data-lucide="cable" style="width:20px;height:20px;color:var(--accent-blue)"></i>
+              </div>
+              <div style="font-weight:600;font-size:14px;margin-bottom:4px">光模块</div>
+              <div style="font-size:11px;color:var(--text-muted)">蓝瞳装入<br>900亿生态协同</div>
+            </div>
+            <div style="background:var(--bg-card);padding:16px;border-radius:8px;border:1px solid var(--border);text-align:center">
+              <div style="width:40px;height:40px;background:rgba(249,226,175,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">
+                <i data-lucide="network" style="width:20px;height:20px;color:var(--accent-yellow)"></i>
+              </div>
+              <div style="font-weight:600;font-size:14px;margin-bottom:4px">高速网卡</div>
+              <div style="font-size:11px;color:var(--text-muted)">收购后装入<br>全球第五团队</div>
+            </div>
+            <div style="background:var(--bg-card);padding:16px;border-radius:8px;border:1px solid var(--border);text-align:center">
+              <div style="width:40px;height:40px;background:rgba(203,166,247,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">
+                <i data-lucide="cpu" style="width:20px;height:20px;color:var(--accent-purple)"></i>
+              </div>
+              <div style="font-weight:600;font-size:14px;margin-bottom:4px">推理芯片</div>
+              <div style="font-size:11px;color:var(--text-muted)">智云装入<br>对标4090, 8月流片</div>
+            </div>
+            <div style="background:var(--bg-card);padding:16px;border-radius:8px;border:1px solid var(--border);text-align:center">
+              <div style="width:40px;height:40px;background:rgba(148,226,213,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">
+                <i data-lucide="server" style="width:20px;height:20px;color:var(--accent-teal)"></i>
+              </div>
+              <div style="font-weight:600;font-size:14px;margin-bottom:4px">服务器</div>
+              <div style="font-size:11px;color:var(--text-muted)">智云装入<br>新爱算100-150亿目标</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 里程碑付款 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="calendar-check" style="width:20px;height:20px;color:var(--accent-blue)"></i>里程碑付款计划
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th style="width:100px">时间节点</th>
+                    <th style="width:120px">金额(USD)</th>
+                    <th style="width:60px">占比</th>
+                    <th>里程碑目标</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>第0个月</td>
+                    <td style="color:var(--accent-blue);font-weight:600">4,500万</td>
+                    <td>15%</td>
+                    <td>合同生效 & 初步落地准备</td>
+                  </tr>
+                  <tr>
+                    <td>第3个月末</td>
+                    <td style="color:var(--accent-purple);font-weight:600">6,000万</td>
+                    <td>20%</td>
+                    <td>中国子公司注册 + 核心团队到位</td>
+                  </tr>
+                  <tr>
+                    <td>第6个月末</td>
+                    <td style="color:var(--accent-purple);font-weight:600">6,000万</td>
+                    <td>20%</td>
+                    <td>办公场地设立 + 设计环境部署完成</td>
+                  </tr>
+                  <tr>
+                    <td>第9个月末</td>
+                    <td style="color:var(--accent-yellow);font-weight:600">7,500万</td>
+                    <td>25%</td>
+                    <td>首版芯片架构冻结 + RTL代码初版交付</td>
+                  </tr>
+                  <tr>
+                    <td>第12个月末</td>
+                    <td style="color:var(--accent-green);font-weight:600">6,000万</td>
+                    <td>20%</td>
+                    <td>团队完整运营 + 项目阶段性验收通过</td>
+                  </tr>
+                  <tr style="background:var(--bg-hover)">
+                    <td style="font-weight:600">合计</td>
+                    <td style="color:var(--accent-red);font-weight:700">3亿USD</td>
+                    <td style="font-weight:600">100%</td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 待决策事项 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="alert-circle" style="width:20px;height:20px;color:var(--accent-yellow)"></i>待决策事项
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th style="width:60px">编号</th>
+                    <th>待决策事项</th>
+                    <th style="width:100px">决策方</th>
+                    <th style="width:80px">状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600">D-001</td>
+                    <td>蓝瞳装入资产的具体形式（合约/订单 vs 业务主体）</td>
+                    <td>关总/蓝瞳</td>
+                    <td><span style="color:var(--accent-yellow)">待定</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-002</td>
+                    <td>智云方估值再评估</td>
+                    <td>蓝瞳、智云协商</td>
+                    <td><span style="color:var(--accent-yellow)">待执行</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-003</td>
+                    <td>1-2亿厂房建设资金的融资方案</td>
+                    <td>关总</td>
+                    <td><span style="color:var(--accent-yellow)">待设计</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-004</td>
+                    <td>联合品牌的具体命名和归属</td>
+                    <td>蓝瞳、智云协商</td>
+                    <td><span style="color:var(--accent-yellow)">待定</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-005</td>
+                    <td>跨境收购路径选择（ODI vs 跨境资本）</td>
+                    <td>融资方案确认后</td>
+                    <td><span style="color:var(--text-muted)">后续决策</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-006</td>
+                    <td>变现路径选择</td>
+                    <td>运营成熟后</td>
+                    <td><span style="color:var(--text-muted)">后续决策</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 风险提示 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="shield-alert" style="width:20px;height:20px;color:var(--accent-red)"></i>核心风险提示
+          </h2>
+          <div class="grid-2">
+            <div style="background:rgba(243,139,168,0.1);border:1px solid rgba(243,139,168,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-red);color:white;font-size:11px;padding:2px 6px;border-radius:4px">高</span>
+                <span style="font-weight:600">推理芯片流片失败</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">智云方估值下降30-50%，整体方案吸引力下降</div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 6px;border-radius:4px">中高</span>
+                <span style="font-weight:600">23亿募资困难</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">需分阶段、多渠道、备选方案保障资金到位</div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 6px;border-radius:4px">中高</span>
+                <span style="font-weight:600">1:9杠杆现金流覆盖不足</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">需稳定的充电+算力收入支撑，保守测算</div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:16px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 6px;border-radius:4px">中高</span>
+                <span style="font-weight:600">蓝瞳+智云合作稳定性</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary)">需明确利益分配机制，股权深度绑定</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 方案关系说明 -->
+        <section>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon teal"><i data-lucide="git-compare" style="width:20px;height:20px"></i></div>
+              <div class="card-title">与原方案的关系</div>
+            </div>
+            <div class="card-body">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                <div style="background:var(--bg-secondary);padding:16px;border-radius:8px;border-left:3px solid var(--accent-blue)">
+                  <div style="font-weight:600;margin-bottom:8px;color:var(--accent-blue)">本方案 (ADR-0011)</div>
+                  <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                    <li>蓝瞳+智云联合主导</li>
+                    <li>蓝瞳作为联合创始股东</li>
+                    <li>资产作价+现金出资</li>
+                    <li>原始股募资分两轮</li>
+                    <li style="color:var(--accent-green);font-weight:600">主路径 ⭐</li>
+                  </ul>
+                </div>
+                <div style="background:var(--bg-secondary);padding:16px;border-radius:8px;border-left:3px solid var(--text-muted)">
+                  <div style="font-weight:600;margin-bottom:8px;color:var(--text-muted)">原方案 (ADR-0006)</div>
+                  <ul style="font-size:13px;color:var(--text-secondary);margin:0;padding-left:20px">
+                    <li>上市公司实控人主导</li>
+                    <li>实控人质押变现出资</li>
+                    <li>智云团队作价入股</li>
+                    <li>SPV三轮结构</li>
+                    <li style="font-weight:600">备选方案</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="margin-top:16px;padding:12px;background:rgba(137,180,250,0.1);border-radius:8px;font-size:13px">
+                <strong>决策依据：</strong>并行推进，不冲突。本方案为主路径，原方案为备选，后续可择优或融合。
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 智云数科 - 超充算网方案 | ADR-0011</p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script>lucide.createIcons()</</script>
+</body>
+</html><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/scheme2-charts.js"></script>

@@ -18,7 +18,8 @@
       <li><a href="index.html" class="active"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
       <li><a href="knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
       <li><a href="knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
-      <li><a href="tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心任务</a></li>
+      <li><a href="tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心方案一</a></li>
+      <li><a href="scheme2/index.html"><i data-lucide="zap" style="width:18px;height:18px"></i>核心方案二</a></li>
       <li><a href="dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
     </ul>
     <div class="navbar-search">
@@ -130,7 +131,7 @@
           <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
             <i data-lucide="compass" style="width:20px;height:20px;color:var(--accent-blue)"></i>快速导航
           </h2>
-          <div class="grid-4">
+          <div class="grid-4" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
             <div class="card" onclick="location.href='knowledge/about-company.html'" style="border-color:var(--accent-teal)">
               <div class="card-icon teal"><i data-lucide="building-2" style="width:22px;height:22px"></i></div>
               <div class="card-title">公司介绍</div>
@@ -145,9 +146,15 @@
             </div>
             <div class="card" onclick="location.href='tasks/index.html'" style="border-color:var(--accent-purple)">
               <div class="card-icon purple"><i data-lucide="target" style="width:22px;height:22px"></i></div>
-              <div class="card-title">核心任务</div>
+              <div class="card-title">核心方案一</div>
               <div class="card-desc">4大优先任务：P1融资结构方案、P2收购交易结构、P3一二级市场联动、P4业务优化管理。</div>
               <div class="card-meta"><span><i data-lucide="flag" style="width:14px;height:14px"></i>P1 - P4 优先级</span></div>
+            </div>
+            <div class="card" onclick="location.href='scheme2/index.html'" style="border-color:var(--accent-yellow);background:linear-gradient(135deg,rgba(249,226,175,0.1),rgba(166,227,161,0.05))">
+              <div class="card-icon" style="background:linear-gradient(135deg,var(--accent-yellow),var(--accent-green))"><i data-lucide="zap" style="width:22px;height:22px;color:#000"></i></div>
+              <div class="card-title">核心方案二</div>
+              <div class="card-desc">超充算网全面合作方案：蓝瞳+智云联合，47亿估值，充电桩+算力生态闭环。</div>
+              <div class="card-meta"><span><i data-lucide="star" style="width:14px;height:14px"></i>主路径 ⭐</span></div>
             </div>
             <div class="card" onclick="location.href='dashboard.html'" style="border-color:var(--accent-green)">
               <div class="card-icon green"><i data-lucide="bar-chart-3" style="width:22px;height:22px"></i></div>

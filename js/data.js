@@ -986,5 +986,359 @@ const SITE_DATA = {
         riskMitigation: '分阶段付款+里程碑验证+银行保函托管，确保资金安全和项目进度可控。'
       }
     }
+  },
+
+  /* ============================================
+     核心方案二 - 超充算网全面合作方案 (ADR-0011)
+     ============================================ */
+  scheme2: {
+    // 方案基础信息
+    meta: {
+      id: 'ADR-0011',
+      name: '超充算网全面合作方案',
+      shortName: '核心方案二',
+      partner: '蓝瞳半导体',
+      description: '蓝瞳半导体深度合作，充电桩+边缘计算+推理芯片+高速网卡融合的运营主体，打造超充算网生态闭环。'
+    },
+
+    // 核心指标卡片
+    metrics: {
+      postMoneyValuation: { value: 47, unit: '亿 CNY', desc: '资产方51% / 现金方49%' },
+      originalShareRaise: { value: 23, unit: '亿 CNY', desc: '约3.3亿USD，含设备厂投资2亿' },
+      crossBorderAcquisition: { value: 3, unit: '亿 USD', desc: '全球第五SmartNIC团队' },
+      productLines: { value: 5, unit: '类产品', desc: '充电桩|光模块|网卡|芯片|服务器' }
+    },
+
+    // 股权结构
+    equityStructure: {
+      postMoneyValuation: 47, // 亿人民币
+      assetParty: {
+        percentage: 51,
+        valuation: 24, // 亿人民币
+        holders: [
+          { name: '蓝瞳半导体', assets: ['充电桩', '光模块'], percentage: '51%的一部分' },
+          { name: '智云数科', assets: ['推理芯片', '服务器'], percentage: '51%的一部分' }
+        ]
+      },
+      cashParty: {
+        percentage: 49,
+        amount: 23, // 亿人民币
+        sources: ['原始股募资']
+      }
+    },
+
+    // 原始股募资计划
+    fundraising: {
+      total: 23, // 亿人民币
+      rounds: {
+        first: {
+          name: '首轮资金',
+          sources: [
+            { name: '股东自有资金', desc: '蓝瞳/智云自有资金、强关联上市公司资金' },
+            { name: '战略产业资金', desc: '蓝瞳产业或相关产业并购资金' },
+            { name: '设备厂投资', amount: 2, unit: '亿', desc: '新品牌充电桩厂房建设资金' }
+          ]
+        },
+        second: {
+          name: '二轮资金',
+          sources: [
+            { name: '供应链合伙人', desc: '通富微电、建广科技、哈勃投资、海淀国资、苏州国新' },
+            { name: '战略资金', desc: '其他战略投资者' },
+            { name: '国家大基金', desc: '国家级专项产业基金' }
+          ],
+          entryMethod: '老股溢价30% 或 SPV层面定增'
+        }
+      }
+    },
+
+    // 多产品体系
+    products: [
+      { name: '充电桩', provider: '蓝瞳装入', highlight: '已签1000亿+合约', icon: 'zap', color: 'green' },
+      { name: '光模块', provider: '蓝瞳装入', highlight: '900亿生态协同', icon: 'cable', color: 'blue' },
+      { name: '高速网卡', provider: '收购后装入', highlight: '全球第五团队', icon: 'network', color: 'yellow' },
+      { name: '推理芯片', provider: '智云装入', highlight: '对标4090, 8月流片', icon: 'cpu', color: 'purple' },
+      { name: '服务器', provider: '智云装入', highlight: '新爱算100-150亿目标', icon: 'server', color: 'teal' }
+    ],
+
+    // 里程碑付款计划（跨境收购）
+    milestonePayment: [
+      { phase: '第0个月', amount: '4,500万 USD', percentage: '15%', milestone: '合同生效 & 初步落地准备' },
+      { phase: '第3个月末', amount: '6,000万 USD', percentage: '20%', milestone: '中国子公司注册 + 核心团队到位' },
+      { phase: '第6个月末', amount: '6,000万 USD', percentage: '20%', milestone: '办公场地设立 + 设计环境部署完成' },
+      { phase: '第9个月末', amount: '7,500万 USD', percentage: '25%', milestone: '首版芯片架构冻结 + RTL代码初版交付' },
+      { phase: '第12个月末', amount: '6,000万 USD', percentage: '20%', milestone: '团队完整运营 + 项目阶段性验收通过' }
+    ],
+
+    // 待决策事项
+    pendingDecisions: [
+      { id: 'D-001', item: '蓝瞳装入资产的具体形式（合约/订单 vs 业务主体）', decisionMaker: '关总/蓝瞳', status: '待定' },
+      { id: 'D-002', item: '智云方估值再评估', decisionMaker: '蓝瞳、智云协商', status: '待执行' },
+      { id: 'D-003', item: '1-2亿厂房建设资金的融资方案', decisionMaker: '关总', status: '待设计' },
+      { id: 'D-004', item: '联合品牌的具体命名和归属', decisionMaker: '蓝瞳、智云协商', status: '待定' },
+      { id: 'D-005', item: '跨境收购路径选择（ODI vs 跨境资本）', decisionMaker: '融资方案确认后', status: '后续决策' },
+      { id: 'D-006', item: '变现路径选择', decisionMaker: '运营成熟后', status: '后续决策' }
+    ],
+
+    // 业务模式
+    businessModels: {
+      operation: {
+        name: '运营模式',
+        type: '项目SPV',
+        features: ['按区域/品牌设立', '便于融资', '隔离风险'],
+        revenue: ['充电服务收入', '算力服务收入'],
+        leverage: '各资金渠道均可51%控股项目SPV'
+      },
+      licensing: {
+        name: '授权模式',
+        grossMargin: '80%+',
+        types: [
+          { type: 'IP授权（主）', items: ['推理芯片IP', 'SmartNIC IP'] },
+          { type: '品牌/技术运营（次）', items: ['品牌授权', '技术支持'] }
+        ]
+      },
+      manufacturing: {
+        name: '生产模式',
+        grossMargin: '15-60%',
+        taxBenefits: ['高新企业15%', '集成电路优惠', '区域优惠'],
+        products: ['充电桩设备', '光模块产品', '服务器整机']
+      }
+    },
+
+    // 资本运作
+    capitalOperation: {
+      leverage: {
+        ratio: '1:9',
+        description: '领投10% + 配套90%',
+        risk: '需稳定的充电+算力收入支撑90%配套资金本息'
+      },
+      channels: [
+        { name: '上市公司渠道', examples: ['战略投资', '定增', '并购'] },
+        { name: '股权基金渠道', examples: ['国家大基金', '产业基金', '供应链基金'] },
+        { name: '国资授信渠道', examples: ['政策性银行', '地方国资', '产业园区'] }
+      ],
+      exitPaths: ['IPO上市', '上市公司并购', 'RWA资产证券化', '股权回购', '分红收益']
+    },
+
+    // 风险矩阵
+    riskMatrix: {
+      summary: {
+        high: 2,
+        mediumHigh: 10,
+        medium: 11
+      },
+      critical: [
+        {
+          level: '高',
+          risk: '推理芯片流片失败',
+          impact: '智云方估值下降30-50%，整体方案吸引力下降',
+          mitigation: '备选方案设计、分阶段验证、风险分散'
+        },
+        {
+          level: '高',
+          risk: '1:9杠杆现金流覆盖不足',
+          impact: '需稳定的充电+算力收入支撑90%配套资金本息',
+          mitigation: '保守测算、分步加杠杆、现金流安全垫'
+        },
+        {
+          level: '中高',
+          risk: '23亿募资困难',
+          impact: '需分阶段、多渠道、备选方案保障资金到位',
+          mitigation: '分阶段募资、多渠道并行、备选ADR-0006方案'
+        },
+        {
+          level: '中高',
+          risk: '蓝瞳+智云合作稳定性',
+          impact: '需明确利益分配机制，股权深度绑定',
+          mitigation: '利益绑定、协议约束、设置退出机制'
+        }
+      ],
+      byCategory: [
+        {
+          category: '估值风险',
+          risks: [
+            { item: '47亿估值能否支撑', level: '中高', mitigation: '商业协商形式，不锁定' },
+            { item: '蓝瞳资产定价分歧', level: '中高', mitigation: '第三方评估，协商确定' },
+            { item: '智云方估值再评估分歧', level: '中', mitigation: '流片结果作为调整依据' }
+          ]
+        },
+        {
+          category: '融资风险',
+          risks: [
+            { item: '23亿原始股募集困难', level: '中高', mitigation: '分阶段募资，多渠道并行' },
+            { item: '募资进度不及预期', level: '中', mitigation: '备选方案，滚动融资' },
+            { item: '资金成本超预期', level: '中', mitigation: '锁定核心资金，控制成本' }
+          ]
+        },
+        {
+          category: '运营风险',
+          risks: [
+            { item: '充电桩业务不及预期', level: '中', mitigation: '合约保障，分批投入' },
+            { item: '算力需求波动', level: '中', mitigation: '多客户结构，长协锁定' },
+            { item: 'SPV管理复杂度高', level: '低', mitigation: '标准化模板，专业团队' }
+          ]
+        },
+        {
+          category: '技术风险',
+          risks: [
+            { item: '推理芯片流片失败', level: '高', mitigation: '分阶段验证，备选技术路线' },
+            { item: '网卡IP迁移受阻', level: '中高', mitigation: '分批迁移，人才绑定' },
+            { item: '技术迭代风险', level: '中', mitigation: '持续研发投入，跟踪前沿' }
+          ]
+        }
+      ]
+    },
+
+    // 与原方案对比
+    comparison: {
+      current: {
+        id: 'ADR-0011',
+        name: '本方案',
+        features: ['蓝瞳+智云联合主导', '蓝瞳作为联合创始股东', '资产作价+现金出资', '原始股募资分两轮'],
+        status: '主路径'
+      },
+      alternative: {
+        id: 'ADR-0006',
+        name: '原方案',
+        features: ['上市公司实控人主导', '实控人质押变现出资', '智云团队作价入股', 'SPV三轮结构'],
+        status: '备选方案'
+      },
+      strategy: '并行推进，不冲突。本方案为主路径，原方案为备选，后续可择优或融合。'
+    },
+
+    // 图表配置
+    charts: {
+      // 股权结构饼图
+      equityPie: {
+        canvasId: 'equityPieChart',
+        title: '股权结构',
+        data: [
+          { label: '资产方', value: 51, color: '#a6e3a1', desc: '资产作价24亿' },
+          { label: '现金方', value: 49, color: '#cba6f7', desc: '募资23亿' }
+        ]
+      },
+
+      // 估值结构分解
+      valuationBreakdown: {
+        canvasId: 'valuationBreakdownChart',
+        title: '投后估值47亿分解',
+        data: [
+          { name: '蓝瞳资产', value: 12, unit: '亿', color: '#a6e3a1', items: ['充电桩', '光模块'] },
+          { name: '智云资产', value: 12, unit: '亿', color: '#89b4fa', items: ['推理芯片', '服务器'] },
+          { name: '现金出资', value: 23, unit: '亿', color: '#cba6f7', items: ['原始股募资'] }
+        ],
+        formula: '投后估值 = 24亿(资产) + 23亿(现金) = 47亿'
+      },
+
+      // 里程碑付款
+      milestonePayment: {
+        canvasId: 'milestonePaymentChart',
+        title: '跨境收购付款计划',
+        total: '3亿 USD',
+        phases: [
+          { phase: '首付款', amount: 4500, unit: '万USD', percentage: 15, color: '#89b4fa', milestone: '合同生效' },
+          { phase: '第二期', amount: 6000, unit: '万USD', percentage: 20, color: '#a6e3a1', milestone: '子公司注册' },
+          { phase: '第三期', amount: 6000, unit: '万USD', percentage: 20, color: '#cba6f7', milestone: '设计环境部署' },
+          { phase: '第四期', amount: 7500, unit: '万USD', percentage: 25, color: '#f9e2af', milestone: '架构冻结' },
+          { phase: '尾款', amount: 6000, unit: '万USD', percentage: 20, color: '#94e2d5', milestone: '项目验收' }
+        ]
+      },
+
+      // 募资流程
+      fundraising: {
+        canvasId: 'fundraisingTimelineChart',
+        title: '原始股募资23亿',
+        rounds: [
+          {
+            name: '首轮',
+            target: 8,
+            unit: '亿',
+            color: '#89b4fa',
+            sources: ['股东自有资金', '战略产业资金', '设备厂投资(2亿)']
+          },
+          {
+            name: '二轮',
+            target: 15,
+            unit: '亿',
+            color: '#cba6f7',
+            sources: ['供应链合伙人', '战略资金', '国家大基金'],
+            entryMethod: '老股溢价30% 或 定增'
+          }
+        ]
+      },
+
+      // 风险分布
+      riskDistribution: {
+        canvasId: 'riskDistributionChart',
+        title: '风险等级分布',
+        data: [
+          { level: '高风险', count: 2, color: '#f38ba8', items: ['流片失败', '杠杆现金流不足'] },
+          { level: '中高风险', count: 10, color: '#f9e2af', items: ['募资困难', '合作稳定性', 'IP迁移受阻'] },
+          { level: '中风险', count: 11, color: '#6c7086', items: ['估值分歧', '运营波动', '技术迭代'] }
+        ]
+      },
+
+      // 产品估值贡献
+      productContribution: {
+        canvasId: 'productContributionChart',
+        title: '产品体系估值贡献',
+        products: [
+          { name: '充电桩', contribution: 8, unit: '亿', color: '#a6e3a1', provider: '蓝瞳' },
+          { name: '光模块', contribution: 6, unit: '亿', color: '#89b4fa', provider: '蓝瞳' },
+          { name: '高速网卡', contribution: 5, unit: '亿', color: '#f9e2af', provider: '收购装入' },
+          { name: '推理芯片', contribution: 8, unit: '亿', color: '#cba6f7', provider: '智云' },
+          { name: '服务器', contribution: 6, unit: '亿', color: '#94e2d5', provider: '智云' }
+        ],
+        total: 33,
+        note: '加上现金方23亿，投后估值约47亿（含溢价）'
+      },
+
+      // 业务模式毛利
+      businessMargin: {
+        canvasId: 'businessMarginChart',
+        title: '三大业务模式毛利率',
+        models: [
+          { name: '授权模式', margin: 85, unit: '%', color: '#a6e3a1', highlight: 'IP授权，高毛利' },
+          { name: '生产模式(高端)', margin: 60, unit: '%', color: '#89b4fa', highlight: '芯片/网卡产品' },
+          { name: '生产模式(中端)', margin: 35, unit: '%', color: '#cba6f7', highlight: '服务器/光模块' },
+          { name: '运营模式', margin: 25, unit: '%', color: '#f9e2af', highlight: '充电/算力服务' }
+        ]
+      },
+
+      // 杠杆结构
+      leverageStructure: {
+        canvasId: 'leverageStructureChart',
+        title: '项目SPV 1:9杠杆结构',
+        ratio: '1:9',
+        structure: [
+          { name: '领投方', percentage: 10, color: '#89b4fa', desc: '项目SPV控股方' },
+          { name: '配套资金', percentage: 90, color: '#cba6f7', desc: '银行贷款/产业基金等' }
+        ],
+        riskNote: '需稳定的充电+算力收入支撑90%配套资金本息'
+      },
+
+      // 资金渠道
+      capitalChannels: {
+        canvasId: 'capitalChannelChart',
+        title: '三大资金渠道',
+        channels: [
+          { name: '上市公司渠道', percentage: 35, color: '#89b4fa', examples: ['战略投资', '定增', '并购'] },
+          { name: '股权基金渠道', percentage: 40, color: '#a6e3a1', examples: ['国家大基金', '产业基金', '供应链基金'] },
+          { name: '国资授信渠道', percentage: 25, color: '#cba6f7', examples: ['政策性银行', '地方国资', '产业园区'] }
+        ]
+      },
+
+      // 变现路径
+      exitPaths: {
+        canvasId: 'exitPathTimelineChart',
+        title: '五种变现路径',
+        paths: [
+          { name: 'IPO上市', timeline: 5, unit: '年', color: '#a6e3a1', target: '科创板/港股' },
+          { name: '上市公司并购', timeline: 3, unit: '年', color: '#89b4fa', target: '装入上市公司' },
+          { name: 'RWA资产证券化', timeline: 2, unit: '年', color: '#cba6f7', target: '充电桩/算力资产' },
+          { name: '股权回购', timeline: 4, unit: '年', color: '#f9e2af', target: '大股东/战略方回购' },
+          { name: '分红收益', timeline: 1, unit: '年', color: '#94e2d5', target: '稳定运营后分红' }
+        ]
+      }
+    }
   }
 };

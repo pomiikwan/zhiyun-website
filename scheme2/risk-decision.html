@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>风险与决策 - 核心方案二 - 智云数科</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <button class="sidebar-toggle" aria-label="切换侧边栏"><i data-lucide="menu" style="width:20px;height:20px"></i></button>
+      <i data-lucide="cpu" style="width:24px;height:24px;color:var(--accent-blue)"></i>
+      <span>智云数科</span>
+    </div>
+    <ul class="navbar-nav">
+      <li><a href="../index.html"><i data-lucide="home" style="width:18px;height:18px"></i>首页</a></li>
+      <li><a href="../knowledge/about-company.html"><i data-lucide="building-2" style="width:18px;height:18px"></i>公司介绍</a></li>
+      <li><a href="../knowledge/index.html"><i data-lucide="book-open" style="width:18px;height:18px"></i>知识库</a></li>
+      <li><a href="../tasks/index.html"><i data-lucide="target" style="width:18px;height:18px"></i>核心方案一</a></li>
+      <li><a href="index.html" class="active"><i data-lucide="zap" style="width:18px;height:18px"></i>核心方案二</a></li>
+      <li><a href="../dashboard.html"><i data-lucide="bar-chart-3" style="width:18px;height:18px"></i>数据看板</a></li>
+    </ul>
+    <div class="navbar-search">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" placeholder="搜索..." aria-label="搜索">
+      <div class="search-results"></div>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单"><i data-lucide="menu" style="width:22px;height:22px"></i></button>
+  </nav>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title expanded"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>核心方案二导航</span></div>
+        <ul class="sidebar-items" style="max-height:500px">
+          <a href="index.html" class="sidebar-item"><i data-lucide="layout-dashboard" style="width:16px;height:16px"></i><span>方案总览</span></a>
+          <a href="equity-structure.html" class="sidebar-item"><i data-lucide="git-branch" style="width:16px;height:16px"></i><span>顶层股权架构</span></a>
+          <a href="business-operation.html" class="sidebar-item"><i data-lucide="briefcase" style="width:16px;height:16px"></i><span>业务运营架构</span></a>
+          <a href="capital-operation.html" class="sidebar-item"><i data-lucide="landmark" style="width:16px;height:16px"></i><span>资本运作架构</span></a>
+          <a href="risk-decision.html" class="sidebar-item active"><i data-lucide="shield-alert" style="width:16px;height:16px"></i><span>风险与决策</span></a>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title"><i data-lucide="chevron-right" style="width:14px;height:14px"></i><span>详细文档</span></div>
+        <ul class="sidebar-items">
+          <a href="valuation-model.html" class="sidebar-item"><i data-lucide="calculator" style="width:16px;height:16px"></i><span>估值建模详解</span></a>
+          <a href="equity-detail.html" class="sidebar-item"><i data-lucide="pie-chart" style="width:16px;height:16px"></i><span>股权结构细化</span></a>
+          <a href="cross-border.html" class="sidebar-item"><i data-lucide="globe" style="width:16px;height:16px"></i><span>跨境收购路径</span></a>
+          <a href="revenue-model.html" class="sidebar-item"><i data-lucide="trending-up" style="width:16px;height:16px"></i><span>授权模式收益</span></a>
+          <a href="fundraising-plan.html" class="sidebar-item"><i data-lucide="banknote" style="width:16px;height:16px"></i><span>原始股募资计划</span></a>
+          <a href="risk-matrix.html" class="sidebar-item"><i data-lucide="alert-triangle" style="width:16px;height:16px"></i><span>风险矩阵</span></a>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-container">
+        <!-- 页面标题 -->
+        <div style="margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <a href="index.html" style="color:var(--accent-blue);font-size:13px">核心方案二</a>
+            <i data-lucide="chevron-right" style="width:14px;height:14px;color:var(--text-muted)"></i>
+            <span style="color:var(--text-muted);font-size:13px">风险与决策</span>
+          </div>
+          <h1 style="font-size:1.75rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;background:rgba(243,139,168,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
+              <i data-lucide="shield-alert" style="width:22px;height:22px;color:var(--accent-red)"></i>
+            </div>
+            风险与决策
+          </h1>
+        </div>
+
+        <!-- 风险总览 -->
+        <section class="mb-8">
+          <div class="grid-4">
+            <div class="metric-card" style="border-left:3px solid var(--accent-red)">
+              <div class="metric-label">高风险</div>
+              <div class="metric-value" style="color:var(--accent-red)">2项</div>
+              <div class="metric-sub">需重点监控</div>
+            </div>
+            <div class="metric-card" style="border-left:3px solid var(--accent-yellow)">
+              <div class="metric-label">中高风险</div>
+              <div class="metric-value" style="color:var(--accent-yellow)">10项</div>
+              <div class="metric-sub">密切关注</div>
+            </div>
+            <div class="metric-card" style="border-left:3px solid #a6adc8">
+              <div class="metric-label">中风险</div>
+              <div class="metric-value" style="color:#a6adc8">11项</div>
+              <div class="metric-sub">持续跟踪</div>
+            </div>
+            <div class="metric-card" style="border-left:3px solid var(--accent-green)">
+              <div class="metric-label">待决策</div>
+              <div class="metric-value green">6项</div>
+              <div class="metric-sub">D-001至D-006</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 核心风险提示 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="alert-octagon" style="width:20px;height:20px;color:var(--accent-red)"></i>核心风险提示
+          </h2>
+          <div class="grid-2">
+            <div style="background:rgba(243,139,168,0.1);border:1px solid rgba(243,139,168,0.3);padding:20px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <span style="background:var(--accent-red);color:white;font-size:11px;padding:2px 8px;border-radius:4px">高</span>
+                <span style="font-weight:600;font-size:1rem">推理芯片流片失败</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">
+                智云方估值下降30-50%，整体方案吸引力下降
+              </div>
+              <div style="font-size:12px;color:var(--text-muted);padding-top:12px;border-top:1px solid rgba(243,139,168,0.2)">
+                <strong>缓解措施：</strong>备选方案设计、分阶段验证、风险分散
+              </div>
+            </div>
+            <div style="background:rgba(243,139,168,0.1);border:1px solid rgba(243,139,168,0.3);padding:20px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <span style="background:var(--accent-red);color:white;font-size:11px;padding:2px 8px;border-radius:4px">高</span>
+                <span style="font-weight:600;font-size:1rem">1:9杠杆现金流覆盖不足</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">
+                需稳定的充电+算力收入支撑90%配套资金本息
+              </div>
+              <div style="font-size:12px;color:var(--text-muted);padding-top:12px;border-top:1px solid rgba(243,139,168,0.2)">
+                <strong>缓解措施：</strong>保守测算、分步加杠杆、现金流安全垫
+              </div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:20px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 8px;border-radius:4px">中高</span>
+                <span style="font-weight:600;font-size:1rem">23亿募资困难</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">
+                需分阶段、多渠道、备选方案保障资金到位
+              </div>
+              <div style="font-size:12px;color:var(--text-muted);padding-top:12px;border-top:1px solid rgba(249,226,175,0.2)">
+                <strong>缓解措施：</strong>分阶段募资、多渠道并行、备选ADR-0006方案
+              </div>
+            </div>
+            <div style="background:rgba(249,226,175,0.1);border:1px solid rgba(249,226,175,0.3);padding:20px;border-radius:8px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                <span style="background:var(--accent-yellow);color:black;font-size:11px;padding:2px 8px;border-radius:4px">中高</span>
+                <span style="font-weight:600;font-size:1rem">蓝瞳+智云合作稳定性</span>
+              </div>
+              <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">
+                需明确利益分配机制，股权深度绑定
+              </div>
+              <div style="font-size:12px;color:var(--text-muted);padding-top:12px;border-top:1px solid rgba(249,226,175,0.2)">
+                <strong>缓解措施：</strong>利益绑定、协议约束、设置退出机制
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 风险矩阵 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="table-2" style="width:20px;height:20px;color:var(--accent-yellow)"></i>风险矩阵汇总
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0;font-size:13px">
+                <thead>
+                  <tr>
+                    <th style="width:80px">类别</th>
+                    <th>风险点</th>
+                    <th style="width:60px">等级</th>
+                    <th>缓解措施</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 估值风险 -->
+                  <tr style="background:var(--bg-secondary)">
+                    <td rowspan="3" style="font-weight:600;vertical-align:middle">估值风险</td>
+                    <td>47亿估值能否支撑</td>
+                    <td><span style="color:var(--accent-yellow)">中高</span></td>
+                    <td>商业协商形式，不锁定</td>
+                  </tr>
+                  <tr style="background:var(--bg-secondary)">
+                    <td>蓝瞳资产定价分歧</td>
+                    <td><span style="color:var(--accent-yellow)">中高</span></td>
+                    <td>第三方评估，协商确定</td>
+                  </tr>
+                  <tr style="background:var(--bg-secondary)">
+                    <td>智云方估值再评估分歧</td>
+                    <td><span style="color:#a6adc8">中</span></td>
+                    <td>流片结果作为调整依据</td>
+                  </tr>
+                  <!-- 融资风险 -->
+                  <tr>
+                    <td rowspan="3" style="font-weight:600;vertical-align:middle">融资风险</td>
+                    <td>23亿原始股募集困难</td>
+                    <td><span style="color:var(--accent-yellow)">中高</span></td>
+                    <td>分阶段募资，多渠道并行</td>
+                  </tr>
+                  <tr>
+                    <td>募资进度不及预期</td>
+                    <td><span style="color:var(--accent-yellow)">中高</span></td>
+                    <td>提前启动，备选方案</td>
+                  </tr>
+                  <tr>
+                    <td>投资方中途退出</td>
+                    <td><span style="color:#a6adc8">中</span></td>
+                    <td>协议约束，备选投资方</td>
+                  </tr>
+                  <!-- 业务风险 -->
+                  <tr style="background:var(--bg-secondary)">
+                    <td rowspan="5" style="font-weight:600;vertical-align:middle">业务风险</td>
+                    <td>推理芯片流片失败</td>
+                    <td><span style="color:var(--accent-red)">高</span></td>
+                    <td>备选方案设计，风险分散</td>
+                  </tr>
+                  <tr style="background:var(--bg-secondary)">
+                    <td>充电桩合约履约不及预期</td>
+                    <td><span style="color:var(--accent-yellow)">中高</span></td>
+                    <td>分阶段验证，合约保障</td>
+                  </tr>
+                  <tr style="background:var(--bg-secondary)">
+                    <td>新爱算营收目标未达成</td>
+                    <td><span style="color:var(--accent-yellow)">中高</span></td>
+                    <td>动态调整，备选预期</td>
+                  </tr>
+                  <tr style="background:var(--bg-secondary)">
+                    <td>1:9杠杆现金流覆盖不足</td>
+                    <td><span style="color:var(--accent-red)">高</span></td>
+                    <td>保守测算，分步加杠杆</td>
+                  </tr>
+                  <tr style="background:var(--bg-secondary)">
+                    <td>项目SPV运营效率低下</td>
+                    <td><span style="color:#a6adc8">中</span></td>
+                    <td>标准化运营，专业团队</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 待决策事项 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="list-checks" style="width:20px;height:20px;color:var(--accent-purple)"></i>待决策事项追踪
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th style="width:60px">编号</th>
+                    <th>待决策事项</th>
+                    <th style="width:100px">决策方</th>
+                    <th style="width:80px">状态</th>
+                    <th style="width:80px">风险影响</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600">D-001</td>
+                    <td>蓝瞳装入资产的具体形式（合约/订单 vs 业务主体）</td>
+                    <td>关总/蓝瞳</td>
+                    <td><span style="background:var(--accent-yellow);color:#000;font-size:11px;padding:2px 6px;border-radius:4px">待定</span></td>
+                    <td style="font-size:12px;color:var(--text-muted)">估值风险</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-002</td>
+                    <td>智云方估值再评估</td>
+                    <td>蓝瞳、智云协商</td>
+                    <td><span style="background:var(--accent-yellow);color:#000;font-size:11px;padding:2px 6px;border-radius:4px">待执行</span></td>
+                    <td style="font-size:12px;color:var(--text-muted)">估值风险</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-003</td>
+                    <td>1-2亿厂房建设资金的融资方案</td>
+                    <td>关总</td>
+                    <td><span style="background:var(--accent-yellow);color:#000;font-size:11px;padding:2px 6px;border-radius:4px">待设计</span></td>
+                    <td style="font-size:12px;color:var(--text-muted)">融资风险</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-004</td>
+                    <td>联合品牌的具体命名和归属</td>
+                    <td>蓝瞳、智云协商</td>
+                    <td><span style="background:var(--accent-yellow);color:#000;font-size:11px;padding:2px 6px;border-radius:4px">待定</span></td>
+                    <td style="font-size:12px;color:var(--text-muted)">协同风险</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-005</td>
+                    <td>跨境收购路径选择（ODI vs 跨境资本）</td>
+                    <td>融资方案确认后</td>
+                    <td><span style="background:var(--text-muted);color:#fff;font-size:11px;padding:2px 6px;border-radius:4px">后续决策</span></td>
+                    <td style="font-size:12px;color:var(--text-muted)">跨境风险</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">D-006</td>
+                    <td>变现路径选择</td>
+                    <td>运营成熟后</td>
+                    <td><span style="background:var(--text-muted);color:#fff;font-size:11px;padding:2px 6px;border-radius:4px">后续决策</span></td>
+                    <td style="font-size:12px;color:var(--text-muted)">市场风险</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 风险监控指标 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="activity" style="width:20px;height:20px;color:var(--accent-teal)"></i>风险监控指标
+          </h2>
+          <div class="card">
+            <div class="card-body" style="padding:0">
+              <table class="data-table" style="margin:0">
+                <thead>
+                  <tr>
+                    <th style="width:120px">指标类型</th>
+                    <th>监控指标</th>
+                    <th style="width:120px">预警阈值</th>
+                    <th style="width:100px">监控频率</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-blue)">融资进度</td>
+                    <td>募资完成率</td>
+                    <td>&lt;80%目标</td>
+                    <td>月度</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-green)">现金流</td>
+                    <td>SPV现金流覆盖率</td>
+                    <td>&lt;1.2x</td>
+                    <td>月度</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-purple)">业务进度</td>
+                    <td>里程碑完成率</td>
+                    <td>&lt;90%目标</td>
+                    <td>季度</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-yellow)">技术进度</td>
+                    <td>流片进度</td>
+                    <td>延迟&gt;1月</td>
+                    <td>月度</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-teal)">跨境审批</td>
+                    <td>ODI审批进度</td>
+                    <td>延迟&gt;1月</td>
+                    <td>月度</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;color:var(--accent-red)">合作稳定性</td>
+                    <td>股东沟通频率</td>
+                    <td>&lt;1次/月</td>
+                    <td>月度</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 风险应对策略 -->
+        <section>
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="shield-check" style="width:20px;height:20px;color:var(--accent-green)"></i>风险应对策略汇总
+          </h2>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:1rem">核心策略</div>
+              </div>
+              <div class="card-body">
+                <table class="data-table" style="margin:0;font-size:13px">
+                  <tr>
+                    <td style="width:100px;font-weight:600">估值风险</td>
+                    <td>协商不锁定，分阶段验证</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">融资风险</td>
+                    <td>分阶段多渠道，备选方案</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">业务风险</td>
+                    <td>风险分散，备选方案设计</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">技术风险</td>
+                    <td>分阶段验证，里程碑挂钩</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">跨境风险</td>
+                    <td>结构隔离，多通道方案</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">协同风险</td>
+                    <td>利益绑定，协议约束</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600">市场风险</td>
+                    <td>灵活调整，动态优化</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title" style="font-size:1rem">关键成功因素</div>
+              </div>
+              <div class="card-body">
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-secondary);border-radius:8px">
+                    <div style="width:28px;height:28px;background:rgba(166,227,161,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--accent-green)">1</div>
+                    <div style="font-size:13px">推理芯片8月流片成功</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-secondary);border-radius:8px">
+                    <div style="width:28px;height:28px;background:rgba(137,180,250,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--accent-blue)">2</div>
+                    <div style="font-size:13px">充电桩合约按计划履约</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-secondary);border-radius:8px">
+                    <div style="width:28px;height:28px;background:rgba(203,166,247,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--accent-purple)">3</div>
+                    <div style="font-size:13px">跨境收购顺利完成</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-secondary);border-radius:8px">
+                    <div style="width:28px;height:28px;background:rgba(249,226,175,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--accent-yellow)">4</div>
+                    <div style="font-size:13px">新爱算营收目标达成</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 图表区域 -->
+        <section class="mb-8">
+          <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:20px;color:var(--text-primary);display:flex;align-items:center;gap:8px">
+            <i data-lucide="pie-chart" style="width:20px;height:20px;color:var(--accent-red)"></i>风险可视化
+          </h2>
+          <div class="card" style="max-width:400px;margin:0 auto">
+            <div class="card-header">
+              <div class="card-title" style="font-size:0.95rem">风险等级分布</div>
+            </div>
+            <div class="card-body" style="height:280px">
+              <canvas id="riskDistributionChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 智云数科 - 超充算网方案 | ADR-0011</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/scheme2-charts.js"></script>
+  <script>lucide.createIcons()</script>
+</body>
+</html>
